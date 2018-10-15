@@ -23,8 +23,8 @@ var BoxColumnMain = function () {
 
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint.point,
-            "endPoint": _mp.endPoint.point,
+            "startPoint": _mp.startPoint,
+            "endPoint": _mp.endPoint,
             "orientation": _mp.orientation,
             "materialGrade": _mp.materialGrade,
             "memberType": _mp.memberType,

@@ -189,7 +189,7 @@ var class_grid_beam = function()
 	    {
 	    	memberList.push(data);
 	    	canvas.add(group);
-                dataModel.insertData("gridBeam", data);
+//                dataModel.insertData("gridBeam", data);
 	    }
 	}
 

@@ -11,6 +11,7 @@ var GridBeamModel = function () {
 var GridBeamMain = function () {
     this.model = clone(arr_data_model["gridBeam_main"]);
     this.getData = function (data) {
+        console.log(data);
         dataModel.uid++;
         this.model["uid"] = dataModel.uid;
         this.setMemberProperties(data);
@@ -23,96 +24,91 @@ var GridBeamMain = function () {
 
         _mp = data.memberProperties;
         mp = {
-            "startPoint": {
-                "x": 240,
-                "y": 0,
-                "z": 0
-            },
-            "endPoint": {
-                "x": 360,
-                "y": 0,
-                "z": 0
-            },
-            "profile": "W5X16",
-            "depthvalue": "",
-            "orientation": "0",
-            "materialGrade": "A572-GR.42",
-            "memberType": "Gravity",
-            "dataSource": "",
-            "alignment": "Straight",
+            "startPoint": _mp.startPoint,
+            "endPoint": _mp.endPoint,
+            "profile": _mp.profile,
+            "depthvalue": data.depthvalue,
+            "orientation": _mp.orientation,
+            "materialGrade": _mp.materialGrade,
+            "memberType": _mp.memberType,
+            "dataSource": _mp.dataSource,
+            "alignment": data.alignment,
             "tos": {
-                "sign": "+",
-                "ft": "0",
-                "in": "0",
-                "fr": "0"
+                "sign": data.tos_sign,
+                "ft": data.tos_ft,
+                "in": data.tos_in,
+                "fr": data.tos_fr
             },
             "ffl": {
-                "sign": "+",
-                "in": "0",
-                "fr": "0"
+                "sign": data.ffl_sign, // checkd
+                "ft": data.ffl_ft, // check
+                "in": data.ffl_in, // check
+                "fr": data.ffl_fr //check
             },
             "tos_1": {
-                "sign": "+",
-                "ft": "0",
-                "in": "0",
-                "fr": "0"
+                "sign": data.tos_sign1,
+                "ft": data.tos_ft1,
+                "in": data.tos_in1,
+                "fr": data.tos_fr1
             },
             "ffl_1": {
-                "sign": "+",
-                "in": "0",
-                "fr": "0"
+                "sign": data.tos_sign2, //check
+                "ft": data.tos_ft2, //check
+                "in": data.tos_in2, // check
+                "fr": data.tos_fr2 //check
             },
             "skewLeftEnd_offset": {
                 "along-x": {
-                    "tos_sign": "+",
-                    "tos_ft": "0",
-                    "tos_in": "0",
-                    "tos_fr": "0"
+                    "tos_sign": "+", // check
+                    "tos_ft": "0",   // check
+                    "tos_in": "0",   // check
+                    "tos_fr": "0"    // check
                 },
                 "along-y": {
-                    "tos_sign": "+",
-                    "tos_ft": "0",
-                    "tos_in": "0",
-                    "tos_fr": "0"
+                    "tos_sign": "+",  // check
+                    "tos_ft": "0",    // check
+                    "tos_in": "0",    // check
+                    "tos_fr": "0"     // check
                 }
             },
             "skewRightEnd_offset": {
                 "along-x": {
-                    "tos_sign": "+",
-                    "tos_ft": "0",
-                    "tos_in": "0",
-                    "tos_fr": "0"
+                    "tos_sign": "+",    // check
+                    "tos_ft": "0",    // check
+                    "tos_in": "0",    // check
+                    "tos_fr": "0"    // check
                 },
                 "along-y": {
-                    "tos_sign": "+",
-                    "tos_ft": "0",
-                    "tos_in": "0",
-                    "tos_fr": "0"
+                    "tos_sign": "+",    // check
+                    "tos_ft": "0",    // check
+                    "tos_in": "0",    // check
+                    "tos_fr": "0"    // check
                 }
             },
-            "splice_count": "1",
+            "splice_count": data.splice_count,
             "splice_data": [{
-                    "ft": "10",
-                    "in": "0",
-                    "fr": "0",
-                    "profile": "W5X19"
+                    "ft": "10",    // check
+                    "in": "0",    // check
+                    "fr": "0",    // check
+                    "profile": "W5X19"    // check
                 }],
-            "camberReq": "off",
-            "camber_in": "",
-            "StudReq": "off",
-            "StudDia_in": "",
-            "StudLength_in": "",
-            "StudCount": "",
-            "StiffReq": "off",
-            "stiffPlGrade": "A36",
-            "stiffPlThick_in": "",
-            "stiffPlCount": "",
-            "stiffW_type": "",
-            "stiffW_size": "",
-            "frameNo": "",
-            "frameCMethod": "",
-            "referenceDrawing": ""
+            "camberReq": data.camberReq,
+            "camber_in": data.camber_in,
+            "StudReq": data.isshearStudRequired,
+            "StudDia_in": data.shearStudDia_in,
+            "StudLength_in": data.shearStudLength_in,
+            "StudCount": data.shearStudCount,
+            "StiffReq": data.isStiffenerRequired,
+            "stiffPlGrade": data.stiffPlateGrade,
+            "stiffPlThick_in": data.stiffPlateThick_in,
+            "stiffPlCount": data.stiffPlateCount,
+            "stiffW_type": data.stiffWeldSize,
+            "stiffW_size": data.stiffWeldType,
+            "frameNo": data.frameNO,
+            "frameCMethod": data.frameCMethod,
+            "referenceDrawing": _mp.referenceDrawing;
         }
+        this.model["memberProperties"] = mp;
     }
     this.setFinishProperties = function (data) {
 
@@ -125,40 +121,38 @@ var GridBeamMain = function () {
             "surType": _fp.paintType,
             "paintName": _fp.paintName,
             "paintCoats": _fp.paintCoats,
-            "ZincThick": null,
+            "ZincThick": _fp.galvZincCoatThickness,              // check
             "fProofType": _fp.fireProofType,
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat,
         };
         this.model["finishProperties"] = fp;
-
     }
     this.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
-            "CMark_LHS": null,
-            "CMark_RHS": null,
-            "CType_LHS": null,
-            "CType_RHS": null,
-            "Support_LHS": null,
-            "Support_RHS": null,
-            "Supported_LHS": null,
-            "Supported_RHS": null,
-            "splice_CMark": null,
-            "shearLoad_LHS": "",
-            "shearLoad_RHS": "",
-            "axialLoad_LHS": "",
-            "axialLoad_RHS": "",
-            "mommentLoad_LHS": "",
-            "mommentLoad_RHS": ""
+            "CMark_LHS": _cp.connMark_LHS,
+            "CMark_RHS": _cp.connMark_RHS,
+            "CType_LHS": _cp.connType_LHS,
+            "CType_RHS": _cp.connType_RHS,
+            "Support_LHS": _cp.connSupportMethod_LHS,
+            "Support_RHS": _cp.connSupportMethod_RHS,
+            "Supported_LHS": _cp.connSupportedMethod_LHS,
+            "Supported_RHS": _cp.connSupportedMethod_RHS,
+            "splice_CMark": _cp.connMark_Splice,
+            "shearLoad_LHS": _cp.shearLoad_LHS,
+            "shearLoad_RHS": _cp.shearLoad_RHS,
+            "axialLoad_LHS": _cp.axialLoad_LHS,
+            "axialLoad_RHS": _cp.axialLoad_RHS,
+            "mommentLoad_LHS": _cp.mommentLoad_LHS,
+            "mommentLoad_RHS": _cp.mommentLoad_RHS
         };
-        this.model["finishProperties"] = cp;
+        this.model["connectionProperties"] = cp;
     }
 }
 
 arr_data_class["gridBeam"] = GridBeamModel;
 arr_data_class["gridBeam_main"] = GridBeamMain;
-
 arr_data_model["gridBeam_main"] = {
     "Group": "Beam",
     "type": "gridBeam",
@@ -169,12 +163,12 @@ arr_data_model["gridBeam_main"] = {
     },
     "uid": "",
     "memberProperties": {
-        
+
     },
     "finishProperties": {
-       
+
     },
     "connectionProperties": {
-       
+
     }
 }
