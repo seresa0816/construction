@@ -288,6 +288,7 @@ var class_cant_Beam = function()
 	    if (shape.chkPossibleBeam(line))
 	    {
 	    	memberList.push(data);
+                dataModel.insertData("canteBeam", data);
 	    	canvas.add(line);
 	    	stopDraggingElement(line);
 	    }
