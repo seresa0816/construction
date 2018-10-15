@@ -730,6 +730,10 @@ function checkExistMember(obj)
     var flag = false;
     for (var i = 0; i < memberList.length; i ++)
     {
+        if (memberList[i].uid == obj.uid)
+        {
+            break;
+        }
         if (memberList[i].type == obj.type)
         {
             if (memberList[i].memberProperties.startPoint.x == obj.memberProperties.startPoint.x && memberList[i].memberProperties.startPoint.y == obj.memberProperties.startPoint.y && memberList[i].memberProperties.startPoint.z == obj.memberProperties.startPoint.z)

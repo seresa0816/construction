@@ -446,7 +446,7 @@ if(category != null){
 			    
 			
 			  $.each(cmsplice, function(key, value) {
-			       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+			       var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 			       $(ConnectionMark).appendTo('#bc3spcm'); 
 			   }); 
 			  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -461,7 +461,7 @@ if(category != null){
 		    
 		 
 		  $.each(cmsplice, function(key, value) {
-		       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+		        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 		       $(ConnectionMark).appendTo('#bc3spcm'); 
 		   }); 
 		  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -475,7 +475,7 @@ if(category != null){
 	  	
 	  
 	$.each(cmsplice, function(key, value) {
-	     var ConnectionMark="<option>"+value.connectionMark+"</option>";
+	     var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 	     $(ConnectionMark).appendTo('#bc3spcm'); 
 	 }); 
 			}

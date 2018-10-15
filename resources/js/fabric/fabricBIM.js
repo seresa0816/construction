@@ -111,7 +111,7 @@ function initCanvas()
 	var gaps  = 0;
 	var width = $("#expandCanvas").innerWidth() - 70;;
 	// var height = $(window).height() - $(".topbar").height() - $(".mp-heading").height() - 20;
-	var height = $(window).height() - 260;
+	var height = $(window).height() - 217;
 
 	var absolute_width_cm = $("#feet_convert").width();
 	var absolute_inch = absolute_width_cm * 2.54;
@@ -1899,7 +1899,7 @@ function initSubmitEvents()
 		var member = memberList[parseInt(memID)];
 		if (memID.split(",").length > 1)
 		{
-			applyGroup(memID.split(","));
+			applyGroup(memID.split(","), $(this).attr("id"));
 			return;
 		}
 
@@ -2891,7 +2891,7 @@ function initSubmitEvents()
 	})
 }
 
-function applyGroup(str)
+function applyGroup(str, shape_id)
 {
 	var index_arr = [];
 	for (i = 0; i < str.length; i ++)
@@ -2900,6 +2900,8 @@ function applyGroup(str)
 	}
 
 	var memType = $("#memType").val();
+	if (!genericValidatorfunction(shape_id))
+		return false;
 	var configure = new_configure[memType];
 	if (configure == undefined)
 		return;
@@ -3191,8 +3193,11 @@ function loadMembersToCanvas(plane,depth){
         {
         	if ($("#viewdrpdwn").val() == 1)
         	{
-        		if (memberList[index].floor == floor)
+        		if (memberList[index].floor == floor) 
+        		{
     				infillBeam.drawPlan(memberList[index], "XY");
+    				memberList.splice(index, 1);
+        		}
         	}
         	else 
         	{

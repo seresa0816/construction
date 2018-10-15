@@ -483,14 +483,17 @@ $('#chkaess').change(function() {
 	}
 
 
-
+	$("#boxsplicecount").change(function() { 
+		getSpliceConnectionMark();
+		console.log('here');
+	});
 
 
 
 	$( document ).ready(function() {
 
 	getBasePlateConnectionMark();
-	getSpliceConnectionMark();
+	// getSpliceConnectionMark();
 	getCapPlateConnectionMark();
 
 	$("#bc2tfpthicknessin").change(function(){
@@ -556,10 +559,6 @@ $('#chkaess').change(function() {
 
 	});
 
-	$("#boxsplicecount").change(function() { 
-	getSpliceConnectionMark();
-	});
-
 	//Populate Base Plate Connection Mark
 	function getBasePlateConnectionMark(){
 		
@@ -596,7 +595,7 @@ $('#chkaess').change(function() {
 		    	
 		    
 		  $.each(cmsplice, function(key, value) {
-		       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+		        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 		       $(ConnectionMark).appendTo('#bc2spcm'); 
 		   }); 
 		  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -609,7 +608,7 @@ $('#chkaess').change(function() {
 	    	
 	    
 	  $.each(cmsplice, function(key, value) {
-	       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+	        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 	       $(ConnectionMark).appendTo('#bc2spcm'); 
 	   }); 
 	  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -624,7 +623,7 @@ $('#chkaess').change(function() {
   
 
 $.each(cmsplice, function(key, value) {
-     var ConnectionMark="<option>"+value.connectionMark+"</option>";
+      var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
      $(ConnectionMark).appendTo('#bc2spcm'); 
  }); 
 		}

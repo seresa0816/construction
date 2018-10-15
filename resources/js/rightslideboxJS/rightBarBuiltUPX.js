@@ -21,7 +21,7 @@ $( document ).ready(function() {
             allow_single_deselect: true
 				});
 					getBasePlateConnectionMark();
-					getSpliceConnectionMark();
+					// getSpliceConnectionMark();
 					getCapPlateConnectionMark();		
      		});
 
@@ -497,16 +497,6 @@ $('#chkaess').change(function() {
      			
      			  $("#splicecount").val($("#splicecount option:first").val());
      		  }
-
- 
-  
-     	        $("#splicecount").change( function(){
-     	        	 getSpliceConnectionMark();
-     	            
-     	        });
-     	
-     		
-     		
      
      	  
      	//Populate base plate drop down
@@ -575,7 +565,7 @@ $('#chkaess').change(function() {
 						  
 					    
 					  $.each(cmsplice, function(key, value) {
-					       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+					       var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 					       $(ConnectionMark).appendTo('#bc3spcm'); 
 					   }); 
 					  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -589,7 +579,7 @@ $('#chkaess').change(function() {
 				    	
 				
 				  $.each(cmsplice, function(key, value) {
-				       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+				        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 				       $(ConnectionMark).appendTo('#bc3spcm'); 
 				   }); 
 				  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -602,7 +592,7 @@ $('#chkaess').change(function() {
 				  
 			    
 			  $.each(cmsplice, function(key, value) {
-			       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+			        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 			       $(ConnectionMark).appendTo('#bc3spcm'); 
 			   }); 
 					}
@@ -752,3 +742,7 @@ $('#chkaess').change(function() {
     $('#bc3wtlengthft').keyup(function(e){
 		$("#bc3wtlengthft").removeClass("importantRed");
 		});
+$("#splicecount").change( function(){
+     	        	 getSpliceConnectionMark();
+     	            
+     	        });

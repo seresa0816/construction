@@ -550,7 +550,7 @@
 			 $('#cspcmark').empty();
 		
 			 var profilename = $("#columnprofile").val();	
-				
+			 if(profilename != null){
 				var spliceCount=parseInt($('#splicecount').val() );
 				
 				if((spliceCount)>0){
@@ -569,7 +569,7 @@
 				    	
 				    });
 				  $.each(cmsplice, function(key, value) {
-				       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+				        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 				       $(ConnectionMark).appendTo('#cspcmark'); 
 				   }); 
 				  cmsplice = $.grep(connectionObjList, function (el2) {
@@ -584,7 +584,7 @@
 			    	
 			    });
 			  $.each(cmsplice, function(key, value) {
-			       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+			        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 			       $(ConnectionMark).appendTo('#cspcmark'); 
 			   }); 
 				
@@ -600,11 +600,13 @@
 		    	
 		    });
 		  $.each(cmsplice, function(key, value) {
-		       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+		        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 		       $(ConnectionMark).appendTo('#cspcmark'); 
 		   }); 
 					
 		   }
+			 }
+		   
 		   }
 				// });
 				  

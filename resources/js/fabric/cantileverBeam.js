@@ -284,10 +284,10 @@ var class_cant_Beam = function()
         data.color 	= "#000000";
         data.uid 	= "cantBeam_" + line.uid;
 
-        memberList.push(data);
-
-	    if (shape.chkPosAvailable(line, line.mode))
+        // if (shape.chkPosAvailable(line, line.mode))
+	    if (shape.chkPossibleBeam(line))
 	    {
+	    	memberList.push(data);
 	    	canvas.add(line);
 	    	stopDraggingElement(line);
 	    }

@@ -1,16 +1,15 @@
        $( document ).ready(function() {
        
     	   getBasePlateConnectionMark();
-    	   getSpliceConnectionMark();
+    	   // getSpliceConnectionMark();
     	   getCapPlateConnectionMark();  
        });
 
 	$(function(){
-                $("#c4boxsplicecount").change( function(){
-                	 getSpliceConnectionMark();
-                    
-                });
             });
+	// $("#c4boxsplicecount").change( function(){
+ //                	 getSpliceConnectionMark();
+ //                });
     
 
       $(function() {
@@ -736,53 +735,42 @@
 		   			
 		   		function getSpliceConnectionMark(){
 		   	//Populate Splice Connection Mark
-		   			$('#bc4spcm').empty();
-						var spliceCount=parseInt($('#c4boxsplicecount').val() );
+		   			$('#bc4spcm').html("");
+					var spliceCount=parseInt($('#c4boxsplicecount').val() );
 						
-						if((spliceCount)>0){
-						  var cmsplice = $.grep(connectionObjList, function (el2) {
-							     
-								  if(el2.LSprofile  == "Built-Up Member" && el2.type.toLowerCase().indexOf("splicecolumnusingsplice")>=0){
-									  	
-						        	return el2.connectionMark;
-						        }
-								  });
-							  
-						    	
-						    
-						
-						  $.each(cmsplice, function(key, value) {
-						       var ConnectionMark="<option>"+value.connectionMark+"</option>";
-						       $(ConnectionMark).appendTo('#bc4spcm'); 
-						   }); 
-						  var cmsplice = $.grep(connectionObjList, function (el2) {
-							     
-							  if(el2.LSprofile  == "Built-Up Member" && el2.type.toLowerCase().indexOf("splicecolumnusingend")>=0){
-								  	 
+					if((spliceCount)>0){
+					  	var cmsplice = $.grep(connectionObjList, function (el2) {
+						  	if(el2.LSprofile  == "Built-Up Member" && el2.type.toLowerCase().indexOf("splicecolumnusingsplice")>=0) {
 					        	return el2.connectionMark;
 					        }
-							  });
-						  
-					
-					  $.each(cmsplice, function(key, value) {
-					       var ConnectionMark="<option>"+value.connectionMark+"</option>";
-					       $(ConnectionMark).appendTo('#bc4spcm'); 
-					   }); 
-					  var cmsplice = $.grep(connectionObjList, function (el2) {
-						     
-						  if(el2.LSprofile  == "Built-Up Member" && el2.type.toLowerCase().indexOf("splicecolumnusingdirectly")>=0){
-							  		 
-				        	return el2.connectionMark;
-				        }
-						  });
-					  
-				    $.each(cmsplice, function(key, value) {
-				       var ConnectionMark="<option>"+value.connectionMark+"</option>";
-				       $(ConnectionMark).appendTo('#bc4spcm'); 
-				   }); 
-						}
+					  	});
 						
-		   			}
+					  	$.each(cmsplice, function(key, value) {
+					       	var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
+					       	$(ConnectionMark).appendTo('#bc4spcm'); 
+					   	}); 
+					   	var cmsplice = $.grep(connectionObjList, function (el2) {
+						  	if(el2.LSprofile  == "Built-Up Member" && el2.type.toLowerCase().indexOf("splicecolumnusingend")>=0){
+				        		return el2.connectionMark;
+					        }
+					  	});
+
+				  		$.each(cmsplice, function(key, value) {
+				       		var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
+					       	$(ConnectionMark).appendTo('#bc4spcm'); 
+					   	}); 
+					   	var cmsplice = $.grep(connectionObjList, function (el2) {
+					  		if(el2.LSprofile  == "Built-Up Member" && el2.type.toLowerCase().indexOf("splicecolumnusingdirectly")>=0){
+				        		return el2.connectionMark;
+					        }
+					  	});
+						  
+					    $.each(cmsplice, function(key, value) {
+					       	var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
+					       	$(ConnectionMark).appendTo('#bc4spcm'); 
+					   	});
+					}
+	   			}
 		   			function getCapPlateConnectionMark(){
 						 //Populate Cap Plate Connection Mark  
 		   			
@@ -808,8 +796,10 @@
 						 
 		   			}								 
 		   			$("#c4boxsplicecount").change(function() {
-		   		        $('#spliceRows').empty();
+		   				$('#spliceRows').empty();
 		   		        var spliceCount=parseInt($('#c4boxsplicecount').val() );
+
+		   		    getSpliceConnectionMark();
 
 		   		     for(var i=1;i<=spliceCount;i++) {
 

@@ -16,7 +16,7 @@ $(document).ready(function(){
 		});
  
 	getBasePlateConnectionMark();
-	getSpliceConnectionMark();
+	// getSpliceConnectionMark();
 	getCapPlateConnectionMark();
   }
    
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		getGradeOnProfileChange();
 		//getProfileConnectionMark();
 		getBasePlateConnectionMark();
-		getSpliceConnectionMark();
+		// getSpliceConnectionMark();
 		getCapPlateConnectionMark();
 	});
 
@@ -530,7 +530,7 @@ $.each(wsDropDown.SurfacePreparation, function(index,data) {
 						  
 					
 					  $.each(cmsplice, function(key, value) {
-					       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+					        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 					       $(ConnectionMark).appendTo('#bc1spcm'); 
 					   }); 
 					  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -545,7 +545,7 @@ $.each(wsDropDown.SurfacePreparation, function(index,data) {
 				    
 				
 				  $.each(cmsplice, function(key, value) {
-				       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+				        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 				       $(ConnectionMark).appendTo('#bc1spcm'); 
 				   }); 
 				  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -558,7 +558,7 @@ $.each(wsDropDown.SurfacePreparation, function(index,data) {
 				  
 			
 			$.each(cmsplice, function(key, value) {
-			     var ConnectionMark="<option>"+value.connectionMark+"</option>";
+			      var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 			     $(ConnectionMark).appendTo('#bc1spcm'); 
 			 }); 
 					}
