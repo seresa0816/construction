@@ -150,7 +150,7 @@ var class_box_Column 	= function(parent)
 			{
 				undoAction.addAction("memberPlace");
 				memberList.push(main.member_boxColumn);
-                                dataModel.insertData("boxColumn", main.member_boxColumn);
+            	dataModel.insertData("boxColumn", main.member_boxColumn);
 			}
 
 		});

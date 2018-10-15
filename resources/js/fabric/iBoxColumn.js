@@ -170,6 +170,8 @@ var class_ibox_Column 	= function(parent)
 			{
 				undoAction.addAction("memberPlace");
 				memberList.push(main.member_boxColumn);
+				dataModel.insertData("iColumn", main.member_boxColumn);
+				
 			}
 
 		});

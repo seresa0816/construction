@@ -65,6 +65,7 @@ function placeDefaultColumns(columnObj,plane){
             placeColumn(column,plane);
             column.uid = "Column_" + column.id;
             memberList.push(column);
+            dataModel.insertData("regularColumn", column);
         }
     }
 }

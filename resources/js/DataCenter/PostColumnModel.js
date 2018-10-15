@@ -1,17 +1,15 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
-var BoxColumnModel = function () {
+var PostColumnModel = function () {
     var mainModel;
     this.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["boxColumn_main"]().getData(data);
+        mainModel = new arr_data_class["postColumn_main"]().getData(data);
         returnData.push(mainModel);
         return returnData;
-    };
-};
+    }
+}
 
-var BoxColumnMain = function () {
-    this.model = clone(arr_data_model["boxColumn_main"]);
+var PostColumnMain = function () {
+    this.model = clone(arr_data_model["postColumn_main"]);
     this.getData = function (data) {
         dataModel.uid++;
         this.model["uid"] = dataModel.uid;
@@ -19,7 +17,7 @@ var BoxColumnMain = function () {
         this.setFinishProperties(data);
         this.setConnectionProperties(data);
         return this.model;
-    };
+    }
 
     this.setMemberProperties = function (data) {
 
@@ -31,18 +29,7 @@ var BoxColumnMain = function () {
             "materialGrade": _mp.materialGrade,
             "memberType": _mp.memberType,
             "dataSource": _mp.dataSource,
-            "profile": {
-                "depth_a_ft": data.depth_a_ft,
-                "depth_a_in": data.depth_a_in,
-                "depth_a_fr": data.depth_a_fr,
-                "width_b_ft": data.width_b_ft,
-                "width_b_in": data.width_b_in,
-                "width_b_fr": data.width_b_fr,
-                "thick_c_in": data.thick_c_in,
-                "thick_c_fr": data.thick_c_fr,
-                "thick_d_in": data.thick_d_in,
-                "thick_d_fr": data.thick_d_fr,
-            },
+            "profile": _mp.profile,
             "elevation": {
                 "baseEl_sign": data.baseElevation_sign,
                 "baseEl_ft": data.baseElevation_ft,
@@ -51,18 +38,24 @@ var BoxColumnMain = function () {
                 "topEl_sign": data.topElevation_sign,
                 "topEl_ft": data.topElevation_ft,
                 "topEl_in": data.topElevation_in,
-                "topEl_fr": data.topElevation_fr
+                "topEl_fr": data.topElevation_fr,
             },
-            "w_type": data.weld_type,
-            "w_size": data.weld_size,
-            "cjp_weld": data.cjp_weld,
-            "length_in": "0", // check
-            "length__fr": "0", // check 
-            "splice_data": data.splice_data, // check 
+            "location": {
+                "loc_X": data.loc_X,
+                "loc_Y": data.loc_Y,
+                "xDir_sign": data.xDirection_sign,
+                "xDir_ft": data.xDirection_ft,
+                "xDir_in": data.xDirection_in,
+                "xDir_fr": data.xDirection_fr,
+                "yDir_sign": data.yDirection_sign,
+                "yDir_ft": data.yDirection_ft,
+                "yDir_in": data.yDirection_in,
+                "yDir_fr": data.yDirection_fr,
+            },
             "referenceDrawing": _mp.referenceDrawing // check 
         };
         this.model["memberProperties"] = mp;
-    };
+    }
     this.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
@@ -77,18 +70,14 @@ var BoxColumnMain = function () {
             "ZincThick": null,
             "fProofType": _fp.fireProofType,
             "fRating": _fp.fireRating,
-            "aessCat": _fp.aessCat
+            "aessCat": _fp.aessCat,
         };
         this.model["finishProperties"] = fp;
-    };
+    }
     this.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "bPlCMark": _cp.basePlateConnMark,
-            "sPlCMark": _cp.splice_plateConnMark,
-            "s_shearLoad": _cp.splice_shearLoad,
-            "s_axialLoad": _cp.splice_axialLoad,
-            "s_momentLoad": _cp.splice_momentLoad,
             "cap_check": _cp.cap_check,
             "cap_PlCMark": _cp.cap_plateConnMark,
             "cap_shearLoad": _cp.cap_shearLoad,
@@ -96,16 +85,16 @@ var BoxColumnMain = function () {
             "cap_momentLoad": _cp.cap_momentLoad
         };
         this.model["connectionProperties"] = cp;
-    };
-};
+    }
+}
 
-arr_data_class["boxColumn"] = BoxColumnModel;
-arr_data_class["boxColumn_main"] = BoxColumnMain;
+arr_data_class["postColumn"] = PostColumnModel;
+arr_data_class["postColumn_main"] = PostColumnMain;
 
 
-arr_data_model["boxColumn_main"] = {
+arr_data_model["postColumn_main"] = {
     "Group": "Beam",
-    "type": "boxColumn",
+    "type": "post",
     "3rPartyID": {
         "Tekla": "",
         "Revit": "",
@@ -118,4 +107,4 @@ arr_data_model["boxColumn_main"] = {
     },
     "connectionProperties": {
     }
-};
+}

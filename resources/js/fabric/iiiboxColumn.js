@@ -142,8 +142,11 @@ var class_iiibox_Column 	= function(parent)
 			main.member_boxColumn.floor = parseFloat($("#depthdrpdwn").val());
 			if (main.drawShape(main.member_boxColumn, main.s_type, "#e72f5f", main.member_boxColumn.memberProperties.startPoint.x, main.member_boxColumn.memberProperties.startPoint.y))
 			{
+				
 				undoAction.addAction("memberPlace");
 				memberList.push(main.member_boxColumn);
+				//console.log(memberList);
+				dataModel.insertData("channelColumn", main.member_boxColumn);
 			}
 
 		});

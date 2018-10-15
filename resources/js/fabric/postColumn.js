@@ -101,6 +101,7 @@ var class_post_Column 	= function(parent)
 		main.member_postColumn.floor = parseFloat($("#depthdrpdwn").val());
 		main.drawShape(main.member_postColumn, main.s_type, "#e72f5f", main.member_postColumn.memberProperties.startPoint.x, main.member_postColumn.memberProperties.startPoint.y);
 		memberList.push(main.member_postColumn);
+		dataModel.insertData("postColumn", main.member_postColumn);
 	}
 
 	main.drawShape = function(data, type, color, pointX, pointY)
