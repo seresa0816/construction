@@ -82,7 +82,7 @@ var BoxColumnMain = function () {
             "cap_axialLoad": _cp.cap_axialLoad,
             "cap_momentLoad": _cp.cap_momentLoad
         };
-        this.model["finishProperties"] = cp;
+        this.model["connectionProperties"] = cp;
     }
 }
 
