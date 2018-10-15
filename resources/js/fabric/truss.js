@@ -328,6 +328,7 @@ var class_Truss 	= function(parent)
 		data.plane = plane;
 		data.uid = "truss_" + (memId);
 		memberList.push(data);
+                dataModel.insertData("pitchTruss", data);
 		memId++;
 		return true;
 	}

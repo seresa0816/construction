@@ -74,7 +74,7 @@ var BoxColumnMain = function () {
             "surType": _fp.paintType,
             "paintName": _fp.paintName,
             "paintCoats": _fp.paintCoats,
-            "ZincThick": null,
+            "ZincThick": _fp.galvZincCoatThickness,
             "fProofType": _fp.fireProofType,
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat

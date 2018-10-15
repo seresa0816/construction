@@ -243,6 +243,7 @@ var class_para_Truss 	= function(parent)
 		data.plane = plane;
 		data.uid = "paraTruss_" + (memId);
 		memberList.push(data);
+                dataModel.insertData("parallelTruss", data);
 		memId++;
 		return true;
 	}
