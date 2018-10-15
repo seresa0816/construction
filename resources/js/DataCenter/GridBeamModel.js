@@ -106,7 +106,7 @@ var GridBeamMain = function () {
             "stiffW_size": data.stiffWeldType,
             "frameNo": data.frameNO,
             "frameCMethod": data.frameCMethod,
-            "referenceDrawing": _mp.referenceDrawing;
+            "referenceDrawing": _mp.referenceDrawing
         }
         this.model["memberProperties"] = mp;
     }

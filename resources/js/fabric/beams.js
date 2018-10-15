@@ -52,7 +52,7 @@ function placeGridBeams(beamObj,plane){
             placeBeam(beam,plane);
             beam.uid = "Beam_" + beam.id;
             memberList.push(beam);
-            dataModel.insertData("gridBeam", data);
+            dataModel.insertData("gridBeam", beam);
         }
     }
     
@@ -111,7 +111,7 @@ function placeGridBeams(beamObj,plane){
             placeBeam(beam,plane);
             beam.uid = "Beam_" + beam.id;
             memberList.push(beam);
-            dataModel.insertData("gridBeam", data);
+            dataModel.insertData("gridBeam", beam);
         }
     }
 }

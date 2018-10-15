@@ -499,6 +499,7 @@ var class_h_Braces 	= function(parent)
 			memberList.push(data);
 			canvas.add(group);
 			stopDraggingElement(group);
+                        dataModel.insertData("h_brace", data);
 		}
 	}
 
