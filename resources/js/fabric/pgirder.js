@@ -254,6 +254,7 @@ var class_PGirder = function()
         if (!checkExistMember(data))
         {
         	memberList.push(data);
+                dataModel.insertData("plateGirder", data);
 	        if (data.floor == parseFloat($("#depthdrpdwn").val()))
 	        {
 			    canvas.add(group);
