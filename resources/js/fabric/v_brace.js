@@ -734,6 +734,7 @@ var class_v_Braces 	= function(parent)
 			if (data.leftCol)
 				delete data.leftCol;
 			memberList.push(data);
+                        dataModel.insertData("v_brace", data);
 		}
 	}
 
