@@ -1,19 +1,18 @@
-/* global arr_data_class, arr_data_model, dataModel */
+/* global arr_data_class, dataModel, arr_data_model */
 
-var GridBeamModel = function () {
+var PeriBeamModel = function () {
     var mainModel;
     this.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["gridBeam_main"]().getData(data);
+        mainModel = new arr_data_class["periBeam_main"]().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 
-var GridBeamMain = function () {
-    this.model = clone(arr_data_model["gridBeam_main"]);
+var PeriBeamMain = function () {
+    this.model = clone(arr_data_model["periBeam_main"]);
     this.getData = function (data) {
-        console.log(data);
         dataModel.uid++;
         this.model["uid"] = dataModel.uid;
         this.setMemberProperties(data);
@@ -141,7 +140,7 @@ var GridBeamMain = function () {
             "Support_RHS": _cp.connSupportMethod_RHS,
             "Supported_LHS": _cp.connSupportedMethod_LHS,
             "Supported_RHS": _cp.connSupportedMethod_RHS,
-            "splice_CMark": _cp.connMark_Splice,
+            "sPL_CMark": _cp.connMark_Splice,
             "shearLoad_LHS": _cp.shearLoad_LHS,
             "shearLoad_RHS": _cp.shearLoad_RHS,
             "axialLoad_LHS": _cp.axialLoad_LHS,
@@ -153,11 +152,11 @@ var GridBeamMain = function () {
     };
 };
 
-arr_data_class["gridBeam"] = GridBeamModel;
-arr_data_class["gridBeam_main"] = GridBeamMain;
-arr_data_model["gridBeam_main"] = {
+arr_data_class["periBeam"] = PeriBeamModel;
+arr_data_class["periBeam_main"] = PeriBeamMain;
+arr_data_model["periBeam_main"] = {
     "Group": "Beam",
-    "type": "gridBeam",
+    "type": "periBeam",
     "3rPartyID": {
         "Tekla": "",
         "Revit": "",

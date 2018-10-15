@@ -9,12 +9,12 @@ var DataModel = function () {
 //    var model = new Object();
 
     this.insertData = function (modelName, data) {
-        new_data = new arr_data_class[modelName]().createData(data)
+        new_data = new arr_data_class[modelName]().createData(data);
         arr_data = arr_data.concat(new_data);
         console.log(JSON.stringify(arr_data));
 
 //        alart(JSON.stringify(arr_data));
-    }
+    };
 //
 //    function setMemberProperties(modelName, data) {
 //        arr_data_class[modelName].setMemberProperties(data);
@@ -35,8 +35,8 @@ var DataModel = function () {
 //    function getData(){
 //        return arr_data_class[modelName].getData();
 //    }
-}
-dataModel = new DataModel()
+};
+dataModel = new DataModel();
 
 function clone(obj) {
     if (obj === null || typeof (obj) !== 'object')

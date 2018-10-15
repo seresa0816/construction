@@ -383,6 +383,7 @@ var class_infill_Beam = function()
         	if (!checkExistMember(beamObj))
         	{
         		memberList.push(beamObj);
+                        dataModel.insertData("infillBean", beamObj);
 				canvas.add(line);
 				stopDraggingElement(line);
 			}

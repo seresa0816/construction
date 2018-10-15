@@ -1,3 +1,5 @@
+/* global arr_data_class, arr_data_model, dataModel */
+
 var H_braceModel = function () {
     this.createData = function (data) {
         var returnData = Array();
@@ -9,8 +11,8 @@ var H_braceModel = function () {
         }
 
         return returnData;
-    }
-}
+    };
+};
 
 var H_braceMain = function () {
     this.model = clone(arr_data_model["h_brace_main"]);
@@ -31,14 +33,14 @@ var H_braceMain = function () {
         this.setFinishProperties(data);
         this.setConnectionProperties(data);
         return this.model;
-    }
+    };
 
     this.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
         };
         this.model["memberProperties"] = mp;
-    }
+    };
     this.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
@@ -56,7 +58,7 @@ var H_braceMain = function () {
             "aessCat": _fp.aessCat
         };
         this.model["finishProperties"] = fp;
-    }
+    };
     this.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
@@ -90,8 +92,8 @@ var H_braceMain = function () {
             "ConnDesign": _cp.connectionDesign
         };
         this.model["connectionProperties"] = cp;
-    }
-}
+    };
+};
 
 var H_braceSub = function () {
     this.index = 0;
@@ -108,7 +110,7 @@ var H_braceSub = function () {
         this.setFinishProperties(data);
         this.setConnectionProperties(data);
         return this.model;
-    }
+    };
 
     this.setMemberProperties = function (data) {
         _mp = data.memberProperties;
@@ -122,7 +124,7 @@ var H_braceSub = function () {
             "referenceDrawing": _mp.referenceDrawing
         };
         this.model["memberProperties"] = mp;
-    }
+    };
     this.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
@@ -140,7 +142,7 @@ var H_braceSub = function () {
             "aessCat": _fp.aessCat
         };
         this.model["finishProperties"] = fp;
-    }
+    };
     this.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
@@ -154,8 +156,8 @@ var H_braceSub = function () {
             "axialLoad": ""           //check
         };
         this.model["connectionProperties"] = cp;
-    }
-}
+    };
+};
 
 arr_data_class["h_brace"] = H_braceModel;
 arr_data_class["h_brace_main"] = H_braceMain;

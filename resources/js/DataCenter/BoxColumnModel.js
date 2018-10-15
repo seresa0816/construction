@@ -1,3 +1,5 @@
+/* global arr_data_class, arr_data_model, dataModel */
+
 var BoxColumnModel = function () {
     var mainModel;
     this.createData = function (data) {
@@ -5,8 +7,8 @@ var BoxColumnModel = function () {
         mainModel = new arr_data_class["boxColumn_main"]().getData(data);
         returnData.push(mainModel);
         return returnData;
-    }
-}
+    };
+};
 
 var BoxColumnMain = function () {
     this.model = clone(arr_data_model["boxColumn_main"]);
@@ -17,7 +19,7 @@ var BoxColumnMain = function () {
         this.setFinishProperties(data);
         this.setConnectionProperties(data);
         return this.model;
-    }
+    };
 
     this.setMemberProperties = function (data) {
 
@@ -38,7 +40,7 @@ var BoxColumnMain = function () {
                 "topEl_sign": data.topElevation_sign,
                 "topEl_ft": data.topElevation_ft,
                 "topEl_in": data.topElevation_in,
-                "topEl_fr": data.topElevation_fr,
+                "topEl_fr": data.topElevation_fr
             },
             "w_type": data.weld_type,
             "w_size": data.weld_size,
@@ -49,7 +51,7 @@ var BoxColumnMain = function () {
             "referenceDrawing": _mp.referenceDrawing // check 
         };
         this.model["memberProperties"] = mp;
-    }
+    };
     this.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
@@ -64,10 +66,10 @@ var BoxColumnMain = function () {
             "ZincThick": null,
             "fProofType": _fp.fireProofType,
             "fRating": _fp.fireRating,
-            "aessCat": _fp.aessCat,
+            "aessCat": _fp.aessCat
         };
         this.model["finishProperties"] = fp;
-    }
+    };
     this.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
@@ -83,8 +85,8 @@ var BoxColumnMain = function () {
             "cap_momentLoad": _cp.cap_momentLoad
         };
         this.model["connectionProperties"] = cp;
-    }
-}
+    };
+};
 
 arr_data_class["boxColumn"] = BoxColumnModel;
 arr_data_class["boxColumn_main"] = BoxColumnMain;
@@ -105,4 +107,4 @@ arr_data_model["boxColumn_main"] = {
     },
     "connectionProperties": {
     }
-}
+};

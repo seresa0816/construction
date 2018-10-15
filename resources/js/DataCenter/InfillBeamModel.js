@@ -1,17 +1,17 @@
 /* global arr_data_class, arr_data_model, dataModel */
 
-var GridBeamModel = function () {
+var InfillBeamModel = function () {
     var mainModel;
     this.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["gridBeam_main"]().getData(data);
+        mainModel = new arr_data_class["infillBeam_main"]().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 
-var GridBeamMain = function () {
-    this.model = clone(arr_data_model["gridBeam_main"]);
+var InfillBeamMain = function () {
+    this.model = clone(arr_data_model["infillBeam_main"]);
     this.getData = function (data) {
         console.log(data);
         dataModel.uid++;
@@ -29,7 +29,7 @@ var GridBeamMain = function () {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
             "profile": _mp.profile,
-            "depthvalue": data.depthvalue,
+//            "depthvalue": data.depthvalue,
             "orientation": _mp.orientation,
             "materialGrade": _mp.materialGrade,
             "memberType": _mp.memberType,
@@ -141,7 +141,7 @@ var GridBeamMain = function () {
             "Support_RHS": _cp.connSupportMethod_RHS,
             "Supported_LHS": _cp.connSupportedMethod_LHS,
             "Supported_RHS": _cp.connSupportedMethod_RHS,
-            "splice_CMark": _cp.connMark_Splice,
+            "sPl_CMark": _cp.connMark_Splice,
             "shearLoad_LHS": _cp.shearLoad_LHS,
             "shearLoad_RHS": _cp.shearLoad_RHS,
             "axialLoad_LHS": _cp.axialLoad_LHS,
@@ -153,11 +153,11 @@ var GridBeamMain = function () {
     };
 };
 
-arr_data_class["gridBeam"] = GridBeamModel;
-arr_data_class["gridBeam_main"] = GridBeamMain;
-arr_data_model["gridBeam_main"] = {
+arr_data_class["infillBeam"] = InfillBeamModel;
+arr_data_class["infillBeam_main"] = InfillBeamMain;
+arr_data_model["infillBeam_main"] = {
     "Group": "Beam",
-    "type": "gridBeam",
+    "type": "infilBeam",
     "3rPartyID": {
         "Tekla": "",
         "Revit": "",

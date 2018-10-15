@@ -171,6 +171,7 @@ function placePeripheralBeams(beamObj,plane){
         {
             placeBeam(beamAtLeft,plane);
             memberList.push(beamAtLeft);
+            dataModel.insertData("periBeam", beamAtLeft);
         }
         
         var beamAtRight =new beamMember();
@@ -222,6 +223,7 @@ function placePeripheralBeams(beamObj,plane){
         {
             placeBeam(beamAtRight,plane);
             memberList.push(beamAtRight);
+            dataModel.insertData("periBeam", beamAtRight);
         }
         
     }
@@ -279,6 +281,7 @@ function placePeripheralBeams(beamObj,plane){
         {
             placeBeam(beamAtBottom,plane);
             memberList.push(beamAtBottom);
+            dataModel.insertData("periBeam", beamAtBottom);
         }
         
         var beamAtTop =new beamMember();
@@ -331,6 +334,7 @@ function placePeripheralBeams(beamObj,plane){
         {
             placeBeam(beamAtTop,plane);
             memberList.push(beamAtTop);
+            dataModel.insertData("periBeam", beamAtTop);
         }
     }
 }
@@ -787,6 +791,11 @@ var class_place_beam = function()
                 undoAction.addAction("memberPlace");
                 placeBeam(beamObj, "XY");
                 memberList.push(beamObj);
+                if (main.mode == "periBeam"){
+                    dataModel.insertData("periBeam", beamObj);
+                }else{
+                    dataModel.insertData("gridBeam", beamObj);
+                }
             }
         });
     }
