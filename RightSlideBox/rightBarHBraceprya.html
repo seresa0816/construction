@@ -1,0 +1,499 @@
+    <!-- editHbrace Right Sidebar  -->
+             
+   
+                    <div class="rightFloat" id="rightHBrace">
+                    <ul  class="nav nav-pills">
+                        <li class="active">
+                        <a  href="#editHbrace1" data-toggle="tab">Horizontal Brace Properties</a>
+                        </li>
+                        <li><a href="#editHbrace3" data-toggle="tab">Connection Details</a>
+                        </li>
+                        <li><a href="#editHbrace2" data-toggle="tab">Finish</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="hBrace1">
+                            <form class="m-t-10">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">HB Brace Profile</label>
+                                    <select class="form-control" id="hBraceProfile">
+                                        <option value="" selected="select">W10x12</option>
+                                        <option value="">Option 2</option>
+                                        <option value="">Option 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Material Grade</label>
+                                    <select class="form-control" id="hBraceMaterialGrade">
+                                        <option value="" selected="select">A992</option>
+                                        <option value="">Option 2</option>
+                                        <option value="">Option 3</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Data Source</label>
+                                    <select class="form-control" id="hBraceDataSource">
+                                        <option value="" selected="select">2D design Drawings</option>
+                                        <option value="">Option 2</option>
+                                        <option value="">Option 3</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 padding10 m-b-10">
+                                    <label class="labelBlack control-label disblock">Horizontal Brace Shapes</label>
+                                    <select class="form-control width100" id="hBraceShapes">
+                                        <option value="hfs" selected="select">/</option>
+                                        <option value="hbs">\</option>
+                                        <option value="has">/\</option>
+                                        <option value="hvs">\/</option>
+                                        <option value="hxs">X</option>
+                                        <option value="hws">W</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-10 col-md-10 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Location of Horizontal Brace w.r.t to TOS</label>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 p-r-0">
+                                            <input type="text" class="form-control text-center" placeholder="-" id="hBraceLocationNegative">
+                                            
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 p-r-5">
+                                            <input type="text" class="form-control per70" id="hBraceLocation">
+                                            <div class="txt-right">
+                                                ft
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            
+                                            <select class="form-control per70" id="hBraceLocation_in">
+                                                    <option value="" selected="select">0</option>
+                                                    <option value="">Option 2</option>
+                                                    <option value="">Option 3</option>
+                                                </select>
+                                            <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            
+                                            <select class="form-control per70" id="hBraceLocation_fr">
+                                                    <option value="" selected="select">0</option>
+                                                    <option value="">Option 2</option>
+                                                    <option value="">Option 3</option>
+                                                </select>
+                                            <div class="txt-right">
+                                                fr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 padding10 m-b-10">
+                                    <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                                    <select data-placeholder="" multiple class="chosen-select" name="test" id="hBraceRefNum">
+                                        <option value=""></option>
+                                     <option>a249</option>
+                                                <option>a250</option>
+                                                <option>a251</option>
+                                                <option>a252</option>
+                                                <option>a253</option>
+                                    </select>
+                                </div>
+                            </div>  
+                            </form>
+                            <div class="modifyBtn text-right">
+                                <a href="javascript:void(0);" class="ctb-btn qckModifyBtn">Modify</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="hBrace2">
+                            <form class="m-t-10">
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <label class="custom-control custom-checkbox"> <input id="hBraceSurfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('hbsurfacePreparation1').disabled = true;"
+                                                                onchange="document.getElementById('hbsurfacePreparation1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Surface Preparation </span></label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control" id="hbsurfacePreparation1" disabled="true">
+                                                <option selected="selected" value="">SP</option>
+                                                <option>Option1</option>
+                                                <option>Option2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <label class="custom-control custom-checkbox"> <input id="hBracePrimer" type="checkbox" class="custom-control-input" onclick="document.getElementById('hbprimer1').disabled = true; document.getElementById('hbprimer2').disabled = true;"
+                                                                onchange="document.getElementById('hbprimer1').disabled = !this.checked;document.getElementById('hbprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <label class="labelBlack control-label">Name</label>
+                                            <input type="text" id="hbprimer1" class="form-control" value="TNEMEC#10-99" disabled="true">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 p-l-5">
+                                            <label class="labelBlack control-label">No. of Coats</label>
+                                            <select id="hbprimer2" class="form-control" disabled="true">
+                                                <option value="" selected="select">2</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhBrace" class="custom-control-input" 
+                                                onclick="document.getElementById('hbgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('hbaess1').disabled = !this.unchecked; 
+                                                document.getElementById('hbpaint1').disabled = !this.unchecked;
+                                                document.getElementById('hbpaint2').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer1').disabled = !this.checked;
+                                                document.getElementById('hbprimer2').disabled = !this.checked;
+                                                document.getElementById('hbprimer3').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer4').disabled = !this.unchecked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhBrace" class="custom-control-input" 
+                                                onclick="document.getElementById('hbgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('hbaess1').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer1').disabled = !this.unchecked; 
+                                                document.getElementById('hbprimer2').disabled = !this.unchecked;
+                                                document.getElementById('hbpaint1').disabled = !this.unchecked;
+                                                document.getElementById('hbpaint2').disabled = !this.checked;
+                                                document.getElementById('ehprimer2').disabled = !this.checked;"
+                                                                
+                                                onchange="document.getElementById('hbpaint1').disabled = !this.checked;
+                                                document.getElementById('hbpaint2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <label class="labelBlack control-label">Name</label>
+                                            <input type="text" class="form-control" id="hbpaint1" value="POLYURETHANE" disabled="true">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 p-l-5">
+                                            <label class="labelBlack control-label">No. of Coats</label>
+                                            <select id="hbpaint2" class="form-control" disabled="true">
+                                                <option value="" selected="select">4</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhBrace" class="custom-control-input" 
+                                                onclick="document.getElementById('hbpaint1').disabled = !this.unchecked;
+                                                document.getElementById('hbpaint2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing3').disabled = !this.unchecked; 
+                                                document.getElementById('hbaess1').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer1').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer2').disabled = !this.unchecked;
+                                                document.getElementById('ehprimer2').disabled = !this.unchecked;"
+                                                
+                                                onchange="document.getElementById('hbgalvanization2').disabled = !this.checked;
+                                                document.getElementById('ehgalvanization2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <label class="labelBlack control-label">Surface Prep</label>
+                                            <select id="ehgalvanization1" class="form-control" disabled="true">
+                                                <option value="" selected="select">SP8</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 p-l-5">
+                                            <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                            <select id="hbgalvanization2" class="form-control per70" disabled="true">
+                                                <option value="" selected="select">10</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                            <div class="txt-right">
+                                                mils
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 p-r-5">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhBrace" class="custom-control-input" 
+                                                onclick="document.getElementById('hbpaint1').disabled = !this.unchecked;
+                                                document.getElementById('ehpaint2').disabled = !this.unchecked;
+                                                document.getElementById('hbgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('hbaess1').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer1').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer2').disabled = !this.checked;
+                                                document.getElementById('ehprimer2').disabled = !this.checked;"
+                                                                
+                                                onchange="document.getElementById('hbfireProofing2').disabled = !this.checked;
+                                                document.getElementById('ehfireProofing2').disabled = !this.checked; document.getElementById('ehfireProofing3').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <label class="labelBlack control-label">Surface Prep</label>
+                                            <select id="hbsurfacePreparation1" class="form-control" disabled="true">
+                                                <option value="" selected="select">SP3</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <label class="labelBlack control-label">Fire Proofing Type</label>
+                                            <select id="hbfireProofing2" class="form-control per70" disabled="true">
+                                                <option value="" selected="select">1.8</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 p-l-5">
+                                            <label class="labelBlack control-label">Fire Rating</label>
+                                            <select id="hbfireProofing3" class="form-control per70" disabled="true">
+                                                <option value="" selected="select">10</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                            <div class="txt-right">
+                                                hr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhBrace" class="custom-control-input" 
+                                                onclick="document.getElementById('hbpaint1').disabled = !this.unchecked;
+                                                document.getElementById('hbpaint2').disabled = !this.unchecked;
+                                                document.getElementById('hbgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing2').disabled = !this.unchecked;
+                                                document.getElementById('hbfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('hbprimer1').disabled = !this.unchecked; 
+                                                document.getElementById('hbprimer2').disabled = !this.unchecked;
+                                                document.getElementById('ehprimer1').disabled = !this.checked;
+                                                document.getElementById('ehprimer2').disabled = !this.checked;"
+                                                                onchange="document.getElementById('hbaess1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                             <label class="labelBlack control-label">Category</label>
+                                            <select id="hbaess1" class="form-control" disabled="true">
+                                                <option selected="selected" value="">2</option>
+                                                <option>Option1</option>
+                                                <option>Option2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                            <div class="modifyBtn text-right">
+                                <a href="javascript:void(0);" class="ctb-btn qckModifyBtn">Modify</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="hBrace3">
+                            <form class="m-t-10">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                        <label class="labelBlack control-label">Connection Mark</label>
+                                        <select class="form-control" id="hBraceMark">
+                                            <option value="" selected="select"></option>
+                                            <option value="">Option 2</option>
+                                            <option value="">Option 3</option>
+                                        </select>
+                                    </div>
+                               
+                            </div>
+                            <div class="row">
+                                    <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                        <label class="labelBlack control-label">Connection Method - Brace to Gusset</label>
+                                        <select class="form-control" id="hBraceMethodGusset">
+                                            <option value="" selected="select"></option>
+                                            <option value="">Option 2</option>
+                                            <option value="">Option 3</option>
+                                        </select>
+                                    </div>
+                               
+                            </div>
+                            <div class="row">
+                                    <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                        <label class="labelBlack control-label">Connection Type - Gusset to Beam</label>
+                                        <select class="form-control" id="hBraceTypeBeam">
+                                            <option value="" selected="select"></option>
+                                            <option value="">Option 2</option>
+                                            <option value="">Option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                        <label class="labelBlack control-label">Connection Method - Gusset to Beam</label>
+                                        <select class="form-control" id="hBraceMethodBeam">
+                                            <option value="" selected="select"></option>
+                                            <option value="">Option 2</option>
+                                            <option value="">Option 3</option>
+                                        </select>
+                                    </div>
+                               
+                            </div>
+                            <div class="row Hshape1 m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial1">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                   <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-01.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-01.png'">
+                                </div>
+                            </div>
+                            <div class="row Hshape2 m-b-10 thisClass">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial2">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-02.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-02.png'">
+                                </div>
+                            </div>
+                            <div class="row Hshape3 m-b-10 thisClass" >
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial3">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-03.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-03.png'">
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial4">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape4 m-b-10 thisClass">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial5">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-04.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-04.png'">
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial6">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape5 m-b-10 thisClass">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial7">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-05.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-05.png'">
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial8">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape6 m-b-10 thisClass">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial9">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial10">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial11">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="hBraceAxial12">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-06.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-06.png'">
+                                </div>
+                            </div>
+                            </form>
+                            <div class="modifyBtn text-right">
+                                <a href="javascript:void(0);" class="ctb-btn qckModifyBtn">Modify</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <script type="text/javascript">
+
+					    $(function() {
+					      $('.chosen-select').chosen();
+					      $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+					    });
+					  </script>

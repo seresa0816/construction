@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="286 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Main_Steel);
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Main_Steel">
+      <rect x="286" width="34" height="34"/>
+    </clipPath>
+  </defs>
+  <g id="Main_Steel" data-name="Main Steel" class="cls-1">
+    <g id="Group_7" data-name="Group 7" transform="translate(263 -617)">
+      <g id="Rectangle_1529" data-name="Rectangle 1529" class="cls-2" transform="translate(24 619)">
+        <rect class="cls-4" width="32" height="30"/>
+        <rect class="cls-5" x="0.75" y="0.75" width="30.5" height="28.5"/>
+      </g>
+      <g id="Rectangle_1530" data-name="Rectangle 1530" class="cls-3" transform="translate(24 623)">
+        <rect class="cls-4" width="32" height="22"/>
+        <rect class="cls-5" x="0.5" y="0.5" width="31" height="21"/>
+      </g>
+      <line id="Line_304" data-name="Line 304" class="cls-3" y2="21" transform="translate(36.5 623.5)"/>
+      <line id="Line_305" data-name="Line 305" class="cls-3" x2="5.5" transform="translate(27.5 627.5)"/>
+      <line id="Line_306" data-name="Line 306" class="cls-3" x2="5.5" transform="translate(27.5 639.5)"/>
+      <g id="Ellipse_34" data-name="Ellipse 34" class="cls-3" transform="translate(28 631)">
+        <circle class="cls-4" cx="2.5" cy="2.5" r="2.5"/>
+        <circle class="cls-5" cx="2.5" cy="2.5" r="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

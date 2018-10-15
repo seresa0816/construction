@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88 88">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-File_Manager);
+      }
+
+      .cls-2 {
+        fill: #fff5e2;
+      }
+
+      .cls-3 {
+        fill: #8e723d;
+      }
+    </style>
+    <clipPath id="clip-File_Manager">
+      <rect width="88" height="88"/>
+    </clipPath>
+  </defs>
+  <g id="File_Manager" data-name="File Manager" class="cls-1">
+    <path id="Path_2039" data-name="Path 2039" class="cls-2" d="M42.5,0A42.5,42.5,0,1,1,0,42.5,42.5,42.5,0,0,1,42.5,0Z" transform="translate(2 2)"/>
+    <g id="noun_File_1909648" transform="translate(261.5 -350.6)">
+      <g id="Group_4493" data-name="Group 4493" transform="translate(-0.265)">
+        <rect id="Rectangle_1563" data-name="Rectangle 1563" class="cls-3" width="21.62" height="2.22" transform="translate(-227.234 388.6)"/>
+        <rect id="Rectangle_1564" data-name="Rectangle 1564" class="cls-3" width="21.62" height="2.22" transform="translate(-227.234 396.6)"/>
+        <rect id="Rectangle_1565" data-name="Rectangle 1565" class="cls-3" width="21.62" height="2.22" transform="translate(-227.234 403.6)"/>
+      </g>
+      <path id="Path_2039-2" data-name="Path 2039" class="cls-3" d="M-201.5,403.4V371.6h-28.93l-6.07,7.491V419.37h35V403.4Zm-28.753-28.911v4.883H-234.2Zm26.981,42.609h-31.456V381.588h6.247V373.82h25.209v43.275Z" transform="translate(2)"/>
+    </g>
+  </g>
+</svg>

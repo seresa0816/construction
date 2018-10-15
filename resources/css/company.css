@@ -1,0 +1,329 @@
+p {
+	font-size: 14px;
+}
+.page-heading {
+	padding: 15px 0;
+}
+.page-heading .textBlue {
+	font-size: 19px;
+	color: #0078d7!important;
+	font-weight: 500;
+	display: inline-block;
+	margin: 0;
+}
+.contactContainer {
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    margin: 0;
+}
+.conHeaderBlk {
+    position: relative;
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+.chbLeft {
+    position: relative;
+    top: 15px;
+}
+.chbLeft img {
+    width: 100%;
+}
+.chbLeft h4 {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 0 0 5px;
+    color: #787877;
+}
+.chbRight {
+    display: inline-block;
+    padding: 0 15px 0 0;
+}
+.chbRight img {
+    display: inline-grid;
+}
+.chbRightImg img {
+    width: 40px;
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+}
+.chbRight p {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #787877;
+}
+.conBodyBlk {
+    position: relative;
+    min-height: 400px;
+    padding: 10px;
+}
+.conLeftBlk {
+    border-left: 1px solid #f2f2f2;
+}
+.conFormHeader {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.conFormHeader h4 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #1e88e5;
+}
+.conFormBody {
+    padding: 15px;
+}
+.conFormBody .form-group {
+    margin-bottom: 15px;
+}
+.conFormBody label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: #787878;
+    font-weight: 400px;
+}
+.conFormBody .form-control {
+    width: 100%;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size: 13px;
+    background: #fff;
+    padding: 5px;
+    height: 36px!important;
+    color: #787878;
+    border: 1px solid #e3e3e3;
+}
+.conFormAction {
+    padding: 10px 15px;
+    background: #f5f5f5;
+}
+.conFormAction button {
+    padding: 6px 15px;
+    background: #1e88e5;
+    color: #fff;
+    outline: 0;
+    border: 1px solid #1e88e5;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.conFormAction .cfa-cancel {
+    background: #fff;
+    color: #1e88e5;
+    border: 1px solid #1e88e5;
+}
+.conFormBody .dropify-wrapper {
+    height: 100px;
+    border: 1px solid #f0f0f6;
+}
+.cbbAccordion .panel-group {
+    margin-bottom: 0
+}
+.cbbAccordion .panel {
+    margin-bottom: 10px;
+    background-color: #fff;    
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.cbbAccordion .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: none;
+    border-radius: 0;
+}
+.cbbAccordion .panel-body {
+    min-height: 300px;
+    position: relative;
+    border: 0!important;
+}
+.cbbAccordion .panel-title {
+    font-size: 15px;
+}
+.cbbAccordion .panel-title a{
+    color: #787877;
+}
+.cbbAccordion .panel-heading.active a {
+    display: block;
+    color: #0078d7;
+    font-size: 15px;
+    text-decoration: none;
+}
+/* .cbbAccordion .panel-heading a:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    float: left;
+    padding-right: 5px;
+}
+.cbbAccordion .panel-heading.active a:before {
+    font-family: FontAwesome;
+    content: "\f0d7";
+} */
+.chbRightImg, .currentLogoBlk, .conAddAddress, .conAddContacts, .cbbAccordion, .alert-container, .addressInfoBlk, #callAddressForm, .contactsTableHide, #callContactForm1, #updateContacts, .contactSearch, #cus-pagination {
+    display: none;
+}
+.cbbNodata img, .cbbAccorNodata img {
+    width: 50px;
+}
+.cbbNodata {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 100px;
+}
+.cbbNodata img {
+    width: 50px;
+}
+.cbbNodata p {
+    padding: 5px 0;
+    margin: 0;
+    font-size: 14px;
+    color: #d9d9de;
+}
+.clbLogo img {
+    width: 100%;
+}
+.closeLogo {
+    position: absolute;
+    width: 40px!important;
+    right: 0;
+    top: 8px;
+    cursor: pointer;
+}
+.addressInfoBlk {
+    border: 1px solid #f2f2f2;
+}
+.addressInfoBlk h4 {
+    margin: 0;
+    font-size: 16px;
+    padding: 10px;
+    color: #787877;
+}
+.addressInfoBlk p {
+    margin: 0;
+    padding: 10px;
+    line-height: 30px;
+    color: #b4b4be;
+}
+.aibAction {
+    background: #f5f5f5;
+    padding: 8px 10px;
+}
+.aibAction .fa {
+    font-size: 20px;
+    padding: 0 5px;
+    color: #787877;
+    cursor: pointer;
+}
+button {
+    padding: 6px 15px;
+    background: #1e88e5;
+    color: #fff;
+    outline: 0;
+    border: 1px solid #1e88e5;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.clb-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: none;
+}
+.clb-close .fa {
+    color: #b5b5b5;
+    font-size: 16px;
+}
+.alert-container .alert {
+    padding: 10px 15px;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-size: 15px;
+}
+.alert-container .alert .fa {
+    font-size: 18px;
+    padding-right: 10px;
+}
+.alert-success h4, .alert-danger h4{
+	margin: 0;
+	font-size: 16px;
+}
+.alert-success, .alert-danger{
+	padding: 15px 15px;
+    position: absolute;
+    top: 0;
+    width: 100%;   
+    border-radius: 0;
+}
+.container-fluid{
+	position: relative;
+}
+/*deleteModal CSS*/
+.m-t-30 {
+	margin-top: 30px;
+}
+.modal h4 {
+    font-size: 18px;
+}
+.error-modal{
+    height: 40px;
+    position: relative;
+    bottom: 10px;
+}
+.btn-secondary, .btn-secondary.disabled {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(169, 169, 169, 0.14), 0 3px 1px -2px rgba(169, 169, 169, 0.2), 0 1px 5px 0 rgba(169, 169, 169, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(169, 169, 169, 0.14), 0 3px 1px -2px rgba(169, 169, 169, 0.2), 0 1px 5px 0 rgba(169, 169, 169, 0.12);
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    background-color: #ffffff;
+    color: #99abb4;
+}
+.btn-secondary {
+    border-color: #B4B4BE;
+}
+.btn {
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn-secondary:hover{
+    background-color: #fff!important;
+    color: #B4B4BE!important;
+     border-color: #B4B4BE;
+}
+.btn-danger, .btn-danger.disabled{
+     background-color: #F44336;
+}
+.btn-danger.active.focus, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger.focus:active, .btn-danger:active:focus, .btn-danger:active:hover, .open > .dropdown-toggle.btn-danger.focus, .open > .dropdown-toggle.btn-danger:focus, .open > .dropdown-toggle.btn-danger:hover, .btn-danger.focus, .btn-danger:focus{
+    background-color: #F44336;
+    border:1px solid #F44336;
+}
+.btn-danger{
+    background-color: #F44336;
+}
+.btn-secondary {
+    border-color: #B4B4BE;
+}
+.btn-secondary.active, .btn-secondary:focus, .btn-secondary.disabled.active, .btn-secondary.disabled:focus{
+    color: #B4B4BE!important; 
+}
+@media (min-width: 576px){
+.modal-dialog.modal-delete{
+    max-width: 400px;
+    margin: 160px auto;
+    }
+}
+.delete-footer{
+    background-color: #f5f5f5;
+}
+/*end deletemodal CSS*/

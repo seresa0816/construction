@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-select);
+      }
+
+      .cls-2 {
+        fill: #787877;
+      }
+    </style>
+    <clipPath id="clip-select">
+      <rect width="56" height="56"/>
+    </clipPath>
+  </defs>
+  <g id="select" class="cls-1">
+    <g id="noun_Cursor_939126" transform="matrix(0.985, 0.174, -0.174, 0.985, 15.345, 7.967)">
+      <path id="Path_2000" data-name="Path 2000" class="cls-2" d="M25.371,14.454,6.641,2.264a.819.819,0,0,0-1.267.686V25.466a.819.819,0,0,0,1.319.649l5.234-4.025,5.4,9.949a.819.819,0,0,0,1.111.327L24.2,29.241a.82.82,0,0,0,.329-1.111l-5.41-9.963,6.093-2.261a.817.817,0,0,0,.163-1.451Zm-7.711,2.508a.818.818,0,0,0-.435,1.159L22.695,28.2l-4.318,2.344-5.47-10.074a.816.816,0,0,0-.55-.41.779.779,0,0,0-.169-.017.82.82,0,0,0-.5.169L7.011,23.8V4.461l16.1,10.479Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

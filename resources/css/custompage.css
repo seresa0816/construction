@@ -1,0 +1,29 @@
+.myadmin-dd .dd-list .dd-item .dd-handle{
+	
+	
+	width:180px;
+}
+
+.dd-handle {
+    display: block;
+    height: 30px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    cursor: move;
+    color: #979898;
+    text-decoration: none;
+    font-weight: bold;
+     border: 0px solid #e5e5e5 !important; 
+    background: #fafafa !important;
+    box-sizing: border-box;
+}
+
+.myadmin-dd .dd-list .dd-item .dd-handle {
+    background: none !important;
+    border: 0px solid rgba(120, 130, 140, 0.13) !important; 
+    padding: 8px 16px;
+    height: auto;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    border-radius: 0;
+}

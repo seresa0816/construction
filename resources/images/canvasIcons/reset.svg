@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-reset);
+      }
+
+      .cls-2 {
+        fill: #787877;
+      }
+    </style>
+    <clipPath id="clip-reset">
+      <rect width="56" height="56"/>
+    </clipPath>
+  </defs>
+  <g id="reset" class="cls-1">
+    <g id="noun_reset_1569853" transform="translate(-4 -6)">
+      <g id="Group_4426" data-name="Group 4426" transform="translate(15 18)">
+        <path id="Path_2003" data-name="Path 2003" class="cls-2" d="M33.457,970.362a15.578,15.578,0,0,0-15.27,12.629H15l3.886,4.857,3.886-4.857h-2.6a13.6,13.6,0,1,1,1.518,9.729l-1.609,1.108a15.543,15.543,0,1,0,13.372-23.466ZM28.6,987.848h6.8V979.1H33.457v6.8H28.6" transform="translate(-15 -970.362)"/>
+      </g>
+    </g>
+  </g>
+</svg>

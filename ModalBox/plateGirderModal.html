@@ -1,0 +1,619 @@
+<!-- plategirderModal  -->
+
+<div id="plategirderModal" class="modalcss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg modal700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12 text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#pGirder1" data-toggle="tab">Plate
+                                Girder Properties</a></li>
+                        <li><a href="#pGirder3" id="plateconntab" data-toggle="tab">Connection
+                                Details</a></li>
+                        <li><a href="#pGirder2" data-toggle="tab">Finish</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active " id="pGirder1">
+                        <form>
+                            <div class="row appendtextbox">
+                                <div class="col-lg-3 col-md-3 padding10 m-b-10" id="girdergrade">
+                                    <label class="labelBlack control-label">Plate Material Grade
+                                    </label>
+                                    <select class="form-control pgselect1" id="plategridergrade">
+                                        <option value="select">select</option>
+                                     
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Plate Girder Alignment</label>
+                                    <select class="form-control" id="plategrideralignment" disabled="true">
+                                        <option value="Straight">Straight</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Top Flange Plate Thickness</label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-5 col-md-5 padding5">
+                                            <select class="form-control per70 depthfield" id="pgtfptin">
+                                           
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 padding5">
+                                            <select class="form-control per70 depthfield" id="pgtfptfr">
+                                             
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                    <label class="labelBlack control-label padding10">Top Flange Plate width</label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <input type="text" class="form-control per70" id="pgtfpwft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">ft</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgtfpwin">
+
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgtfpwfr">
+                                              
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Bottom Flange Plate Thickness</label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-5 col-md-5 padding5">
+                                            <select class="form-control per70 depthfield" id="pgbfptin">
+                                       
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 padding5">
+                                            <select class="form-control per70 depthfield" id="pgbfptfr">
+                                               
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-45 padding10 m-b-10">
+                                    <label class="labelBlack control-label padding10">Bottom Flange Plate width</label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <input type="text" class="form-control per70"  id="pgbfpwft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">ft</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgbfpwin">
+                                              
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgbfpwfr">
+                                              
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label ">Web Plate Thickness
+                                    </label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-5 col-md-5 padding5">
+                                            <select class="form-control per70" id="pgwptin">
+                                             
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 padding5">
+                                            <select class="form-control per70" id="pgwptfr">
+                                              
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                    <label class="labelBlack control-label padding10">Web Plate width</label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                            <input type="text" class="form-control per70 depthfield" id="pgwpwft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">ft</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70 depthfield" id="pgwpwin">
+                                            </select>
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70 depthfield" id="pgwpwfr">
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-8 col-lg-8 padding10">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="pgcamber" type="checkbox" value="Camber" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Camber</span>
+                                    </label>
+                                    <div class="row padding10">
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="plategridercamber" disabled="true">
+                                                <option value="select">select</option>
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4 padding10">
+                                    <label class="labelBlack control-label"> Weld Type:</label>
+                                </div>
+                                <div class="col-lg-5 col-md-5 ">
+                                    <label class="labelBlack control-label"> Weld Size/Effective Throat: </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 col-md-12 padding10">
+                                    <div class="row ">
+                                        <div class="col-lg-4 col-md-4 p-r-0">
+                                            <label class="labelBlack control-label">Web Plate & Top Flange Plate</label>
+                                            <select class="form-control col-lg-6" id="plategriderwebtype1">
+                                                <option value="select">select</option>
+                                               
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label">Web Plate & Top Flange Plate</label>
+                                            <div class="col-lg-5 p-l-0">
+                                                <select class="form-control col-lg-10 per70" id="plategriderwebsize1">
+                                                    <option value="select">select</option>
+                                                   
+                                                </select>
+                                                <div class="txt-right">in</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10">
+                                    <label class="labelBlack control-label"> Weld Type:</label>
+                                </div>
+                                <div class="col-lg-5 col-md-5 ">
+                                    <label class="labelBlack control-label"> Weld Size/Effective Throat: </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 col-md-12 padding10">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 p-r-0">
+                                            <label class="labelBlack control-label">Web Plate & Bottom Flange Plate</label>
+                                            <select class="form-control col-lg-6" id="plategriderwebtype2">
+                                                <option value="select">select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label">Web Plate & Bottom Flange Plate</label>
+                                            <div class="col-lg-5 p-l-0">
+                                                <select class="form-control col-lg-10 per70" id="plategriderwebsize2">
+                                                    <option value="select">select</option>
+                                                </select>
+                                                <div class="txt-right">in</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row p-t-10">
+                                <div class="col-lg-6 col-md-6 padding10 m-b-10">
+                                    <label class="labelBlack control-label">TOS</label>
+                                    <div class="row ">
+                                        <div class="col-lg-2 p-r-5">
+                                            <select class="form-control p-r-0" id="plusminus">
+                                                <option value="+">+</option>
+                                                <option value="-">-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <input type="text" class="form-control per70" id="pgtosft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">ft</div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="pgtosin">
+                                              
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgtosfr">
+                                              
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                    <label class="labelBlack control-label m-l-10">FFL</label>
+                                    <div class="row padding10">
+									    <div class="col-lg-3 p-r-5">
+                                            <select class="form-control p-r-5" id="plusminusffl">
+                                                <option value="+">+</option>
+                                                <option value="-">-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgfflin">
+                                             
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding5">
+                                            <select class="form-control per70" id="pgfflfr">
+                                           
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 padding10">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="pgShearstud" type="checkbox" value="Shear Stud" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Shear Stud
+                                    </span></label>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 p-r-5">
+                                            <label class="labelBlack control-label disblock">DIA</label>
+                                            <select class="form-control per70" id="pgdia" disabled="true">
+                                                <option value="select">select</option>
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 p-r-5">
+                                            <label class="labelBlack control-label disblock">Length</label>
+                                            <select class="form-control per70" id="pglength1" disabled="true">
+                                                <option value="select">select</option>
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-2 p-l-5">
+                                            <label class="labelBlack control-label disblock">Count</label>
+                                            <input type="text" class="form-control w100" id="pgcount" disabled="true" onkeypress="return AllowNumbersOnly(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 padding10 m-b-10">
+                                    <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                                    <select data-placeholder="" multiple class="referenceSelect" name="test" id="pgreferencenum">
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="pGirder2">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Surface Preparation </label> 
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <select class="form-control" id="pgsurfacePreparation1">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" id="pgprimer1" class="form-control"disabled="true">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="pgprimer2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" class="form-control" id="pgpaint1" disabled="true">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="pgpaint2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                    <div class="col-lg-7 nopadding">
+                                        <select id="pggalvanization2" class="form-control per60" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            mils
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Fire Proofing Type</label>
+                                    <select id="pgfireProofing2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Fire Rating</label>
+                                    <div class="col-lg-7 nopadding">
+                                        <select id="pgfireProofing3" class="form-control per70" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            hr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkaess" type="radio" name="rdhb" value="AESS" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Category</label>
+                                    <select id="pgaess1" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="pGirder3">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label"><b>Left</b></label>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label"><b>Right</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Mark</label>
+                                            <select class="col-lg-6 form-control per70 cmark1" id="pgconmark1">
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Mark</label>
+                                            <select class="col-lg-6 form-control per70 cmark2" id="pgconmark2">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Type</label>
+                                            <select class="col-lg-6 form-control per70" id="pgcontype1" disabled="true">
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Type</label>
+                                            <select class="col-lg-6 form-control per70" id="pgcontype2" disabled="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Support Side</label>
+                                            <select class="col-lg-6 form-control per70" id="pgcmss1" disabled="true"> 
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Support Side</label>
+                                            <select class="col-lg-6 form-control per70" id="pgcmss3" disabled="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Supported Side</label>
+                                            <select class="col-lg-6 form-control per70" id="pgcmss2" disabled="true"> 
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Supported Side</label>
+                                            <select class="col-lg-6 form-control per70" id="pgcmss4" disabled="true">
+                                            </select>
+                                        </div> 
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Shear Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="pgshearload1">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Shear Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="pgshearload2">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Axial Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="pgaxialload1">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Axial Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="pgaxialload2">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="row Hshape2 m-b-10 thisClass">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload3">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_Shapes/Brace-shape-02.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_MaterialGrade/Brace-shape-02.png'">
+                                </div>
+                            </div>
+
+                            <div class="row Hshape3 m-b-10 p-r-0 thisClass">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload4">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 p-l-0">
+                                    <img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_Shapes/Brace-shape-03.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_MaterialGrade/Brace-shape-03.png'">
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload5">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                            </div>
+                            <div class="row Hshape4 m-b-10 thisClass">
+                                <div class="col-lg-3 col-md-3 p-r-0">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload6">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 p-l-0">
+                                    <img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_Shapes/Brace-shape-04.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_MaterialGrade/Brace-shape-04.png'">
+                                </div>
+                                <div class="col-lg-3 col-md-3 p-l-20">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload7">
+                                    <div class="txt-right f-s-11">Kips</div>
+                                </div>
+                            </div>
+                            <div class="row Hshape5 m-b-10 thisClass">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload8">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_Shapes/Brace-shape-05.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_MaterialGrade/Brace-shape-05.png'">
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload9">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                            </div>
+                            <div class="row Hshape6 m-b-10 thisClass">
+                                <div class="col-lg-3 col-md-3 p-r-30">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload10">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload11">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload12">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 p-l-30">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="pgaxialload13">
+                                    <div class="txt-right">Kips</div>
+                                </div>
+                                <div class="col-lg-6 col-md-5">
+                                    <img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_Shapes/Brace-shape-06.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/Brace_MaterialGrade/Brace-shape-06.png'">
+                                </div>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="">
+                    <a href="javascript:void(0);" class="modalcancel" data-dismiss="modal" id="PlateClose" aria-label="Close">Cancel</a> <a href="javascript:void(0);" id="PlateApply" class="modalapply">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/memberplacementmodal/plateGirderModal.js"></script>

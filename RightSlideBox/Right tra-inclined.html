@@ -1,0 +1,578 @@
+	<!-- tra-Chord Right Sidebar  -->
+			
+	                    <div class="rightFloat" id="rightTrussPitched">
+                         <ul class="nav nav-pills">
+                            <li class="active">
+                            <a  href="#tzbeam1" data-toggle="tab">Truss- Inclined Properties</a>
+                            </li>
+                            <li><a href="#tzbeam3" data-toggle="tab">Connection Details</a>
+                            </li>                           
+						   <li><a href="#tzbeam2" data-toggle="tab">Finish</a>
+                            </li>
+							
+                        </ul>
+                        <div class="tab-content clearfix" >
+                        <div class="tab-pane active" id="tzbeam1">
+                            <form class="m-t-10">
+                                <div class="row m-b-10">
+                                <div class="col-lg-12">
+								
+									<div class="col-lg-5 col-md-5">
+										   <label class="labelBlack control-label"><b>Inclined Bracings/Lacings</b></label>
+										
+										     <div class="row">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+												    <label class="labelBlack control-label">Member Profile</label>
+													<select class="form-control per90" id="trapezoidalprofile3">
+																<option value="Select">Select</option>
+                                                                <option value="W14X53">W14X53</option>
+                                                                <option value="W16X50">W16X50</option>
+                                                 </select>
+                                                </div>
+													
+												<div class="col-lg-4 col-md-4 p-r-5" >
+												<label class="labelBlack control-label w125">Member Orientation</label>
+													<select class="form-control per70" id="inclinedMemberOrientation">
+																<option value="0">0</option>
+                                                                <option value="90">90</option>
+                                                     </select>
+													<div class="txt-right">
+														deg
+													</div>
+												</div>
+												
+												<div class="col-lg-4 col-md-4 p-r-5 w125">
+												<label class="labelBlack control-label w125" >Material Grade</label>
+													<select class="form-control per70" id="inclinedMaterialGrade">
+															   <option value="Select">Select</option>
+                                                                <option value="A36">A36</option>
+                                                                <option value="A992">A992</option>
+                                                                <option value="A572 Gr.50">A572 Gr.50</option>
+                                                   </select>
+													
+												</div>
+												
+											</div><br />
+											<div class="row">
+                                                <div class="col-lg-3 col-md-3 p-r-5">
+												    <label class="labelBlack control-label w250">Inclined Bracings/Lacings Layout Pattern</label>
+													<select class="form-control col-md-8" id="hbshapes">
+														<option value="hfs" selected="select">/</option>
+														<option value="hbs">\</option>
+														<option value="has">/\</option>
+														<option value="hvs">\/</option>
+														<option value="hxs">X</option>
+														<option value="hws">W</option>
+													</select>
+                                                </div>
+													
+												
+											</div><br />
+											<div class="row">
+											<div class="col-lg-10 col-md-10 p-r-5">
+												
+												
+												<label class="custom-control custom-checkbox"> <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('trainclined').disabled = true; document.getElementById('trainclined1').disabled = true; document.getElementById('trainclined2').disabled = true;"
+                                                                onchange="document.getElementById('trainclined').disabled = !this.checked;document.getElementById('trainclined1').disabled = !this.checked; document.getElementById('trainclined2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">If the inclined bracing/lacing does not connect to the vertical post, specify the end point distance from left end  </span></label>
+														<div class="row">
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<input type="text" class="form-control per70" disabled="true" id="trainclined">
+															<div class="txt-right">
+																ft
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<select class="form-control per70" disabled="true" id="trainclined1" >
+															   <option value="" selected="select">0</option>
+                                                                                <option value="">1</option>
+                                                                                <option value="">2</option>
+                                                                                <option value="">3</option>
+                                                                                <option value="">4</option>
+                                                                                <option value="">5</option>
+                                                                                <option value="">6</option>
+                                                                                <option value="">7</option>
+                                                                                <option value="">8</option>
+                                                                                <option value="">9</option>
+                                                                                <option value="">10</option>
+                                                                                <option value="">11</option>
+                                                           </select>
+															<div class="txt-right">
+																in
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<select class="form-control per70" disabled="true" id="trainclined2" >
+															   <option value="" selected="select">0</option>
+                                                                                <option value="">1/16</option>
+                                                                                <option value="">1/8</option>
+                                                                                <option value="">3/16</option>
+                                                                                <option value="">1/4</option>
+                                                                                <option value="">5/16</option>
+                                                                                <option value="">3/8</option>
+                                                                                <option value="">7/16</option>
+                                                                                <option value="">1/2</option>
+                                                                                <option value="">9/16</option>
+                                                                                <option value="">5/8</option>
+                                                                                <option value="">11/16</option>
+                                                                                <option value="">3/4</option>
+                                                                                <option value="">13/16</option>
+                                                                                <option value="">7/8</option>
+                                                                                <option value="">15/16</option>
+															   
+                                                           </select>
+															<div class="txt-right">
+																fr
+															</div>
+														</div>
+														
+														</div>
+												</div>
+											</div>
+											
+											
+                                        </div>
+									
+								</div>
+							</div>
+							                 <div class="col-lg-12  m-t-10">
+                                                  <label class="labelBlack control-label disblock">Reference Drawing Numbers</label>
+                                                <select data-placeholder="" multiple class="chosen-select" name="test" id="TrapezoidalRefNumber">
+													<option value=""></option>
+													<option>a249</option>
+													<option>a249</option>
+													<option>a249</option>
+													<option>a249</option>
+													<option>a249</option>
+                                                </select>
+                                               </div>
+											  
+                            
+							 </form>
+                        </div>
+                        <div class="tab-pane" id="tzbeam3">
+							<form class="m-t-10">
+                                 <div class="col-md-6 padding10 ">
+                                <div class="row">
+								<label class="labelBlack control-label col-lg-12 font18-label p-l-52 f-z-16">Inclined Bracing Connection Details:</label>
+										<div class="col-lg-1 col-md-1 m-b-10">
+										</div>
+										<div class="col-lg-4 col-md-4 m-b-10">
+										   <div class="row">
+												<div class="col-lg-12 col-md-12">
+												<h6><b>Left</b></h6>
+												<label class="labelBlack control-label ">Connection Mark</label>
+																	<select class="form-control  w141" id="leftConnectionMark">
+																	   <option value="" selected="select">select</option>
+																    </select>
+												
+												<label class="labelBlack control-label ">Connection Type</label>
+																	<select class="form-control  w141" id="leftConnectiontype">
+																	  <option value="" selected="select">select</option>
+																	</select>
+												<label class="labelBlack control-label ">Connection Method</label>
+																	<select class="form-control  w141" id="leftConnectionmethod">
+																	   <<option value="" selected="select">select</option>
+																	</select>					
+												</div>
+											</div>
+											
+										</div>
+								<div class="col-lg-2 col-md-2 m-b-10">
+								</div>
+                                <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                    <div class="row">
+												<div class="col-lg-12 col-md-12">
+												<h6><b>Right</b></h6>
+												<label class="labelBlack control-label ">Connection Mark</label>
+																	<select class="form-control  w141" id="leftConnectionMark1">
+																	   <option value="" selected="select">select</option>
+																	</select>
+											
+												<label class="labelBlack control-label ">Connection Type</label>
+																	<select class="form-control  w141" id="leftConnectionMark1">
+																	   <option value="" selected="select">select</option>
+																	</select>
+												<label class="labelBlack control-label ">Connection Method</label>
+																	<select class="form-control  w141" id="leftConnectionMark1">
+																	   <option value="" selected="select">select</option>
+																	</select>					
+												</div>
+											</div>
+								</div>
+								 </div>
+								</div>
+							
+							<div class="row Hshape1 m-b-10 m-l-36">
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload1">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                     <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-01.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-01.png'">
+                                 </div>
+                            </div>
+                            <div class="row Hshape2 m-b-10" style="display: none;">
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload2">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                     <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-02.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-02.png'">
+                                 </div>
+                            </div>
+                            <div class="row Hshape3 m-b-10 p-r-0" style="display: none;">
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload3">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 p-l-0">
+                                     <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-03.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-03.png'">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload4">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape4 m-b-10" style="display: none;">
+                                <div class="col-lg-2 col-md-2 p-r-0">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload5">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 p-l-0">
+                                   <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-04.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-04.png'">
+                                 </div>
+                                <div class="col-lg-2 col-md-2 p-l-20">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload6">
+                                    <div class="txt-right f-s-11">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape5 m-b-10" style="display: none;">
+                                <div class="col-lg-2 col-md-2 p-r-0">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload7"> 
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 p-l-0">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-05.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-05.png'">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload8">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape6 m-b-10" style="display: none; ">
+                                <div class="col-lg-2 col-md-2 p-r-30">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload9">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload10">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload11">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 p-l-30">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="axialload12">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 marginl140">
+                                   <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-06.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-06.png'">
+                                </div>
+                            </div>
+							
+							</form>
+						</div>
+						
+						<div class="tab-pane" id="tzbeam2">
+                             <form class="m-t-10">
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-checkbox"> <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('trasurfacePreparation1').disabled = true;"
+                                                                onchange="document.getElementById('trasurfacePreparation1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Surface Preparation </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3" >
+                                            <select class="form-control" id="trasurfacePreparation1" disabled="true">
+                                            <option value="" label="--- Select ---" ></option>
+                                           </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-checkbox"> <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('traprimer1').disabled = true; document.getElementById('traprimer2').disabled = true;"
+                                                                onchange="document.getElementById('traprimer1').disabled = !this.checked;document.getElementById('traprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="labelBlack control-label">Name</label>
+                                            <input type="text" id="traprimer1" class="form-control" value="TNEMEC#10-99" disabled="true" id="name1">
+                                        </div>
+                                        <div class="col-lg-2 col-md-2">
+                                            <label class="labelBlack control-label">No. of Coats</label>
+                                            <select id="traprimer2" class="form-control" disabled="true" id="noOfCoats1">
+                                               <option value="" label="--- Select ---" ></option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('tragalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('trafireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('trafireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('traaess1').disabled = !this.unchecked;
+                                                document.getElementById('trapaint1').disabled = !this.unchecked;
+                                                document.getElementById('trapaint2').disabled = !this.unchecked;
+                                                document.getElementById('traprimer1').disabled = !this.checked;
+                                                document.getElementById('traprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('tragalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('trafireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('trafireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('traaess1').disabled = !this.unchecked;
+                                                document.getElementById('traprimer1').disabled = !this.checked;
+                                                document.getElementById('traprimer2').disabled = !this.checked;"
+                                                
+                                                onchange="document.getElementById('trapaint1').disabled = !this.checked;document.getElementById('trapaint2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="labelBlack control-label">Name</label>
+                                            <input type="text" class="form-control" id="trapaint1" value="POLYURETHANE" disabled="true">
+                                        </div>
+                                        <div class="col-lg-2 col-md-2">
+                                            <label class="labelBlack control-label">No. of Coats</label>
+                                            <select id="trapaint2" class="form-control" disabled="true" id="noOfCoats2">
+                                             <option value="" label="--- Select ---" ></option>
+                                           </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('trapaint1').disabled = !this.unchecked;
+                                                document.getElementById('trapaint2').disabled = !this.unchecked;
+                                                document.getElementById('trafireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('trafireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('traaess1').disabled = !this.unchecked;
+                                                document.getElementById('traprimer1').disabled = !this.unchecked;
+                                                document.getElementById('traprimer2').disabled = !this.unchecked;"
+                                                
+                                                onchange="document.getElementById('tragalvanization2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 col-md-4">
+                                            <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                            <div class="col-lg-8 p-l-0">
+                                                
+                                            
+                                            <select id="tragalvanization2" class="form-control per70" disabled="true" id="zincCoatingThickness">
+                                                <option value="" selected="select">10</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                            <div class="txt-right">
+                                                mils
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('trapaint1').disabled = !this.unchecked;
+                                                document.getElementById('trapaint2').disabled = !this.unchecked;
+                                                document.getElementById('tragalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('traaess1').disabled = !this.unchecked;
+                                                document.getElementById('traprimer1').disabled = !this.checked;
+                                                document.getElementById('traprimer2').disabled = !this.checked;"
+                                                
+                                                onchange="document.getElementById('trafireProofing2').disabled = !this.checked; document.getElementById('trafireProofing3').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                        </div>
+                                        
+                                        <div class="col-lg-3 col-md-3 p-r-0">
+                                            <label class="labelBlack control-label">Fire Proofing Type</label>
+                                            <select id="trafireProofing2" class="form-control per70" disabled="true">
+                                                <option value="" label="--- Select ---" ></option>
+                                        </select>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 p-l-0">
+                                            <label class="labelBlack control-label">Fire Rating</label>
+                                            <select id="trafireProofing3" class="form-control per70" disabled="true">
+                                             <option value="" label="--- Select ---" ></option>
+                                         </select>
+                                            <div class="txt-right">
+                                                hr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('trapaint1').disabled = !this.unchecked;
+                                                document.getElementById('trapaint2').disabled = !this.unchecked;
+                                                document.getElementById('tragalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('trafireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('trafireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('traprimer1').disabled = !this.checked;
+                                                document.getElementById('traprimer2').disabled = !this.checked;"
+                                                
+                                                onchange="document.getElementById('traaess1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                             <label class="labelBlack control-label">Category</label>
+                                            <select id="traaess1" class="form-control" disabled="true">
+                                                <option selected="selected" value="">2</option>
+                                                <option>Option1</option>
+                                                <option>Option2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+						<div class="modifyBtn text-right">
+                                <a href="#" class="ctb-btn">Modify</a>
+                            </div>
+                    </div>
+                    </div>
+					
+					
+					
+					
+  <script type="text/javascript">
+
+
+     
+/
+			$(function() {
+				$('.chosen-select').chosen();
+				$('.chosen-select-deselect').chosen({
+					allow_single_deselect: true
+				});
+			});
+			
+			
+			
+			 $(function(){
+                $("#hbshapes").change( function(){
+                    if($('#hbshapes').val()=='hfs'){
+                        $(".Hshape1").show();
+                        $(".Hshape2").hide();
+                        $(".Hshape3").hide();
+                        $(".Hshape4").hide();
+                        $(".Hshape5").hide();
+                        $(".Hshape6").hide();
+                        
+                    }
+                    else if($('#hbshapes').val()=='hbs'){
+                        $(".Hshape1").hide();
+                        $(".Hshape2").show();
+                        $(".Hshape3").hide();
+                        $(".Hshape4").hide();
+                        $(".Hshape5").hide();
+                        $(".Hshape6").hide();
+                    }
+                    else if($('#hbshapes').val()=='has'){
+                        $(".Hshape1").hide();
+                        $(".Hshape2").hide();
+                        $(".Hshape3").show();
+                        $(".Hshape4").hide();
+                        $(".Hshape5").hide();
+                        $(".Hshape6").hide();
+                    }
+                    else if($('#hbshapes').val()=='hvs'){
+                        $(".Hshape1").hide();
+                        $(".Hshape2").hide();
+                        $(".Hshape3").hide();
+                        $(".Hshape4").show();
+                        $(".Hshape5").hide();
+                        $(".Hshape6").hide();
+                    }
+                    else if($('#hbshapes').val()=='hxs'){
+                        $(".Hshape1").hide();
+                        $(".Hshape2").hide();
+                        $(".Hshape3").hide();
+                        $(".Hshape4").hide();
+                        $(".Hshape5").show();
+                        $(".Hshape6").hide();
+                    }
+                    else if($('#hbshapes').val()=='hws'){
+                        $(".Hshape1").hide();
+                        $(".Hshape2").hide();
+                        $(".Hshape3").hide();
+                        $(".Hshape4").hide();
+                        $(".Hshape5").hide();
+                        $(".Hshape6").show();
+                    }
+                    
+                });
+            });
+
+</script>
+				

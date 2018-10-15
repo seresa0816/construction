@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="87 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Beam);
+      }
+
+      .cls-2 {
+        fill: #686868;
+        stroke: #f0f6fa;
+      }
+    </style>
+    <clipPath id="clip-Beam">
+      <rect x="87" width="36" height="36"/>
+    </clipPath>
+  </defs>
+  <g id="Beam" class="cls-1">
+    <g id="Group_855" data-name="Group 855" transform="translate(-1467 -761.593)">
+      <path id="Path_7" data-name="Path 7" class="cls-2" d="M1555,811.7l10.588,2.741,23.412-14.7-7.647-1.246Z" transform="translate(0 -19.459)"/>
+      <path id="Path_6" data-name="Path 6" class="cls-2" d="M1580.75,792.272v13.287l22.526-14.014V780.5Z" transform="translate(-19.691 -11.944)"/>
+      <path id="Path_5" data-name="Path 5" class="cls-2" d="M1555,778.522l10.353,2.99,23.177-14.824-10.771-2.094Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10 10">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-close);
+      }
+
+      .cls-2 {
+        fill: #787877;
+        fill-rule: evenodd;
+      }
+    </style>
+    <clipPath id="clip-close">
+      <rect width="10" height="10"/>
+    </clipPath>
+  </defs>
+  <g id="close" class="cls-1">
+    <path id="path" class="cls-2" d="M15,6,14,5,10,9,6,5,5,6l4,4L5,14l1,1,4-4,4,4,1-1-4-4Z" transform="translate(-5 -5)"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="143 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Material_Takeoff);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-Material_Takeoff">
+      <rect x="143" width="34" height="34"/>
+    </clipPath>
+  </defs>
+  <g id="Material_Takeoff" data-name="Material Takeoff" class="cls-1">
+    <g id="Group_4" data-name="Group 4" transform="translate(-1745.312 -1755)">
+      <path id="Path_1903" data-name="Path 1903" class="cls-2" d="M23.933,10.958,12.6,5.573a.671.671,0,0,0-.572,0L.694,10.958a.666.666,0,0,0,0,1.2l11.332,5.384a.665.665,0,0,0,.572,0l11.334-5.384a.666.666,0,0,0,0-1.2Zm-11.62,5.248L2.533,11.56l9.78-4.647,9.782,4.647Z" transform="translate(1892.998 1756.491)"/>
+      <path id="Path_1904" data-name="Path 1904" class="cls-2" d="M23.36,42.991,12.311,48.238,1.265,42.991a.666.666,0,1,0-.572,1.2l11.332,5.384a.665.665,0,0,0,.572,0l11.335-5.383a.666.666,0,0,0-.572-1.2Z" transform="translate(1893 1728.998)"/>
+      <path id="Path_1905" data-name="Path 1905" class="cls-2" d="M23.36,60.11,12.311,65.359,1.265,60.11a.666.666,0,1,0-.572,1.2L12.025,66.7a.67.67,0,0,0,.572,0l11.335-5.385a.666.666,0,0,0-.572-1.2Z" transform="translate(1893 1716.418)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 47">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Delete_Warning);
+      }
+
+      .cls-2 {
+        fill: #f44336;
+      }
+    </style>
+    <clipPath id="clip-Delete_Warning">
+      <rect width="50" height="47"/>
+    </clipPath>
+  </defs>
+  <g id="Delete_Warning" class="cls-1">
+    <g id="noun_18974_cc" transform="translate(-10 -13.062)">
+      <g id="Group_1476" data-name="Group 1476" transform="translate(10 13.062)">
+        <path id="Path_1906" data-name="Path 1906" class="cls-2" d="M32.244,14.766,10.879,53.248c-1.778,3.24-1.023,6.338,3.782,6.338H55.337c4.816,0,5.56-3.1,3.782-6.338L37.312,14.869a2.691,2.691,0,0,0-2.446-1.807A2.834,2.834,0,0,0,32.244,14.766Zm-.056,12.319h5v17.5h-5Zm0,21.25h5v5h-5Z" transform="translate(-10 -13.062)"/>
+      </g>
+    </g>
+  </g>
+</svg>

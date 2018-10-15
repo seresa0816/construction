@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-save);
+      }
+
+      .cls-2 {
+        fill: #787877;
+      }
+    </style>
+    <clipPath id="clip-save">
+      <rect width="56" height="56"/>
+    </clipPath>
+  </defs>
+  <g id="save" class="cls-1">
+    <g id="noun_Save_716011" transform="translate(1.11 -1)">
+      <rect id="Rectangle_1534" data-name="Rectangle 1534" class="cls-2" width="5.613" height="10.615" transform="translate(16.308 12.013)"/>
+      <path id="Path_2008" data-name="Path 2008" class="cls-2" d="M41.751,46.026a2.139,2.139,0,0,0,2.139-2.139V17.177a2.139,2.139,0,0,0-.625-1.515l-3.025-3.025A2.139,2.139,0,0,0,38.722,12H37.01V23.911a1.284,1.284,0,0,1-1.284,1.284h-20.7a1.284,1.284,0,0,1-1.284-1.284V12H12.029A2.139,2.139,0,0,0,9.89,14.139V43.874a2.139,2.139,0,0,0,2.139,2.139ZM13.732,30.4a1.378,1.378,0,0,1,1.455-1.284h23.39A1.378,1.378,0,0,1,40.031,30.4V42.851h-26.3Z"/>
+      <rect id="Rectangle_1535" data-name="Rectangle 1535" class="cls-2" width="9.969" height="10.615" transform="translate(24.492 12.013)"/>
+      <path id="Path_2009" data-name="Path 2009" class="cls-2" d="M44.78,71.95H26.354a1.284,1.284,0,1,0,0,2.567H44.78a1.284,1.284,0,1,0,0-2.567Z" transform="translate(-8.685 -34.301)"/>
+      <path id="Path_2010" data-name="Path 2010" class="cls-2" d="M44.78,59H26.354a1.284,1.284,0,1,0,0,2.567H44.78a1.284,1.284,0,1,0,0-2.567Z" transform="translate(-8.685 -26.892)"/>
+    </g>
+  </g>
+</svg>

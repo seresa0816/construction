@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="142 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-H_Braces);
+      }
+
+      .cls-2 {
+        fill: #686868;
+      }
+    </style>
+    <clipPath id="clip-H_Braces">
+      <rect x="142" width="36" height="36"/>
+    </clipPath>
+  </defs>
+  <g id="H_Braces" data-name="H Braces" class="cls-1">
+    <g id="Group_853" data-name="Group 853" transform="translate(5944.733 144.88) rotate(90)">
+      <path id="Path_46" data-name="Path 46" class="cls-2" d="M3.031,14.382h8.252l-2.69,3.253,2.394,1.856L16.3,12.866,11.283,6.884,8.888,8.74l2.394,2.61H3.031V0H0V25.733H3.031Z" transform="translate(-128.581 5797.733) rotate(180)"/>
+      <path id="Path_47" data-name="Path 47" class="cls-2" d="M65.151,47.4H73.4l-2.69,3.253,2.394,1.856,5.312-6.624L73.4,39.9,71.008,41.76l2.394,2.61H65.151V33.02H62.12V58.753h3.031Z" transform="translate(-187.299 5738.98)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,635 @@
+
+
+/* Topbar */
+/* .topbar .navicon {
+    color: #000;
+}
+.topbar {
+    background: #fff!important;
+}
+.topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
+    color: #000!important;
+}
+.app-search {
+    padding-left: 35px;
+}
+.search-box .app-search input {
+    width: 85%;
+}
+.search-box .app-search .srh-btn{
+    right: 125px;
+}
+.topbar .navbar-nav .nav-item .du-log {
+    width: 160px;
+}
+.topbar .navbar-nav .nav-item .light-logo {
+    padding-top: 2px; 
+} */
+
+/* .topbar .top-navbar {
+    min-height: 70px;
+    max-width: 100%;
+    margin: 0 5px 0;
+    padding: 0px 15px 0 0;
+}
+
+.sidebar-nav ul li a {
+    color: #607d8b;
+} */
+.nomargin {
+    margin: 0;
+}
+/*contact table*/
+.worksheet-section{
+    display: none;
+}
+#std1, #std2, #std3, #std4, #std5{
+    padding: 10px 0 0 0;
+}
+#std1 table, #std2 table, #std3 table, #std4 table, #std5 table{
+    font-size: 13px;
+}
+#std1 table thead, 
+#std2 table thead, 
+#std3 table thead, 
+#std4 table thead, 
+#std5 table thead{
+    background: #fbfafa;
+    color: #b4b4be;
+}
+#std1 table tbody, 
+#std2 table tbody, 
+#std3 table tbody, 
+#std4 table tbody, 
+#std5 table tbody {
+    color: #787877;
+}
+#std1 .table thead th,#std1 .table th, 
+#std2 .table thead th,#std2 .table th,
+#std3 .table thead th,#std23.table th, 
+#std4 .table thead th,#std4 .table th, 
+#std5 .table thead th,#std5 .table th {
+    border: 1px solid #f6f6f6;
+    border-bottom: 0;
+    padding: 10px;
+}
+#std1 .table td, 
+#std2 .table td,
+#std3 .table td,
+#std4 .table td, 
+#std5 .table td {
+    padding: 10px;
+}
+
+
+@media (min-width: 1100px) {
+    .container-fluid {
+        max-width: inherit;
+    }
+}
+@media (min-width: 768px) {
+    .right-aside-nav > li > ul {
+        width: 240px!important;
+    }
+}
+@media (min-width: 768px) {
+
+}
+
+
+/*Project Sidebar*/
+.project-sidebar {
+    border-right: 1px solid #eee;
+    padding-right: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    font-size: 15px;
+}
+.project-sidebar .panel.panel-default {
+    border-bottom: 1px solid #ddd;
+}
+.project-sidebar .panel-heading h4 {
+    padding: 15px 0 15px 15px;
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+}
+.panel-default h4{
+    margin-top: 10px;
+    color:#1E88E5; 
+    font-size: 16px;
+}
+.project-sidebar .panel-heading h4 a{
+    color: #898989;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.project-sidebar .panel-default>.panel-heading a:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: left;
+  padding-right: 10px;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+.project-sidebar .panel-body ul li {
+    width: 100%;
+}
+.panel-body ul{
+  border-bottom: 1px solid #F0F0F6;
+}
+.project-sidebar .panel-body ul li a{
+    color: rgba(68, 68, 68, 0.75);
+    display: block;
+    font-size: 13px;
+    padding: 30px 0 20px 22px; 
+}
+.project-sidebar .panel-body ul li a.active {
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color: #e2e2e2;
+}
+.project-sidebar .panel-body ul li a:hover {
+    color: rgb(30, 136, 229);
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color:#efefef;
+}
+.project-sidebar .panel-body ul li a:active, .panel-body ul li a:focus {
+    color: rgb(30, 136, 229);
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color: #efefef;
+}
+
+.reportddl{
+    background: #F7F7F7;
+    box-shadow: 1px 1px 1px 1px #bbd0da;
+}
+.subListFont .fa-home{
+    font-size: 20px;
+    padding-right: 10px;
+}
+/*tab pane*/
+#stdTab{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    background: #fff
+}
+#stdTab .nav{
+    padding-top: 10px;
+}
+#stdTab .nav-pills > li > a {
+    border-radius: 8px 8px 0 0;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 10px 9px 4px;
+    color: #c2c2c2;
+}
+#stdTab .tab-pane{
+    min-height: 400px;
+    color: #425563;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+#stdTab .nav-pills>li>a.active,
+#stdTab .nav-pills>li>a.active:focus,
+#stdTab .nav-pills>li>a.active:hover {
+    color: #3498f7;
+    border-bottom: 3px solid;
+}
+#stdTab .nav-pills-inside > li > a {
+    
+    font-size: 14px;
+    margin-right: 10px;
+    padding:10px 30px 4px;
+    color: #c2c2c2;
+    font-weight: 400;
+}
+#stdTab .nav-pills-inside > li > a.active,
+#stdTab .nav-pills-inside > li > a.active:focus,
+#stdTab .nav-pills-inside > li > a.active:hover {
+    color: #3498f7;
+    border-bottom: 3px solid #3498f7!important;
+    background: #fff!important;
+}
+#stdTab .TabBox{
+    padding: 20px 15px;
+    position: relative;
+    overflow: auto;
+}
+#stdTab .stdTabCtrl1{
+    display: inline;
+    width: auto;
+    padding: 5px 5px;
+    font-size: 14px;
+    box-shadow: none;
+
+}
+#stdTab .stdTabCtrl2{
+    display: block;
+    width: auto;
+    padding: 5px 5px;
+    font-size: 14px;
+    box-shadow: none;
+
+}
+#stdTab label{
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 10px;
+
+}
+#stdTab .state-label{
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+}
+#stdTab .br{
+    border-right: 1px solid #eee;
+}
+#stdTab .std-subBox{
+    padding: 20px 5px;
+}
+#std1 .std-btn{
+    padding: 6px 15px;
+    color: #fff;
+    background: #3498f7;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+#std1 .btn-cancel{
+    padding: 6px 15px;
+    background: #fff;
+    color: #3498f7;
+    outline: 0;
+    border: #3498f7;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+#std1 .btn-bg{
+    background-color: #eee;
+}
+/*end of tab pane*/
+.worksheet{
+    background-color: #fff;
+}
+.dataTables_wrapper .dataTables_paginate{
+    position: absolute;
+    top: 45px;
+    right: 0px;
+}
+.dataTables_filter {
+    position: absolute;
+    top: 80px;
+    padding-left: 10px;
+    right: 10px;
+    font-size: 14px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    color: #99abb4;
+    border: none!important;
+    background: none!important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+}
+#worksheettable_», #worksheettable_«, 
+#formulae_», #formulae_«, 
+#mathoperator_», #mathoperator_«, 
+#keyname_«, #keyname_», 
+#index_», #index_«{
+    display: none;
+}
+#worksheettable_info, 
+#formulae_info, 
+#mathoperator_info, 
+#index_info, 
+#keyname_info{
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    font-size: 14px;
+}
+.contactsTableAction {
+    cursor: pointer;
+}
+.contactsTableAction .dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+.contactsTableAction .dropdown-menu li a {
+    padding: 6px 0;
+    display: block;
+    font-size: 13px;
+    cursor: pointer;
+}
+.contactsTableAction .dropdown-menu {
+    min-width: 80px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    top: 25px;
+    right: 0;
+    font-size: 13px;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+button {
+    padding: 3px 10px;
+    background: #1e88e5;
+    color: #fff;
+    outline: 0;
+    border: 1px solid #1e88e5;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.fa-exclamation-triangle{
+    color: red;
+}
+.btncancel{
+    padding: 3px 10px;
+    background: #fff;
+    color: #1e88e5;
+    outline: 0;
+    border: 1px solid #1e88e5;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.modal-header{
+    padding: 5px 20px;
+
+}
+.modal-header .modal-title{
+    color: #1e88e5;
+    font-size: 15px;
+}
+.addUser label{
+    font-size: 14px;
+    color: #787877;
+}
+textarea.comment{
+    height: 52px!important;
+}
+.form-control {
+    width: 100%;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size: 13px;
+    background: #fff;
+    padding: 5px;
+    min-height: 28px!important;
+    height: 30px!important;
+    color: #787878;
+    border: 1px solid #F0F0F6;
+}
+.form-control {
+    color: #99abb4;
+    display: initial;
+}
+.DBCard {
+    width: 200px;
+    min-height: 180px;
+    margin: 50px;
+}
+.card-footer{
+    background-color: #787877;
+    height: 50px;
+    padding: 0.55rem 1.25rem;
+}
+.card-footer h6{
+    color: #fff;
+}
+
+.whiteBG{
+
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+.anv-center{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: max-content;
+    height: 100px;
+    text-align: center;
+}
+.text-blue{
+    color: #1E88E5!important;
+    font-weight: 400;
+    padding: 10px 0px;
+    background-color: #FAFAFA;
+}
+/*header icon menu*/
+.menu-blue .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+}
+.menu-blue .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+    top: 25px;
+}
+.menu-blue .dropdown-content a {
+    color: #1E88E5;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.13);
+    text-align: left;
+    line-height: 40px;
+    font-size: 14px;
+}
+.menu-blue .dropdown-content a:hover {
+    color: #0078d7!important;
+}
+.menu-blue .dropdown-content i {
+    padding-right: 10px;
+}
+.menu-blue .dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.menu-blue .dropdown:hover .dropdown-content {
+    display: block;
+}
+.menu-blue .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.myLabel i{
+    float: right;
+    color: #1E88E5;
+    padding-top: 10px;
+    font-size: 18px;
+}
+.btndiv{
+    position: relative;
+    right: 300px;
+    padding: 0 10px 25px;
+}
+.btngrey{
+    background-color: #FAFAFA;
+    color: #787877;
+    border-radius: 45px;
+    border: #fafafa;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    cursor: none;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+.fa-arrow-circle-left{
+    margin-left: 10px;
+    padding-top: 10px;
+    color: #1E88E5;
+}
+.cardLabel{
+    font-size: 13px;
+}
+.card-footer.lightgrey{
+    background-color: #FAFAFA;
+}
+.header5{
+    color: #455a64;
+    font-size: 16px;
+}
+.switch{
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin: 0;
+    margin-top: -15px;
+}
+
+
+.switch label input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #3498f7 !important;
+    width: 28px;
+    height: 16px;
+}
+.switch label .lever{
+    
+    width: 28px;
+    height: 16px;
+}
+
+.switch label .lever:after{
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    top: 0px;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #fff;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+    top: 0px;
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 480px;
+        margin: 30px auto;
+    }
+}
+@media (min-width: 992px){
+  .col-lg-2.reportmenu{
+      -ms-flex: 0 0 16.666667%;
+      flex: 0 0 16.666667%;
+      max-width: 14.666667%;
+  }
+}
+ /* bharath CSS */
+.chosen-container {
+    min-width: 400px !important;
+}
+
+.custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #0078D7 !important;
+}
+.btn-bg{
+	
+	background-color:#eee;
+}
+
+.btn-align-top{
+	
+	
+	margin-top: 13px;
+}
+.text-left{
+	
+	float:left;
+	color:#1E88E5;
+	
+}
+.m-r-40{
+ margin-right:40px;	
+	
+}
+.searchInputHeight{
+    height: inherit!important;
+}
+.m-r-0{
+    margin-right: 0px;
+}
+
+.m-l-0{
+    margin-left: :0px;
+}
+.m-b-0{
+    margin-bottom: 0px;
+}
+.cardLabelTitle{
+    font-weight: bold;
+}
+.cardHeight{
+    height: 332px;
+}
+.m-t-100{
+    margin-top: 50px;
+}
+
+.fa-pencil-square-o{
+    color:#1E88E5; 
+}
+.p-l-0{
+    padding-left: 0px;
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="33 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Column);
+      }
+
+      .cls-2 {
+        fill: #686868;
+        stroke: #f0f6fa;
+      }
+    </style>
+    <clipPath id="clip-Column">
+      <rect x="33" width="36" height="36"/>
+    </clipPath>
+  </defs>
+  <g id="Column" class="cls-1">
+    <g id="Group_851" data-name="Group 851" transform="translate(-688.5 -512.75)">
+      <path id="Path_3" data-name="Path 3" class="cls-2" d="M761.75,513.75l1.032,25.5,8.879,5.792v-26.1Z" transform="translate(-20.188)"/>
+      <path id="Path_4" data-name="Path 4" class="cls-2" d="M748.644,528.068,758.77,524.5v25.65l-6.854,2.724Z" transform="translate(-11.722 -7.515)"/>
+      <path id="Path_1" data-name="Path 1" class="cls-2" d="M730.5,524.5v24.6l11.947,6.168V530.819Z" transform="translate(-2 -7.515)"/>
+    </g>
+  </g>
+</svg>

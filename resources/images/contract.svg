@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-contract);
+      }
+
+      .cls-2 {
+        fill: #787877;
+      }
+    </style>
+    <clipPath id="clip-contract">
+      <rect width="28" height="28"/>
+    </clipPath>
+  </defs>
+  <g id="contract" class="cls-1">
+    <g id="noun_Exit_Full_Screen_1664864" data-name="noun_Exit Full Screen_1664864" transform="translate(-199 -199)">
+      <g id="Group_4552" data-name="Group 4552" transform="translate(200 200)">
+        <path id="Path_2088" data-name="Path 2088" class="cls-2" d="M207.429,200v7.429H200v2.786h10.214V200Z" transform="translate(-200 -200)"/>
+        <path id="Path_2089" data-name="Path 2089" class="cls-2" d="M550.214,207.429h-7.429V200H540v10.214h10.214Z" transform="translate(-524.214 -200)"/>
+        <path id="Path_2090" data-name="Path 2090" class="cls-2" d="M542.786,550.214v-7.429h7.429V540H540v10.214Z" transform="translate(-524.214 -524.214)"/>
+        <path id="Path_2091" data-name="Path 2091" class="cls-2" d="M200,542.786h7.429v7.429h2.786V540H200Z" transform="translate(-200 -524.214)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,206 @@
+   <!-- vBraceModal  -->
+
+<div id="vBraceModal" class="modalcss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg modal700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12 text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#vBrace1" data-toggle="tab">Vertical Brace Properties</a>
+                        </li>
+                        <li>
+                            <a href="#vBrace3" data-toggle="tab">Connection Details</a>
+                        </li>
+                        <li>
+                            <a href="#vBrace2" data-toggle="tab">Finish</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="vBrace1">
+                        <form">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10" id="vbprofile">
+                                    <label class="labelBlack control-label">VB Brace Profile</label>
+                                    <select class="form-control vbselect1" id="vBraceProfile">
+                                        <option value="" label="Select"></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10 m-b-10" id="vbgrade">
+                                    <label class="labelBlack control-label">Material Grade</label>
+                                    <select class="form-control vbselect2" id="vBraceMaterialGrade">
+                                        <option value="" label="select"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4 padding10">
+                                    <label class="labelBlack control-label">Date Source</label>
+                                    <select class="form-control" id="vBraceDataSource">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4 padding10">
+                                    <label class="labelBlack control-label disblock">Verical Brace Layouts</label>
+                                    <select class="form-control w75" id="vBraceShapes">
+                                         <option value="">select</option>
+                                        <option value="vfs" ctbd="1" ctbg="2">/</option>
+                                        <option value="vbs" ctbd="1" ctbg="2">\</option>
+                                        <option value="vxs" ctbd="2" ctbg="5">X</option>
+                                        <option value="vvs" ctbd="2" ctbg="3">\/</option>
+                                        <option value="vas" ctbd="2" ctbg="3">/\</option>
+                                        <option value="vds" ctbd="2" ctbg="3"><</option>
+                                        <option value="vps" ctbd="2" ctbg="3">></option>
+                                        <option value="vws" ctbd="4" ctbg="5">w</option>
+                                        <option value="vms" ctbd="4" ctbg="5">M</option>
+                                     	 <option value="ves"  ctbd="4" ctbg="5">ⵉ</option>
+                                        <option value="vves"  ctbd="4" ctbg="5">𐩦</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 padding10 m-b-10">
+                                    <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                                    <select data-placeholder="" multiple class="referenceSelect" name="test" id="vBraceRefNum">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="vBrace2">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Surface Preparation </label> 
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <select class="form-control" id="vbsurfacePreparation1">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" id="vbprimer1" class="form-control"  disabled="true">
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="vbprimer2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" class="form-control" id="vbpaint1"  disabled="true">
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="vbpaint2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                    <div class="col-lg-8 nopadding">
+                                        <select id="vbgalvanization2" class="form-control per60" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            mils
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Fire Proofing Type</label>
+                                    <select id="vbfireProofing2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Fire Rating</label>
+                                    <select id="vbfireProofing3" class="form-control per70" disabled="true">
+                                    </select>
+                                    <div class="txt-right">
+                                        hr
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkaess" type="radio" name="rdhb" value="AESS" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Category</label>
+                                    <select id="vbaess1" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="vBrace3">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-6 col-md-6 text-center padding10">
+                                   <label class="custom-control custom-radio">
+                                        <input id="rdinclinedlacing1" type="radio" checked="checked" name="rdhb" class="custom-control-input" onclick="show1();"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Connections Given </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center padding10">
+                                    <label class="custom-control custom-radio">
+                                        <input id="rdinclinedlacing2" type="radio" name="rdhb" class="custom-control-input" onclick="show2();"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Connections to be Designed </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="showcg">
+                              
+                            </div>
+                            <div id="showcd" style="display: none;">
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="">
+                    <a href="javascript:void(0)" class="modalcancel" data-dismiss="modal" aria-label="Close">Cancel</a>
+                    <a href="javascript:void(0)" class="modalapply" id="vbapply">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="resources/js/memberplacementmodal/vBraceModal.js"></script>

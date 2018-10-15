@@ -1,0 +1,1709 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/images/favicon.png">
+    <title>Grid Lines</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">     
+    <!-- SideBar CSS -->
+    <link href="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/css/custom.css" rel="stylesheet">
+    <link href="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/css/colors/blue.css" id="theme" rel="stylesheet">
+    
+    
+    <!-- <link href="css/chosen.min.css" rel="stylesheet"> -->
+    <link href="resources/css/chosen.min.css"  rel="stylesheet"/>
+    
+    <!-- <link href="css/grid.css" rel="stylesheet"> -->
+    <link href="resources/css/grid.css"  rel="stylesheet"/>
+      <!-- <link href="css/grid.css" rel="stylesheet"> -->
+    <link href="resources/css/leftside.css" rel="stylesheet"/>
+     <link href="resources/css/topBarNew.css" rel="stylesheet">
+    <link href="resources/css/virtuele.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <style type="text/css">
+.down i {
+	transform: rotate(90deg);
+}
+
+   #addgridform.submitted input:invalid {
+	  border: 1px solid red;
+    }
+
+#addgridform.submitted select:invalid {
+	border: 1px solid red;
+}
+</style>
+    
+    
+</head>
+
+<body class="fix-header fix-sidebar card-no-border card-custom-no-border logo-center">
+    <!-- Preloader -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- Main wrapper -->
+    <div id="main-wrapper">
+        <!-- Topbar header -->
+        
+        <header class="topbar" id="header">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="dashboard" id="callDashboard">
+					<img src="resources/images/logo.svg" alt="Logo" onerror="this.src='resources/images/logo.png'">
+				</a>
+                </div>
+                <div class="navbar-collapse">
+                    <!-- Navbar-nav right -->
+				<ul class="navbar-nav ml-auto">
+					<!-- Search -->
+					<li class="nav-item paddingtb15 hidden-sm-down search-box m-l-20">
+						<a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" id="callSearchBar" href="javascript:void(0)"> 
+							<img src="resources/images/search.svg" alt="Logo" onerror="this.src='resources/images/search.png'">
+						</a>
+						<form class="app-search">
+							<input type="text" name="headerSearch" id="headerSearch" class="form-control"	placeholder="Search Keyword"> 
+							<a class="srh-btn" id="closeSearch">
+								<i class="ti-close"></i>
+							</a>
+						</form>
+					</li>
+					<!-- Search -->
+				</ul>
+				<!-- Navbar-nav right -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- Notifications -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" id="callNoti" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+							<img src="resources/images/notification.svg" alt="Image" onerror="this.src='resources/images/notification.png'">
+							<span class="alert-nos">10</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right mailbox scale-up nopadding">
+							<ul>
+								<li>
+									<div class="drop-title">Notification - Coming Soon</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- Notifications -->
+                	<!-- Email -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" id="callEmail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+							<img src="resources/images/mail.svg" alt="Image" onerror="this.src='resources/images/mail.png'">
+							<span class="alert-nos">10</span>
+						</a>
+						<div class="dropdown-menu mailbox dropdown-menu-right scale-up p-0" aria-labelledby="2">
+							<ul>
+								<li>
+									<div class="drop-title">Email - Coming Soon</div>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<!-- Email -->
+                	<!-- Settings -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" id="callSettings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+							<img src="resources/images/setting.svg" alt="Image" onerror="this.src='resources/images/setting.png'">
+						</a>
+						<div class="dropdown-menu mailbox dropdown-menu-right scale-up nopadding" aria-labelledby="2">
+							<ul class="dropdown-user setting-W100">
+								<li>
+									<a href="getCompanySetupScreen" id="callSettings1">
+										<i class="fa fa-building"></i>&nbsp;&nbsp;Company Profile
+									</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="companyuser" id="callSettings2">
+										<i class="mdi mdi-account-settings-variant"></i>&nbsp;&nbsp;User Management
+									</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="comingsoon" id="callSettings3">
+										<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Shop Standards
+									</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="pricebook" id="callSettings4">
+										<i class="fa fa-cc"></i>&nbsp;&nbsp;Price Book
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- Settings -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" id="callUserProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img src="resources/images/profile.svg" alt="Image" onerror="this.src='resources/images/profile.png'">
+						</a>
+                            <div class="dropdown-menu dropdown-menu-right scale-up">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+
+                                            <div class="u-text">
+                                               <h4>Test User </h4>
+                                                <p class="text-muted"><h6>Test@test.com  </h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="myprofile"><i class="ti-user"></i> My Profile</a></li>
+									<li><a href="logout"> Logout</a></li>
+                                              
+                                   
+                                </ul>
+                            </div>
+                        </li>
+                     
+
+						<li class="nav-item cnbl">
+                            <a class="n-p-r nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+
+            
+                            
+                            
+
+                    </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+		
+		 <!-- Drop Header -->
+        <section id="Dropheader">
+            <div class="header-body">
+                <div class="header-container container-fluid">
+                    <div class="header-row">
+                        <div class="header-column fl">
+                            <div class="header-nav">
+                                <div class="header-nav-main">
+                                    <nav>
+                                        <ul class="nav nav-pills">
+                                            <li class=""><h5>Estimation Manager</h5></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-column fr">
+                            <div class="header-nav">
+                                <div class="header-nav-main collapse">
+                                    <nav>
+                                        <ul class="nav nav-pills" id="mainNav">
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggled" href="javascript:void(0);">Contacts</a>
+                                                <ul class="dropdown-menu">
+                                                  <li><a href="newcontacts"><i class="fa fa-plus"></i>&nbsp;&nbsp;New Contacts </a></li>
+                                                    <li><a href="contactlist"><i class="fa fa-th"></i>&nbsp;&nbsp;List Contacts</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggled" href="javascript:void(0);">Projects</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="newprojects"><i class="fa fa-plus"></i>&nbsp;&nbsp;New Project</a></li>
+                                                     <li><a href="projectlist"><i class="fa fa-th"></i>&nbsp;&nbsp;List Projects</a></li></ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggled" href="javascript:void(0);">RFI Manager</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="comingsoon">New RFI</a></li>
+                                                    <li><a href="comingsoon">List RFI's</a></li>
+                                                </ul>
+                                            </li>                                               
+                                            <li class="">
+                                                <a href="comingsoon">Reports</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="comingsoon">Quotes</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- End Topbar header -->
+
+<div class="misc-sidebar">
+                        <ul class="list-unstyled components">
+                            <div id="misc-accordion">
+                                <li class="bluemenu1">
+                                    <a data-toggle="collapse" href="" data-target="#miscSubmenu1" data-collapse-group="miscSide"><img title="Project Details" src="resources/images/Project Deatils.png" alt="Project Details"</a>
+                                    
+                                    
+                                    <ul id="miscSubmenu1" class="list-unstyled outer-collapse collapse" aria-labelledby="miscSubmenu1">
+					<h4 class="text-left"><i  aria-hidden="true"></i> Project Details</h4>
+					<li><a href="ProjectInfo">General Information</a></li>
+					<li ><a href="otherinfo">Project Partners</a></li>
+					<li><a href="drawingupload">Project Files</a></li>
+					<li><a href="javascript:void(0)" id="viewProjectFiles" onclick="check()">View Project Files</a></li>
+				</ul>
+                                </li>
+                                
+                               
+                                 <li class="bluemenu3">
+                                    <a data-toggle="collapse" href="#miscSubmenu3" data-target="#miscSubmenu3" data-collapse-group="miscSide"><img title="Project Standards" src="resources/images/Project Standards.png" alt="Project Standards"></a>
+                                    
+                                    <div class="collapse-body">
+					<ul id="miscSubmenu2" class="list-unstyled outer-collapse projectstandards collapse" aria-labelledby="miscSubmenu2" >
+						<h4 class="text-left"><i  aria-hidden="true"></i> Project Standards</h4>
+						<li><a href="estimationscope">Modules</a></li>
+						<li><a href="scopeofwork">Scope of Work</a></li>
+						<li><a href="inclusion">Inclusions</a></li>
+						<li><a href="exclusion">Exclusions</a></li>
+						<li><a href="steelgrade">Material Grade</a></li>
+						<li><a href="finish">Finish Details</a></li>
+						<li><a href="shippinglimits">Shipping Limits</a></li>
+				   <li><a href="termsandcondition">Terms and Conditions</a></li>
+						
+					</ul>
+				</div>
+                                
+
+                                
+                                
+                                <li class="bluemenu4">
+                                    <a data-toggle="collapse" href="#miscSubmenu4" data-target="#miscSubmenu4" data-collapse-group="miscSide"><img title="Connections Available" src="resources/images/Material Takeoff.png" alt="Material Takeoff"></a>
+                                    
+                                    <div class="collapse-body">
+					<ul id="miscSubmenu4" class="list-unstyled width4and5 collapse miscHeightScroll" aria-labelledby="miscSubmenu4">
+						<h4 class="text-left"><i aria-hidden="true"></i>Connections</h4>
+						<li class="misc-sub-menu msm41"><a data-toggle="collapse" class="noborder" href="#miscSubmenu41" data-target="#miscSubmenu41" data-collapse-group="miscSideMat" aria-expanded="false">Connections - Available</a>
+							<ul id="miscSubmenu41" class="list-unstyled width4and5 collapse" aria-labelledby="miscSubmenu41">
+								<li><a href="contractgeneralpreference">General Preferences</a></li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuBtC" data-target="#miscSubmenuBtC" data-collapse-group="miscSideMatSub" aria-expanded="false">Beam to Column</a>
+									<ul id="miscSubmenuBtC" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuBtC">
+										<li><a href="contractbeamtocolumnclip">Clip Angle</a></li>
+										<li><a href="contractbeamtocolumnshear">Shear Plate</a></li>
+										<li><a href="contractbeamtocolumnendplate">End Plate</a></li>
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuBtB" data-target="#miscSubmenuBtB" data-collapse-group="miscSideMatSub" aria-expanded="false">Beam to Beam</a>
+									<ul id="miscSubmenuBtB" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuBtB">
+										 <li><a href="contractbeamtobeamclipangle">Clip Angle</a></li>
+										<li><a href="contractbeamtobeamshear">Shear Plate</a></li>
+										<li><a href="contractbeamtobeamendplate">End Plate</a></li>
+										
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuBtE" data-target="#miscSubmenuBtE" data-collapse-group="miscSideMatSub" aria-expanded="false">Beam to Embed</a>
+									<ul id="miscSubmenuBtE" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuBtE">
+										<li><a href="contractbeamtoembedclip">Clip Angle</a></li>
+										<li><a href="contractbeamtoembedshear">Shear Plate</a></li>
+									</ul>
+								</li>
+								<li><a href="contracthorizontalbrace">Horizontal Braces</a></li>
+								<li><a href="contractverticalbrace">Vertical Braces</a></li>
+								<li><a href="contractmomentconnection">Moment Connections</a></li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuStB" data-target="#miscSubmenuStB" data-collapse-group="miscSideMatSub" aria-expanded="false">Splice - Beam to Beam</a>
+									<ul id="miscSubmenuStB" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuStB">
+										<li><a href="contractscbslipceplate">Splice Plate</a></li>
+										<!-- <li><a href="contractscbendplate">End Plate</a></li> -->
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuStC" data-target="#miscSubmenuStC" data-collapse-group="miscSideMatSub" aria-expanded="false">Splice - Column to Column</a>
+									<ul id="miscSubmenuStC" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuStC">
+										<li><a href="contractsccslipceplate">Splice Plate</a></li>
+										<li><a href="contractsccendplate">End Plate</a></li>
+										<li><a href="contractsccdirectlywelded">Directly Welded</a></li>
+									</ul>
+								</li>
+								<li><a href="contractbaseplate">Base Plate</a></li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuBtB" data-target="#trusse" data-collapse-group="miscSideMatSub" aria-expanded="false">Trusses</a>
+									<ul id="trusse" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="#trusse">
+										 <li><a href="contracttrussend">Trusses End</a></li>
+										<li><a href="contracttrussessplice">Trusses Splice</a></li>
+										<li><a href="contracttrussvertical">Trusses Vertical</a></li>
+										  <li><a href="contractrussesdiagonals">Trusses Diagonals</a></li>
+										
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="misc-sub-menu msm42"><a data-toggle="collapse" class="noborder" href="#miscSubmenu42" data-target="#miscSubmenu42" data-collapse-group="miscSideMat" aria-expanded="false">Connections - to be Designed</a>
+							<ul id="miscSubmenu42" class="list-unstyled width4and5 collapse" aria-labelledby="miscSubmenu42">
+								<li><a href="comingsoonleft">General Preferences</a></li>
+								<li><a href="comingsoonleft">Base Plate</a></li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuCDBtB" data-target="#miscSubmenuCDBtB" data-collapse-group="miscSideMatSub2" aria-expanded="false">Beam to Beam</a>
+									<ul id="miscSubmenuCDBtB" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuCDBtB">
+										<li><a href="comingsoonleft">Clip Angle</a></li>
+										<li><a href="comingsoonleft">Shear Plate</a></li>
+										<li><a href="comingsoonleft">End Plate</a></li>
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuCDBtC" data-target="#miscSubmenuCDBtC" data-collapse-group="miscSideMatSub2" aria-expanded="false">Beam to Column</a>
+									<ul id="miscSubmenuCDBtC" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuCDBtC">
+										<li><a href="comingsoonleft">Clip Angle</a></li>
+										<li><a href="comingsoonleft">Shear Plate</a></li>
+										<li><a href="comingsoonleft">End Plate</a></li>
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuCDBtE" data-target="#miscSubmenuCDBtE" data-collapse-group="miscSideMatSub2" aria-expanded="false">Beam to Embed</a>
+									<ul id="miscSubmenuCDBtE" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuCDBtE">
+										<li><a href="comingsoonleft">Clip Angle</a></li>
+										<li><a href="comingsoonleft">Shear Plate</a></li>
+									</ul>
+								</li>
+								<li><a href="comingsoonleft">Horizontal Braces</a></li>
+								<li><a href="comingsoonleft">Vertical Braces</a></li>
+								<li><a href="comingsoonleft">Moment</a></li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuCDStB" data-target="#miscSubmenuCDStB" data-collapse-group="miscSideMatSub2" aria-expanded="false">Splice - Beam to Beam</a>
+									<ul id="miscSubmenuCDStB" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuCDStB">
+										<li><a href="javascript:void(0)">Splice Plate</a></li>
+										<li><a href="javascript:void(0)">End Plate</a></li>
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuCDStC" data-target="#miscSubmenuCDStC" data-collapse-group="miscSideMatSub2" aria-expanded="false">Splice - Column to Column</a>
+									<ul id="miscSubmenuCDStC" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuCDStC">
+										<li><a href="comingsoonleft">Splice Plate</a></li>
+										<li><a href="comingsoonleft">End Plate</a></li>
+										<li><a href="comingsoonleft">Directly Welded</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+                                </li>
+								
+								</li>
+                                
+                                   <li class="bluemenu6">
+                                    <a  href="gridproperties"  data-collapse-group="miscSide"><img title="Grid Lines" src="resources/images/Grid Lines.png" alt="Grid Lines"></a>
+                                   
+                                </li>
+                                
+                                   <li class="bluemenu7">
+                                    <a  href="index"  data-collapse-group="miscSide"><img title="Main Steel" src="resources/images/Main Steel.png" alt="Main Steel"></a>
+                                   
+                                </li>
+                                
+                                <li class="bluemenu5">
+                                    <a data-toggle="collapse" href="#miscSubmenu5" data-target="#miscSubmenu5" data-collapse-group="miscSide"><img title="Other Steel" src="resources/images/Other Steel.png" alt="Other Steel"></a>
+                                    
+                                    <div class="collapse-body">
+					<ul id="miscSubmenu5" class="list-unstyled outer-collapse collapse miscHeightScroll" aria-labelledby="miscSubmenu5">
+						<h4 class="text-left"><i  aria-hidden="true"></i> Other Steel</h4>
+					  <li><a href="bridgingangle">Bridging Angle</a></li>
+						  <li><a href="carriergirts">Carrier Girt</a></li>                  
+						  <li><a href="edgeangle">Edge Angle</a></li>
+						  <li><a href="embedplate">Embed Plates</a></li>
+						  <li><a href="girts">Girts</a></li>
+						  <li><a href="hangers">Hangers</a></li>
+						  <li><a href="handrail">Handrails</a></li>
+						  <li><a href="kickerangle">Kicker Angle</a></li>                  
+						  <li><a href="ladder">Ladders</a></li>							                 
+						  <li><a href="ledgerangle">Ledger Angle</a></li>
+						  <li><a href="lintels">Lintel</a></li>
+						  <li><a href="miscpipes">Misc Pipe</a></li>
+						  <li><a href="miscpipessupport">Misc Pipe Support</a></li>
+						  <li><a href="miscplates">Misc Plate</a></li>
+						  <li><a href="monorails">Monorails</a></li>  
+						  <li><a href="purlins">Purlins</a></li>
+						  <li><a href="rafterbeam">Rafter Beam</a></li>
+						  <li><a href="rtu">RTU</a></li>
+						  <li><a href="screenwallframes">Screen Wall Frame</a></li>
+						  <li><a href="sagrods">Sag Rods</a></li>
+						  <li><a href="stairs">Stairs</a></li>
+						  <li><a href="stairrails">Stair Rails</a></li> 
+					</ul>
+				</div>
+                                </li>
+                             
+                                      <li class="bluemenu8">
+                                    <a href="projectgeneralinforeport" data-target="#miscSubmenu8" data-collapse-group="miscSide"><img title="Reports" src="resources/images/Reports.png" alt="Reports"></a>
+                                   <div class="collapse-body">
+					<ul id="miscSubmenu8" class="list-unstyled width4and5 collapse miscHeightScroll" aria-labelledby="miscSubmenu8">
+						<h4 class="text-left"><i aria-hidden="true"></i>Reports</h4>
+						<li class="misc-sub-menu msm81"><a data-toggle="collapse" class="noborder" href="#miscSubmenu81" data-target="#miscSubmenu81" data-collapse-group="miscSideMat" aria-expanded="false">Input Reports</a>
+							<ul id="miscSubmenu81" class="list-unstyled width4and5 collapse" aria-labelledby="miscSubmenu81">
+								<li><a href="projectgeneralinforeport">Project Info</a></li>
+								<li><a href="projectfilereport">Project Files </a></li>
+								<li><a href="estimationreports">Estimation Scope</a></li>
+								<li><a href="scopeofworkreport">Scope of Work</a></li>
+								<li><a href="inclusionreport">Inclusions</a></li>
+								<li><a href="exclusionreport">Exclusions</a></li>
+								<li><a href="materialgradereport">Material Grade</a></li>
+								<li><a href="finishdetailreport">Finish Details </a></li>
+								<li><a href="shippinglimitreport">Shipping Limits</a></li>
+								<li><a href="termsandconditionreport">Terms and Conditions</a></li>
+							</ul>
+						</li>
+						<li class="misc-sub-menu msm82"><a data-toggle="collapse" class="noborder" href="#miscSubmenu82" data-target="#miscSubmenu82" data-collapse-group="miscSideMat" aria-expanded="false">Output Reports</a>
+							<ul id="miscSubmenu82" class="list-unstyled width4and5 collapse" aria-labelledby="miscSubmenu82">
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenuMR" data-target="#miscSubmenuMR" data-collapse-group="miscSideMatSub2" aria-expanded="false">Material Report</a>
+									<ul id="miscSubmenuMR" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenuMR">
+										<li><a href="mtostructuralreport">MTO - Structural Steel</a></li>
+										<li><a href="mtomiscreport">MTO - Misc and Other Steel</a></li>
+										<li><a href="mtoconnectionmaterialreport">MTO - Connection Materials</a></li>
+										<li><a href="boltandstudreport">Bolts and Studs Report</a></li>
+										<li><a href="weldreport">Weld Report</a></li>
+										<li><a href="">Connection Design Report</a></li>
+										<li><a href="errorconnectionreport">Pending Connections Report</a></li>
+										<li><a href="outputfinishdetailsreport">Finish Details</a></li>
+									</ul>
+								</li>
+								<li class="misc-sub-menu1"><a data-toggle="collapse" class="noborder" href="#miscSubmenu3DM" data-target="#miscSubmenu3DM" data-collapse-group="miscSideMatSub2" aria-expanded="false">3D Models</a>
+									<ul id="miscSubmenu3DM" class="list-unstyled width4and5 inter-collapse collapse" aria-labelledby="miscSubmenu3DM">
+										<li><a href="bimview">Stick Models</a></li>
+										<li><a href="bimviewconnectedmodule">Connected Models</a></li>
+									</ul>
+								</li>
+								<li>
+									<a id="ExShear" href="efilesreport1"> E Files for ERP Software</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+                                </li>
+                                
+                            </div>
+                        </ul>
+                    </div>
+        <!-- Drop Header  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper" id="pwheight">
+            <!-- Container fluid  -->
+            
+            
+            
+            
+            
+            <div class="container-fluid nopadding">  
+                <!-- Wrex Block -->
+                <div class="">  
+
+
+
+
+            		<div class="grid-container nopadding">
+                        <!-- Page-Navbar -->
+                        <section class="page-navbar" id="page-navbar">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 nopadding">
+                                        <h4>Grid Lines &nbsp</h4>
+                                    </div>
+                                
+                                    <!-- <div class="showNote">Please enter the most repeating values in these forms. You will be able to review and edit the loads/connection codes/general info in the final review screens.</div> -->
+                                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 nopadding">
+                                        <div class="pull-right page-navbar-right">
+                                            <ul>
+                                                <li class="text-right">${projectname}</li>
+                                                <li><span class="txt-small">#</span>${jobno}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End Page-Navbar -->
+                        <!-- Success Message -->
+                        <section class="success-msg" id="success-msg" style="display: none;">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                        <img class="img-success p-r-10" src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/misc/Success.svg" alt="Success">
+                                         <label class="labelBlack control-label"><b>Success </b>: Added Successfully</label>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+                                        <div class="pull-right page-navbar-right">
+                                            <ul>
+                                                <img class="img-close" src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/misc/Close.svg" alt="Close">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Error Message -->
+                        <section class="error-msg" id="error-msg" style="display: none;">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                        <img class="img-error p-r-10" src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/misc/Error.svg" alt="Error">
+                                         <label class="labelBlack control-label"><b>Error </b>: Internal Sever error</label>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+                                        <div class="pull-right page-navbar-right">
+                                            <ul>
+                                                <img class="img-close" src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/misc/Close.svg" alt="Close">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    	<!-- Add Value -->
+                        <section class="add-new-value" id="add-new-value">
+                            <div class="anv-bg">
+                                <div class="anv-center">
+                                    <img src="resources/images/NoData.png"  alt="No Data"/>
+                                    <h4><a class="anv-btn">Draw Grids</a></h4>
+                                   <p>There are no data for Grids</p>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End Add Value -->
+                        <!-- Table -->
+                        <section class="memtype-table">
+                        <div class="container-fluid">
+                        
+                        <form class="form"  id="frmGridProperties">
+                        
+                        
+                        
+                        
+                            <div class="row accordion ">
+                                <div class="col-md-2 p-r-0 ">
+                                    <button id="btnFaAlongX" class="" type="button"><i class="fa fa-caret-right m-r-10 m-b-10 alongX" aria-hidden="true"></i>Along X-Lines</button>
+                                    
+                                </div>
+                                <div class="col-md-10 p-l-0">
+                                    <hr class="m-l-m40">
+                                </div>
+                            </div>
+                                <div class="row panel">
+                                    <div class="col-lg-6 col-md-6 col-sm-4 ps-mg-box ">
+                                        <div class="ps-pr ps-tab-box">
+                                            
+
+                                            <div class="ps-tab-select-box ps-sl-table ">
+                                                
+                                                <div class="table-responsive">
+                                                
+                                                    <table class="table" id="xlinestable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-left">Label</td>
+                                                                <td class="text-left p-l-25"> Dimension</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row accordion ">
+                                <div class="col-md-2 p-r-0 ">
+                                    <button id="btnFaAlongY" class="" type="button"><i class="fa fa-caret-right m-r-10 m-b-10" aria-hidden="true"></i>Along Y-Lines</button>
+                                    
+                                </div>
+                                <div class="col-md-10 p-l-0">
+                                    <hr class="m-l-m40">
+                                </div>
+                            </div>
+                                <div class="row panel">
+                                    <div class="col-lg-6 col-md-6 col-sm-4 ps-mg-box">
+                                        <div class="ps-pr ps-tab-box">
+                                            <div class="ps-tab-select-box ps-sl-table">
+                                                
+                                                <div class="table-responsive">
+                                                    <table class="table" id="ylinestable">
+                                                        
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-left">Label</td>
+                                                                <td class="text-left p-l-25">Default Dimension</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row accordion ">
+                                    <div class="col-md-2 p-r-0 ">
+                                        <button id="btnFaAlongZ" class="" type="button"><i class="fa fa-caret-right m-r-10 m-b-10" aria-hidden="true"></i>Along Z-Lines</button>
+                                    </div>
+                                    <div class="col-md-10 p-l-0">
+                                        <hr class="m-l-m40">
+                                    </div>
+                                </div>
+                                <div class="row panel">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 ps-mg-box">
+                                        <div class="ps-pr ps-tab-box">
+                                            <div class="ps-tab-select-box ps-sl-table">
+                                                
+                                                <div class="table-responsive">
+                                                    <table class="table" id="zlinestable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-left">Label</td>
+                                                                <td class="text-left p-l-25">TOS Dimension</td>
+                                                                <td class="text-left p-l-25">FFL Dimension</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+							<div class="modal-footer p-t-5 p-b-5 m-t-10 ">
+							<button type="button" class="btn btn-success pull-right" onclick="saveGridData()">Save</button>
+                            <button type="button" data-toggle="modal" data-target="#editModal" class="btn btn-outline-success whiteBG pull-right m-r-20">Edit</button>
+							</div>
+                                </form>
+                            </div>
+							
+                        </div>
+                        
+                        <!-- Table -->
+                    </div>
+                </div>
+                
+                
+                
+                
+                <!-- memtype-rightedit -->
+              
+                <form class="memtype-form"  id="addgridform">
+                <section class="memtype-rightedit">
+                    <div class="editmemtype mp-right-sidebar select32">
+                        <div class="slide-rightbar right">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="slide-rightbar left" style="display: none;">
+                            <i class="fa fa-caret-left" aria-hidden="true"></i>
+                        </div>
+                        <div class="rightFloat rightFloat700">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Index</th>
+                                            <th>Number</th>
+                                            <th>Default Dimension</th>
+                                            <th>Grid Label</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-fr-bg">Grid lines along X axis</td>
+                                            <td><input id="xlines"  type="text" class="form-control numericTxt" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required"></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-4 padding5">
+                                                        <input id="xft" type="text" class="form-control per70 numericTxt" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required"  /> 
+                                                        <div class="txt-right">
+                                                            ft
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                         <select  id="xin" class="form-control per70 inches" required data-validation-required-message="This field is required">
+                                                         <option value="" selected="select"></option>                                                     
+                                                        </select>
+                                                        <div class="txt-right">
+                                                            in
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                         <select id="xfr" class="form-control per70 fractions" required data-validation-required-message="This field is required">
+                                                            <option value="" selected="select"></option>
+                                                         </select>
+                                                        <div class="txt-right">
+                                                            fr
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                               <select id="xlbl" class="form-control" required data-validation-required-message="This field is required">
+                                                    <option value="" selected="select"></option>
+                                                    <option value="alphasmall">a-z</option>
+                                                    <option value="alphacap">A-Z</option>
+                                                    <option value="numeric">1-9</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-fr-bg">Grid lines along Y axis</td>
+                                            <td><input id="ylines" type="text" class="form-control numericTxt" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required"></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-4 padding5">
+                                                       <input id="yft" type="text" class="form-control per70 numericTxt" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required"> 
+                                                        <div class="txt-right">
+                                                            ft
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                        <select id="yin" class="form-control per70 inches" required data-validation-required-message="This field is required" >
+                                                         <option value="" selected="select"></option>
+                                                        </select>
+
+                                                        <div class="txt-right">
+                                                            in
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                        <select id="yfr" class="form-control per70 fractions" required data-validation-required-message="This field is required">
+                                                         <option value="" selected="select"></option>
+                                                        </select>
+                                                        <div class="txt-right">
+                                                            fr
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <select id="ylbl" class="form-control" required data-validation-required-message="This field is required">
+                                                   <option value="" selected="select" ></option>
+                                                   <option value="alphasmall">a-z</option>
+                                                  <option value="alphacap">A-Z</option>
+                                                    <option value="numeric">1-9</option>
+                                                </select>
+                                            </td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="table-fr-bg">No. of Floors</td>
+                                            <td><input id="zlines" type="text" class="form-control numericTxt" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required" ></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-4 padding5">
+                                                        <input id="zft" type="text" class="form-control per70 numericTxt" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required" > 
+                                                        <div class="txt-right">
+                                                            ft
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                      <select id="zin" class="form-control per70 inches" required data-validation-required-message="This field is required" >
+                                                            <option value="" selected="select"></option>
+                                                        </select>
+                                                        <div class="txt-right">
+                                                            in
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                         <select id="zfr" class="form-control per70 fractions" required data-validation-required-message="This field is required" >
+                                                         <option value="" selected="select"></option>
+                                                        </select>
+                                                        <div class="txt-right">
+                                                            fr
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                               <select id="zlbl" class="form-control" required data-validation-required-message="This field is required" >
+                                                    <option value="" selected="select"></option>
+                                                    <option value="floor">Floor</option>
+                                                  <option value="elevation">Elevation</option>
+                                                </select>
+                                            </td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="table-fr-bg">FFL level from TOS</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        <select id="ffl" disabled="disabled" class="form-control per70 p-r-0"  data-validation-required-message="This field is required">
+                                                            <option value="" selected="select">+</option>
+                                                            <option value="">-</option>
+                                                        </select>
+                                                  
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                             
+                                                    <div class="col-md-4 padding5">
+                                                        <select id="fin" class="form-control per70 inches" required data-validation-required-message="This field is required">
+                                                            <option value="" selected="select"></option>
+                                                           
+                                                        </select>
+                                                        <div class="txt-right">
+                                                            in
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 padding5">
+                                                        <select id="ffr" class="form-control per70 fractions" required data-validation-required-message="This field is required">
+                                                            <option value="" selected="select"></option>
+                                                           
+                                                        </select>
+                                                        <div class="txt-right">
+                                                            fr
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                                                                   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                            <div class="row">
+                                <div class="col-lg-12 padding5">
+									<div class="modal-footer m-t-10">
+										
+										<button type="button" class="btn btn-outline-success whiteBG pull-right cancelRFB m-r-20"> Cancel </button>   
+										<button type="button" class="btn btn-success pull-right" onclick="drawGridTables()">Create Grid </button>
+										
+										 
+                                         
+									</div>
+							    </div>
+                            </div>
+                        </div>
+                     </div>
+                </section>
+                  </form>
+                <!-- memtype-rightedit -->
+            </div>
+            <!-- End Container fluid  -->
+        </div>
+        <!-- End Wrapper -->
+        <div id="editModal" class="modal fade show" role="dialog">
+            <div class="modal-dialog modal-delete" style="margin-top:170px;">
+                <!-- Modal content-->
+                <div class="modal-content fontRoboto">
+                    <div class="modal-body info">
+                        <form>
+                            <div class="row m-t-10">
+                                <div class="col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Error.svg" />
+                                   
+                                </div>
+                                <div class="col-md-8 p-l-40">
+                                    <p>Editing the grid lines will result in loss<br> of all subsequent work done on <br>Member Placement</p>
+                                    <h6 class="labelBlack control-label"> Do you really want to Continue?</h6>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+					<div class="modal-footer">
+                            <div class="row ">
+                               <div class="col-lg-12 col-md-4">
+                                    <button class="btn waves-effect waves-light btn-secondary " data-dismiss="modal" aria-label="Close" type="submit"> No</button>
+                                    <button class="btn waves-effect waves-light btn-danger" type="button" onclick="editgrids()">Yes</button>
+                                </div>
+                            </div>                    
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="deleteModal" class="modal fade show" role="dialog">
+            <div class="modal-dialog" style="margin-top:170px;">
+                <!-- Modal content-->
+                <div class="modal-content fontRoboto">
+                    
+                    <div class="modal-body info">
+                        <form>
+                            <div class="row m-t-30">
+                                <div class="col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Error.svg" class="error-modal m-l-40"/>
+                                   
+                                </div>
+                                <div class="col-md-8 p-l-40">
+                                    <h4 class="labelBlack control-label"> Delete Row</h4>
+                                    <p>This action cannot be undone.</p>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="modal-footer p-b-0">
+                            <div class="row ">
+                               <div class="col-lg-12 col-md-4">
+                                    <button class="btn waves-effect waves-light btn-secondary" type="submit"> Cancel</button>
+                                    <button class="btn waves-effect waves-light btn-danger " type="submit">Delete</button>
+                                </div>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -Wrapper -->
+    <!-- footer -->
+    <footer class="footer"> © 2018 VIRTUELE </footer>
+    <!-- End footer -->
+    
+
+    <!-- All Jquery -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="https://s3.ap-south-1.amazonaws.com/testbucket092601/material-style-1.5.2/HTML/js/custom.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+   
+  
+	<script src="resources/js/chosen.jquery.min.js"></script>
+	<script src="resources/js/grid.js"></script>
+	<script src="resources/js/leftside.js"></script>
+
+    <script>
+        $('#btnFaAlongX').click(function(){
+            $(this).toggleClass('down');
+        });
+         $('#btnFaAlongY').click(function(){
+            $(this).toggleClass('down');
+        });
+          $('#btnFaAlongZ').click(function(){
+            $(this).toggleClass('down');
+        });
+    </script>
+    
+    <script type="text/javascript">
+    
+    var inches = ["0","1","2","3","4","5","6","7","8","9","10","11"];
+    var fraction = "[ { \"fr_fra\": 0, \"fr\": 0 }, { \"fr_fra\": \"1/16\", \"fr\": 0.0625 }, { \"fr_fra\": \"1/2\", \"fr\": 0.5 }, { \"fr_fra\": \"1/4\", \"fr\": 0.25 }, { \"fr_fra\": \"1/8\", \"fr\": 0.125 }, { \"fr_fra\": \"11/16\", \"fr\": 0.6875 }, { \"fr_fra\": \"13/16\", \"fr\": 0.8125 }, { \"fr_fra\": \"15/16\", \"fr\": 0.9375 }, { \"fr_fra\": \"3/16\", \"fr\": 0.1875 }, { \"fr_fra\": \"3/4\", \"fr\": 0.75 }, { \"fr_fra\": \"3/8\", \"fr\": 0.375 }, { \"fr_fra\": \"5/16\", \"fr\": 0.3125 }, { \"fr_fra\": \"5/8\", \"fr\": 0.625 }, { \"fr_fra\": \"7/16\", \"fr\": 0.4375 }, { \"fr_fra\": \"7/8\", \"fr\": 0.875 }, { \"fr_fra\": \"9/16\", \"fr\": 0.5625 } ]";
+
+    var fractionJson = JSON.parse(fraction);
+	addFrDropDown('.fractions');
+    addInchDropDown('.inches');
+  
+    
+    
+    
+    
+ // On page Load
+	$(document).ready(function(){			
+
+// localStorage.clear();
+
+   var gridJSON=  localStorage.getItem("virgrids");
+   console.log(gridJSON);
+		
+	
+
+				// If Grid Data exists hide the input form and show only data tables for X Y Z Axis
+	
+				if (gridJSON) {
+
+                    console.log("Grid data found on Local storage");
+					ws="/bimspring/updategriddata";
+			
+			        $(".add-new-value").hide();
+			        $(".memtype-table").show();
+			   
+			        $(".editmemtype .rightFloat").hide();
+			   
+				
+					var grids = JSON.parse(gridJSON).grids;
+							
+			//	console.log(grids);
+				
+					for (var x = 1; x < grids.xaxis.length; x++) {
+					
+						if(grids.xaxis[x].g_Label)
+							{
+						addTableRow("xlinestable",x, grids.xaxis[x].g_Label,
+								 grids.xaxis[x].g_dimension_ft,
+								 grids.xaxis[x].g_dimension_in,
+								 grids.xaxis[x].g_dimension_fra);
+							}
+					}
+					for (var y = 1; y < grids.yaxis.length; y++) {
+				
+						if(grids.yaxis[y].g_Label)
+						{
+						addTableRow("ylinestable",y, grids.yaxis[y].g_Label,
+								 grids.yaxis[y].g_dimension_ft,
+								 grids.yaxis[y].g_dimension_in,
+								 grids.yaxis[y].g_dimension_fra);
+						}
+					}
+					for (var z = 1; z < grids.zaxis.length; z++) {
+						if(grids.zaxis[z].g_Label)
+						{
+						addTableRow_Z("zlinestable",z, grids.zaxis[z].g_Label,
+								 grids.zaxis[z].g_dimension_ft_tos,
+								 grids.zaxis[z].g_dimension_in_tos,
+								 grids.zaxis[z].g_dimension_fra_tos,
+								 grids.zaxis[z].g_dimension_in_ffl,
+								 grids.zaxis[z].g_dimension_fra_ffl);
+						}
+					}
+
+				} else {
+                    console.log("Grid Json Not Found on Local storage");
+					ws="/bimspring/addgriddata";
+							
+				}
+
+			});
+
+ 
+    function addFrDropDown(id_class){				
+ 	   var option = '';
+
+ 	
+         option += "<option value=\"0\">0</option>";
+        option += " <option value=\"0.0625\">1/16</option>";
+        option += " <option value=\"0.125\">1/8</option>";
+        option += " <option value=\"0.1875\">3/16</option>";
+        option += " <option value=\"0.25\">1/4</option>";
+        option += " <option value=\"0.3125\">5/16</option>";
+        option += " <option value=\"0.375\">3/8</option>";
+        option += " <option value=\"0.4375\">7/16</option>";
+        option += "<option value=\"0.5\">1/2</option>";
+        option += " <option value=\"0.5625\">9/16</option>";
+        option += " <option value=\"0.625\">5/8</option>";
+        option += "  <option value=\"0.6875\">11/16</option>";
+        option += "  <option value=\"0.75\">3/4</option>";
+        option += "  <option value=\"0.8125\">13/16</option>";
+        option += " <option value=\"0.875\">7/8</option>";
+        option += " <option value=\"0.9375\">15/16</option>";
+
+ 	
+ 	    $(id_class).append(option);
+ 	    $(id_class).val("0");
+    }
+    
+    function addInchDropDown(id_class)   {
+ 	   
+ 	   var option = '';
+
+             option += "<option value=\"0\">0</option>";
+         option +="<option value=\"1\">1</option>";
+         option += "<option value=\"2\">2</option>";
+         option += "<option value=\"3\">3</option>";
+         option += "<option value=\"4\">4</option>";
+         option += "<option value=\"5\">5</option>";
+         option += "<option value=\"6\">6</option>";
+         option += "<option value=\"7\">7</option>";
+         option += "<option value=\"8\">8</option>";
+         option += "<option value=\"9\">9</option>";
+         option += "<option value=\"10\">10</option>";
+         option += "<option value=\"11\">11</option>";
+
+
+        
+ 	    $(id_class).append(option);
+ 	    $(id_class).val("0");
+ 	   
+    }
+    
+  
+    
+    
+    
+    function keyDownEvent(e){
+    	
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13,  190]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    }
+    
+    
+    
+    function drawGridTables()
+    {
+    	    
+        if(validateForm() == true){
+        	 $(".add-new-value").hide();
+             $(".memtype-table").show();
+             $(".left").show();
+             $(".editmemtype .rightFloat").hide();
+        	
+             
+           
+        createGridTable_X();
+ 	    createGridTable_Y();
+    	createGridTable_Z();
+        }
+        
+       
+       
+    }
+    
+    
+    
+    
+    //function to create tables based on user selection
+	function createGridTable_X(){
+    	
+    	var xft=0;
+    	var xin=0;
+    	var xfr=0;
+    	
+    	var Lbl = $("#xlbl").val() ;
+    	
+    	
+    	var xlines=parseInt($("#xlines").val());
+    	var def_xft=  parseInt($("#xft").val());
+    	var def_xin=  parseInt($("#xin").val());
+    	var def_xfr= parseFloat($("#xfr").val());
+    	
+   
+
+    	var ch = 'A',ch_prefix='',ch2='B';
+    	
+		if (Lbl == "alphacap") {
+			ch = 'A'; ch_prefix='A'; ch2='B';
+		} else if (Lbl == "alphasmall") {
+			ch = 'a';ch_prefix='a'; ch2='b';
+		} else if (Lbl == "numeric") {
+			ch = 1; ch2=2;
+		}
+		
+	
+		var tempChar='';
+  
+     	addTableRow("xlinestable",0,tempChar+ch +'-'+ch2 ,def_xft,def_xin,def_xfr); 
+     	
+     
+    	
+    	for (var x=1;x<xlines-1;x++){
+    		// Logic for incremnting Lablels
+    		if (Lbl == "numeric") {
+				ch++;
+				ch2++;
+			}
+			else {
+				if(ch.trim()=='z'){
+					
+						ch='a';ch2='b';
+					tempChar=ch_prefix;
+					ch_prefix = String.fromCharCode(ch_prefix.charCodeAt(0) + 1);
+					
+				}
+				else if(ch.trim()=='Z'){
+					
+					ch='A';ch2='B';
+					tempChar=ch_prefix;
+					ch_prefix = String.fromCharCode(ch_prefix.charCodeAt(0) + 1);
+				}
+				else{
+					
+					ch = String.fromCharCode(ch.charCodeAt(0) + 1);
+					ch2 = String.fromCharCode(ch2.charCodeAt(0) + 1); 
+					
+					
+				}
+			}
+
+    		
+    		
+    		addTableRow("xlinestable",x,tempChar+ch + '-' + ch2,def_xft,def_xin,def_xfr);
+    	}
+	}
+    
+    
+    
+	function createGridTable_Y(){
+		
+		
+	
+	    
+    	var yft=0;
+    	var yin=0;
+    	var yfr=0;
+    	
+    	var Lbl = $("#ylbl").val() ;
+    	var ylines=parseInt($("#ylines").val());
+    	var def_yft=  parseInt($("#yft").val());
+    	var def_yin=  parseInt($("#yin").val());
+    	var def_yfr= parseFloat($("#yfr").val());
+
+   		var ch = 'A',ch_prefix='', ch2='B';
+    	
+		if (Lbl == "alphacap") {
+			ch = 'A';ch_prefix='A'; ch2='B';
+		} else if (Lbl == "alphasmall") {
+			ch = 'a'; ch_prefix='a'; ch2='b';
+		} else if (Lbl == "numeric") {
+			ch = 1; ch2=2;
+		}
+		
+		var tempChar='';
+  
+		
+    	addTableRow("ylinestable",0,tempChar+ch +'-'+ch2 ,def_yft,def_yin,def_yfr);
+    	
+    	
+    	
+    	
+    	for (var y=1;y<ylines-1;y++){
+    		
+    		// Logic for incremnting Lablels
+    		if (Lbl == "numeric") {
+				ch++;
+				ch2++;
+			}
+			else {
+				if(ch.trim()=='z'){
+					ch='a';	ch2='b';
+					tempChar=ch_prefix;
+					ch_prefix = String.fromCharCode(ch_prefix.charCodeAt(0) + 1);
+					
+				}
+				else if(ch.trim()=='Z'){
+					ch='A';ch2='B';
+					tempChar=ch_prefix;
+					ch_prefix = String.fromCharCode(ch_prefix.charCodeAt(0) + 1);
+				}
+				else{
+					ch = String.fromCharCode(ch.charCodeAt(0) + 1);
+					ch2 = String.fromCharCode(ch2.charCodeAt(0) + 1); 
+				}
+			}
+    		 // End
+    		 
+
+
+    		addTableRow("ylinestable",y,tempChar+ch + '-' + ch2,def_yft,def_yin,def_yfr);
+    	
+    	}
+	}
+	
+	
+	
+function createGridTable_Z(){
+	
+	
+	    
+    	var zft_tos=0;
+    	var zin_tos=0;
+    	var zfr_tos=0;
+    	var zft_ffl=0;
+    	var zin_ffl=0;
+    	var zfr_ffl=0;
+    	
+    	var Lbl = $("#zlbl").val() ;
+    	
+    	var zlines=parseInt($("#zlines").val());
+    	var def_zft=  parseInt($("#zft").val());
+    	var def_zin=  parseInt($("#zin").val());
+    	var def_zfr= parseFloat($("#zfr").val());
+    	
+
+    	var def_fin=  parseInt($("#fin").val());
+    	var def_ffr= parseFloat($("#ffr").val());
+    	
+
+    	
+    	var ch="";
+    	if (Lbl == "floor") {
+			ch = 'Floor';
+		} else if (Lbl == "elevation") {
+			ch = 'Elevation';
+		}
+		
+    	
+    	
+
+		addTableRow_Z("zlinestable",0,ch+" 0 -"+ch+" 1",def_zft, def_zin, def_zfr,def_fin,def_ffr);
+    	
+		
+		for (var z=1;z<zlines-1;z++){    		
+    		
+   
+    		 addTableRow_Z("zlinestable",z,ch+" "+(z)+" - "+ch+" "+(z+1),def_zft, def_zin, def_zfr,def_fin,def_ffr); 
+    		
+    	
+    	}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+	function addTableRow(tableID,index, label, d_ft,d_in,d_fr) {
+    	
+		
+		
+		var row =   '<tr class="datarow">'+
+		             '<td ><input id="'+(tableID+"_"+index+'_lbl')+'" type="text" class="text-center form-control widthtd"  required data-validation-required-message="This field is required"></td>'+
+		              '<td class="p-l-0">'+
+		              '<div class="row">'+
+		                 ' <div class="col-md-3 padding5">'+
+		                     ' <input  id="'+(tableID+"_"+index+'_ft')+'" type="text" class="rowtextft text-center p-r-0 ft form-control per70 numericTxt" onChange="textChange(event)" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required"> '+
+		                     ' <div class="txt-right">'+
+		                        '  ft'+
+		                     ' </div>'+
+		                     '<input  id="'+(tableID+"_"+index+'_ft_hidden')+'" type="hidden" class="text-center p-r-0 ft form-control per70 numericTxt" > '+
+		                 ' </div>'+
+		                 ' <div class="col-md-4 p-r-0 padding5">'+
+		                   '   <select  id="'+(tableID+"_"+index+'_in')+'" class="in form-control  p-0  per70" required data-validation-required-message="This field is required">'+
+		                     '     <option value="" selected="select"></option>'+
+		                      ' </select>'+
+		                     ' <div class="txt-right">'+
+		                     '     in'+
+		                    '  </div>'+
+		                 ' </div>'+
+		                 ' <div class="col-md-5 p-r-0 padding5">'+
+		                   '   <select  id="'+(tableID+"_"+index+'_fr')+'" class="fr form-control p-0 per70" required data-validation-required-message="This field is required">'+
+		                      '    <option value="" selected="select"></option>'+
+		                        
+		                     ' </select>'+
+		                     ' <div class="txt-right">'+
+		                    '      fr'+
+		                   '   </div>'+
+		                '  </div>'+
+		             ' </div>'+
+		          '</td>'+
+		         ' </tr>';
+     
+   
+           
+	
+				$('#' + tableID + ' tbody').append(row);  				
+		
+				
+			    addFrDropDown('#'+(tableID+"_"+index+'_fr'));
+			    addInchDropDown('#'+(tableID+"_"+index+'_in'));
+			    
+			   
+			    $('#'+(tableID+"_"+index+'_lbl')).val(label);
+			    $('#'+(tableID+"_"+index+'_ft')).val(d_ft);
+			    $('#'+(tableID+"_"+index+'_ft_hidden')).val(d_ft);
+			    $('#'+(tableID+"_"+index+'_in')).val(d_in);
+			    $('#'+(tableID+"_"+index+'_fr')).val(d_fr);    				
+
+	}
+	
+	
+	function addTableRow_Z(tableID,index, label, d_ft_tos,d_in_tos,d_fr_tos,d_in_ffl,d_fr_ffl) {
+    	
+		var row =  '<tr class="datarow">'+
+			            '<td><input  id="'+(tableID+"_"+index+'_lbl')+'" type="text" class=" text-center form-control col-lg-8 numericTxt" required data-validation-required-message="This field is required"></td>'+
+			            '<td>'+
+			            '<div class="row">'+
+			             '   <div class="col-md-4 padding5">'+
+			              '      <input id="'+(tableID+"_"+index+'_fttos')+'"  type="text" class=" rowtextft text-center ft form-control per70 numericTxt" onChange="textChange(event)" onkeydown="keyDownEvent(event)" required data-validation-required-message="This field is required"> '+
+			               '     <div class="txt-right">'+
+			                '        ft'+
+			                 '   </div>'+
+		                     '<input  id="'+(tableID+"_"+index+'_fttos_hidden')+'" type="hidden" class="text-center p-r-0 ft form-control per70 numericTxt" > '+
+			                '</div>'+
+			                '<div class="col-md-4 padding5">'+
+			                    '<select id="'+(tableID+"_"+index+'_intos')+'" class="in p-0 form-control per70" required data-validation-required-message="This field is required">'+
+			                     '   <option value="" selected="select"></option>'+
+			                  
+			                   ' </select>'+
+			                   ' <div class="txt-right">'+
+			                  '      in'+
+			                 '   </div>'+
+			                '</div>'+
+			                '<div class="col-md-4 padding5 p-l-0">'+
+			                    '<select  id="'+(tableID+"_"+index+'_frtos')+'"class="fr p-0 form-control per70" required data-validation-required-message="This field is required">'+
+			                        '<option value="" selected="select"></option>'+
+			                     
+			                    '</select>'+
+			                    '<div class="txt-right">'+
+			                     '   fr'+
+			                    '</div>'+
+			                '</div>'+
+			                '</div>'+
+			            '</td>'+
+			            '<td>'+
+			            '<div class="row">'+
+			               
+			           ' <div class="col-md-4">'+
+                        '<select id="ffl" disabled="disabled" class="form-control per70 p-r-0"  data-validation-required-message="This field is required">'+
+			                          '  <option value="" selected="select">+</option>'+
+			                        '    <option value="">-</option>'+
+			                      '  </select>'+
+			                  
+			                 '   </div>'+
+			                    '<div class="col-md-4 padding5">'+
+			                        '<select id="'+(tableID+"_"+index+'_inffl')+'" class="in p-0 form-control per70" required data-validation-required-message="This field is required">'+
+			                          '  <option value="" selected="select"></option>'+
+			                        
+			                        '</select>'+
+			                       ' <div class="txt-right">'+
+			                      '      in'+
+			                     '   </div>'+
+			                    '</div>'+
+			                    '<div class="col-md-4 padding5 p-l-0">'+
+			                        '<select  id="'+(tableID+"_"+index+'_frffl')+'" class="fr p-0 form-control per70" required data-validation-required-message="This field is required">'+
+			                         '   <option value="" selected="select"></option>'+
+			                    
+			                        '</select>'+
+			                        '<div class="txt-right">'+
+			                         '   fr'+
+			                        '</div>'+
+			                    '</div>'+
+			            '</div>    '+                 
+			    '</td>'+
+			        '</tr>';
+ 
+     
+   
+		          	
+				$('#' + tableID + ' tbody').append(row);  				
+		
+				
+			    addFrDropDown('#'+(tableID+"_"+index+'_frtos'));
+			    addInchDropDown('#'+(tableID+"_"+index+'_intos'));
+			    addFrDropDown('#'+(tableID+"_"+index+'_frffl'));
+			    addInchDropDown('#'+(tableID+"_"+index+'_inffl'));
+			    
+			    $('#'+(tableID+"_"+index+'_lbl')).val(label);
+			    
+			    $('#'+(tableID+"_"+index+'_fttos')).val(d_ft_tos);
+			    $('#'+(tableID+"_"+index+'_fttos_hidden')).val(d_ft_tos);
+			    $('#'+(tableID+"_"+index+'_intos')).val(d_in_tos);
+			    $('#'+(tableID+"_"+index+'_frtos')).val(d_fr_tos); 
+
+			 
+			    $('#'+(tableID+"_"+index+'_inffl')).val(d_in_ffl);
+			    $('#'+(tableID+"_"+index+'_frffl')).val(d_fr_ffl);  
+
+	}
+	
+	
+	 
+	  
+	// Method to Conevrt the Grid data table to JSON Format to save into the database.
+		function tableToJSON(tableID) {
+			var tableData = [];
+			var table = document.getElementById(tableID);
+			var rowCount = document.getElementById(tableID).rows.length;
+			
+			var temp_ft=0,temp_in=0,temp_fra=0,temp_Dimension=0;
+			for (var i = 0; i < rowCount; i++) {
+				if(i==0){
+					
+					var obj = {
+							
+							Label : $(table.rows.item(i+1).cells[0]).find('input').val().split("-")[0],
+							dimension_ft :0 ,
+							dimension_in :0 ,
+							dimension_fra :0 ,
+							Dimension :0
+					};
+					tableData.push(obj);
+				}
+				else{
+
+					var ft=$(table.rows.item(i).cells[1]).find('.ft').val();
+					var inch=$(table.rows.item(i).cells[1]).find('.in').val();
+					var fra=$(table.rows.item(i).cells[1]).find('.fr').val();
+					
+					temp_ft=temp_ft+parseFloat(ft);
+					temp_in=temp_in+parseFloat(inch);
+					temp_fra=temp_fra+parseFloat(fra);
+					
+					if(temp_fra>1){
+						temp_in=temp_in+1;
+						temp_fra=temp_fra-1;						
+					}
+					if(temp_in >12){
+						temp_ft=temp_ft+1;
+						temp_in=temp_in-12;						
+					}
+					temp_Dimension= ((temp_ft*12)+temp_in+temp_fra);
+					
+					var temp_Label="";
+					var labelValue= $(table.rows.item(i).cells[0]).find('input').val().split("-");
+					temp_Label=labelValue[1];
+						
+				
+					
+					var obj = {
+							Label : temp_Label,
+							dimension_ft :temp_ft ,
+							dimension_in :temp_in ,
+							dimension_fra :temp_fra ,			
+							Dimension :temp_Dimension,
+							g_Label : $(table.rows.item(i).cells[0]).find('input').val(),
+							g_dimension_ft :ft ,
+							g_dimension_in :inch ,
+							g_dimension_fra :fra 
+						
+					};
+					
+					tableData.push(obj);
+				}
+			}
+			return tableData;
+		}
+	
+	
+		// Method to Conevrt the Grid data table to JSON Format to save into the database.
+		function tableToJSON_Z(tableID) {
+			var tableData = [];
+			var table = document.getElementById(tableID);
+			var rowCount = document.getElementById(tableID).rows.length;
+			var temp_ft=0,temp_in=0,temp_fra=0,temp_Dimension=0,temp_Dimension_ffl=0;
+			for (var i = 0; i < rowCount; i++) {
+
+					if(i==0){
+					
+					var obj = {
+							
+							Label : $(table.rows.item(i+1).cells[0]).find('input').val().split("-")[0],
+							dimension_ft :0 ,
+							dimension_in :0 ,
+							dimension_fra :0 ,						
+							Dimension :0
+					};
+					tableData.push(obj);
+				}
+				else{
+						var ft_tos=$(table.rows.item(i).cells[1]).find('.ft').val();
+						var inch_tos=$(table.rows.item(i).cells[1]).find('.in').val();
+						var fra_tos=$(table.rows.item(i).cells[1]).find('.fr').val();
+						
+		
+						var inch_ffl=$(table.rows.item(i).cells[2]).find('.in').val();
+						var fra_ffl=$(table.rows.item(i).cells[2]).find('.fr').val();
+						
+						temp_ft=temp_ft+parseFloat(ft_tos);
+						temp_in=temp_in+parseFloat(inch_tos);
+						temp_fra=temp_fra+parseFloat(fra_tos);
+						
+						if(temp_fra>1){
+							temp_in=temp_in+1;
+							temp_fra=temp_fra-1;						
+						}
+						if(temp_in >12){
+							temp_ft=temp_ft+1;
+							temp_in=temp_in-12;						
+						}
+						
+						
+						temp_Dimension=((temp_ft*12)+temp_in+temp_fra);
+						temp_Dimension_ffl=(parseFloat(temp_in)+parseFloat(temp_fra));
+					
+							
+							
+							
+						var temp_Label="";
+						var labelValue= $(table.rows.item(i).cells[0]).find('input').val().split("-");
+						temp_Label=labelValue[1];
+							
+						
+						var obj = {
+							g_Label : $(table.rows.item(i).cells[0]).find('input').val(),
+							g_dimension_ft_tos : ft_tos,
+							g_dimension_in_tos : inch_tos,
+							g_dimension_fra_tos : fra_tos,
+							
+							Label : temp_Label,
+							dimension_ft_tos : temp_ft,
+							dimension_in_tos : temp_in,
+							dimension_fra_tos : temp_fra,
+							Dimension :temp_Dimension,
+							Dimension_ffl :temp_Dimension_ffl,
+							
+							g_dimension_in_ffl : inch_ffl,
+							g_dimension_fra_ffl : fra_ffl
+							
+						};
+					
+						tableData.push(obj);
+					}
+			}
+
+			//alert(JSON.stringify(tableData));
+			return tableData;
+		
+		}
+		
+		function validateForm() {
+			$('#addgridform').addClass('submitted');
+			var validated = true;
+			/* checking for required filed */
+			$('#addgridform').find(':input').each(function(){   
+		   		var id  = $(this).prop('id');
+		   		if(id!="")
+		   		{
+		       		var Value =  $('#' + id).val();   		
+		       		var requ = $(this).prop('required');	
+		       	 var elemetvisible = $('#' + id).is(':visible');
+		       		   		
+		       	 if(Value == "" && requ == true && elemetvisible)     
+		             validated = false;	
+		   		}
+		   	});
+			 return validated;
+		}
+		
+		
+		 function saveGridData(){
+		        
+	         var xTable = tableToJSON("xlinestable");
+	         var yTable=tableToJSON("ylinestable");
+		     var zTable =tableToJSON_Z("zlinestable"); 
+	        
+            var GridJSONObj={"grids":{"xaxis":xTable,"yaxis":yTable,"zaxis":zTable}};
+            console.log(GridJSONObj);
+            
+             localStorage.setItem("virgrids", JSON.stringify(GridJSONObj));
+             window.location.replace("index.html");
+            //     // Retrieve
+            //   
+
+		
+	}
+		
+
+
+		    function editgrids(){
+		    	
+		    	$(".datarow").remove();
+		    	   $(".add-new-value").show();
+		           $(".memtype-table").hide();
+		           $('#editModal').modal('hide');
+		           
+		       
+		           $(".editmemtype .rightFloat").show();
+		           $(".memtype-rightedit").show();
+
+                   localStorage.clear();
+		    }
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+
+.misc-sidebar ul ul .comingsoonH:hover{
+	    height: 50px
+}
+
+.light-logo{
+    color: #fff!important;
+}
+
+/* Misc Sidebar */
+.misc-sidebar {
+    width: 60px;
+    background: #0078d7;
+    position: fixed;
+    z-index: 9;
+    height: fit-content;
+    margin-bottom: 10px;
+    padding-top: 46px;
+}
+/* .misc-sidebar {
+    min-width: 4%;
+    max-width: 4%;
+    background: #0078d7;
+    position:fixed;
+    z-index: 9;
+    height: fit-content;
+    margin-bottom:50px;
+} */
+.misc-sidebar ul p {
+    color: #787877;
+    padding: 10px;
+}
+.misc-sidebar ul li a {
+    padding: 15px 10px;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid rgba(201, 229, 251, 0.25);
+}
+.misc-sidebar ul ul a {
+    padding: 8px 5px 5px 5px;
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    color: #787877;
+}
+.misc-sidebar ul ul a:hover {
+    border-left: 3px solid #fca121;
+    background: #3477cb;
+    color: #fff!important;
+}
+.misc-sidebar .noborder:hover {
+    background-color: none!important;
+}
+/* .misc-sidebar ul ul {
+    position: absolute;
+    left: 99%;
+    width: 147px;
+    z-index: 9;
+    top: 1px;
+    background: #fff;
+    color: #787877;
+} */
+.misc-sidebar ul ul {
+    position: absolute;
+    left: 99%;
+    width: 150px;
+    z-index: 9;
+    background: #fff;
+    color: #787877;
+}
+.width4and5{
+    width: 230px!important;
+}
+.misc-sidebar ul ul h4{
+    margin: 0;
+    color: #787877;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid rgba(201, 229, 251, 0.25);
+    font-size: 14px;
+    font-weight: 500;
+}
+.misc-sidebar ul ul h4 i{
+    font-size: 22px;
+    padding-right: 10px;
+}
+.misc-sidebar ul li.active > a {
+    color: #fff;
+    background: #2759a3;
+}
+.misc-sidebar .list-unstyled{
+    padding-left: 0;
+    list-style: none;
+    border: 1px solid #eee;
+    border-left: none;
+    margin: 0;
+    top: 45px;
+}
+.projectstandards{
+	top: 111px!important;
+}
+.misc-sidebar a[data-toggle="collapse"] {
+    position: relative;
+}
+.misc-sidebar .misc-sub-menu ul {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.misc-sidebar .misc-sub-menu ul {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.misc-sidebar .misc-sub-menu a {
+    color: #787877;
+}
+.misc-sidebar .misc-sub-menu1 a {
+    color: #787877!important;
+    padding: 5px 18px 3px 15px;
+}
+.misc-sidebar .misc-sub-menu ul li a, .misc-sidebar .misc-sub-menu1 ul li a {
+    font-size: 13px;
+    color: #787877;
+    padding-left: 25px;
+}
+.misc-sidebar .misc-sub-menu1 ul li a {
+    font-size: 13px;
+    color: #787877!important;
+    padding-left: 35px;
+}
+.misc-sidebar .misc-sub-menu1 ul li a:hover{
+    color: #fff!important;
+}
+.misc-sub-menu a:after, .misc-sub-menu1 a:after {
+    top: 3px;
+    left: 5px;
+    color: #787877;
+    position: relative;
+    display: inline-block;
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+    padding-right: 10px;
+    transition: transform .25s linear;
+}
+.misc-sub-menu a[aria-expanded="false"]:after, .misc-sub-menu1 a[aria-expanded="false"]:after {
+    content: "\f0da";
+}
+.misc-sub-menu a[aria-expanded="true"]:after, .misc-sub-menu1 a[aria-expanded="true"]:after {
+    content: "\f0d7";
+}
+.miscHeightScroll {
+    height: 470px;
+    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* .misc-container {
+    width: 96.6%;
+    height: auto;
+    margin-left: 4%;
+    z-index: 1;
+    margin-bottom:30px;
+} */
+/* .updatedMisc .misc-container {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    z-index: 1;
+    margin-bottom: 30px;
+} */
+.noborder {
+    border: 0;
+}
+.gridtop{
+    top: 372px!important;
+}
+.mainsteel{
+	top: 436px!important;
+}
+.allocationtop{
+    top:198px!important;
+}
+
+.wrex-block {
+     display: flex;
+    align-items: stretch;
+}
+@media (min-width: 1100px) {
+    .container-fluid {
+        max-width: inherit!important;
+    }
+}
+@media (max-width: 1200px){
+    .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%; 
+    }
+}
+@media (max-width: 850px){
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%; 
+    }
+}

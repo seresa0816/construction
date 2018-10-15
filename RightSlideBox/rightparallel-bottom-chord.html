@@ -1,0 +1,284 @@
+<!-- Parallel Modal  -->
+<div class="rightFloat" id="rightbColumn1">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#pabeam1" data-toggle="tab">Parallel Chord Truss- Bottom Chord Properties</a>
+        </li>
+        <li>
+            <a href="#pabeam3" id="rightparatrusscontab" data-toggle="tab">Connection Details</a>
+        </li>
+        <li>
+            <a href="#pabeam2" data-toggle="tab">Finish</a>
+        </li>
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="pabeam1">
+            <form>
+                <div class="row nomarginlr">
+                    <div class="col-lg-3 col-md-3 padding5 m-b-10">
+                        <label class="labelBlack control-label w125">Member Profile</label>
+                        <select class="form-control pmselect3" id="parallelmodalprofile1">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-3 padding5 m-b-10 ">
+                        <label class="labelBlack control-label w125">Member Orientation</label>
+                        <select class="form-control per70" id="parallelmemorientation">
+                        </select>
+                        <div class="txt-right">
+                            deg
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 padding5 m-b-10">
+                        <label class="labelBlack control-label">Material Grade</label>
+                        <select class="form-control pmselect4" id="parallelgrade1">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-3 padding5 m-b-10">
+                        <label class="custom-control custom-checkbox camAlign">
+                            <input id="pezcamber" type="checkbox" value="Camber" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Camber</span></label>
+                        <select class="form-control per70 " disabled="true" id="pezcamber1">
+                            <option value="">Select</option>
+                        </select>
+                        <div class="txt-right">
+                            in
+                        </div>
+                    </div>
+                </div>
+                <div class="row nomarginlr">
+                    <div class="col-lg-3 col-md-3 padding5 m-b-10">
+                        <label class="labelBlack control-label">Splice Count</label>
+                        <select class="form-control per70" id="splicecount">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="spliceRows">
+                   
+                </div>
+                <div class="row nomarginlr m-t-10">
+                    <div class="col-lg-12 padding5">
+                        <label class="labelBlack control-label disblock">Reference Drawing Numbers</label>
+                        <select data-placeholder="" multiple class="referenceSelect" name="test" id="parallelreferencenum">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="pabeam3">
+            <form>
+                <label class="labelBlack control-label col-lg-12 disblock nopadding"> Bottom Chord Connection Details:</label>
+                <hr />
+                <div class="row nomarginlr">
+                    <div class="col-md-6 padding10 borderRight">
+                        <div class="row nomarginlr">
+                            <div class="col-md-12 padding5">
+                                <h6><b>Left</b></h6>
+                                <div class="col-md-8 nopadding">
+                                    <label class="labelBlack disblock control-label">End Connection Mark</label>
+                                    <select class="form-control  m-b-10" id="parallelconmark1">
+                                    </select>
+                                    <label class="labelBlack disblock control-label">Connection Type</label>
+                                    <select class="form-control  m-b-10" id="parallelconmark3" disabled="true">
+                                    </select>
+                                    <label class="labelBlack disblock control-label">Connection Method</label>
+                                    <select class="form-control  m-b-10" id="parallelconmark4" disabled="true">
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12 padding5">
+                                <label class="labelBlack control-label disblock"><b>End Connection Load Details:</b></label>
+                                <div class="col-lg-8 col-md-8 nopadding">
+                                    <label class="labelBlack control-label">Shear Load</label>
+                                    <input type="text" class="form-control per70" id="parallelsload1">
+                                    <div class="txt-right">
+                                        kips
+                                    </div>
+                                    <label class="labelBlack m-t-10 control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="parallelaload1">
+                                    <div class="txt-right">
+                                        kips
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 padding10">
+                        <div class="row nomarginlr  m-b-10">
+                            <div class="col-md-12 padding5">
+                                <h6><b>Right</b></h6>
+                                <div class="col-md-8 nopadding">
+                                    <label class="labelBlack disblock control-label disblock">End Connection Mark</label>
+                                    <select class="form-control m-b-10" id="parallelconmark5">
+                                    </select>
+                                    <label class="labelBlack disblock control-label">Connection Type</label>
+                                    <select class="form-control m-b-10" id="parallelconmark7" disabled="true">
+                                    </select>
+                                    <label class="labelBlack disblock control-label">Connection Method</label>
+                                    <select class="form-control m-b-10" id="parallelconmark8" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 padding5">
+                                <label class="labelBlack control-label disblock"><b>End Connection Load Details:</b></label>
+                                <div class="col-lg-8 col-md-8 nopadding">
+                                    <label class="labelBlack control-label">Shear Load</label>
+                                    <input type="text" class="form-control per70" id="parallelsload2">
+                                    <div class="txt-right">
+                                        kips
+                                    </div>
+                                    <label class="labelBlack m-t-10 control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="parallelaload2">
+                                    <div class="txt-right">
+                                        kips
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row nomarginlr">
+                   <div class="col-md-12 padding10">
+                      <div class="row nomarginlr">
+                         <div class="col-md-6 padding5">
+                          <label class="labelBlack control-label"><b>Splice Connection Details:</b></label>
+                            <div class="col-lg-8 col-md-8 padding5">
+                              <label class="labelBlack disblock control-label">Splice Connection Mark</label>
+                              <select class="form-control m-b-10" id="parallelconmark2">
+                              </select>
+                            </div>
+                         </div>
+                         <div class="col-md-6 padding5">
+                          <label class="labelBlack control-label"><b>Splice Connection Load Details:</b></label>
+                          <div class="col-lg-6 col-md-6 padding5">
+                              <label class="labelBlack control-label disblock">Shear Load</label>
+                              <input type="text" class="form-control per70" id="parallelsload3">
+                              <div class="txt-right">
+                                 kips
+                              </div>
+                            </div>
+                         </div>
+
+                       </div>
+                   </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="pabeam2">
+            <form>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label ">Surface Preparation </label>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <select class="form-control" id="paralsurfacePreparation1">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-checkbox">
+                            <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" id="paralprimer1" class="form-control" disabled="true">
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="paralprimer2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" class="form-control" id="paralpaint1"  disabled="true">
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="paralpaint2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                        <div class="col-lg-8 p-l-0">
+                            <select id="paralgalvanization2" class="form-control per70" disabled="true">
+                            </select>
+                            <div class="txt-right">
+                                mils
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 p-r-0">
+                        <label class="labelBlack control-label">Fire Proofing Type</label>
+                        <select id="paralfireProofing2" class="form-control per70" disabled="true">
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4 p-l-0">
+                        <label class="labelBlack control-label">Fire Rating</label>
+                        <select id="paralfireProofing3" class="form-control per70" disabled="true">
+                        </select>
+                        <div class="txt-right">
+                            hr
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkaess" type="radio" value="AESS" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Category</label>
+                        <select id="paralaess1" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modalcss modal-footer m-t-10">
+            <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+            <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="btnmodify">Modify</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="resources/js/rightslideboxJS/rightparallel-bottom-chord.js"></script>

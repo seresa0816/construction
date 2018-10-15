@@ -1,0 +1,636 @@
+        <!-- editBuiltup2(ShapeI) Right Sidebar -->
+         
+       <div class="rightFloat">
+                    <div class="slide-rightbar right">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="slide-rightbar left">
+                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="rightFloat">
+                        <ul  class="nav nav-pills">
+                            <li class="active">
+                                <a href="#bShape2a" data-toggle="tab">Built-Up Properties</a>
+                            </li>
+                            <li>
+                                <a href="#bShape2c" data-toggle="tab">Connection Details</a>
+                            </li>
+                            <li>
+                                <a href="#bShape2b" data-toggle="tab">Finish</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="bShape2a">
+                                <form>
+                                 <section class="error-msg" id="error-msg">
+		                            <div class="container-fluid">
+		                                <div class="row">
+		                                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+		                                        <img class="img-error p-r-10" src="https://dvlc9qcftewvt.cloudfront.net/assets/images/misc/Error.svg" alt="Success">
+		                                         <label class="labelBlack control-label"><b> </b> Splice Plate Properties has also been updated</label>
+		                                    </div>
+		                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		                                        <div class="pull-right page-navbar-right">
+		                                            <ul>
+		                                                <img class="img-close" src="https://dvlc9qcftewvt.cloudfront.net/assets/images/misc/Close.svg" alt="Close">
+		                                            </ul>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </section>
+                                    <div class="row m-b-10">
+                                        
+                                        <div class="col-lg-4 col-md-4 padding10">
+                                            <label class="labelBlack control-label">Column Orientation</label>
+                                            <div class="row">
+                                            
+                                            <div class="col-lg-11 col-md-11 ">
+                                                <input type="text" class="form-control per70 allownumericwithdecimal" placeholder="0" id="bc2orientation">
+                                                <div class="txt-right">
+                                                    deg
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding10">
+                                            <label class="labelBlack control-label">Plate Material Grade</label>
+                                            <select class="form-control bs2select1" id="columnmodal2grade">
+                                               <option value="">select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1">
+                                            <img class="modalinsidediag" height="25px" src="https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/I.svg" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/I.png'">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-3 col-md-3 padding10">
+                                            <label class="labelBlack control-label">Column Type</label>
+                                            <select class="form-control" disabled="true" id="bc2columntype">
+                                              <option value="">select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding10">
+                                            <label class="labelBlack control-label">Data Source</label>
+                                            <select class="form-control" id="bc2datasource">
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-5 col-md-5 padding10">
+                                            <label class="labelBlack control-label ">Top Flange Plate Thickness</label>
+                                             <div class="row ">
+                                                <div class="col-lg-6 col-md-6 ">
+                                                     <select class="form-control per70" id="bc2tfpthicknessin">
+                                                       <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 p-l-0">
+                                                     <select class="form-control per70" id="bc2tfpthicknessfr">
+                                                       <option value="">select</option>
+                                                     </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                             </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-7 col-md-7 padding10">
+                                             <label class="labelBlack control-label ">Top Flange Plate Width</label>
+                                             <div class="row ">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+                                                    <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)"  id="bc2tfpwidthft">
+                                                    <div class="txt-right">
+                                                        ft
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 padding5">
+                                                     <select class="form-control per70" id="bc2tfpwidthin">
+                                                       <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 padding5">
+                                                     <select class="form-control per70" id="bc2tfpwidthfr">
+                                                         <option value="">select</option>
+                                                     </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-5 col-md-5 padding10">
+                                            <label class="labelBlack control-label ">Bottom Flange Plate Thickness</label>
+                                             <div class="row ">
+                                                <div class="col-lg-6 col-md-6 ">
+                                                     <select class="form-control per70" disabled="true" id="bc2bfpthicknessin">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 p-l-0">
+                                                     <select class="form-control per70" disabled="true" id="bc2bfpthicknessfr">
+                                                        <option value="">select</option>
+                                                     </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                             </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-7 col-md-7 padding10">
+                                             <label class="labelBlack control-label ">Bottom Flange Plate Width</label>
+                                             <div class="row ">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+                                                    <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" disabled="true" id="bc2bfpwidthft">
+                                                    <div class="txt-right">
+                                                        ft
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 padding5">
+                                                     <select class="form-control per70" disabled="true" id="bc2bfpwidthin">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 padding5">
+                                                     <select class="form-control per70" disabled="true" id="bc2bfpwidthfr">
+                                                        <option value="">select</option>
+                                                     </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-5 col-md-5 padding10">
+                                            <label class="labelBlack control-label ">Web Plate Thickness</label>
+                                             <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                     <select class="form-control per70" id="bc2wpthicknessin">
+                                                       <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 p-l-0">
+                                                     <select class="form-control per70" id="bc2wpthicknessfr">
+                                                      <option value="">select</option>
+                                                     </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                             </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-7 col-md-7 padding10 m-b-10">
+                                             <label class="labelBlack control-label ">Web Plate Width</label>
+                                             <div class="row ">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+                                                    <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" placeholder="1/4" id="bc2wpwidthft">
+                                                    <div class="txt-right">
+                                                        ft
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 padding5">
+                                                     <select class="form-control per70" id="bc2wpwidthin">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 padding5">
+                                                     <select class="form-control per70" id="bc2wpwidthfr">
+                                                         <option value="">select</option>
+                                                     </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                       
+                                        <div class="col-md-5 padding10  m-t-10 p-r-0">
+                                            <label class="labelBlack  control-label">Weld Type:<br>Web Plate & Top Flange Plate</label>   
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-7 col-md-7 p-r-5">
+                                                <select class="form-control" id="columnmodal2weldtype">
+                                                   <option value="">select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-7  m-t-10">
+                                            <label class="labelBlack  control-label">Weld Size/Effective Throat:<br> Web Plate & Top Flange Plate</label> 
+                                        
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-5 col-md-5 " >
+                                                <select class="form-control per70" id="columnmodalweldsize">
+                                                  <option value="">select</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    in
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row m-b-10">
+                                       
+                                        <div class="col-md-5 padding10  m-t-10 p-r-0">
+                                            <label class="labelBlack  control-label">Weld Type:<br>Web Plate & Bottom Flange Plate</label>   
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-7 col-md-7 p-r-5">
+                                                <select class="form-control"  id="bc2weldtype"> 
+                                                   <option value="select">select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-7  m-t-10">
+                                            <label class="labelBlack  control-label">Weld Size/Effective Throat:<br> Web Plate & Bottom Flange Plate</label> 
+                                        
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-5 col-md-5 " >
+                                                <select class="form-control per70"  id="bc2weldsizein">
+                                                     <option value="select">select</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    in
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-8 col-md-8 padding10">
+                                            <label class="labelBlack control-label"> Column Base Elevation</label>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 p-r-5">
+                                                    <select class="form-control" id="bc2cbelevation">
+                                                        <option value="+" selected="select">+</option>
+                                                        <option value="-">-</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 padding5">
+                                                    <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="bc2cbelevationft">
+                                                    <div class="txt-right">
+                                                        ft
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 padding5">
+                                                    <select class="form-control per70" id="bc2cbelevationin">
+                                                      <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 p-l-5">
+                                                    <select class="form-control per70" id="bc2cbelevationfr">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-8 col-md-8 padding10">
+                                            <label class="labelBlack control-label"> Column Top Elevation</label>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 p-r-5">
+                                                    <select class="form-control" id="bc2ctelevation">
+                                                        <option value="+" selected="select">+</option>
+                                                        <option value="-">-</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 padding5">
+                                                    <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="bc2ctelevationft">
+                                                    <div class="txt-right">
+                                                        ft
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 padding5">
+                                                    <select class="form-control per70" id="bc2ctelevationin">
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 p-l-5">
+                                                    <select class="form-control per70" id="bc2ctelevationfr">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row m-b-10">
+                                        <div class="col-lg-3 col-md-3 padding10">
+                                            <label class="labelBlack control-label">Splice Count</label>
+                                            <select class="form-control" id="boxsplicecount">
+                                              <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                            </select>
+                                        </div>
+                                    </div>
+									
+									
+                                
+							
+							<div id="spliceRows">
+
+                                    </div>
+							
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-12 padding10 m-b-10">
+                                            <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                                            <select data-placeholder="" multiple class="referenceSelect" name="test" id="bc2referencenumber">
+                                               
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="bShape2b">
+                                <form>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Surface Preparation </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3">
+                                        <select class="form-control" id="bs2surfacePreparation1" disabled="true">
+                                          
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="custom-control custom-checkbox"> <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Name</label>
+                                        <input type="text" id="bs2primer1" class="form-control"  disabled="true">
+                                    </div>
+                                    <div class="col-lg-3 col-md-3">
+                                        <label class="labelBlack control-label">No. of Coats</label>
+                                        <select id="bs2primer2" class="form-control" disabled="true">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="custom-control custom-radio"> <input id="chknopaint" type="radio" value="No Paint" name="ecol1" class="custom-control-input" 
+                                            ><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                                    </div>
+                                </div>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="custom-control custom-radio"> <input id="chkpaint" type="radio" value="Paint" name="ecol1" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Name</label>
+                                        <input type="text" class="form-control" id="bs2paint1"  disabled="true">
+                                    </div>
+                                    <div class="col-lg-3 col-md-3">
+                                        <label class="labelBlack control-label">No. of Coats</label>
+                                        <select id="bs2paint2" class="form-control" disabled="true">
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="custom-control custom-radio"> <input id="chkgalvanize" type="radio" value="Galvanization" name="ecol1" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                        <div class="col-lg-9 nopadding">
+                                            <select id="bs2galvanization2" class="form-control per70" disabled="true">
+                                               
+                                            </select>
+                                            <div class="txt-right">
+                                                mils
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="custom-control custom-radio"> <input id="chkfireproofing" type="radio" value="Fire Proofing" name="ecol1" class="custom-control-input" ><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Fire Proofing Type</label>
+                                        <select id="bs2fireProofing2" class="form-control" disabled="true">
+                                           
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Fire Rating</label>
+                                        <div class="col-lg-9 nopadding">
+                                            <select id="bs2fireProofing3" class="form-control per70" disabled="true">
+                                              
+                                            </select>
+                                            <div class="txt-right">
+                                                hr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="custom-control custom-radio"> <input id="chkaess" type="radio" value="AESS" name="ecol1" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3">
+                                         <label class="labelBlack control-label">Category</label>
+                                        <select id="bs2aess1" class="form-control" disabled="true">
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="bShape2c">
+                                <form>
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                                        <label class="labelBlack control-label">Base Plate-Connection Mark</label>
+                                        <select class="form-control col-lg-8" id="bc2bpcm">
+                                           <option value="">select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 padding10 p-r-0">
+                                        <label class="labelBlack control-label">Splice Plate-Connection Mark</label>
+                                        <div class="row">
+                                        <div class="col-lg-10 col-md-10">
+                                            
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5">
+                                                     <select class="form-control " id="bc2spcm">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    
+                                                </div> 
+                                                 
+                                            </div>
+                                        </div>
+                                        
+                                         </div>  
+                                    </div>
+                                
+                                    <div class="col-lg-9 col-md-9 padding10 m-t-16">
+                                        <div class="row">
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Shear Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per70" id="bc2shearload1">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Axial Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 p-l-0 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per70" id="bc2axialload1">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Moment Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-11 col-md-11 p-l-0 p-r-10 m-b-10">
+                                                    <input type="text" class="form-control per70" id="bc2momentload1">
+                                                    <div class="txt-right">
+                                                        kip-ft
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                         </div>  
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 padding10 p-r-0">
+                                        <label class="custom-control custom-checkbox m-0"> <input id="chkcapplate" type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Cap Plate-Connection Mark</span></label>
+                                        <div class="row">
+                                        <div class="col-lg-10 col-md-10  m-b-10">
+                                            
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <select class="form-control " id="chks2Cap1" disabled="true">
+                                                       
+                                                    </select>
+                                                   
+                                                </div> 
+                                            </div>
+                                        </div>
+                                         </div>  
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 padding10 m-t-16">
+                                        <div class="row">
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Shear Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per70" id="chks2Cap2" disabled="true">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Axial Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 p-l-0 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per70" id="chks2Cap3" disabled="true">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Moment Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-11 col-md-11 p-l-0 p-r-10 m-b-10">
+                                                    <input type="text" class="form-control per70" id="chks2Cap4" disabled="true">
+                                                    <div class="txt-right">
+                                                        kip-ft
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                         </div>  
+                                    </div>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                            <div class="modalcss modal-footer m-t-10">
+                                <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+                                <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="bc2modify">Modify</a>
+                            </div>
+                        </div>
+                    </div>					
+                </div>
+									  
+	<script type="text/javascript" src="resources/js/rightslideboxJS/rightBarBuiltUPI.js"></script>

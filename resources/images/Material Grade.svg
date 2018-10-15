@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1 335 1000 62">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Material_Grade);
+      }
+
+      .cls-12, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-8 {
+        stroke: #f0f0f6;
+      }
+
+      .cls-3, .cls-8 {
+        fill: #f0f0f6;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #b4b4be;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        font-size: 12px;
+        font-family: Roboto-Regular, Roboto;
+      }
+
+      .cls-6 {
+        fill: #b6b6c0;
+      }
+
+      .cls-7 {
+        fill: #414146;
+      }
+
+      .cls-9 {
+        fill: #cacad3;
+      }
+
+      .cls-10 {
+        fill: #fca121;
+      }
+
+      .cls-11 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Material_Grade">
+      <rect x="-1" y="335" width="1000" height="62"/>
+    </clipPath>
+  </defs>
+  <g id="Material_Grade" data-name="Material Grade" class="cls-1">
+    <g id="Group_1552" data-name="Group 1552" transform="translate(-248 -3)">
+      <g id="Rectangle_1527" data-name="Rectangle 1527" class="cls-2" transform="translate(286.548 349.299)">
+        <rect class="cls-11" width="941.62" height="3.766"/>
+        <rect class="cls-12" x="0.5" y="0.5" width="940.62" height="2.766"/>
+      </g>
+      <g id="Group_1541" data-name="Group 1541" transform="translate(437.835 341.139)">
+        <circle id="Ellipse_5" data-name="Ellipse 5" class="cls-3" cx="9.416" cy="9.416" r="9.416" transform="translate(0 0)"/>
+        <circle id="Ellipse_6" data-name="Ellipse 6" class="cls-4" cx="3.139" cy="3.139" r="3.139" transform="translate(6.277 6.277)"/>
+      </g>
+      <g id="Group_1543" data-name="Group 1543" transform="translate(746.686 341.139)">
+        <circle id="Ellipse_7" data-name="Ellipse 7" class="cls-3" cx="9.416" cy="9.416" r="9.416" transform="translate(0 0)"/>
+        <circle id="Ellipse_8" data-name="Ellipse 8" class="cls-4" cx="3.139" cy="3.139" r="3.139" transform="translate(6.277 6.277)"/>
+      </g>
+      <g id="Group_1542" data-name="Group 1542" transform="translate(592.26 341.139)">
+        <circle id="Ellipse_11" data-name="Ellipse 11" class="cls-3" cx="9.416" cy="9.416" r="9.416" transform="translate(0 0)"/>
+        <circle id="Ellipse_12" data-name="Ellipse 12" class="cls-4" cx="3.139" cy="3.139" r="3.139" transform="translate(6.277 6.277)"/>
+      </g>
+      <g id="Group_1544" data-name="Group 1544" transform="translate(900.484 341.139)">
+        <circle id="Ellipse_13" data-name="Ellipse 13" class="cls-3" cx="9.416" cy="9.416" r="9.416" transform="translate(0 0)"/>
+        <circle id="Ellipse_14" data-name="Ellipse 14" class="cls-4" cx="3.139" cy="3.139" r="3.139" transform="translate(6.277 6.277)"/>
+      </g>
+      <text id="Scope_of_Work" data-name="Scope of Work" class="cls-5" transform="translate(286 380.504)"><tspan x="-39.135" y="0">Scope of Work</tspan></text>
+      <text id="Inclusion" class="cls-6" transform="translate(445.258 380.504)"><tspan x="-24.683" y="0">Inclusion</tspan></text>
+      <text id="Exclusions" class="cls-5" transform="translate(599.917 380.504)"><tspan x="-29.18" y="0">Exclusions</tspan></text>
+      <text id="Material_Grade-2" data-name="Material Grade" class="cls-7" transform="translate(755.927 380.504)"><tspan x="-39.715" y="0">Material Grade</tspan></text>
+      <text id="Finish_Details" data-name="Finish Details" class="cls-5" transform="translate(913.63 380.504)"><tspan x="-36.627" y="0">Finish Details</tspan></text>
+      <g id="Group_1545" data-name="Group 1545" transform="translate(1054.909 341.139)">
+        <circle id="Ellipse_13-2" data-name="Ellipse 13" class="cls-3" cx="9.416" cy="9.416" r="9.416" transform="translate(0 0)"/>
+        <circle id="Ellipse_14-2" data-name="Ellipse 14" class="cls-4" cx="3.139" cy="3.139" r="3.139" transform="translate(6.277 6.277)"/>
+      </g>
+      <text id="Shipping_Limits" data-name="Shipping Limits" class="cls-5" transform="translate(1064.267 380.504)"><tspan x="-42.026" y="0">Shipping Limits</tspan></text>
+      <g id="Group_1546" data-name="Group 1546" transform="translate(1209.335 341.139)">
+        <circle id="Ellipse_13-3" data-name="Ellipse 13" class="cls-3" cx="9.416" cy="9.416" r="9.416" transform="translate(0 0)"/>
+        <circle id="Ellipse_14-3" data-name="Ellipse 14" class="cls-4" cx="3.139" cy="3.139" r="3.139" transform="translate(6.277 6.277)"/>
+      </g>
+      <text id="Terms_and_Conditions" data-name="Terms and
+Conditions" class="cls-5" transform="translate(1215.736 380.504)"><tspan x="-28.477" y="0">Terms and</tspan><tspan x="-29.086" y="16">Conditions</tspan></text>
+      <g id="Rectangle_1560" data-name="Rectangle 1560" class="cls-8" transform="translate(294.709 349.299)">
+        <rect class="cls-11" width="448.839" height="3.766"/>
+        <rect class="cls-12" x="0.5" y="0.5" width="447.839" height="2.766"/>
+      </g>
+      <g id="Group_1549" data-name="Group 1549" transform="translate(277.132 338)">
+        <circle id="Ellipse_9" data-name="Ellipse 9" class="cls-9" cx="12.555" cy="12.555" r="12.555"/>
+        <path id="Path_1909" data-name="Path 1909" class="cls-4" d="M20.866,34.558,16.7,30.306l1.056-1.1,3.11,3.174L28.2,24.9,29.255,26Z" transform="translate(-10.423 -17.367)"/>
+      </g>
+      <g id="Group_1550" data-name="Group 1550" transform="translate(741.664 338)">
+        <circle id="Ellipse_9-2" data-name="Ellipse 9" class="cls-3" cx="12.555" cy="12.555" r="12.555" transform="translate(0)"/>
+        <circle id="Ellipse_10" data-name="Ellipse 10" class="cls-10" cx="6.277" cy="6.277" r="6.277" transform="translate(6.277 6.277)"/>
+      </g>
+      <g id="Group_1551" data-name="Group 1551" transform="translate(435.324 338)">
+        <circle id="Ellipse_9-3" data-name="Ellipse 9" class="cls-9" cx="12.555" cy="12.555" r="12.555" transform="translate(0)"/>
+        <path id="Path_1909-2" data-name="Path 1909" class="cls-4" d="M20.866,34.558,16.7,30.306l1.056-1.1,3.11,3.174L28.2,24.9,29.255,26Z" transform="translate(-10.423 -17.367)"/>
+      </g>
+      <g id="Group_1553" data-name="Group 1553" transform="translate(587.866 338)">
+        <circle id="Ellipse_9-4" data-name="Ellipse 9" class="cls-9" cx="12.555" cy="12.555" r="12.555" transform="translate(0)"/>
+        <path id="Path_1909-3" data-name="Path 1909" class="cls-4" d="M20.866,34.558,16.7,30.306l1.056-1.1,3.11,3.174L28.2,24.9,29.255,26Z" transform="translate(-10.423 -17.367)"/>
+      </g>
+    </g>
+  </g>
+</svg>

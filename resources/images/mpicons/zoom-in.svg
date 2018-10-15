@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="430 1 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-zoom-in);
+      }
+
+      .cls-2 {
+        fill: #707070;
+      }
+    </style>
+    <clipPath id="clip-zoom-in">
+      <rect x="430" y="1" width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="zoom-in" class="cls-1">
+    <g id="Group_297" data-name="Group 297" transform="translate(-1541 -594)">
+      <path id="Path_1084" data-name="Path 1084" class="cls-2" d="M37.078,24.539a12.561,12.561,0,1,0-4.269,9.414l8.047,7.528L42,40.337l-8.047-7.528A12.484,12.484,0,0,0,37.078,24.539ZM24.539,35.46A10.921,10.921,0,1,1,35.46,24.539,10.934,10.934,0,0,1,24.539,35.46Zm.809-11.73h4.045v1.618H25.348v4.045H23.73V25.348H19.685V23.73H23.73V19.685h1.618Z" transform="translate(1959 583)"/>
+    </g>
+  </g>
+</svg>

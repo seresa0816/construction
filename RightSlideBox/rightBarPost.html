@@ -1,0 +1,392 @@
+<div class="rightFloat" id="rightPost">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#postm1" data-toggle="tab">Post Column Properties</a>
+        </li>
+        <li><a href="#postm3" data-toggle="tab">Connection Details</a>
+        </li>
+        <li><a href="#postm2" data-toggle="tab">Finish</a>
+        </li>
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="postm1">
+            <form>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 padding10 ">
+                        <label class="labelBlack control-label">Post Profile</label>
+                        <select class="form-control postselect1" id="postProfile">
+                            <option value="">select</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-3 padding10">
+                        <label class="labelBlack control-label">Post Grade</label>
+                        <select class="form-control postselect2" id="postGrade">
+                            <option value="">select</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-3 padding10 ">
+                        <label class="labelBlack control-label">Post Orientation</label>
+                        <div class="col-lg-9 col-md-9 p-0">
+                            <select class="form-control per70" id="postOrientation">
+                                <option value="">select</option>
+                            </select>
+                            <div class="txt-right">
+                                deg
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <label class="labelBlack control-label">Post Bottom Elevation</label>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 p-r-5">
+                                <select class="form-control" id="postBottomElevation">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="postBottomElevationFt">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <select class="form-control per70" id="postBottomElevationIn">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-l-5">
+                                <select class="form-control per70" id="postBottomElevationFr">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <label class="labelBlack control-label">Post Top Elevation</label>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 p-r-5">
+                                <select class="form-control" id="postTopElevation">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="postTopElevationFt">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <select class="form-control per70" id="postTopElevationIn">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-l-5">
+                                <select class="form-control per70" id="postTopElevationFr">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-12 padding10">
+                        <label class="labelBlack control-label disblock"><b>Location from Grid</b></label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5 m-b-10">
+                                <label class="labelBlack control-label">Along X</label>
+                                <select class="form-control" id="gridLocX">
+                                    <option value="">select</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 p-r-5">
+                                <label class="labelBlack control-label">Along Y</label>
+                                <select class="form-control" id="gridLocY">
+                                    <option value="">select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 padding10 ">
+                        <label class="labelBlack control-label">X - Direction</label>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 p-r-5">
+                                <select class="form-control" id="xDirection">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="xDirectionFt">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <select class="form-control per70" id="xDirectionIn">
+                                    </select>
+                                    <div class="txt-right">
+                                        in
+                                    </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-l-5">
+                                <select class="form-control per70" id="xDirectionFr">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 padding10 ">
+                        <label class="labelBlack control-label">Y - Direction</label>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 p-r-5">
+                                <select class="form-control" id="yDirection">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="yDirectionFt">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5">
+                                <select class="form-control per70" id="yDirectionIn">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-l-5">
+                                <select class="form-control per70" id="yDirectionFr">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-t-5">
+                    <div class="col-lg-12 padding10">
+                        <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                        <select data-placeholder="" multiple class="referenceSelect" name="test" id="postReferenceNum">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="postm2">
+            <form class="m-t-10">
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-r-5">
+                                <label class="custom-control ">Surface Preparation </label>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5">
+                                <select class="form-control" id="losurfacePreparation1">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-r-5">
+                                <label class="custom-control custom-checkbox">
+                                    <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5">
+                                <label class="labelBlack control-label">Name</label>
+                                <input type="text" id="loprimer1" class="form-control"  disabled="true">
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-l-5">
+                                <label class="labelBlack control-label">No. of Coats</label>
+                                <select id="loprimer2" class="form-control" disabled="true">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="chknopaint" type="radio" value="No Paint" name="rdcolp" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="chkpaint" type="radio" value="Paint" name="rdcolp" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <label class="labelBlack control-label">Name</label>
+                                <input type="text" class="form-control" id="lopaint1"  disabled="true">
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <label class="labelBlack control-label">No. of Coats</label>
+                                <select id="lopaint2" class="form-control" disabled="true">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="chkgalvanize" type="radio" value="Galvanization" name="rdcolp" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                            </div>
+                            <div class="col-lg-5 col-md-5">
+                                <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                <div class="col-lg-8 p-l-0">
+                                    <select id="logalvanization1" class="form-control per70" disabled="true">
+                                    </select>
+                                    <div class="txt-right">
+                                        mils
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdcolp" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-r-0">
+                                <label class="labelBlack control-label">Fire Proofing Type</label>
+                                <select id="lofireProofing2" class="form-control per70" disabled="true">
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-l-0">
+                                <label class="labelBlack control-label">Fire Rating</label>
+                                <select id="lofireProofing3" class="form-control per70" disabled="true">
+                                </select>
+                                <div class="txt-right">
+                                    hr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="chkaess" type="radio" value="AESS" name="rdcolp" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <label class="labelBlack control-label">Category</label>
+                                <select id="loaess1" class="form-control" disabled="true">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="postm3">
+            <form>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                        <label class="labelBlack control-label">Base Plate-Connection Mark</label>
+                        <select class="form-control col-lg-8" id="postbpcm">
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 padding10 p-r-0">
+                        <label class="custom-control custom-checkbox m-0">
+                            <input id="chkcapplate" type="checkbox" value="Cap Plate-Connection Mark" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Cap Plate-Connection Mark</span></label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10  m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                        <select class="form-control " id="chkp3Cap1" disabled="true">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 padding10 m-t-16">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-l-0 m-b-10">
+                                <label class="labelBlack control-label">Shear Load</label>
+                                <div class="row">
+                                    <div class="col-lg-11 col-md-11 p-r-5 m-b-10">
+                                        <input type="text" class="form-control per70" id="chkp3Cap2" disabled="true">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 p-l-0 m-b-10">
+                                <label class="labelBlack control-label">Axial Load</label>
+                                <div class="row">
+                                    <div class="col-lg-11 col-md-11 p-r-5 m-b-10">
+                                        <input type="text" class="form-control per70" id="chkp3Cap3" disabled="true">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 p-l-0 m-b-10">
+                                <label class="labelBlack control-label">Moment Load</label>
+                                <div class="row">
+                                    <div class="col-lg-11 col-md-11 p-r-5 m-b-10">
+                                        <input type="text" class="form-control per70" id="chkp3Cap4" disabled="true">
+                                        <div class="txt-right">
+                                            kip-ft
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modalcss modal-footer m-t-10">
+        <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+        <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="postmodify">Modify</a>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/rightslideboxJS/rightBarPost.js"></script>

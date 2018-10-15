@@ -1,0 +1,536 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!-- editPourstop Right Sidebar -->
+
+<div class="rightFloat" id="rightPourStop">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#pour1" data-toggle="tab">Pour Stop Properties</a>
+        </li>
+        <li><a href="#pour2" data-toggle="tab">Finish</a>
+        </li>
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="pour1">
+            <form class="m-t-10">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 padding10 m-b-10">
+                        <label class="labelBlack control-label">Pour Stop Material</label>
+                        <select class="form-control" id="psMaterial">
+                            <option value="select">select</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-3 padding10 m-b-10 "  id="pourgrade">
+                        <label class="labelBlack control-label">Material Grade</label>
+                        <select class="form-control psselect1" id="pourstopgrade">
+                            <option value="select">select</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="labelBlack control-label"> Pour Stop Orientation</label>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label class="custom-control custom-radio">
+                                    <input id="pourstop1" type="radio" name="rdimgs" class="custom-control-input" checked="checked"><span class="custom-control-indicator"></span><span class="custom-control-description labelblk"></span></label>
+                                <img class="boxdiag" width="50px" height="50px" src="https://dvlc9qcftewvt.cloudfront.net/assets/images/PourStop1.svg" alt="Your Logo Alt" onerror="this.src='/images/PourStop1.png'">
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="custom-control custom-radio">
+                                    <input id="pourstop2" type="radio" name="rdimgs" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk"></span></label>
+                                <img class="boxdiag" width="52px" height="52px" src="https://dvlc9qcftewvt.cloudfront.net/assets/images/PourStop2.svg" alt="Your Logo Alt" onerror="this.src='/images/PourStop2.png'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row showAnglePro">
+                    <div class="col-lg-3 col-md-3 padding10" id="pourprofile">
+                        <label class="labelBlack control-label">Angle Profile</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10 p-r-5">
+                                <select class="form-control psselect2" id="pourstopprofile">
+                                    <option value="select">select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row showBentPlate">
+                    <div class="col-lg-3 col-md-3 padding10 p-r-0">
+                        <label class="labelBlack control-label">Plate Thickness</label>
+                        <div class="row padding10">
+                            <div class="col-lg-12 col-md-12 padding5">
+                                <select class="form-control per70" id="pourstopthickness">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="row showBentPlate m-b-5">
+                    <div class="col-lg-4 col-md-4 padding10">
+                        <label class="labelBlack control-label">Vertical Leg Length</label>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 p-r-0">
+                                <select class="form-control per70" id="pourstopLegLengthIn">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 padding5">
+                                <select class="form-control per70" id="pourstopLegLengthFr">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 padding10">
+                        <label class="labelBlack control-label">Edge of Slab(EOS/EOD)</label>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-r-0">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="slabEdgeFt">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5">
+                                <select class="form-control per70" id="slabEdgeIn">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5">
+                                <select class="form-control per70" id="slabEdgeFr">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 padding10">
+                        <label class="labelBlack control-label">Pour Stop Position</label>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-10 p-r-5">
+                                <select class="form-control" id="pourposition">
+                                    <option value="fulllength">Full Length</option>
+                                    <option value="specificlength">Specific Length</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row specificlengthshow m-t-10">
+                    <div class="col-lg-6 padding10">
+                        <label class="labelBlack control-label">Position from left end of the beam</label>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-r-5 m-b-10">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="leftendpositionft">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <select class="form-control per70" id="leftendpositionin">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <select class="form-control per70" id="leftendpositionfr">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 padding10">
+                        <label class="labelBlack control-label">Pour Stop Length</label>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-r-5 m-b-10">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pourlengthft">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <select class="form-control per70" id="pourlengthin">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <select class="form-control per70" id="pourlengthfr">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 padding10 m-b-10">
+                        <label class="labelBlack control-label">Pour Stop connection to Beam</label>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-10 p-r-5">
+                                <select class="form-control" id="pourStopBeamConn">
+                                  
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 padding10 p-l-0">
+                        <label class="labelBlack control-label">Overlap Length</label>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-10 p-r-5">
+                                <select class="form-control per70" id="overlapLength">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 padding10">
+                        <label class="labelBlack control-label">Are there Shear Studs attached to Vertical Leg of Pour Stop</label>
+                    </div>
+                    <div class="col-md-2 p-l-0">
+                        <div class="switch mdb-color-switch">
+                            <label>
+                                <input type="checkbox" id="psmswitch">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-12 padding10">
+                        <label class="labelBlack control-label disblock">Shear Stud</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5 m-b-10">
+                                <label class="labelBlack control-label disblock">DIA</label>
+                                <select class="form-control per70" id="switchdia" disabled="true">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 m-b-10 padding5">
+                                <label class="labelBlack control-label disblock">Length</label>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <select class="form-control per70" id="switchlength1" disabled="true">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 p-l-5 m-b-10">
+                                <label class="labelBlack control-label disblock">Count</label>
+                                <input type="text" class="form-control" id="switchcount" disabled="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="m-0">
+                <div class="row m-t-10 eshowpsweld">
+                    <div class="col-md-12 padding10">
+                        <label class="labelBlack control-label"><b>Weld Details</b></label>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <label class="labelBlack control-label">Weld Type</label>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <select class="form-control" id="psWeldtype">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding5 m-b-10">
+                                <label class="labelBlack control-label">Weld Size</label>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 ">
+                                        <select class="form-control per70" id="weldSize">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ehidewt2 showpitch">
+                            <div class="col-lg-6 col-md-6">
+                                <label class="labelBlack control-label">Weld Length</label>
+                                <div class="row  m-b-10">
+                                    <div class="col-lg-4 col-md-4 p-r-5">
+                                        <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="weldLengthFt">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="weldLengthIn">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="weldLengthFr">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 ">
+                                <label class="labelBlack control-label">Pitch</label>
+                                <div class="row m-b-10">
+                                    <div class="col-lg-4 col-md-4 p-r-5">
+                                        <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pitchFt">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="pitchIn">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="pitchFr">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-t-10 eshowpsbolt">
+                    <div class="col-md-8 padding10">
+                        <label class="labelBlack control-label"><b>Bolt Details</b></label>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <label class="labelBlack control-label">Bolt Dia</label>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <select class="form-control per70" id="boltDia">
+                                            <option value="">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <label class="labelBlack control-label">Bolt Grade</label>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 ">
+                                        <select class="form-control" id="boltGrade">
+                                            <option value="">select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <label class="labelBlack control-label">No. of Bolts</label>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 ">
+                                         <select class="form-control w75" id="boltrows">
+                                                        <option value="select">select</option>
+                                                      
+                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 m-b-10">
+                                <label class="labelBlack control-label">Bolt Spacing</label>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 m-b-10">
+                                        <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="boltSpacingFt">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                        <select class="form-control per70" id="boltSpacingIn">
+                                            No. of Bolts
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 m-b-10">
+                                        <select class="form-control per70" id="boltSpacingFr">
+                                            No. of Bolts
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-12 padding10 m-b-10">
+                        <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                        <select data-placeholder="" multiple class="referenceSelect" id="pourStopRefDrawingNo" name="test">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="pour2">
+            <form class="m-t-10">
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Surface Preparation </label>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <select class="form-control" id="pssurfacePreparation1">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-checkbox">
+                            <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" id="psprimer1" class="form-control"  disabled="true">
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="psprimer2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chknopaint" type="radio" value="No Paint" name="rdpStop" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkpaint" type="radio" value="Paint" name="rdpStop" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" class="form-control" id="pspaint1"  disabled="true">
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="pspaint2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkgalvanize" type="radio" value="Galvanization" name="rdpStop" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                        <div class="col-lg-9 nopadding">
+                            <select id="psgalvanization2" class="form-control per70" disabled="true">
+                            </select>
+                            <div class="txt-right">
+                                mils
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdpStop" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Fire Proofing Type</label>
+                        <select id="psfireProofing2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Fire Rating</label>
+                        <div class="col-lg-9 nopadding">
+                            <select id="psfireProofing3" class="form-control per70" disabled="true">
+                            </select>
+                            <div class="txt-right">
+                                hr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkaess" type="radio" value="AESS" name="rdpStop" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="labelBlack control-label">Category</label>
+                        <select id="psaess1" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modalcss modal-footer m-t-10">
+        <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+        <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="pourmodify">Modify</a>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="resources/js/rightslideboxJS/rightBarPourStop.js"></script>

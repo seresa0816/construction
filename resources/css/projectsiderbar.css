@@ -1,0 +1,127 @@
+@charset "ISO-8859-1";
+#mp-sidebar {
+    background: #f5f5f5;
+/*    max-width: 65px;*/
+    padding: 0 10px;
+}
+
+.mp-side-max {
+    max-width: none!important;
+    padding: 0 15px;
+}
+#mp-sidebar .panel.panel-default {
+    border-bottom: 1px solid #ddd;
+}
+#mp-sidebar .panel-heading h4 {
+    padding: 15px 0 15px 5px;
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+}
+#mp-sidebar .panel-heading h4 a {
+    color:#000000 !important;;
+}
+
+#mp-sidebar .panel-body ul li {
+    width: 100%;
+    padding: 7px 0 7px 40px;
+    font-size:13px;
+}  	
+/* #mp-sidebar .panel-body ul li {
+    width: 100%; 
+} */
+#mp-sidebar .panel-body ul li a:hover {
+    color: rgb(30, 136, 229);
+    border-left: 4px solid rgb(30, 136, 229);
+}
+#mp-sidebar .panel-body ul li a:hover {
+    color: rgb(30, 136, 229);
+}
+#mp-sidebar .panel-body ul li a:active, #mp-sidebar .panel-body ul li a:focus {
+    color: rgb(30, 136, 229);
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color: #efefef;
+}
+/ Add this css /
+#mp-sidebar .panel-body ul li a{
+    color: rgba(68, 68, 68, 0.75);
+    display: block;
+    padding: 7px 0 7px 75px; / change 75 to 40px /
+}
+/ copy this too /
+#mp-sidebar .panel-body ul li a.active {
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color: #e2e2e2;
+}
+
+/* #mp-sidebar .panel-body ul li a.active {
+color: rgb(30, 136, 229);
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color: #efefef;
+} */
+
+#mp-sidebar .panel-body ul > li > a.active , #mp-sidebar .panel-body > ul > li > a.active:hover {
+	background-color:#fff !important;
+}
+#mp-sidebar .panel-body ul li.active:hover > a:after {
+	background-color:#fff !important;
+}
+#mp-sidebar .panel-body ul li a:active, #mp-sidebar .panel-body ul li a:focus {
+    color: rgb(30, 136, 229) !important;
+    border-left: 4px solid rgb(30, 136, 229) ;
+    background-color: #efefef;
+}
+#mp-sidebar .panel-body ul li a{
+    color: rgba(68, 68, 68, 0.75);
+    display: block;
+    
+}
+
+
+/* #mp-sidebar .panel-body ul li a:active {
+    color: rgb(30, 136, 229) !important;
+} */
+#mp-sidebar .panel-body ul li a{
+    color: rgba(68, 68, 68, 0.75);
+}
+#mp-sidebar .panel-default>.panel-heading a:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: left;
+  padding-right: 10px;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+#mp-sidebar .panel-default>.panel-heading a[aria-expanded="true"] {
+   
+    font-weight: 500;
+}
+#mp-sidebar .panel-default>.panel-heading a[aria-expanded="true"]:before {
+  content: "\f0d7";
+}
+.panel-default>.panel-heading a[aria-expanded="false"]:before {
+  content: "\f0da";
+}
+
+.collapse, .panel-heading{
+font-size:14px;
+}
+
+.mp-body {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+}
+
+#mp-sidebar .panel-body ul li.active {
+    color: rgb(30, 136, 229);
+    border-left: 4px solid rgb(30, 136, 229);
+    background-color: #efefef;
+}

@@ -1,0 +1,457 @@
+<!-- builtupcolumnModal3 (x-Shape) -->
+<link href="https://dvlc9qcftewvt.cloudfront.net/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+<div id="builtupcolumnModal3" class=" modalcss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg modal700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12 text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#bcol1" data-toggle="tab">Built-Up Column Properties</a>
+                        </li>
+                        <li><a href="#bcol3" data-toggle="tab">Connection Details</a>
+                        </li>
+                        <li><a href="#bcol2" data-toggle="tab">Finish</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="bcol1">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3 padding10" id="columnwprofile">
+                                    <label class="labelBlack control-label">WF Profile</label>
+                                    <select class="form-control bc3select1" id="columnmodal3profile1">
+                                        <option value="select">select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10">
+                                    <label class="labelBlack control-label">Column Orientation</label>
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-10 p-r-5">
+                                            <input type="text" class="form-control per70" placeholder="0" id="bc3orientation" onkeypress="return AllowDecimalNumbersOnly(event)">
+                                            <div class="txt-right">
+                                                deg
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10" id="columnwgrade">
+                                    <label class="labelBlack control-label">WF Material Grade</label>
+                                    <select class="form-control bc3select2" id="gradecolumnmodal3">
+                                        <option value="select">select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-1 col-md-1">
+                                    <img class="modalinsidediag" height="25px" src="https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/Cruciform.svg" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/Cruciform.png'">
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3 padding10">
+                                    <label class="labelBlack control-label">Column Type</label>
+                                    <select class="form-control" disabled="true" id="bc3columntype">
+                                        <option value="Built-Up">Built-Up</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 padding10 ">
+                                    <label class="labelBlack control-label">Data Source</label>
+                                    <select class="form-control" id="bc3datasource">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-8 col-md-8 padding10 ">
+                                    <label class="labelBlack control-label">Column Base Elevation</label>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 p-r-5">
+                                            <select class="form-control" id="bc3cbelevation">
+                                                <option value="+">+</option>
+                                                <option value="-">-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <input type="text" class="form-control per70" id="bc3cbelevationft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">
+                                                ft
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="bc3cbelevationin">
+                                            </select>
+                                            <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 p-l-5">
+                                            <select class="form-control per70" id="bc3cbelevationfr">
+                                            </select>
+                                            <div class="txt-right">
+                                                fr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-8 col-md-8 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Column Top Elevation</label>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 p-r-5">
+                                            <select class="form-control" id="bc3ctelevation">
+                                                <option value="+">+</option>
+                                                <option value="-">-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <input type="text" class="form-control per70" id="bc3ctelevationft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">
+                                                ft
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="bc3ctelevationin">
+                                            </select>
+                                            <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 p-l-5">
+                                            <select class="form-control per70" id="bc3ctelevationfr">
+                                            </select>
+                                            <div class="txt-right">
+                                                fr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-2 col-md-2 padding10">
+                                    <label class="labelBlack control-label w100">Splice Count</label>
+                                    <select class="form-control" id="splicecount">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="spliceRows">
+                            </div>
+                            <hr>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3 padding10" id="columnwtprofile">
+                                    <label class="labelBlack control-label">WT Profile</label>
+                                    <select class="form-control bc3select3" id="columnmodal3profile4">
+                                        <option value="select">select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10" id="columnwtgrade">
+                                    <label class="labelBlack control-label">WT Material Grade</label>
+                                    <select class="form-control bc3select4" id="columnmodal3grade2">
+                                        <option value="select">select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-2 padding5">
+                                    <label class="labelBlack control-label">Count</label>
+                                    <input type="text" class="form-control" id="bc3count" onkeypress="return AllowNumbersOnly(event)">
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-9 col-md-9 padding10 ">
+                                    <label class="labelBlack control-label">WT Length</label>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <input type="text" class="form-control per70" id="bc3wtlengthft" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">
+                                                ft
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="bc3wtlengthin">
+                                            </select>
+                                            <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 p-l-5">
+                                            <select class="form-control per70" id="bc3wtlengthfr">
+                                            </select>
+                                            <div class="txt-right">
+                                                fr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Weld Type between
+                                        <br>W & WT</label>
+                                    <select class="form-control" id="columnmodal3weldtype">
+                                        <option value="select">select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Weld Size/Effective Throat
+                                        <br>between W & WT</label>
+                                    <div class="col-lg-8 p-l-0">
+                                        <select class="form-control  per70" id="columnmodal3weldsize">
+                                            <option value="select">select</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hLine"></div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 padding10 m-b-10">
+                                    <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                                    <select data-placeholder="" multiple class="referenceSelect" name="test" id="bc3referencenumber">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="bcol2">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Surface Preparation </label>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <select class="form-control" id="bc3surfacePreparation1">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" id="bc3primer1" class="form-control"  disabled="true">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="bc3primer2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chknopaint" type="radio" value="No Paint" name="bucm3" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkpaint" type="radio" value="Paint" name="bucm3" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" class="form-control" id="bc3paint1"  disabled="true">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="bc3paint2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkgalvanize" type="radio" value="Galvanization" name="bucm3" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                    <div class="col-lg-7 nopadding">
+                                        <select id="bc3galvanization2" class="form-control per70" disabled="true">
+                                        </select>
+                                        </select>
+                                        <div class="txt-right">
+                                            mils
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkfireproofing" type="radio" value="Fire Proofing" name="bucm3" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Fire Proofing Type</label>
+                                    <select id="bc3fireProofing2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Fire Rating</label>
+                                    <div class="col-lg-7 nopadding">
+                                        <select id="bc3fireProofing3" class="form-control per70" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            hr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkaess" type="radio" value="AESS" name="bucm3" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Category</label>
+                                    <select id="bc3aess1" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="bcol3">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Base Plate-Connection Mark</label>
+                                    <select class="form-control col-lg-8" id="bc3bpcm">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10">
+                                    <label class="labelBlack control-label">Splice Plate-Connection Mark</label>
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-10  m-b-10">
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <select class="form-control " id="bc3spcm">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 padding5">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Shear Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per60" id="bc3shearload1">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Axial Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per60" id="bc3axialload1">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 p-l-0 m-b-10">
+                                            <label class="labelBlack control-label">Moment Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per60" id="bc3momentload1">
+                                                    <div class="txt-right">
+                                                        kip-ft
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 p-r-0">
+                                    <label class="custom-control custom-checkbox m-0">
+                                        <input id="chkcapplate" type="checkbox" value="Cap Plate-Connection Mark" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Cap Plate-Connection Mark</span></label>
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-10  m-b-10">
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <select class="form-control " id="chks3Cap1" disabled="true">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 padding5">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Shear Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per60" id="chks3Cap2" disabled="true">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  m-b-10">
+                                            <label class="labelBlack control-label">Axial Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per60" id="chks3Cap3" disabled="true">
+                                                    <div class="txt-right">
+                                                        kips
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 p-l-0 m-b-10">
+                                            <label class="labelBlack control-label">Moment Load</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-10 p-r-5 m-b-10">
+                                                    <input type="text" class="form-control per60" id="chks3Cap4" disabled="true">
+                                                    <div class="txt-right">
+                                                        kip-ft
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="">
+                    <a href="javascript:void(0)" class="modalcancel" data-dismiss="modal" aria-label="Close" id="bc3cancel">Cancel</a>
+                    <a href="javascript:void(0)" class="modalapply" id="bc3apply">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://dvlc9qcftewvt.cloudfront.net/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+
+<script type="text/javascript" src="resources/js/memberplacementmodal/builtupColumnModal3.js"></script>
+     

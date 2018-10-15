@@ -1,0 +1,126 @@
+.card-outline-info .card-header {
+    background: #D7E3F4;
+    border-color: #D7E3F4;
+    color:#1e88e5 !important;
+}
+.transparentbutton{
+	background: none;
+    border: none;
+    outline: none;
+}
+.p-t-34{
+	padding-top: 34px;
+}
+.DBCard2 {
+    min-height: 630px!important;
+}
+.DBCard2 .card-header{
+	height: 40px!important;
+}
+.card-header {
+    padding: .25rem 1.25rem !important; 
+}
+.insideHeader{
+        height: 40px;
+    
+    padding: 0;
+    
+    color: #16325C;
+}
+.minus10{
+    margin-bottom: -10px;
+}
+.m-t-m10{
+	margin-top: -10px;
+}
+.minus40{
+    margin-top: -40px;
+}
+.btn-success, .btn-success.disabled{
+	background-color: #009efb;
+}
+.btn-success:hover, .btn-success.disabled:hover{
+	background-color: #009efb;
+}
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success.focus:active, .btn-success:active:focus, .btn-success:active:hover, .open > .dropdown-toggle.btn-success.focus, .open > .dropdown-toggle.btn-success:focus, .open > .dropdown-toggle.btn-success:hover, .btn-success.focus, .btn-success:focus{
+	background-color: #009efb;
+    border: 1px solid #009efb;
+}
+.fontUbuntu{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 15px;
+}
+.form-control{
+    border: 1px solid #F0F0F6;
+    font-size: 14px;
+    padding: 0 .75rem;
+    min-height: 30px;
+    color: #787877;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+select.form-control:not([size]):not([multiple]) {
+     height: calc(1.25rem + 2px); 
+}
+.textSuccess{
+    color: #26c6da;
+}
+.coverTable{
+    font-size:14px; 
+    margin-left: -20px; 
+    margin-top: 10px; width: 1550px;
+}
+thead{
+    background-color: #F0F0F6;
+}
+.whiteBG{
+    background: #fff;
+}
+.card-body{
+    padding: 0 !important;
+}
+.m-l-0{
+    margin-left: 0;
+}
+.m-r-0{
+    margin-right: 0;
+}
+.m-0-10{
+    margin: 0 10px;
+}
+
+.btn-outline-success{
+
+color:#028ee1 !important;
+border-color:028ee1 !important;
+}
+
+.grayBackground{
+
+background-color:#F7F7FA;
+}
+.modal-footer{
+border-top: 0px solid grey !important;
+}
+#formContacts.submitted input:invalid{
+    border: 1px solid red;  
+}
+
+#formContacts.submitted select:invalid{
+    border: 1px solid red;  
+}
+
+#formContactsAddress.submitted input:invalid{
+    border: 1px solid red;  
+}
+
+#formContactsAddress.submitted select:invalid{
+    border: 1px solid red;  
+}
+#formcontactuser.submitted input:invalid{
+    border: 1px solid red;  
+}
+
+#formcontactuser.submitted select:invalid{
+    border: 1px solid red;  
+}
+

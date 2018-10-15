@@ -1,0 +1,234 @@
+.header{
+color:#F0F0F6;
+}
+
+.form-control{	
+border-radius:.05rem;
+
+}
+
+.formcustom{	
+	width:121px;
+	height:26px;
+	border: 0px solid;
+	color:#1E88E5;
+	background-color:#fafafc;
+}
+
+.formcustom1{
+	width:220px;
+	height:26px;	
+	border: 0px solid;
+	color:#787877;
+	
+}
+.time{	
+	color:#CACAD3; 
+	padding-left:10px;
+}
+
+button, input, optgroup, select, textarea{	
+	
+	border:solid lightgrey 1px;
+}
+.col-lg-6{
+	
+	padding-top:8px;
+	color:#787877;
+}
+
+.col-lg-3{
+	color:#787877;
+	
+}
+.col-lg-2{
+	color:#787877;
+	
+}
+
+
+h6{
+	
+	color:#B4B4BE;
+	line-height:10px !important;
+	font-family: 'Ubuntu', sans-serif!important;
+}
+
+
+.card-body{	
+	padding:0.65rem !important;	
+}
+
+.card-header{
+	
+	background-color:#F9FAFC !important;
+	border-bottom:0px solid !important;
+}
+
+
+.card-outline-info .card-header{
+	
+	background-color:white !important;
+	border-color:white;
+}
+.text-white{	
+	color:#1E88E5 !important;
+}
+
+
+
+.headerinfo{	
+	
+	color:#16325C;
+	background-color:#F0F0F6;	
+	font-family: 'Ubuntu', sans-serif !important;
+	color:#B4B4BE;
+	font-size:15px;
+	padding-top:4px;
+	
+}
+
+.mydatepicker{	
+	color:#FCA121;
+	height:26px;
+	border:solid grey 0px;
+	width:120px;
+	background-color:#fafafc;
+	
+}
+
+.input-group-addon{	
+	border:0px solid rgba(0,0,0,.15) !important;
+	background-color: #F0F0F6 !important;
+	
+}
+.headerinfo1{
+	
+	font-family: 'Ubuntu', sans-serif !important;	
+	font-size:18px;	
+}
+
+.fav{	
+	color:#B4B4BE;
+}
+
+.row{	
+	margin-left:0px !important;
+	margin-right:0px !important;
+	
+}
+
+label{	
+	color:#16325C;
+}
+.headerpad{
+	
+	margin-left:20px;
+	font-family: 'Ubuntu', sans-serif !important;
+	margin-bottom:10px;
+	color:#787877;
+	font-size:18px;
+	line-height:35px;
+	margin-top:-2px;
+}
+.slimScrollBar{
+	
+	background-color:#d9d9d9 !important;
+}
+.headerpad3{	
+	margin-left:10px;
+	font-family: 'Ubuntu', sans-serif !important;
+}
+
+.headerpad4{	
+	margin-left:10px;
+	font-family: 'Ubuntu', sans-serif !important;
+	padding-top:30px;
+}
+.headerpad1{	
+	margin-left:32px;
+	font-family: 'Ubuntu', sans-serif !important;
+}
+
+.card-title1{	
+	padding-top:32px;
+	font-family: 'Ubuntu', sans-serif !important;	
+}
+
+.card-header{	
+	padding:1.25rem 1.25rem !important;
+}
+
+.label-info{	
+	background-color:#607D8B;
+	font-family: 'Ubuntu', sans-serif !important;
+}
+
+
+.btn{	
+	padding:11px 12px !important;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+	
+	font-family: 'Ubuntu', sans-serif !important;
+	
+	
+}
+
+
+
+.tooltip-content5 {
+            position: absolute;
+            z-index: 9999;
+            width: 318px;
+            left: -61%;
+            bottom: 55%;
+            font-size: 11px;
+            line-height: 1.4;
+            text-align: center;
+            font-weight: 400;
+            color: #ffffff;
+            background: transparent;
+            opacity: 0;
+            margin: 0 0 20px -150px;
+            cursor: default;
+            pointer-events: none;
+            -webkit-transition: opacity 0.3s 0.3s;
+            -o-transition: opacity 0.3s 0.3s;
+            transition: opacity 0.3s 0.3s;
+        }
+        .tooltip-inner2 {
+            padding: 11px;
+            text-align: left;
+            background-color: #F7F7F7;
+            color:#99ABB4;
+        }
+        .tooltip-text3{
+            box-shadow: 0px 0px 1px black;
+        }
+        
+        #toolTipHeading{
+            font-style: italic;
+            margin-bottom: -6px;
+            margin-top: -6px;
+        }
+
+.datepicker {	
+	z-index:56 !important;
+}
+.datepicker-dropdown{	
+	z-index:56 !important;
+}
+
+.dropdown-menu{
+	z-index:56 !important;	
+}
+
+.datepicker-orient-left{	
+	z-index:56 !important;
+}
+
+.datepicker-orient-top{	
+	z-index:56 !important;	
+}

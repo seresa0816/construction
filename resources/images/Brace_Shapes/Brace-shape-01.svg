@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1990 0 61 106">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Brace-shape-01);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f0f0f6;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-Brace-shape-01">
+      <rect x="1990" width="61" height="106"/>
+    </clipPath>
+  </defs>
+  <g id="Brace-shape-01" class="cls-1">
+    <line id="Line_2" data-name="Line 2" class="cls-2" x2="61" y2="106" transform="translate(2051.299 0.5) rotate(60)"/>
+  </g>
+</svg>

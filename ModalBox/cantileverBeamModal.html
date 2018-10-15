@@ -1,0 +1,531 @@
+<!-- Cantilever beam Modal  -->
+
+<div id="cbeam" class="modalcss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg modal700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12 text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#cbeam1" data-toggle="tab">Cantilever Beam Properties</a>
+                            </li>
+                        <li>
+                            <a href="#cbeam3" id="canticonntab" data-toggle="tab">Connection Details</a>
+                            </li>
+                        <li>
+                            <a href="#cbeam2" data-toggle="tab">Finish </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="cbeam1">
+                        <form>
+                            <label class="labelBlack control-label"> 
+                                <b>Note:</b> Select the connecting end 'connection mark' or 'load' in the 'Connection Details'.
+                            </label>
+                            <div class="row m-b-10 appendtextbox">
+                                <div class="col-lg-3 col-md-3 padding10" id="cantileverprofile">
+                                    <label class="labelBlack control-label">Beam Profile</label>
+                                    <select class="form-control cbselect1" id="cantileverbeamprofile">
+									   <option value="select">select</option>
+								    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10">
+                                    <label class="labelBlack control-label">Beam Orientation
+                                    </label>
+                                    <div class="col-lg-9 col-md-9 nopadding">
+                                        <select class="form-control per70" id="clbeamorientation" onkeypress = "return AllowDecimalNumbersOnly(event)">
+                                        </select>
+                                        <div class="txt-right">deg</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10">
+                                    <label class="labelBlack control-label">Beam Alignment</label>
+                                    <select class="form-control" disabled="true" id="clbeamalignment">
+                                        <option value="Straight">Straight</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10" id="cantilevergrade">
+                                    <label class="labelBlack control-label">Material Grade
+                                    </label>
+                                    <select class="form-control cbselect2" id="cantilevermaterialgrade">
+									    <option value="select">select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3 padding10">
+                                    <label class="labelBlack control-label">Beam Type</label>
+                                    <select class="form-control" id="clbeamtype">
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10">
+                                    <label class="labelBlack control-label">Data Source</label>
+                                    <select class="form-control" id="cldatasource">
+                                    </select>
+                                </div>
+								<div class="col-lg-4 col-md-4 padding10">
+                                    <label class="labelBlack control-label">Connecting Member</label>
+                                    <select class="form-control per50" id="spliceConnectiontype">
+                                            <option value="column" selected="select">Column</option>
+                                            <option value="beam">Beam</option>
+											
+                                    </select>
+                                </div>
+							</div>
+                            <div class="splate" id="beam" style="display:none;">
+                                <div class="row m-b-10">
+                                    <div class="col-lg-6 col-md-6 padding10">
+                                        <label class="labelBlack control-label">Distance From the left end of the reference beam</label>
+                                        <div class="row">
+                                            <div class="col-lg-3 p-r-5">
+                                                <input type="text" class="form-control per70" id="distRefgridft1" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                                <div class="txt-right">ft</div>
+                                            </div>
+                                            <div class="col-lg-3 padding5">
+                                                <select class="form-control per70" id="distRefgridin1">
+                                                </select>
+                                                <div class="txt-right">in</div>
+                                            </div>
+                                            <div class="col-lg-4 p-l-5">
+                                                <select class="form-control per70" id="distRefgridfr1">
+                                                </select>
+                                                <div class="txt-right">fr</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swelded" id="column">
+                                <div class="row m-b-10">
+                                    <div class="col-lg-5 col-md-5 padding10">
+                                        <label class="labelBlack control-label">Length of Beam</label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 p-r-5">
+                                                <input type="text" class="form-control per70" id="lengthofbeamft" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                                <div class="txt-right">ft</div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 padding5">
+                                                <select class="form-control per70" id="lengthofbeamin">
+                                                </select>
+                                                <div class="txt-right">in</div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 padding5">
+                                                <select class="form-control per70" id="lengthofbeamfr">
+                                                </select>
+                                                <div class="txt-right">fr</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <!--  <div class="col-lg-6 col-md-6 padding10 p-r-5 p-r-0">
+                                        <label class="labelBlack control-label">Cantilever Beam Position w.r.t the reference column</label>
+                                        <select class="form-control col-lg-4" id="beamparallelto">
+                                        </select>
+                                    </div> -->
+                                    <div class="p-l-5" id="beamRows">
+                                     <label class="labelBlack control-label">Cantilever Beam Position w.r.t the reference column</label>
+                                        <select class="form-control col-lg-4" id="beamparallelto">
+                                        </select></div>
+                                </div>
+                            </div>
+                            
+                           
+                            <div class="row m-b-10">
+                                <div class="col-lg-6 padding10">
+                                    <label class="labelBlack control-label">TOS</label>
+                                    <div class="row">
+                                        <div class="col-lg-2 p-r-5">
+                                            <select class="form-control p-r-0" id="plusminus">
+                                                <option value="+">+</option>
+                                                <option value="-">-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 padding5">
+                                            <input type="text" class="form-control per70" id="clbtosft" onkeypress = "return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'">
+                                            <div class="txt-right">ft</div>
+                                        </div>
+                                        <div class="col-lg-3 padding5">
+                                            <select class="form-control per70" id="clbtosin">
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 p-l-5">
+                                            <select class="form-control per70" id="clbtosfr">
+                                                <option value="0">0</option>
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 padding10">
+                                    <label class="labelBlack control-label">FFL</label>
+                                    <div class="row">
+										<div class="col-lg-3 p-r-5">
+                                            <select class="form-control p-r-5" id="plusminusffl">
+                                                <option value="+">+</option>
+                                                <option value="-">-</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 padding5">
+                                            <select class="form-control per70" id="clbfflin">
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-4 padding5">
+                                            <select class="form-control per70" id="clbfflfr">
+                                                <option value="0">0</option>
+                                            </select>
+                                            <div class="txt-right">fr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hLine"></div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 padding10 m-b-10 ">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="cshear" type="checkbox" value="Shear Stud" class="custom-control-input"><span class="custom-control-indicator"></span><span class="custom-control-description labelblk">Shear Stud
+                                        </span>
+                                    </label>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 p-r-5">
+                                            <label class="labelBlack control-label disblock">DIA</label>
+                                            <select class="form-control per70" id="cshear1" disabled="true">
+                                                <option value="">select</option>
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 p-r-5">
+                                            <label class="labelBlack control-label disblock">Length</label>
+                                            <select class="form-control per70" id="cshear2" disabled="true">
+                                                <option value="">select</option>
+                                            </select>
+                                            <div class="txt-right">in</div>
+                                        </div>
+                                        <div class="col-lg-2 p-l-5">
+                                            <label class="labelBlack control-label disblock">Count</label>
+                                            <input type="text" class="form-control" id="cshear3" disabled="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hLine"></div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 col-md-12 padding10">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="stiffnerplate" type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk"><b>Stiffener Plate</b></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3 p-r-5">
+                                    <label class="labelBlack control-label">Plate Grade</label>
+                                    <select class="form-control" id="caspshear3" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-2 p-r-5">
+                                    <label class="labelBlack control-label">Plate Thickness</label>
+                                    <select class="form-control per70 p-r-0" id="caspshear2" disabled="true">
+                                        <option value="select">select</option>
+                                    
+                                    </select>
+                                    <div class="txt-right">in</div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 padding10">
+                                    <label class="labelBlack control-label">Count</label>
+                                    <input type="text" class="form-control w100" id="caspshear1" disabled="true" return AllowNumbersOnly(event)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 p-r-5">
+                                    <label class="labelBlack control-label">Weld Type</label>
+                                    <select class="form-control" id="caspshear4" disabled="true">
+                                        <option value="select">select</option>
+                                      
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 p-r-5">
+                                    <label class="labelBlack control-label">Weld Size/Effective Throat</label>
+                                    <div class="col-lg-6 col-md-6 nopadding">
+                                        <select class="form-control per70" id="caspshear5" disabled="true">
+                                            <option value="select">select</option>
+                                        </select>
+                                        <div class="txt-right">in</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hLine"></div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-2 col-md-2 padding10 ">
+                                    <label class="labelBlack control-label col-md-12 p-l-0">Frame #</label>
+                                    <input type="text" class="form-control" id="caBeamframe" onkeypress = "return AllowNumbersOnly(event)">
+                                </div>
+                                <div class="col-lg-4 col-md-4 padding10 ">
+                                   <label class="labelBlack control-label col-md-12 p-l-0">Frame Connection Method</label>
+                                    <select class="form-control col-md-12" id="caBeamConnMethod">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12 padding10">
+                                    <label class="labelBlack control-label disblock">Reference Drawing Numbers</label>
+                                    <select data-placeholder="" multiple class="referenceSelect" name="test" id="clreferencenumber">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="cbeam3">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <a class="has-arrow" href="javascript:void(0);" data-toggle="modal" data-target="#hBraceModal"><img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/connection.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/connection.png'"><span class="hide-menu"></span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding10 m-b-10">
+                                            <label class="labelBlack control-label">Profile</label>
+                                            <input type="text" class="form-control" id="clprofile">
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label"><b>Left</b></label>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label"><b>Right</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Mark</label>
+                                            <select class="col-lg-6 form-control per70 cmark1" id="clconnectionmark1">
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Mark</label>
+                                            <select class="col-lg-6 form-control per70 cmark2" id="clconnectionmark2">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Type</label>
+                                            <select class="col-lg-6 form-control per70" id="clconnectiontype1" disabled="true">
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Type</label>
+                                            <select class="col-lg-6 form-control per70" id="clconnectiontype2" disabled="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Support Side</label>
+                                            <select class="col-lg-6 form-control per70" id="clconnectionmss1" disabled="true"> 
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Support Side</label>
+                                            <select class="col-lg-6 form-control per70" id="clconnectionmss2" disabled="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Supported Side</label>
+                                            <select class="col-lg-6 form-control per70" id="clconnectionmss3" disabled="true"> 
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Connection Method-Supported Side</label>
+                                            <select class="col-lg-6 form-control per70" id="clconnectionmss4" disabled="true">
+                                            </select>
+                                        </div> 
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Shear Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="clshearload1">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Shear Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="clshearload2">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Axial Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="claxialload1">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Axial Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="claxialload2">
+                                                <div class="txt-right">
+                                                    kips
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Moment Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="clmomentload1">
+                                                <div class="txt-right">
+                                                    kip-ft
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label class="labelBlack control-label disblock">Moment Load</label>
+                                            <div class="col-lg-6 nopadding">
+                                                <input type="text" class="form-control per70" id="clmomentload2">
+                                                <div class="txt-right">
+                                                    kip-ft
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="cbeam2">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Surface Preparation </label> 
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <select class="form-control" id="cansurfacePreparation1">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" id="canprimer1" class="form-control"  disabled="true">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="canprimer2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" class="form-control" id="canpaint1"  disabled="true">
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="canpaint2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                    <div class="col-lg-7 nopadding">
+                                        <select id="cangalvanization2" class="form-control per60" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            mils
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Fire Proofing Type</label>
+                                    <select id="canfireProofing2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Fire Rating</label>
+                                    <div class="col-lg-7 nopadding">
+                                        <select id="canfireProofing3" class="form-control per70" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            hr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkaess" type="radio" name="rdhb" value="AESS" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <label class="labelBlack control-label">Category</label>
+                                    <select id="canaess1" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="">
+                    <a href="javascript:void(0);" class="modalcancel" data-dismiss="modal" aria-label="Close" id="clcancel">Cancel</a> 
+                    <a href="javascript:void(0);" class="modalapply" id="clapply">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="resources/js/memberplacementmodal/cantileverBeamModal.js"></script>

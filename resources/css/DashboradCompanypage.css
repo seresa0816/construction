@@ -1,0 +1,60 @@
+ form.submitted input:invalid{
+         border: 1px solid red;  
+         }
+         form.submitted select:invalid{
+         border: 1px solid red;  
+         }
+         #logoSelectionDiv{
+         display:none;
+         }
+         #update{
+         margin-left: 15px;
+         background-color: #0078d7;
+         color: #fff;
+         padding: 5px 110px;
+         border-radius: 5px;
+         }
+         .updatecplogo{
+         width: 100%;
+         height: 100%;
+         }
+         .logoResize{
+         width: 200px;
+    margin-left: 215px;
+    margin-top: -37px;
+         }
+         #logodispalyDiv{
+         text-align: left;
+         }
+         .modalcancel, .modalapply {
+         padding: 4px 5px;
+         border: 1px solid #007bff;
+         border-radius: 3px;
+         font-size: 14px;
+         display: block;
+         float: left;
+         width: 70px;
+         text-align: center;
+         margin-right: 10px;
+         }
+         .modalapply {
+         background: #007bff;
+         color: #fff;
+         }
+         .modal {
+         position: fixed;
+         top: 150px;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         z-index: 1050;
+         display: none;
+         overflow: hidden;
+         outline: 0;
+         }
+         @media (min-width: 576px){
+         .modal-dialog {
+         max-width: 420px;
+         margin: 30px auto;
+         }
+         }

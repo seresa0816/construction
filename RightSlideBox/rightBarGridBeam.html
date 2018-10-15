@@ -1,0 +1,1059 @@
+<!-- editablegrid Right Sidebar  -->
+<div class="rightFloat" id="GridBeam">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#gbeam1" data-toggle="tab">Grid Beam Properties</a>
+        </li>
+        <li>
+            <a href="#gbeam3" id="rightgridbeamconntab" data-toggle="tab">Connection Details</a>
+        </li>
+        <li>
+            <a href="#gbeam2" data-toggle="tab">Finish</a>
+        </li>
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="gbeam1">
+            <div class="row nomarginlr m-b-10 appendtextbox">
+                <div class="col-lg-3 col-md-3 padding5" id="gridprofile">
+                    <label class="labelBlack control-label">Beam Profile</label>
+                    <select class="form-control gbselect1" id="gBeamProfile">
+                       <option value="">select</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-3 padding5">
+                    <label class="labelBlack control-label">Beam Orientation</label>
+                    <select class="form-control per70" id="gBeamOrientation">
+                       <option value="">select</option>
+                    </select>
+                    <div class="txt-right">
+                        deg
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 padding5">
+                    <label class="labelBlack control-label w100">Beam Alignment</label>
+                    <select class="form-control" id="gbeamalignment">
+                        <option value="Straight">Straight</option>
+                        <option value="Sloped">Sloped</option>
+                        <option value="Skewed">Skewed</option>
+                         <option value="Sloped & Skewed">Sloped & Skewed</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-3 padding5" id="gridgrade">
+                    <label class="labelBlack control-label w100">Material Grade</label>
+                    <select class="form-control gbselect2" id="gBeamMaterialGrade">
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="efieldsFW" id="eES">
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-10 padding5">
+                        <label class="labelBlack control-label">TOS</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5">
+                                <select class="form-control p-r-5" id="plusminus">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="gBeamTOS">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="gBeamTOS_in">
+                                    <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-l-5">
+                                <select class="form-control per70" id="gBeamTOS_fr">
+                                  <option value="">select</option>
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-10 padding5">
+                        <label class="labelBlack control-label">FFL</label>
+                        </label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5">
+                                <select class="form-control p-r-5" id="plusminusffl">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="gBeamTOSFFL_in">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="peribeamffl_fr">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="efieldsFB hideAll" id="eUES">
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-9 padding5">
+                        <label class="labelBlack control-label">TOS @Left End</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5">
+                                <select class="form-control p-r-5" id="plusminus1">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft1">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin1">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-l-5">
+                                <select class="form-control per70" id="pbtosfr1">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-9 padding5">
+                        <label class="labelBlack control-label">FFL @ Left End</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5">
+                                <select class="form-control p-r-5" id="plusminusl1">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="peribeamffl_in1">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="peribeamffl_fra1">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-9 padding5">
+                        <label class="labelBlack control-label">TOS @ Right End</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-0">
+                                <select class="form-control p-r-5" id="plusminus2">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft2">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin2">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-l-5">
+                                <select class="form-control per70" id="pbtosfr2">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-9 padding5">
+                        <label class="labelBlack control-label">FFL @ Right End</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-5">
+                                <select class="form-control p-r-5" id="plusminusr1">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="peribeamffl_in2">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="peribeamffl_fra2">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skewed hideAll" id="skewed">
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-12 padding10">
+                        <label class="labelBlack control-label">Skewed Beam Off-set</label>
+                        <div class="row m-t-10">
+                            <label class="labelBlack control-label col-lg-12">Left End</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along X</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)"  id="pbtosft3">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin3">
+                                   
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr3">
+                                  
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-10">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along Y</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative1">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft4">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin4">
+                                   
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr4">
+                                   
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Right End -->
+                        <div class="row m-t-20">
+                            <label class="labelBlack control-label col-lg-12">Right End</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along X</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative2">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft5">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin5">
+                                   
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr5">
+                                   
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-10">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along Y</label>
+                            </div>
+                            <div class="col-lg-1 col-md-1 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative3">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft6">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin6">
+                                 
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr6">
+                                    
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Skewed -->
+            <div class="sloppedSkewed hideAll" id="sloppedSkewed">
+                <!-- Slopped -->
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-7 padding5 p-r-0">
+                        <label class="labelBlack control-label">TOS @Left End</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-0">
+                                <select class="form-control p-r-5" id="plusminus3">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft7">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin7">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-l-5">
+                                <select class="form-control per70" id="pbtosfr7">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 paddig10 p-r-0">
+                        <label class="labelBlack control-label">FFL @ Left End</label>
+                        <div class="row">
+                            <div class="col-lg-3 p-r-0">
+                                <select class="form-control p-r-5" id="plusminusl2">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 padding5">
+                                <select class="form-control per70" id="peribeamffl_in4">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-5 p-l-5">
+                                <select class="form-control per70" id="peribeamffl_fra4">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-7 padding5 p-r-0">
+                        <label class="labelBlack control-label">TOS @ Right End</label>
+                        <div class="row">
+                            <div class="col-lg-2 p-r-0">
+                                <select class="form-control p-r-5" id="plusminus4">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft8">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin8">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-l-5">
+                                <select class="form-control per70" id="pbtosfr8">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 padding10 p-r-0">
+                        <label class="labelBlack control-label">FFL @ Right End</label>
+                        <div class="row">
+                            <div class="col-lg-3 p-r-0">
+                                <select class="form-control p-r-5" id="plusminusr2">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 padding5">
+                                <select class="form-control per70" id="peribeamffl_in5">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-5 p-l-5">
+                                <select class="form-control per70" id="peribeamffl_fra5">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  Skewed -->
+                
+                <div class="row nomarginlr m-b-10">
+                    <div class="col-lg-12 padding10">
+                        <label class="labelBlack control-label">Skewed Beam Off-set</label>
+                        <div class="row m-t-10">
+                            <label class="labelBlack control-label col-lg-12">Left End</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along X</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative4">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft9">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin9">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr9">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-10">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along Y</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative5">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft10">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin10">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr10">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Right End -->
+                        <div class="row m-t-10">
+                            <label class="labelBlack control-label col-lg-12">Right End</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along X</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative6">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft11">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin11">
+                                    
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr11">
+                                    
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-10">
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label"> Along Y</label>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-r-5 p-l-0">
+                                <select class="form-control" id="colTopNegative7">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 padding5">
+                                <input type="text" class="form-control per70" onkeydown="keyDownEvent(event)" id="pbtosft12">
+                                <div class="txt-right">
+                                    ft
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosin12">
+                                </select>
+                                <div class="txt-right">
+                                    in
+                                </div>
+                            </div>
+                            <div class="col-lg-3 padding5">
+                                <select class="form-control per70" id="pbtosfr12">
+                                </select>
+                                <div class="txt-right">
+                                    fr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of slopped & Skewed -->
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-3 col-md-3 padding5 ">
+                    <label class="labelBlack control-label">Beam Type</label>
+                    <select class="form-control " id="gBeamType">
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-4 padding5">
+                    <label class="labelBlack control-label">Data Source</label>
+                    <select class="form-control" id="gBeamDataSource">
+                    </select>
+                </div>
+            </div>
+            <!-- Splice -->
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-3 col-md-3 padding5">
+                    <label class="labelBlack control-label">Splice Count</label>
+                    <select class="form-control w75" id="usplicecount">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div id="spliceRows">
+            </div>
+            <!-- End of Splice -->
+            <div class="hLine"></div>
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-8 col-lg-8 padding10 m-b-10">
+                    <label class="custom-control custom-checkbox">
+                        <input id="pcamber" type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Camber</span></label>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 p-r-5">
+                            <select class="form-control per70" disabled="true" id="gcamber1">
+                                <option value="">select</option>
+                            </select>
+                            <div class="txt-right">
+                                in
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row nomarginlr">
+                <div class="col-lg-12 padding10">
+                    <label class="custom-control custom-checkbox">
+                        <input id="gshear" type="checkbox" value="Shear Stud" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Shear Stud </span>
+                    </label>
+                </div>
+            </div>
+            <div class="row nomarginlr ">
+                <div class="col-lg-12 padding10">
+                    <div class="row m-b-10">
+                        <div class="col-lg-3 padding10 ">
+                            <label class="labelBlack control-label disblock">DIA</label>
+                            <select class="form-control per70" id="gshear1" disabled="true">
+                                <option value="">select</option>
+                            </select>
+                            <div class="txt-right">
+                                in
+                            </div>
+                        </div>
+                        <div class="col-lg-3 padding10">
+                            <label class="labelBlack control-label disblock">Length</label>
+                            <select class="form-control per70" id="gshear2" disabled="true">
+                                <option value="">select</option>
+                            </select>
+                            <div class="txt-right">
+                                in
+                            </div>
+                        </div>
+                        <div class="col-lg-2 padding10 ">
+                            <label class="labelBlack control-label disblock">Count</label>
+                            <input type="text" class="form-control" id="gshear3" onkeydown="keyDownEvent(event)" disabled="true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hLine"></div>
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-12 col-md-12 padding10">
+                    <label class="custom-control custom-checkbox">
+                        <input id="pshear" type="checkbox" value="Stiffener Plate" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk"><b>Stiffener Plate</b></span></label>
+                </div>
+            </div>
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-3 col-md-3 padding10 ">
+                    <label class="labelBlack control-label">Plate Grade</label>
+                    <select class="form-control" id="gspshear1" disabled="true">
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-3 padding10">
+                    <label class="labelBlack control-label">Plate Thickness</label>
+                    <select class="form-control per70" id="gspshear2" disabled="true">
+                        <option value="">select</option>
+                    </select>
+                    <div class="txt-right">
+                        in
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 padding10">
+                    <label class="labelBlack control-label">Count</label>
+                    <input type="text" class="form-control" onkeydown="keyDownEvent(event)" id="gspshear3" disabled="true">
+                </div>
+            </div>
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-3 col-md-3 padding10">
+                    <label class="labelBlack control-label">Weld Type</label>
+                    <select class="form-control" id="gspshear4" disabled="true">
+                        <option value="select">select</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-4 padding10">
+                    <label class="labelBlack control-label">Weld Size/Effective Throat</label>
+                    <div class="col-lg-9 col-md-9 nopadding">
+                        <select class="form-control per70" id="gspshear5" disabled="true">
+                            <option value="select">select</option>
+                        </select>
+                        <div class="txt-right">
+                            in
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hLine"></div>
+            <div class="row nomarginlr m-b-10">
+                <div class="col-lg-2 col-md-2 padding10 ">
+                    <label class="labelBlack control-label col-md-12 p-l-0">Frame #</label>
+                    <input type="text" class="form-control" id="gBeamFrame">
+                </div>
+                <div class="col-lg-5 col-md-5 padding10">
+                    <label class="labelBlack control-label">Frame Connection Method</label>
+                    <select class="form-control" id="gbfconnectionmethod">
+                        <option value="Select">Select</option>
+                      
+                    </select>
+                </div>
+            </div>
+
+            <div class="row nomarginlr">
+                <div class="col-lg-12 padding10">
+                    <label class="labelBlack control-label disblock">Reference Drawing Numbers.</label>
+                    <select data-placeholder="" multiple class="referenceSelect" name="test" id="gBeamRefNum">
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane" id="gbeam2">
+            <form>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Surface Preparation </label>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <select class="form-control" id="gsurfacePreparation1">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-checkbox">
+                            <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" id="gprimer1" class="form-control" value="TNEMEC#10-99" disabled="true">
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="gprimer2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" class="form-control" id="gpaint1" disabled="true">
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="gpaint2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                        <div class="col-lg-9 nopadding ">
+                            <select id="ggalvanization2" class="form-control per70" disabled="true">
+                            </select>
+                            <div class="txt-right">
+                                mils
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Fire Proofing Type</label>
+                        <select id="gfireProofing2" class="form-control " disabled="true">
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Fire Rating</label>
+                        <div class="col-lg-9 nopadding ">
+                            <select id="gfireProofing3" class="form-control per70" disabled="true">
+                            </select>
+                            <div class="txt-right">
+                                hr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkaess" type="radio" value="AESS" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="labelBlack control-label">Category</label>
+                        <select id="gaess1" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="tab-pane" id="gbeam3">
+            <div class="row m-b-10">
+                <div class="col-lg-6 col-md-6">
+                    <a class="has-arrow" href="javascript:void(0);" data-toggle="modal" data-target="#hBraceModal"><img src="https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/connection.png" alt="Your Logo Alt" onerror="this.src='https://dvlc9qcftewvt.cloudfront.net/assets/images/mpicons/connection.png'"><span class="hide-menu"></span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 padding10 m-b-10">
+                    <label class="labelBlack control-label">Profile</label>
+                    <input type="text" class="form-control" id="gBeamConnectProfile">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="padding10">Left</h4>
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Connection Mark</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamLeftConnMark">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="padding10">Right</h4>
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Connection Mark</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamRightConnMark">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-b-10">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Connection Type</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamLeftConnType" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Connection Type</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamRightConnType" disabled="true">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-b-10">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock ">Connection Method-Support Side</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamLeftConnMethod" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock ">Connection Method-Support Side</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamRightConnMethod" disabled="true">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-b-10">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock ">Connection Method-Supported Side</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamLeftConnMethod1" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock ">Connection Method-Supported Side</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="gBeamRightConnMethod1" disabled="true">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="hLine"></div>
+            <div class="row m-b-10">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Splice Connection Mark</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <select class="form-control" id="spliceconnectionmark">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="hLine"></div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Shear Load</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <input type="text" class="form-control per70" id="gBeamLeftShear">
+                        <div class="txt-right">
+                            kips
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Shear Load</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <input type="text" class="form-control per70" id="gBeamRightShear">
+                        <div class="txt-right">
+                            kips
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Axial Load</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <input type="text" class="form-control per70" id="gBeamLeftAxial">
+                        <div class="txt-right">
+                            kips
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Axial Load</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <input type="text" class="form-control per70" id="gBeamRightAxial">
+                        <div class="txt-right">
+                            kips
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Moment Load</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <input type="text" class="form-control per70" id="gBeamLeftMoment">
+                        <div class="txt-right">
+                            kip-ft
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="col-lg-12 padding10 labelBlack control-label disblock">Moment Load</label>
+                    <div class="col-lg-8 col-md-8 padding10">
+                        <input type="text" class="form-control per70" id="gBeamRightMoment">
+                        <div class="txt-right">
+                            kip-ft
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modalcss modal-footer m-t-10">
+        <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+        <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="GbeamModify">Modify</a>
+    </div>
+</div>
+
+	
+<script type="text/javascript" src="resources/js/rightslideboxJS/rightBarGridBeam.js"></script>

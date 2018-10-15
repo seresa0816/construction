@@ -1,0 +1,68 @@
+	.text-justify{
+		text-align:justify;
+		
+		
+	}
+	.DBCard2{
+		font-size:14px;
+		color: black; 
+		min-height: 643px !important;
+	}
+	.textBlue{
+		color:#0078d7;
+	}
+	.yScroll{
+		overflow-y: auto;
+		height:100px;
+	}
+	.fa-filter:hover{
+		cursor: pointer;
+	}
+
+    .DBCard {
+        min-height: 360px;
+    }
+    .n-p-r{
+        padding-right: 0 !important;
+    } 
+    .success td
+	{
+    	background-color:#f3f1f1 !important;
+	}
+	
+	.dataTables_paginate
+	{
+		font-size: 14px;
+		
+	}
+	.labelRight{
+	text-align:right;
+	}
+
+	#frmTask.submitted input:invalid{
+	    border: 1px solid red;  
+	}
+	
+	#frmTask.submitted select:invalid{
+	    border: 1px solid red;  
+	}
+	
+	#frmTask.submitted textarea:invalid{
+	    border: 1px solid red;  
+	}
+	.filterText{
+		font-family: 'Ubuntu', sans-serif!important;
+	}
+	
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+	padding: 3px 8px!important;
+}
+.dataTables_wrapper .dataTables_paginate{
+	padding-top: 1.25em!important;
+	    position: absolute;
+    bottom: 20px;
+    right: 25px;
+}
+.clickable-row a{
+	color: #787877;
+}

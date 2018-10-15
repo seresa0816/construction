@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53 53">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-edit);
+      }
+
+      .cls-2 {
+        fill: #fafafa;
+      }
+
+      .cls-3 {
+        fill: #b4b4be;
+      }
+    </style>
+    <clipPath id="clip-edit">
+      <rect width="53" height="53"/>
+    </clipPath>
+  </defs>
+  <g id="edit" class="cls-1">
+    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-2" cx="25.5" cy="25.5" r="25.5" transform="translate(1 1)"/>
+    <g id="noun_958193_cc_1_" data-name="noun_958193_cc (1)" transform="translate(30.377 53.225)">
+      <path id="Path_1942" data-name="Path 1942" class="cls-3" d="M31.83,10.231,30.2,8.568a2.718,2.718,0,0,0-3.839,0L10.853,24.044l-.091.091a.03.03,0,0,1-.03.03c-.03.03-.03.06-.06.091v.03L8.647,31a.63.63,0,0,0,.151.6.6.6,0,0,0,.423.181.383.383,0,0,0,.181-.03l6.68-2.055h.03c.03,0,.06-.03.121-.06h.03l.091-.091L31.83,14.07A2.718,2.718,0,0,0,31.83,10.231ZM10.158,30.271l1.421-4.625,3.2,3.174Zm5.773-2.025L12.153,24.5,24.3,12.347l3.778,3.748ZM30.984,13.223l-2.025,2.025L25.15,11.47l2.025-2.025a1.539,1.539,0,0,1,1.058-.453,1.418,1.418,0,0,1,1.058.453l1.632,1.632A1.5,1.5,0,0,1,30.984,13.223Z" transform="translate(-24 -47)"/>
+    </g>
+  </g>
+</svg>

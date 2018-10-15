@@ -1,0 +1,1049 @@
+                     <!-- editparallelRight Sidebar  -->
+					 
+					 
+	<div class="rightFloat" id="rightParallelBeam">
+                        <ul class="nav nav-pills">
+                            <li class="active">
+                            <a  href="#pabeam1" data-toggle="tab">Parallel Chord Truss Properties</a>
+                            </li>
+                            <li><a href="#pabeam3" data-toggle="tab">Connection Details</a>
+                            </li>
+							<li><a href="#pabeam2" data-toggle="tab">Finish</a>
+                            </li>
+							
+                        </ul>
+                  
+               
+                  <div class="modal-body">
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="pabeam1">
+                            <form class="m-t-10">
+                               <div class="row m-b-10">
+                                <div class="col-lg-12">
+								
+							<div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-7">
+										 <label class="labelBlack control-label m-b10"><b>Top Chord/Rafter</b></label>
+										 <div class="row">
+                                                <div class="col-lg-3 col-md-3 p-r-5">
+												    <label class="labelBlack control-label w125">Member Profile</label>
+													<select class="form-control per70 " id="parallelmodalprofile">
+                                                <option value="">select</option>
+                                                     </select>
+                                                </div>
+													
+												<div class="col-lg-3 col-md-3 p-r-5 m-l30">
+												<label class="labelBlack control-label w125">Member Orientation</label>
+													<select class="form-control per70" id="parallelorientation">
+                                                       <option value="">select</option>
+                                                     </select>
+													<div class="txt-right">
+														deg
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-3 p-r-5">
+												<label class="labelBlack control-label" >Material Grade</label>
+													<select class="form-control per70" id="parallelgrade">
+                                               <option value="">select</option>
+                                                 </select>
+													
+												</div>
+												
+                                       <div class="col-lg-2 col-md-2 p-r-5"  >
+												<label class="custom-control custom-checkbox" style="margin-bottom: -6px;"> <input id="etracamber" type="checkbox" class="custom-control-input" onclick="document.getElementById('tracamber1').disabled = true; document.getElementById('tracamber2').disabled = true;"
+                                                                onchange="document.getElementById('tracamber1').disabled = !this.checked;document.getElementById('tracamber2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Camber</span></label>
+                                       
+                                           
+                                            <select class="form-control per70 " disabled="true" id="tracamber1">
+                                             <option value="">select</option>
+                                            </select>                                           
+										   <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+												
+											</div>
+										</div>
+										
+										<div class="col-lg-4 col-md-4">
+										 <div class="row">
+										   <div class="col-lg-1 col-md-1 p-r-5">
+												    
+                                                </div>
+											
+                                                <div class="col-lg-3 col-md-3 p-r-5">
+												    <a  class="has-arrow" href="javascript:void(0);" data-toggle="modal" data-target="#Planar Truss-Parallel"><img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/mpicons/Planar Truss-Parallel.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/mpicons/Planar Truss-Parallel.png'" style="margin-left:-80px;"><span class="hide-menu"></span></a>
+                                                </div>
+													
+											
+											</div>
+										</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+							
+							
+							<div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-7">
+										 <label class="labelBlack control-label m-b10"><b>Bottom Chord</b></label>
+										 <div class="row">
+                                                <div class="col-lg-3 col-md-3 p-r-5">
+												    <label class="labelBlack control-label w125">Member Profile</label>
+													<select class="form-control per70 " id="parallelmodalprofile1">
+                                        <option value="">select</option>
+                           </select>
+                                                </div>
+													
+												<div class="col-lg-3 col-md-3 p-r-5 m-l30">
+												<label class="labelBlack control-label w125">Member Orientation</label>
+													<select class="form-control per70" id="parallelmemorientation">
+                              <option value="">select</option>
+                          </select>
+													<div class="txt-right">
+														deg
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-3 p-r-5">
+												<label class="labelBlack control-label" >Material Grade</label>
+													<select class="form-control per70" id="parallelgrade1">
+                                              <option value="">select</option>
+                                                     </select>
+													
+												</div>
+												
+                                        <div class="col-lg-2 col-md-2 p-r-5"  >
+												<label class="custom-control custom-checkbox m-b6"> <input id="pezcamber" type="checkbox" class="custom-control-input" onclick="document.getElementById('pezcamber1').disabled = true; document.getElementById('pezcamber2').disabled = true;"
+                                                                onchange="document.getElementById('pezcamber1').disabled = !this.checked;document.getElementById('pezcamber2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Camber</span></label>
+                                       
+                                           
+                                            <select class="form-control per70 " disabled="true" id="pezcamber1">
+                                             <option value="">select</option>
+                                            </select>                                           
+										   <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+												
+											</div>
+										</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+							
+							
+							<div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+							    <div class="col-lg-4 col-md-4">
+							    
+										 <label class="labelBlack control-label"><b>Height of Truss at Left End</b></label>
+										<div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                          <input type="text" class="form-control per70" id="paralleltrusslft" />
+                                            <div class="txt-right">
+                                               ft
+                                            </div>
+											
+                                           </div>
+											<div class="col-lg-4 col-md-4">
+                                              <select class="form-control per70" id="paralleltrusslin">
+                                                       <option value="">select</option>
+                                                     </select>
+                                            <div class="txt-right">
+                                               in
+                                            </div>
+											
+											
+                                           </div>
+										   <div class="col-lg-4 col-md-4">
+                                           <select class="form-control per70" id="paralleltrusslfr">
+                                                       <option value="">select</option>
+                                                     </select>
+                                            <div class="txt-right">
+                                               fr
+                                            </div>
+											
+											
+                                           </div>
+										
+											
+                                       
+							     </div>
+								 </div>
+								 <div class="col-lg-4 col-md-4">
+							     
+										 <label class="labelBlack control-label"><b>Height of Truss at Right End</b></label>
+										<div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                          <input type="text" class="form-control per70" id="paralleltrussrft"/>
+                                            <div class="txt-right">
+                                               ft
+                                            </div>
+											
+                                           </div>
+											<div class="col-lg-4 col-md-4">
+                                              <select class="form-control per70" id="paralleltrussrin">
+                                                      <option value="">select</option>
+                                                     </select>
+                                            <div class="txt-right">
+                                               in
+                                            </div>
+											
+											
+                                           </div>
+										   <div class="col-lg-4 col-md-4">
+                                           <select class="form-control per70" id="paralleltrussrfr">
+                                                       <option value="">select</option>
+                                                     </select>
+                                            <div class="txt-right">
+                                               fr
+                                            </div>
+											
+											
+                                           </div>
+										
+											
+                                        
+							     </div>
+								 </div>
+								    
+									
+									</div>
+								</div>
+							 </div>
+							
+							
+							
+							<div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+									
+									<div class="col-lg-4 col-md-4">
+										 <label class="labelBlack control-label"><b>Truss Length</b></label>
+										<div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                          <input type="text" class="form-control per70" id="paralleltrusslenft"/>
+                                            <div class="txt-right">
+                                               ft
+                                            </div>
+											
+                                           </div>
+											<div class="col-lg-4 col-md-4">
+                                              <select class="form-control per70" id="paralleltrusslenin">
+                                                       <option value="">select</option>
+                                                     </select>
+                                            <div class="txt-right">
+                                               in
+                                            </div>
+											
+											
+                                           </div>
+										   <div class="col-lg-4 col-md-4">
+                                           <select class="form-control per70" id="paralleltrusslenfr">
+                                                       <option value="">select</option>
+                                                     </select>
+                                            <div class="txt-right">
+                                               fr
+                                            </div>
+											
+											
+                                           </div>
+										
+											
+                                        </div>
+							     </div>
+									
+									
+									
+							
+							     <div class="col-lg-4 col-md-4">
+										 <label class="labelBlack control-label"><b>Sloping Chord</b></label>
+										<div class="row">
+                                            
+											<div class="col-lg-4 col-md-4">
+                                              <select class="form-control" id="parallelslopchord">
+                                                       <option value="">select</option>
+                                                     </select>
+                                            
+											
+											
+                                           </div>
+										   
+                                        </div>
+							     </div>
+								    
+									
+									</div>
+								</div>
+							 </div>
+							 
+							 
+							 <div class="row">
+                                        <div class="col-lg-1 col-md-1 padding10">
+                                            <label class="labelBlack control-label w100">Splice Count</label>
+                                            <select class="form-control" id="chordcXsplicecount">
+                                                <option value="">select</option>
+                                            </select>
+                                        </div>
+                                        
+                              </div>
+                                    <div class="row chordXsplice1">
+                                        
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row chordXsplice2">
+                                        <div class="col-lg-8 col-md-8 padding10 ">
+                                            <label class="labelBlack control-label">Splice Position 2 from Left End</label>
+                                            <div class="row">
+                                                
+                                                <div class="col-lg-2 col-md-2">
+                                                    <input type="text" class="form-control per70" id="parallelsp2ft">
+                                                    <div class="txt-right">
+                                                        ft
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 padding5">
+                                                    <select class="form-control per70" id="parallelsp2in">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        in
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 p-l-5">
+                                                    <select class="form-control per70" id="parallelsp2fr">
+                                                        <option value="">select</option>
+                                                    </select>
+                                                    <div class="txt-right">
+                                                        fr
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+								
+							
+							
+							
+							<hr />
+							
+							
+							<div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+										 <label class="labelBlack control-label"><b>Verticals</b></label>
+										
+										     <div class="row">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+												    <label class="labelBlack control-label">Member Profile</label>
+													<select class="form-control per70" id="parallelmodalprofile2">
+                                                <option value="">select</option>
+                                                 </select>
+                                                </div>
+													
+												<div class="col-lg-4 col-md-4 p-r-5 m-l30">
+												<label class="labelBlack control-label">Member Orientation</label>
+													<select class="form-control per70" id="parallelmemorientation2">
+                                                       <option value="">select</option>
+                                                     </select>
+													<div class="txt-right">
+														deg
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-3 p-r-5">
+												<label class="labelBlack control-label" >Material Grade</label>
+													<select class="form-control per70" id="parallelgrade2">
+                                              <option value="">select</option>
+                                                   </select>
+													
+												</div>
+											</div><br />
+											<div class="row">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+												    <label class="labelBlack control-label">Spacing b/w Verticals</label>
+													<select class="form-control per70" id="t1verticals">
+                                                       <option value="t1ES" selected="select">Equal</option>
+                                                       <option value="t1UE">Unequal</option>
+                                                     </select>
+                                                </div>
+												<div class="col-lg-3 col-md-3 p-r-5">
+												    <label class="labelBlack control-label w175">No. of Verticals</label>
+													<select class="form-control per70" id="verticalnumt1">
+                                                       <option value="tv1" selected="select">1</option>
+                                                       <option value="tv2">2</option>
+                                                     </select>
+                                                </div>
+											</div>
+										    <div class="row showtv1">
+											    <div class="col-lg-8 col-md-8  p-r-5" >
+												<label class="labelBlack control-label">Spacing 1 from left end</label>
+													<div class="row">
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<input type="text" class="form-control per70" id="parallels1ft">
+															<div class="txt-right">
+																ft
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<select class="form-control per70" id="parallels1in">
+															   <option value="">select</option>
+                                                           </select>
+															<div class="txt-right">
+																in
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<select class="form-control per70" id="parallels1fr">
+															   <option value="">select</option>
+                                                           </select>
+															<div class="txt-right">
+																fr
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+                                            <div class="row showtv2">
+                                                <div class="col-lg-8 col-md-8  p-r-5" >
+                                                <label class="labelBlack control-label">Spacing 2 from left end</label>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                                            <input type="text" class="form-control per70" id="parallels2ft">
+                                                            <div class="txt-right">
+                                                                ft
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                                            <select class="form-control per70" id="parallels1in">
+                                                               <option value="">select</option>
+                                                           </select>
+                                                            <div class="txt-right">
+                                                                in
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 p-r-5">
+                                                            <select class="form-control per70" id="parallels1fr">
+                                                               <option value="">select</option>
+                                                           </select>
+                                                            <div class="txt-right">
+                                                                fr
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>	
+											<hr>
+											
+											<div class="row">
+                                               <div class="col-lg-12  p-r-5">
+                                                  <label class="labelBlack control-label disblock">Reference Drawing Numbers</label>
+                                                <select data-placeholder="" multiple class="chosen-select" name="test" id="parallelreferencenum">
+												
+                                                </select>
+                                               </div>
+											  
+                                            </div>
+											
+											
+
+                                        </div>
+										<div class="col-lg-1 col-md-1" style="max-width:0.333333% !important;">
+										<div class="vl" style="border-left: 1px solid rgba(0,0,0,.1); height: 300px;"></div>
+                                        </div>
+										<div class="col-lg-5 col-md-5">
+										   <label class="labelBlack control-label"><b>Inclined Bracings/Lacings</b></label>
+										
+										     <div class="row">
+                                                <div class="col-lg-4 col-md-4 p-r-5">
+												    <label class="labelBlack control-label">Member Profile</label>
+													<select class="form-control per90" id="parallelmodalprofile3">
+                                             <option value="">select</option>
+                                                     </select>
+                                                </div>
+													
+												<div class="col-lg-4 col-md-4 p-r-5" >
+												<label class="labelBlack control-label w125">Member Orientation</label>
+													<select class="form-control per70" id="parallelmemorientation3">
+                                                       <option value="">select</option>
+                                                     </select>
+													<div class="txt-right">
+														deg
+													</div>
+												</div>
+												
+												<div class="col-lg-4 col-md-4 p-r-5 w125">
+												<label class="labelBlack control-label w125" >Material Grade</label>
+													<select class="form-control per70" id="parallelgrade3">
+                                             <option value="">select</option>
+                                                    </select>
+													
+												</div>
+												
+											</div><br />
+											<div class="row">
+                                                <div class="col-lg-2 col-md-2 p-r-5">
+												    <label class="labelBlack control-label w250">Inclined Bracings/Lacings Layout Pattern</label>
+													<select class="form-control" id="vbshapes">
+														<option value="vfs" selected="select">/</option>
+														<option value="vbs">\</option>
+														<option value="vas">/\</option>
+														<option value="vvs">\/</option>
+														<option value="vxs">X</option>
+														<option value="vws">W</option>
+                                                    </select>
+                                                </div>
+													
+												
+											</div><br />
+											<div class="row">
+											<div class="col-lg-10 col-md-10 p-r-5">
+												
+												
+												<label class="custom-control custom-checkbox"> <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('parainclined').disabled = true; document.getElementById('parainclined1').disabled = true; document.getElementById('parainclined2').disabled = true;"
+                                                                onchange="document.getElementById('parainclined').disabled = !this.checked;document.getElementById('parainclined1').disabled = !this.checked; document.getElementById('parainclined2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">If the inclined bracing/lacing does not connect to the vertical post, specify the end point distance from left end  </span></label>
+														<div class="row">
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<input type="text" class="form-control per70" disabled="true" id="parainclined">
+															<div class="txt-right">
+																ft
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<select class="form-control per70" disabled="true" id="parainclined1" >
+															   <option value="">select</option>
+                                                           </select>
+															<div class="txt-right">
+																in
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-4 p-r-5">
+															<select class="form-control per70" disabled="true" id="parainclined2" >
+															   <option value="">select</option>
+                                                           </select>
+															<div class="txt-right">
+																fr
+															</div>
+														</div>
+														
+														</div>
+												</div>
+											</div>
+											
+											
+                                        </div>
+                                        
+										
+                                    </div>
+                                </div>
+                            </div>
+							
+							
+							
+								
+									
+								</div>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="pabeam3">
+                            <form class="m-t-10">
+                                 <div class="row" style="margin-bottom:-20px;">    
+                                     <div class="col-md-6 padding10 borderRight"  >
+							           <div class="row">
+								         <div class="col-lg-5 col-md-5 m-b-10">
+								         </div>
+									       <div class="col-lg-1 col-md-1 m-b-10">
+										   
+										   <h4>Top</h4>
+								         </div>
+									 </div>
+									 </div>
+									 
+									 <div class="col-md-6 padding10 borderRight">
+							           <div class="row">
+								         <div class="col-lg-5 col-md-5 m-b-10">
+								         </div>
+									       <div class="col-lg-1 col-md-1 m-b-10">
+										   
+										   <h4>Bottom</h4>
+								         </div>
+									 </div>
+									 </div>
+									 </div>
+								
+								
+							
+							<hr />
+							<div class="row">
+                                <div class="col-md-6 padding10 borderRight">
+                                 
+                                <div class="row">
+								<div class="col-lg-1 col-md-1 m-b-10">
+								</div>
+                                <div class="col-lg-4 col-md-4 m-b-10">
+								
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+										<h4>Left</h4>
+										<label class="labelBlack control-label">Connection Mark</label>
+										  			<select class="form-control  w141" id="parallelconmark1">
+															   <option value="">select</option>
+                                                           </select>
+                                             <label class="labelBlack control-label">Shear Load</label>
+										  			<input type="text" class="form-control per70" id="parallelsload1">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+                                    </div>
+									
+									<div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                             <label class="labelBlack control-label">Axial Load</label>
+										  			<input type="text" class="form-control per70" id="parallelaload1">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-3 col-md-3 m-b-10">
+								</div>
+                                <div class="col-lg-3 col-md-3 padding5 m-b-10">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+										<h4>Right</h4>
+										<label class="labelBlack control-label ">Connection Mark</label>
+										  			<select class="form-control  w117"  id="parallelconmark2">
+															   <option value="">select</option>
+                                                           </select>
+                                             <label class="labelBlack control-label">Shear Load</label>
+										  			<input type="text" class="form-control per70" id="parallelsload2">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+                                    </div>
+									<div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                             <label class="labelBlack control-label">Axial Load</label>
+										  			<input type="text" class="form-control per70" id="parallelaload2">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+                                    </div>
+									
+                                </div>
+                                </div>
+                                
+                                </div>
+                                <div class="col-md-6 padding10">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 m-b-10">
+                                            <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+										<h4>Left</h4>
+										<label class="labelBlack control-label">Connection Mark</label>
+										  			<select class="form-control  w141" id="parallelconmark3">
+															   <option value="">select</option>
+                                                           </select>
+                                             <label class="labelBlack control-label">Shear Load</label>
+										  			<input type="text" class="form-control per70" id="parallelsload3">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+										
+										
+										 <div class="col-lg-12 col-md-12">
+                                             <label class="labelBlack control-label">Axial Load</label>
+										  			<input type="text" class="form-control per70" id="parallelaload3">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+										
+                                    </div>
+                                        </div>
+										<div class="col-lg-3 col-md-3 m-b-10">
+								         </div>
+                                        <div class="col-lg-3 col-md-3 padding5 m-b-10">
+										<h4>Right</h4>
+										
+                                            <div class="row">
+												
+												<div class="col-lg-12 col-md-12">
+                                            <label class="labelBlack control-label">Connection Mark</label>
+										  		<select class="form-control  w117" id="parallelconmark4">
+															  <option value="">select</option>
+                                                           </select></div>	
+													
+                                        <div class="col-lg-12 col-md-12">
+                                             <label class="labelBlack control-label">Shear Load</label>
+										  			<input type="text" class="form-control per70" id="parallelsload4">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+										
+										
+										 <div class="col-lg-12 col-md-12">
+                                             <label class="labelBlack control-label">Axial Load</label>
+										  			<input type="text" class="form-control per70" id="parallelaload4">
+													<div class="txt-right">
+																kips
+													</div>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div><hr />
+							
+							
+
+
+                            <div class="row">
+							    
+                                <div class="col-lg-3 col-md-3 padding10 m-b-10">
+								
+                                </div>
+                            </div>
+                             
+							 
+							          <div class="col-md-6 padding10">
+                                        <div class="row">
+                                        <div class="col-lg-5 col-md-5 m-b-10">
+                                            <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+										
+                                          <div class="row Hshape1 m-b-10">
+                                <div class="col-lg-9 col-md-9">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload1">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-01.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-01.png'">
+                                </div>
+                            </div>
+										
+										</div>
+										
+										
+										
+										
+                                         </div>
+                                        </div>
+										</div>
+										</div>
+							 
+							 
+							 
+							 
+							 
+							  
+                            <div class="row Hshape2 m-b-10" style="display: none;">
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload2">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-02.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-02.png'">
+                                </div>
+                            </div>
+                            <div class="row Hshape3 m-b-10" style="display: none;">
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload3">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-03.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-03.png'">
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload4">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape4 m-b-10" style="display: none;">
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload5">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-04.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-04.png'">
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload6">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape5 m-b-10 thisClass">
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload7">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-05.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-05.png'">
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload8">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Hshape6 m-b-10 thisClass">
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload9">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload10">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload11">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <label class="labelBlack control-label">Axial Load</label>
+                                    <input type="text" class="form-control per70" id="paxialload12">
+                                    <div class="txt-right">
+                                        Kips
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-3">
+                                    <img src="http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-06.png" alt="Your Logo Alt" onerror="this.src='http://d3rqmq0rd8g4st.cloudfront.net/material-style-1.5.2/HTML/assets/images/Brace_Shapes/Brace-shape-06.png'">
+                                </div>
+                            </div>
+							 
+						
+                            </form>
+                            </form>
+                        </div>
+						<div class="tab-pane" id="pabeam2">
+                            <form class="m-t-10">
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-checkbox"> <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('paralsurfacePreparation1').disabled = true;"
+                                                                onchange="document.getElementById('paralsurfacePreparation1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Surface Preparation </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3" >
+                                          <select class="form-control" id="paralsurfacePreparation1" disabled="true">
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-checkbox"> <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('paralprimer1').disabled = true; document.getElementById('paralprimer2').disabled = true;"
+                                                                onchange="document.getElementById('paralprimer1').disabled = !this.checked;document.getElementById('paralprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="labelBlack control-label">Name</label>
+                                            <input type="text" id="paralprimer1" class="form-control" value="TNEMEC#10-99" disabled="true">
+                                        </div>
+                                        <div class="col-lg-2 col-md-2">
+                                            <label class="labelBlack control-label">No. of Coats</label>
+                                            <select id="paralprimer2" class="form-control" disabled="true">
+                                           </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('paralgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('paralfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('paralfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('paralaess1').disabled = !this.unchecked;
+                                                document.getElementById('paralpaint1').disabled = !this.unchecked;
+                                                document.getElementById('paralpaint2').disabled = !this.unchecked;
+                                                document.getElementById('paralprimer1').disabled = !this.checked;
+                                                document.getElementById('paralprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('paralgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('paralfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('paralfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('paralaess1').disabled = !this.unchecked;
+                                                document.getElementById('paralprimer1').disabled = !this.checked;
+                                                document.getElementById('paralprimer2').disabled = !this.checked;"
+                                                
+                                                onchange="document.getElementById('paralpaint1').disabled = !this.checked;document.getElementById('paralpaint2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="labelBlack control-label">Name</label>
+                                            <input type="text" class="form-control" id="paralpaint1" value="POLYURETHANE" disabled="true">
+                                        </div>
+                                        <div class="col-lg-2 col-md-2">
+                                            <label class="labelBlack control-label">No. of Coats</label>
+                                            <select id="paralpaint2" class="form-control" disabled="true">
+                                           </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('paralpaint1').disabled = !this.unchecked;
+                                                document.getElementById('paralpaint2').disabled = !this.unchecked;
+                                                document.getElementById('paralfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('paralfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('paralaess1').disabled = !this.unchecked;
+                                                document.getElementById('paralprimer1').disabled = !this.unchecked;
+                                                document.getElementById('paralprimer2').disabled = !this.unchecked;"
+                                                
+                                                onchange="document.getElementById('paralgalvanization2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 col-md-4">
+                                            <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                            <div class="col-lg-8 p-l-0">
+                                                
+                                            
+                                            <select id="paralgalvanization2" class="form-control per70" disabled="true">
+                                            </select>
+                                            <div class="txt-right">
+                                                mils
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('paralpaint1').disabled = !this.unchecked;
+                                                document.getElementById('paralpaint2').disabled = !this.unchecked;
+                                                document.getElementById('paralgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('paralaess1').disabled = !this.unchecked;
+                                                document.getElementById('paralprimer1').disabled = !this.checked;
+                                                document.getElementById('paralprimer2').disabled = !this.checked;"
+                                                
+                                                onchange="document.getElementById('paralfireProofing2').disabled = !this.checked; document.getElementById('paralfireProofing3').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                        </div>
+                                        
+                                        <div class="col-lg-3 col-md-3 p-r-0">
+                                            <label class="labelBlack control-label">Fire Proofing Type</label>
+                                            <select id="paralfireProofing2" class="form-control per70" disabled="true">
+                                         </select>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 p-l-0">
+                                            <label class="labelBlack control-label">Fire Rating</label>
+                                            <select id="paralfireProofing3" class="form-control per70" disabled="true">
+                                           </select>
+                                            <div class="txt-right">
+                                                hr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3">
+                                            <label class="custom-control custom-radio"> <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" 
+                                                onclick="document.getElementById('paralpaint1').disabled = !this.unchecked;
+                                                document.getElementById('paralpaint2').disabled = !this.unchecked;
+                                                document.getElementById('paralgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('paralfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('paralfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('paralprimer1').disabled = !this.checked;
+                                                document.getElementById('paralprimer2').disabled = !this.checked;"
+                                                
+                                                onchange="document.getElementById('paralaess1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                             <label class="labelBlack control-label">Category</label>
+                                            <select id="paralaess1" class="form-control" disabled="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="">
+                        <a href="javascript:void(0);" class="modalcancel" data-dismiss="modal" aria-label="Close">Cancel</a>
+                        <a href="javascript:void(0);" class="modalapply">Apply</a>
+                    </div>
+                 </div>                 
+       </div>
+        <script type="text/javascript">
+
+					    $(function() {
+					      $('.chosen-select').chosen();
+					      $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+					    });
+					    
+					    
+		 </script>

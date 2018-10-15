@@ -1,0 +1,116 @@
+h6{
+	color:#b4b4b4;
+	font-family:'Ubuntu', sans-serif !important;
+}
+
+label{
+	color:#b4b4b4;
+	line-height: 16px !important;
+    font-size: 14px   !important;
+    font-weight: 400  !important;
+	font-family: 'Ubuntu', sans-serif !important;
+}
+/* .fa{
+	font-size:16px !important;	
+} */
+.headerinfo{
+	
+	line-height:30px;
+	color:#000000;
+	background-color:#F0F6FA;
+	padding-left:55px;
+	font-family: 'Ubuntu', sans-serif !important;
+	
+}
+
+.form-control{
+	border-radius:.00rem !important;
+	padding:0.3rem .75rem !important;
+}
+
+
+.heighthr{
+	margin-top:0px;
+}
+
+html body .m-b-20{
+	margin-bottom:10px;
+	font-family: 'Ubuntu', sans-serif !important;
+}
+
+
+[role=button], a, area, button, input, label, select, summary, textarea{	
+	border:none;
+	font-family: 'Ubuntu', sans-serif !important;	
+}
+
+.card-body{
+	/* //padding-top:10px; */
+}
+
+.datepicker    
+{
+	z-index:56 !important;
+}
+.datepicker-dropdown
+{
+	z-index:56 !important;
+}
+
+.dropdown-menu{	
+	z-index:56 !important;	
+}
+
+.datepicker-orient-left{	
+	z-index:56 !important;
+}
+
+.datepicker-orient-top{	
+	z-index:56 !important;	
+}
+
+
+.slimScrollBar{	
+	right:100px !important;
+}
+
+
+input[list="companynames"] {
+      width: 8em;
+      border: none;
+      background: #eee;
+}
+    input[list="contactuser"] {
+      width: 8em;
+      border: none;
+      background: #eee;
+}
+.select-Suggest {
+      width: 12em;
+      height: 12em;
+      margin: 0;
+      margin-left: -12.75em;
+}
+
+.profGradeTxt{
+   border:0.5px solid #99abb4 !important;
+   border-radius:3px !important;
+   margin-left:10px !important;
+   background:none !important;
+   z-index: 9;
+   position:absolute;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{	
+		color:white;
+		font-weight:bold;
+}
+		
+#frmProjectDetails.submitted input:invalid{
+	border: 1px solid red; 
+}
+	
+#frmProjectDetails.submitted select:invalid{
+   	border: 1px solid red;  
+}
+

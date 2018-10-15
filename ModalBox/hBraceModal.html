@@ -1,0 +1,239 @@
+   <!-- hBraceModal -->
+   
+<div id="hBraceModal" class=" modalcss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg modal700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12 text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#hBrace1" data-toggle="tab">Horizontal Brace Properties</a>
+                        </li>
+                        <li>
+                            <a href="#hBrace3" id="hbraceconntab" data-toggle="tab">Connection Details</a>
+                        </li>
+                        <li>
+                            <a href="#hBrace2" data-toggle="tab">Finish</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="hBrace1">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10" id="hbprofile">
+                                    <label class="labelBlack control-label">HB Brace Profile</label>
+                                    <select class="form-control hbselect1" id="hBraceProfile">
+                                        <option value="">select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 padding10 m-b-10" id="hbgrade">
+                                    <label class="labelBlack control-label">Material Grade</label>
+                                    <select class="form-control hbselect2" id="hBraceMaterialGrade">
+                                        <option value="">select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label col-md-12 p-l-0">Data Source</label>
+                                    <select class="form-control col-md-12" id="hBraceDataSource">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Horizontal Brace Layouts</label>
+                                    <select class="form-control w75" id="hBraceShapes" >
+                                        <option value="">select</option>
+                                        <option value="hfs" ctbd="1" ctbg="2">/</option>
+                                        <option value="hbs" ctbd="1" ctbg="2">\</option>
+                                        <option value="hxs" ctbd="2" ctbg="5">X</option>
+                                        <option value="hvs" ctbd="2" ctbg="3">\/</option>
+                                        <option value="has" ctbd="2" ctbg="3">/\</option>
+                                        <option value="hds" ctbd="2" ctbg="3"><</option>
+                                        <option value="hps" ctbd="2" ctbg="3">></option>
+                                        <option value="hws" ctbd="4" ctbg="5">w</option>
+                                        <option value="hms" ctbd="4" ctbg="5">M</option>
+                                        <option value="hes" ctbd="4" ctbg="5">ⵉ</option>
+                                        <option value="hves" ctbd="4" ctbg="5">𐩦</option>
+                                     	 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 padding10 m-b-10">
+                                    <label class="labelBlack control-label">Location of Horizontal Brace w.r.t TOS</label>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 p-r-0">
+                                            <input type="text" class="form-control text-center" placeholder="-" id="hBraceLocationNegative" readonly="readonly">
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 p-r-5">
+                                            <input type="text" class="form-control per70" id="hBraceLocation" onkeypress="return AllowNumbersOnly(event)" placeholder="0" onfocus="this.placeholder = ''" onblur="this.placeholder = '0'"
+>
+                                            <div class="txt-right">
+                                                ft
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="hBraceLocation_in">
+                                            </select>
+                                            <div class="txt-right">
+                                                in
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 padding5">
+                                            <select class="form-control per70" id="hBraceLocation_fr">
+                                            </select>
+                                            <div class="txt-right">
+                                                fr
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 padding10 m-b-10">
+                                    <label class="labelBlack control-label disblock">Reference Drawing Numbers :</label>
+                                    <select data-placeholder="" multiple class="referenceSelect" name="test" id="hBraceRefNum">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="hBrace2">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Surface Preparation </label> 
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <select class="form-control" id="hbsurfacePreparation1">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-checkbox">
+                                        <input id="chkprimer" type="checkbox" value="Primer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" id="hbprimer1" class="form-control"  disabled="true">
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="hbprimer2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Name</label>
+                                    <input type="text" class="form-control" id="hbpaint1"  disabled="true">
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">No. of Coats</label>
+                                    <select id="hbpaint2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                    <div class="col-lg-8 nopadding">
+                                        <select id="hbgalvanization2" class="form-control per60" disabled="true">
+                                        </select>
+                                        <div class="txt-right">
+                                            mils
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Fire Proofing Type</label>
+                                    <select id="hbfireProofing2" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Fire Rating</label>
+                                    <select id="hbfireProofing3" class="form-control per70" disabled="true">
+                                    </select>
+                                    <div class="txt-right">
+                                        hr
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-10">
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="custom-control custom-radio">
+                                        <input id="chkaess" type="radio" name="rdhb" value="AESS" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <label class="labelBlack control-label">Category</label>
+                                    <select id="hbaess1" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="hBrace3">
+                        <form>
+                            <div class="row m-b-10">
+                                <div class="col-lg-6 col-md-6 text-center padding10">
+                                   <label class="custom-control custom-radio">
+                                        <input id="rdinclinedlacing1" type="radio" checked="checked" name="rdhb" class="custom-control-input" onclick="show1();"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Connections Given </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center padding10">
+                                    <label class="custom-control custom-radio">
+                                        <input id="rdinclinedlacing2" type="radio" name="rdhb" class="custom-control-input" onclick="show2();"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Connections to be Designed </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="showcg">
+                            </div>
+                             
+                        <div id="showcd" style="display: none;">
+ 								</div>
+                              
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="">
+                    <a href="javascript:void(0)" class="modalcancel" data-dismiss="modal" aria-label="Close">Cancel</a>
+                    <a href="javascript:void(0)" class="modalapply" id="hbapply">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="resources/js/memberplacementmodal/hBraceModal.js"></script>
+  

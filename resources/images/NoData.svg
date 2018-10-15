@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 73 51">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Web_1920_1);
+      }
+
+      .cls-2 {
+        fill: #d9d9de;
+      }
+    </style>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="73" height="51"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" class="cls-1">
+    <g id="noun_1540792_cc" transform="translate(-13.82 -24.15)">
+      <rect id="Rectangle_1216" data-name="Rectangle 1216" class="cls-2" width="3.66" height="1.46" transform="translate(57.13 30.44)"/>
+      <rect id="Rectangle_1217" data-name="Rectangle 1217" class="cls-2" width="3.66" height="1.46" transform="translate(64.45 30.44)"/>
+      <rect id="Rectangle_1218" data-name="Rectangle 1218" class="cls-2" width="3.66" height="1.46" transform="translate(57.13 48.76)"/>
+      <rect id="Rectangle_1219" data-name="Rectangle 1219" class="cls-2" width="3.66" height="1.46" transform="translate(64.45 48.76)"/>
+      <path id="Path_1104" data-name="Path 1104" class="cls-2" d="M57,67.09V60.85H50.78V56.47h22.5v-14H50.78V38.15h22.5v-14H26.82v14h22.5v4.37H26.82v14h22.5v4.37H43.07v6.25H13.82V68.6H43.07v6.2H57V68.56H86.29V67.09ZM28.29,36.68v-11H71.81v11ZM28.28,55l.01-11.02H71.81V55ZM55.56,73.34h-11v-11h11Z"/>
+    </g>
+  </g>
+</svg>

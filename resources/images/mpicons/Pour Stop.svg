@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="305 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Pour_Stop_);
+      }
+
+      .cls-2 {
+        fill: #686868;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #f0f6fa;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #9a9a9a;
+      }
+    </style>
+    <clipPath id="clip-Pour_Stop_">
+      <rect x="305" width="36" height="36"/>
+    </clipPath>
+  </defs>
+  <g id="Pour_Stop_" data-name="Pour Stop " class="cls-1">
+    <g id="Group_854" data-name="Group 854" transform="translate(177 -340.904)">
+      <g id="Group_1" data-name="Group 1" transform="translate(130 350.393)">
+        <path id="Path_7" data-name="Path 7" class="cls-2" d="M1555,807.919l9.965,1.955L1587,799.388l-7.2-.889Z" transform="translate(-1555 -788.194)"/>
+        <path id="Path_6" data-name="Path 6" class="cls-2" d="M1580.75,788.9v9.479l21.2-10V780.5Z" transform="translate(-1575.048 -777.673)"/>
+        <path id="Path_5" data-name="Path 5" class="cls-2" d="M1555,774.529l9.743,2.133,21.812-10.574-10.137-1.494Z" transform="translate(-1555 -764.593)"/>
+      </g>
+      <path id="Path_8" data-name="Path 8" class="cls-3" d="M552.069,354.913v6.339l22.509-9.935V345.9Z" transform="translate(-421.811 -1)"/>
+      <path id="Path_9" data-name="Path 9" class="cls-4" d="M553.3,390.9l3.546.75,21.29-9.674-3.307-.475Z" transform="translate(-421.945 -30.707)"/>
+    </g>
+  </g>
+</svg>

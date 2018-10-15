@@ -1,0 +1,205 @@
+<!-- tra-Chord Right vertical Sidebar  -->
+
+<div class="rightFloat" id="rightTrussPitched">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#tzbeam1" data-toggle="tab">Trapezoidal Truss - Vertical Properties</a>
+        </li>
+        <li><a href="#tzbeam3" id="trapvertconntab" data-toggle="tab">Connection Details</a>
+        </li>
+        <li><a href="#tzbeam2" data-toggle="tab">Finish</a>
+        </li>
+
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="tzbeam1">
+            <form>
+                <div class="row m-b-10">
+                    <div class="col-lg-12 col-md-12">
+                        <label class="labelBlack control-label"><b>Vertical</b></label>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 p-r-5 m-b-10">
+                                <label class="labelBlack control-label">Member Profile</label>
+                                <select class="form-control" id="trapezoidalprofile2">
+                                    <option value="">Select</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 p-r-5 m-b-10">
+                                <label class="labelBlack control-label">Member Orientation</label>
+                                <select class="form-control per70" id="verticalMemberorientation">
+                                </select>
+                                <div class="txt-right">
+                                    deg
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 p-r-5 m-b-10">
+                                <label class="labelBlack control-label">Material Grade</label>
+                                <select class="form-control" id="verticalMaterialGrade">
+                                </select>
+
+                            </div>
+                            <div class="col-lg-12 col-md-12 p-r-5 m-b-10">
+                                <label class="labelBlack control-label disblock">Reference Drawing Numbers</label>
+                                <select data-placeholder="" multiple class="referenceSelect" name="test" id="referencenum">
+                                  
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="tab-pane" id="tzbeam3">
+            <form>
+                <div class="row">
+                    <label class="labelBlack control-label col-lg-12  p-l-52 f-z-16">Vertical Connection Details:</label>
+                    <div class="col-lg-6 col-md-6 m-b-10">
+                        <h6><b>Top</b></h6>
+                        <label class="labelBlack control-label disblock">Connection Mark</label>
+                        <select class="form-control col-md-8" id="leftConnectionMark1">
+                        </select>
+
+                        <label class="labelBlack control-label disblock">Connection Type</label>
+                        <select class="form-control col-md-8" id="leftConnectionMark2" disabled="true">
+                        </select>
+                        <label class="labelBlack control-label disblock">Connection Method</label>
+                        <select class="form-control col-md-8" id="leftConnectionMark3" disabled="true">
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 m-b-10">
+                        <h6><b>Bottom</b></h6>
+                        <label class="labelBlack control-label disblock">Connection Mark</label>
+                        <select class="form-control col-md-8" id="leftConnectionMark4">
+                        </select>
+
+                        <label class="labelBlack control-label disblock">Connection Type</label>
+                        <select class="form-control col-md-8" id="leftConnectionType5" disabled="true">
+                        </select>
+                        <label class="labelBlack control-label disblock">Connection Method</label>
+                        <select class="form-control col-md-8" id="leftConnectionMethod6" disabled="true">
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4 m-b-10">
+                        <label class="labelBlack control-label col-lg-12 nopadding"><b> Load Details:</b></label>
+                        <div class="col-lg-12 col-md-12 nopadding">
+                            <label class="labelBlack control-label">Axial Load</label>
+                            <input type="text" class="form-control per70" id="shearLoad1">
+                            <div class="txt-right">
+                                kips
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="tab-pane" id="tzbeam2">
+            <form>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control ">
+                            Surface Preparation</label>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <select class="form-control" id="trasurfacePreparation1">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-checkbox">
+                            <input id="chkprimer" type="checkbox" value="Primer" name="finishprimer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" id="traprimer1" class="form-control"  disabled="true">
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="traprimer2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                     <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Name</label>
+                        <input type="text" class="form-control" id="trapaint1" disabled="true">
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">No. of Coats</label>
+                        <select id="trapaint2" class="form-control" disabled="true">
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                        <div class="col-lg-12 nopadding">
+                            <select id="tragalvanization2" class="form-control per70" disabled="true" id="zincCoatingThickness">
+                            </select>
+                            <div class="txt-right">
+                                mils
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 p-r-0">
+                        <label class="labelBlack control-label">Fire Proofing Type</label>
+                        <select id="trafireProofing2" class="form-control per70" disabled="true">
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-3 nopadding">
+                        <label class="labelBlack control-label">Fire Rating</label>
+                        <select id="trafireProofing3" class="form-control per70" disabled="true">
+                        </select>
+                        <div class="txt-right">
+                            hr
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio">
+                            <input id="chkaess" type="radio" value="AESS" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Category</label>
+                        <select id="traaess1" class="form-control" disabled="true">
+
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modalcss modal-footer m-t-10">
+            <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+            <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="btnmodify">Modify</a>
+        </div>
+    </div>
+</div>
+
+
+	<script type="text/javascript" src="resources/js/rightslideboxJS/Righttra-vertical.js"></script>

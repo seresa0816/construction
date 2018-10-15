@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88 88">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Issues_and_Error_);
+      }
+
+      .cls-2 {
+        fill: #ffefef;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #b95353;
+      }
+
+      .cls-3 {
+        stroke: #b95353;
+      }
+    </style>
+    <clipPath id="clip-Issues_and_Error_">
+      <rect width="88" height="88"/>
+    </clipPath>
+  </defs>
+  <g id="Issues_and_Error_" data-name="Issues and Error " class="cls-1">
+    <circle id="Ellipse_106" data-name="Ellipse 106" class="cls-2" cx="42.5" cy="42.5" r="42.5" transform="translate(2 2)"/>
+    <g id="noun_Info_1803473" transform="translate(3.883 1.872)">
+      <path id="Path_2041" data-name="Path 2041" class="cls-3" d="M18.03,63.128H64.2A.911.911,0,0,0,65,62.664a.924.924,0,0,0-.008-.923L41.9,22.547a.945.945,0,0,0-1.569,0L17.245,61.741a.924.924,0,0,0-.008.923A.911.911,0,0,0,18.03,63.128ZM41.117,24.817,62.6,61.291H19.631Z" transform="translate(0 0)"/>
+      <path id="Path_2042" data-name="Path 2042" class="cls-3" d="M49.662,55.5a.915.915,0,0,0,.912-.919V41.553a.912.912,0,1,0-1.825,0V54.577a.915.915,0,0,0,.912.919Z" transform="translate(-8.545 -4.905)"/>
+      <path id="Path_2043" data-name="Path 2043" class="cls-4" d="M48.9,62.335a2.985,2.985,0,1,0,2.964,2.985A2.974,2.974,0,0,0,48.9,62.335Zm0,4.132a1.147,1.147,0,1,1,1.139-1.147A1.143,1.143,0,0,1,48.9,66.467Z" transform="translate(-7.786 -10.657)"/>
+    </g>
+  </g>
+</svg>

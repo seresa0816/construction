@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88 88">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Detailing_Manager);
+      }
+
+      .cls-2 {
+        fill: #e2ffe9;
+      }
+
+      .cls-3 {
+        stroke: #63a874;
+        stroke-miterlimit: 10;
+        stroke-width: 0.5px;
+        stroke-dasharray: 0.5 1 0.5 1 5 1;
+      }
+
+      .cls-4 {
+        fill: #63a874;
+      }
+    </style>
+    <clipPath id="clip-Detailing_Manager">
+      <rect width="88" height="88"/>
+    </clipPath>
+  </defs>
+  <g id="Detailing_Manager" data-name="Detailing Manager" class="cls-1">
+    <g id="Group_4478" data-name="Group 4478" transform="translate(-723 -187)">
+      <circle id="Ellipse_83" data-name="Ellipse 83" class="cls-2" cx="42.5" cy="42.5" r="42.5" transform="translate(725 189)"/>
+      <g id="noun_grid_916038" transform="translate(738.871 202.518)">
+        <line id="Line_328" data-name="Line 328" class="cls-3" x2="34.769" transform="translate(11.744 17.495)"/>
+        <circle id="Ellipse_88" data-name="Ellipse 88" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(47.337 15.599)"/>
+        <circle id="Ellipse_89" data-name="Ellipse 89" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(7.129 15.599)"/>
+        <line id="Line_329" data-name="Line 329" class="cls-3" y2="33.602" transform="translate(17.433 12.082)"/>
+        <circle id="Ellipse_90" data-name="Ellipse 90" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(15.537 46.343)"/>
+        <circle id="Ellipse_91" data-name="Ellipse 91" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(15.537 7.482)"/>
+        <line id="Line_330" data-name="Line 330" class="cls-3" y2="33.602" transform="translate(25.267 12.008)"/>
+        <circle id="Ellipse_92" data-name="Ellipse 92" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(23.371 46.343)"/>
+        <circle id="Ellipse_93" data-name="Ellipse 93" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(23.371 7.482)"/>
+        <line id="Line_331" data-name="Line 331" class="cls-3" y2="33.602" transform="translate(33.101 12.008)"/>
+        <circle id="Ellipse_94" data-name="Ellipse 94" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(31.205 46.343)"/>
+        <circle id="Ellipse_95" data-name="Ellipse 95" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(31.205 7.482)"/>
+        <line id="Line_332" data-name="Line 332" class="cls-3" y2="33.602" transform="translate(40.935 12.008)"/>
+        <circle id="Ellipse_96" data-name="Ellipse 96" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(39.039 46.343)"/>
+        <circle id="Ellipse_97" data-name="Ellipse 97" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(39.039 7.482)"/>
+        <line id="Line_333" data-name="Line 333" class="cls-3" x2="34.769" transform="translate(11.744 25.028)"/>
+        <circle id="Ellipse_98" data-name="Ellipse 98" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(47.337 23.132)"/>
+        <circle id="Ellipse_99" data-name="Ellipse 99" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(7.129 23.132)"/>
+        <line id="Line_334" data-name="Line 334" class="cls-3" x2="34.769" transform="translate(11.744 32.562)"/>
+        <circle id="Ellipse_100" data-name="Ellipse 100" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(47.337 30.666)"/>
+        <circle id="Ellipse_101" data-name="Ellipse 101" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(7.129 30.666)"/>
+        <line id="Line_335" data-name="Line 335" class="cls-3" x2="34.769" transform="translate(11.744 40.095)"/>
+        <circle id="Ellipse_102" data-name="Ellipse 102" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(47.337 38.199)"/>
+        <circle id="Ellipse_103" data-name="Ellipse 103" class="cls-4" cx="1.896" cy="1.896" r="1.896" transform="translate(7.129 38.199)"/>
+      </g>
+    </g>
+  </g>
+</svg>

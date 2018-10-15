@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Project_Deatils);
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Project_Deatils">
+      <rect width="34" height="34"/>
+    </clipPath>
+  </defs>
+  <g id="Project_Deatils" data-name="Project Deatils" class="cls-1">
+    <g id="Group_1" data-name="Group 1" transform="translate(-26 -25)">
+      <g id="Rectangle_1523" data-name="Rectangle 1523" class="cls-2" transform="translate(31 30)">
+        <rect class="cls-3" width="24" height="24"/>
+        <rect class="cls-4" x="0.75" y="0.75" width="22.5" height="22.5"/>
+      </g>
+      <line id="Line_287" data-name="Line 287" class="cls-2" x2="23" transform="translate(32 48)"/>
+      <line id="Line_288" data-name="Line 288" class="cls-2" y2="4" transform="translate(37 35)"/>
+      <line id="Line_289" data-name="Line 289" class="cls-2" x2="9" transform="translate(40 37)"/>
+      <line id="Line_290" data-name="Line 290" class="cls-2" y2="4" transform="translate(37 41)"/>
+      <line id="Line_291" data-name="Line 291" class="cls-2" x2="9" transform="translate(40 43)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1605 @@
+<!-- edit truss-pitched Right Sidebar  -->
+
+<div class="rightFloat" id="rightTrussPitched">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#pibeam1" data-toggle="tab">Pitched Truss- Chords Properties</a>
+        </li>
+        <li><a href="#pibeam3" data-toggle="tab">Connection Details</a>
+        </li>
+        <li><a href="#pibeam2" data-toggle="tab">Finish</a>
+        </li>
+
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="pibeam1">
+            <form class="m-t-10">
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+
+                        <div class="row m-b-10">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="labelBlack control-label m-b10"><b>Top Chord/Rafter</b></label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 p-r-5">
+                                                <label class="labelBlack control-label">Member Profile</label>
+                                                <select class="form-control per70" id="pitchedprofile">
+                                                    <option value="Select">Select</option>
+                                                    <option value="W14X53">W14X53</option>
+                                                    <option value="W16X50">W16X50</option>
+                                                    <option value="W18X40">W18X40</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-4 p-r-5 m-l30">
+                                                <label class="labelBlack control-label">Member Orientation</label>
+                                                <select class="form-control per70" id="pitchedorientation">
+                                                    <option value="select" selected="select">0</option>
+                                                    <option value="90">90</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    deg
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 p-r-5">
+                                                <label class="labelBlack control-label">Material Grade</label>
+                                                <select class="form-control per70" id="pitchedgrade">
+                                                    <option value="Select">Select</option>
+                                                    <option value="A36">A36</option>
+                                                    <option value="A992">A992</option>
+                                                    <option value="A572">A572 Gr.50</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-b-10">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <label class="labelBlack control-label m-b10"><b>Bottom Chord </b></label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 p-r-5">
+                                                <label class="labelBlack control-label">Member Profile</label>
+                                                <select class="form-control per70" id="pitchedprofile1">
+                                                    <option value="Select">Select</option>
+                                                    <option value="W14X53">W14X53</option>
+                                                    <option value="W16X50">W16X50</option>
+                                                    <option value="W18X40">W18X40</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-4 p-r-5 m-l30">
+                                                <label class="labelBlack control-label">Member Orientation</label>
+                                                <select class="form-control per70" id="pitchedorientation1">
+                                                    <option value="select" selected="select">0</option>
+                                                    <option value="90">90</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    deg
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 p-r-5">
+                                                <label class="labelBlack control-label">Material Grade</label>
+                                                <select class="form-control per70" id="pitchedgrade1">
+                                                    <option value="Select">Select</option>
+                                                    <option value="A36">A36</option>
+                                                    <option value="A992">A992</option>
+                                                    <option value="A572">A572 Gr.50</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-b-10">
+                            <div class="col-lg-12">
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Truss Length</label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <input type="text" class="form-control per70" id="pitchtlengthft" />
+                                                <div class="txt-right">
+                                                    ft
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <select class="form-control per70" id="pitchtlengthin">
+                                                    <option value="select" selected="select">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="4">4</option>
+                                                    <option value="7">7</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    in
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <select class="form-control per70" id="pitchtlengthfr">
+                                                    <option value="0">0</option>
+                                                    <option value="1/4">1/4</option>
+                                                    <option value="3/8">3/8</option>
+                                                    <option value="1/2">1/2</option>
+                                                    <option value="5/8">5/8</option>
+                                                    <option value="3/4">3/4</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    fr
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-b-10">
+                            <div class="col-lg-12">
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <label class="labelBlack control-label">Height of the Truss at Ridge Point</label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <input type="text" class="form-control per70" id="pitchtheightft" />
+                                                <div class="txt-right">
+                                                    ft
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <select class="form-control per70" id="pitchtheightin">
+                                                    <option value="select" selected="select">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="4">4</option>
+                                                    <option value="7">7</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    in
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <select class="form-control per70" id="pitchtheightfr">
+                                                    <option value="0">0</option>
+                                                    <option value="1/4">1/4</option>
+                                                    <option value="3/8">3/8</option>
+                                                    <option value="1/2">1/2</option>
+                                                    <option value="5/8">5/8</option>
+                                                    <option value="3/4">3/4</option>
+                                                </select>
+                                                <div class="txt-right">
+                                                    fr
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 padding10 m-b-10">
+                                <label class="labelBlack control-label w125">Splice Count</label>
+                                <select class="form-control" id="tpitsplicecount">
+                                    <option value="tpitX0" selected="select">0</option>
+                                    <option value="tpitX1">1</option>
+                                    <option value="tpitX2">2</option>
+                                    <option value="tpitX3">3</option>
+                                    <option value="tpitX4">4</option>
+                                    <option value="tpitX5">5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row tpitXsplice1">
+                            <div class="col-lg-4 col-lg-4 padding10 ">
+                                <label class="labelBlack control-label">Splice Position 1 From Left End</label>
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" class="form-control per70" id="splice1ft">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="splice1in">
+                                            <option value="select" selected="select">0</option>
+                                            <option value="1">1</option>
+                                            <option value="4">4</option>
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 p-l-5">
+                                        <select class="form-control per70" id="splice1fr">
+                                            <option value="0">0</option>
+                                            <option value="1/4">1/4</option>
+                                            <option value="3/8">3/8</option>
+                                            <option value="1/2">1/2</option>
+                                            <option value="5/8">5/8</option>
+                                            <option value="3/4">3/4</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Top Chord Profile</label>
+                                <select class="form-control" id="topchordprofile1">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Bottom Chord Profile</label>
+                                <select class="form-control" id="bottomchordprofile1">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row tpitXsplice2">
+                            <div class="col-lg-4 col-md-4 padding10 ">
+                                <label class="labelBlack control-label">Splice Position 2 From Left End</label>
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" class="form-control per70" id="splice2ft">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="splice2in">
+                                            <option value="select" selected="select">0</option>
+                                            <option value="1">1</option>
+                                            <option value="4">4</option>
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 p-l-5">
+                                        <select class="form-control per70" id="splice2fr">
+                                            <option value="0">0</option>
+                                            <option value="1/4">1/4</option>
+                                            <option value="3/8">3/8</option>
+                                            <option value="1/2">1/2</option>
+                                            <option value="5/8">5/8</option>
+                                            <option value="3/4">3/4</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Top Chord Profile</label>
+                                <select class="form-control" id="topchordprofile2">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Bottom Chord Profile</label>
+                                <select class="form-control" id="bottomchordprofile2">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row tpitXsplice3">
+                            <div class="col-lg-4 col-md-4 padding10 ">
+                                <label class="labelBlack control-label">Splice Position 3 From Left End</label>
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" class="form-control per70" id="splice3ft">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="splice3in">
+                                            <option value="select" selected="select">0</option>
+                                            <option value="1">1</option>
+                                            <option value="4">4</option>
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 p-l-5">
+                                        <select class="form-control per70" id="splice3fr">
+                                            <option value="0">0</option>
+                                            <option value="1/4">1/4</option>
+                                            <option value="3/8">3/8</option>
+                                            <option value="1/2">1/2</option>
+                                            <option value="5/8">5/8</option>
+                                            <option value="3/4">3/4</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Top Chord Profile</label>
+                                <select class="form-control" id="topchordprofile3">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Bottom Chord Profile</label>
+                                <select class="form-control" id="bottomchordprofile3">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row tpitXsplice4">
+                            <div class="col-lg-4 col-md-4 padding10 ">
+                                <label class="labelBlack control-label">Splice Position 4 From Left End</label>
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" class="form-control per70" id="splice4ft">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="splice4in">
+                                            <option value="select" selected="select">0</option>
+                                            <option value="1">1</option>
+                                            <option value="4">4</option>
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 p-l-5">
+                                        <select class="form-control per70" id="splice4fr">
+                                            <option value="0">0</option>
+                                            <option value="1/4">1/4</option>
+                                            <option value="3/8">3/8</option>
+                                            <option value="1/2">1/2</option>
+                                            <option value="5/8">5/8</option>
+                                            <option value="3/4">3/4</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Top Chord Profile</label>
+                                <select class="form-control" id="topchordprofile4">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Bottom Chord Profile</label>
+                                <select class="form-control" id="bottomchordprofile4">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row tpitXsplice5">
+                            <div class="col-lg-4 col-md-4 padding10 ">
+                                <label class="labelBlack control-label">Splice Position 5 From Left End</label>
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" class="form-control per70" id="splice5ft">
+                                        <div class="txt-right">
+                                            ft
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 padding5">
+                                        <select class="form-control per70" id="splice5in">
+                                            <option value="select" selected="select">0</option>
+                                            <option value="1">1</option>
+                                            <option value="4">4</option>
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            in
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 p-l-5">
+                                        <select class="form-control per70" id="splice5fr">
+                                            <option value="0">0</option>
+                                            <option value="1/4">1/4</option>
+                                            <option value="3/8">3/8</option>
+                                            <option value="1/2">1/2</option>
+                                            <option value="5/8">5/8</option>
+                                            <option value="3/4">3/4</option>
+                                        </select>
+                                        <div class="txt-right">
+                                            fr
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Top Chord Profile</label>
+                                <select class="form-control" id="topchordprofile5">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="labelBlack control-label">Bottom Chord Profile</label>
+                                <select class="form-control" id="bottomchordprofile5">
+                                    <option value="Select">Select</option>
+                                    <option value="W14X53">W14X53</option>
+                                    <option value="W16X50">W16X50</option>
+                                    <option value="W18X40">W18X40</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12  p-r-5">
+                                <label class="labelBlack control-label disblock">Reference Drawing Numbers.</label>
+                                <select data-placeholder="" multiple class="chosen-select" name="test" id="pitchrefnum">
+                                    <option value="a249">a249</option>
+                                    <option value="a249">a249</option>
+                                    <option value="a249">a249</option>
+                                    <option value="a249">a249</option>
+                                    <option value="a249">a249</option>
+                                    <option value="a249">a249</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="pibeam3">
+            <form class="m-t-10">
+                <label class="labelBlack control-label col-lg-12 p-l-42 f-z-16">Chord Connection Details:</label>
+                <hr />
+
+                <div class="row" style="margin-bottom:-30px;">
+
+                    <div class="col-md-6 padding10 ">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 m-b-10">
+                            </div>
+                            <div class="col-lg-3 col-md-3 m-b-10">
+
+                                <h6><b>Top Chord</b></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 padding10 ">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+
+                                <h6><b>Bottom Chord</b></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-md-6 padding10 borderRight">
+
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <h6><b>Left</b></h6>
+                                        <label class="labelBlack control-label ">End Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark1">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+
+                                        <label class="labelBlack control-label ">Connection Type</label>
+                                        <select class="form-control  w141" id="pitchconmark3">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label ">Connection Method</label>
+                                        <select class="form-control  w141" id="pitchconmark4">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label w250 ">Splice Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark2">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <h6><b>Right</b></h6>
+                                        <label class="labelBlack control-label ">End Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark5">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+
+                                        <label class="labelBlack control-label ">Connection Type</label>
+                                        <select class="form-control  w141" id="pitchconmark7">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label ">Connection Method</label>
+                                        <select class="form-control  w141" id="pitchconmark8">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label w250 ">Splice Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark6">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 padding10">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <h6><b>Left</b></h6>
+                                        <label class="labelBlack control-label ">End Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark9">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+
+                                        <label class="labelBlack control-label ">Connection Type</label>
+                                        <select class="form-control  w141" id="pitchconmark11">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label ">Connection Method</label>
+                                        <select class="form-control  w141" id="pitchconmark12">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label w250 ">Splice Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark10">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <h6><b>Right</b></h6>
+                                        <label class="labelBlack control-label ">End Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark13">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+
+                                        <label class="labelBlack control-label ">Connection Type</label>
+                                        <select class="form-control  w141" id="pitchconmark15">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label ">Connection Method</label>
+                                        <select class="form-control  w141" id="pitchconmark16">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                        <label class="labelBlack control-label w250 ">Splice Connection Mark</label>
+                                        <select class="form-control  w141" id="pitchconmark14">
+                                            <option value="select" selected="select">select</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 padding10 borderRight">
+                        <label class="labelBlack control-label col-lg-12 p-l-42"><b>End Connection Load Details:</b></label>
+
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Left</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload1">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload1">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Right</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload2">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload2">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <label class="labelBlack control-label col-lg-12 p-l-42"><b>Splice Connection Load Details:</b></label>
+
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Left</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload3">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload3">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Right</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload4">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload4">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 padding10">
+                        <label class="labelBlack control-label col-lg-12 p-l-42"><b>End Connection Load Details:</b></label>
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Left</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload5">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload5">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Right</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload6">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload6">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <label class="labelBlack control-label col-lg-12 p-l-42"><b>Splice Connection Load Details:</b></label>
+
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Left</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload7">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload7">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-2 m-b-10">
+                            </div>
+                            <div class="col-lg-4 col-md-4 padding5 m-b-10">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <!-- <h4>Right</h4>
+												 -->
+                                        <label class="labelBlack control-label">Shear Load</label>
+                                        <input type="text" class="form-control per70" id="pitchshearload8">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+                                        <label class="labelBlack control-label">Axial Load</label>
+                                        <input type="text" class="form-control per70" id="pitchaxialload8">
+                                        <div class="txt-right">
+                                            kips
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="tab-pane" id="pibeam2">
+            <form class="m-t-10">
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-checkbox">
+                                    <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('pitsurfacePreparation1').disabled = true;" onchange="document.getElementById('pitsurfacePreparation1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Surface Preparation </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <select class="form-control" id="pitsurfacePreparation1" disabled="true">
+                                    <option value="Select" label="Select"></option>
+                                    <option value="SP1">SP1</option>
+                                    <option value="SP2">SP2</option>
+                                    <option value="SP3">SP3</option>
+                                    <option value="SP4">SP4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-checkbox">
+                                    <input id="surfaceprecb" type="checkbox" class="custom-control-input" onclick="document.getElementById('pitprimer1').disabled = true; document.getElementById('pitprimer2').disabled = true;" onchange="document.getElementById('pitprimer1').disabled = !this.checked;document.getElementById('pitprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <label class="labelBlack control-label">Name</label>
+                                <input type="text" id="pitprimer1" class="form-control" value="TNEMEC#10-99" disabled="true">
+                            </div>
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label">No. of Coats</label>
+                                <select id="pitprimer2" class="form-control" disabled="true">
+                                    <option value="Select" label="Select"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" onclick="document.getElementById('pitgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('pitfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('pitfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('pitaess1').disabled = !this.unchecked;
+                                                document.getElementById('pitpaint1').disabled = !this.unchecked;
+                                                document.getElementById('pitpaint2').disabled = !this.unchecked;
+                                                document.getElementById('pitprimer1').disabled = !this.checked;
+                                                document.getElementById('pitprimer2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" onclick="document.getElementById('pitgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('pitfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('pitfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('pitaess1').disabled = !this.unchecked;
+                                                document.getElementById('pitprimer1').disabled = !this.checked;
+                                                document.getElementById('pitprimer2').disabled = !this.checked;" onchange="document.getElementById('pitpaint1').disabled = !this.checked;document.getElementById('pitpaint2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <label class="labelBlack control-label">Name</label>
+                                <input type="text" class="form-control" id="pitpaint1" value="POLYURETHANE" disabled="true">
+                            </div>
+                            <div class="col-lg-2 col-md-2">
+                                <label class="labelBlack control-label">No. of Coats</label>
+                                <select id="pitpaint2" class="form-control" disabled="true">
+                                    <option value="Select" label="Select"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" onclick="document.getElementById('pitpaint1').disabled = !this.unchecked;
+                                                document.getElementById('pitpaint2').disabled = !this.unchecked;
+                                                document.getElementById('pitfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('pitfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('pitaess1').disabled = !this.unchecked;
+                                                document.getElementById('pitprimer1').disabled = !this.unchecked;
+                                                document.getElementById('pitprimer2').disabled = !this.unchecked;" onchange="document.getElementById('pitgalvanization2').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4">
+                                <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                                <div class="col-lg-8 p-l-0">
+
+                                    <select id="pitgalvanization2" class="form-control per70" disabled="true">
+                                        <option value="Select" label=" Select"></option>
+                                        <option value="1.4">1.4</option>
+                                        <option value="1.8">1.8</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    <div class="txt-right">
+                                        mils
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" onclick="document.getElementById('pitpaint1').disabled = !this.unchecked;
+                                                document.getElementById('pitpaint2').disabled = !this.unchecked;
+                                                document.getElementById('pitgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('pitaess1').disabled = !this.unchecked;
+                                                document.getElementById('pitprimer1').disabled = !this.checked;
+                                                document.getElementById('pitprimer2').disabled = !this.checked;" onchange="document.getElementById('pitfireProofing2').disabled = !this.checked; document.getElementById('pitfireProofing3').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 p-r-0">
+                                <label class="labelBlack control-label">Fire Proofing Type</label>
+                                <select id="pitfireProofing2" class="form-control per70" disabled="true">
+                                    <option value="Select" label="Select"></option>
+                                    <option value="Gypsum Board">Gypsum Board</option>
+                                    <option value="Masonry">Masonry</option>
+                                    <option value="Concrete">Concrete</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-md-2 p-l-0">
+                                <label class="labelBlack control-label">Fire Rating</label>
+                                <select id="pitfireProofing3" class="form-control per70" disabled="true">
+                                    <option value="Select" label="Select"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <div class="txt-right">
+                                    hr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <label class="custom-control custom-radio">
+                                    <input id="surfaceprecb" type="radio" name="rdhb" class="custom-control-input" onclick="document.getElementById('pitpaint1').disabled = !this.unchecked;
+                                                document.getElementById('pitpaint2').disabled = !this.unchecked;
+                                                document.getElementById('pitgalvanization2').disabled = !this.unchecked;
+                                                document.getElementById('pitfireProofing2').disabled = !this.unchecked; 
+                                                document.getElementById('pitfireProofing3').disabled = !this.unchecked;
+                                                document.getElementById('pitprimer1').disabled = !this.checked;
+                                                document.getElementById('pitprimer2').disabled = !this.checked;" onchange="document.getElementById('pitaess1').disabled = !this.checked;"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <label class="labelBlack control-label">Category</label>
+                                <select id="pitaess1" class="form-control" disabled="true">
+                                    <option selected="selected" value="Select">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br />
+        <div class="modifyBtn text-right">
+            <a href="#" class="ctb-btn">Cancel</a>
+            <a href="#" class="ctb-btn qckModifyBtn">Modify</a>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".tpitXsplice1").hide();
+    $(".tpitXsplice2").hide();
+    $(".tpitXsplice3").hide();
+    $(".tpitXsplice4").hide();
+    $(".tpitXsplice5").hide();
+    $(function() {
+        $("#tpitsplicecount").change(function() {
+            if ($('#tpitsplicecount').val() == 'tpitX0') {
+                $(".tpitXsplice1").hide();
+                $(".tpitXsplice2").hide();
+                $(".tpitXsplice3").hide();
+                $(".tpitXsplice4").hide();
+                $(".tpitXsplice5").hide();
+            } else if ($('#tpitsplicecount').val() == 'tpitX1') {
+                $(".tpitXsplice1").show();
+                $(".tpitXsplice2").hide();
+                $(".tpitXsplice3").hide();
+                $(".tpitXsplice4").hide();
+                $(".tpitXsplice5").hide();
+            } else if ($('#tpitsplicecount').val() == 'tpitX2') {
+                $(".tpitXsplice1").show();
+                $(".tpitXsplice2").show();
+                $(".tpitXsplice3").hide();
+                $(".tpitXsplice4").hide();
+                $(".tpitXsplice5").hide();
+            } else if ($('#tpitsplicecount').val() == 'tpitX3') {
+                $(".tpitXsplice1").show();
+                $(".tpitXsplice2").show();
+                $(".tpitXsplice3").show();
+                $(".tpitXsplice4").hide();
+                $(".tpitXsplice5").hide();
+            } else if ($('#tpitsplicecount').val() == 'tpitX4') {
+                $(".tpitXsplice1").show();
+                $(".tpitXsplice2").show();
+                $(".tpitXsplice3").show();
+                $(".tpitXsplice4").show();
+                $(".tpitXsplice5").hide();
+            } else if ($('#tpitsplicecount').val() == 'tpitX5') {
+                $(".tpitXsplice1").show();
+                $(".tpitXsplice2").show();
+                $(".tpitXsplice3").show();
+                $(".tpitXsplice4").show();
+                $(".tpitXsplice5").show();
+            }
+        });
+    });
+    // verticals
+    $(".pshowtv1").hide();
+    $(".pshowtv2").hide();
+    $(".pshowtv3").hide();
+    $(".pshowtv4").hide();
+    $(".pshowtv5").hide();
+    $(".pshowtv6").hide();
+    $(".pshowtv7").hide();
+    $(".pshowtv8").hide();
+    $(".pshowtv9").hide();
+    $(".pshowtv10").hide();
+    $(".pshowtv11").hide();
+    $(".pshowtv12").hide();
+    $(".pshowtv13").hide();
+    $(".pshowtv14").hide();
+    $(".pshowtv15").hide();
+    $(".pshowtv16").hide();
+    $(".pshowtv17").hide();
+    $(".pshowtv18").hide();
+    $(".pshowtv19").hide();
+    $(".pshowtv20").hide();
+    $(function() {
+        $("#pverticalnum, #pt1verticals").change(function() {
+
+            if ($('#pverticalnum').val() == 'ptv0' || $('#pt1verticals').val() == 'ptES') {
+
+                $(".pshowtv1").hide();
+                $(".pshowtv2").hide();
+                $(".pshowtv3").hide();
+                $(".pshowtv4").hide();
+                $(".pshowtv5").hide();
+                $(".pshowtv6").hide();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv1') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").hide();
+                $(".pshowtv3").hide();
+                $(".pshowtv4").hide();
+                $(".pshowtv5").hide();
+                $(".pshowtv6").hide();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv2') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").hide();
+                $(".pshowtv4").hide();
+                $(".pshowtv5").hide();
+                $(".pshowtv6").hide();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv3') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").hide();
+                $(".pshowtv5").hide();
+                $(".pshowtv6").hide();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv4') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").hide();
+                $(".pshowtv6").hide();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv1`").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv5') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").hide();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv6') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").hide();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv7') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").hide();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv8') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").hide();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv9') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").hide();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv10') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").hide();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv11') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").hide();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv12') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").hide();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv13') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").hide();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv14') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").hide();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv15') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").show();
+                $(".pshowtv16").hide();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv16') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").show();
+                $(".pshowtv16").show();
+                $(".pshowtv17").hide();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv17') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").show();
+                $(".pshowtv16").show();
+                $(".pshowtv17").show();
+                $(".pshowtv18").hide();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv18') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").show();
+                $(".pshowtv16").show();
+                $(".pshowtv17").show();
+                $(".pshowtv18").show();
+                $(".pshowtv19").hide();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv19') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").show();
+                $(".pshowtv16").show();
+                $(".pshowtv17").show();
+                $(".pshowtv18").show();
+                $(".pshowtv19").show();
+                $(".pshowtv20").hide();
+            } else if ($('#pverticalnum').val() == 'ptv20') {
+                $(".pshowtv1").show();
+                $(".pshowtv2").show();
+                $(".pshowtv3").show();
+                $(".pshowtv4").show();
+                $(".pshowtv5").show();
+                $(".pshowtv6").show();
+                $(".pshowtv7").show();
+                $(".pshowtv8").show();
+                $(".pshowtv9").show();
+                $(".pshowtv10").show();
+                $(".pshowtv11").show();
+                $(".pshowtv12").show();
+                $(".pshowtv13").show();
+                $(".pshowtv14").show();
+                $(".pshowtv15").show();
+                $(".pshowtv15").show();
+                $(".pshowtv16").show();
+                $(".pshowtv17").show();
+                $(".pshowtv18").show();
+                $(".pshowtv19").show();
+                $(".pshowtv20").show();
+            }
+
+        });
+    });
+</script>

@@ -1,0 +1,297 @@
+
+p, a {
+    font-size: 14px;
+}
+
+
+/* Bid Document */
+
+.BD-tab .panel-group {
+    margin-bottom: 10px;
+}
+.BD-tab .panel-default {
+    border: 0;
+    margin-bottom: 5px;
+}
+.BD-tab .panel-group .panel {
+    border-radius: 0px;
+}
+.BD-tab .panel-heading {
+    padding: 0;
+}
+.BD-tab .panel-default > .panel-heading {
+    background-color: #fff;
+}
+.BD-tab .panel-title {
+    position: relative;
+    display: block;
+    color: #414146;
+    min-height: 50px;
+    line-height: 50px;
+    padding: 0 12px;
+    background-color: #fff;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(228, 228, 228, 0.50);
+    transition: all 0.2s ease-in-out;
+}
+.BD-tab .panel-title a {
+    color: #414146;
+    font-size: 15px;
+    font-weight: 600;
+    border-collapse: separate;
+}
+.BD-tab .panel-default > .panel-heading + .panel-collapse .panel-body {
+    border-top: none;
+    background: #ffffff;
+}
+.BD-tab .panel-title a .control-icon {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.BD-tab .upload-files {
+    display: inline-block;
+    float: right;
+    display: none;
+}
+.BD-tab .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    background: #1e88e5;
+    color: #fff;
+}
+.BD-tab .btn i{
+    padding-right: 10px;
+}
+.BD-tab .total-no {
+    position: relative;
+    left: 5px;
+    display: inline-block;
+    padding: 0px 8px;
+    height: 22px;
+    border: 1px solid #c1c1c1;
+    color: #c1c1c1;
+    border-radius: 10px;
+    line-height: 22px;
+}
+.BD-list {
+    list-style: none;
+    padding: 10px 12px;
+    /* border-bottom: 1px solid #e4e4e4; */
+    font-size: 14px;
+    margin: 0;
+    color: #858585;
+}
+.BD-list li{
+    display: inline-block;
+}
+.BD-list li i {
+    padding-right: 10px;
+    font-size: 18px;
+}
+.BD-list .width60 {
+    width: 60%;
+}
+.BD-list .width10 {
+    width: 13%;
+}
+.BD-tab .ptb5 {
+    padding: 5px 0;
+}
+.BD-tab .BD-inner-tab a {
+    color: #414146;
+    font-size: 14px;
+    font-weight: 600;
+    border-collapse: separate;
+}
+.BD-tab .BD-inner-tab .panel-title {
+    min-height: 45px;
+    line-height: 45px;
+    padding: 0 12px 0 50px;
+}
+.BD-navtabs {
+    border: 0;
+    background: #ffffff;
+    margin: 0 0 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(228, 228, 228, 0.50);
+}
+.BD-navtabs li a {
+    font-weight: 500;
+    color: #b5b5b5;
+    display: block;
+    padding: 12px 16px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: none;
+    transition: all 0.2s ease-in-out;
+}
+.BD-navtabs li:first-child a {
+    border-radius: 8px 0 0 8px;
+}
+.BD-navtabs > li > a:hover, .BD-navtabs > li > a:focus {
+    color: #ffffff;
+    background: #1e88e5;
+}
+.BD-navtabs > li.active > a, .BD-navtabs > li.active > a:hover {
+    color: #ffffff;
+    background: #1e88e5;
+}
+.BD-tc>.active {
+    display: block;
+}
+.topbar .top-navbar .navbar-nav > .nav-item > .nav-link{
+	line-height:0px !important;
+	
+}
+.BD-tab .panel-title a:before{
+    position: relative;
+    display: inline-block;
+    font-family: 'FontAwesome';
+    font-style: normal;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+    left: 5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: transform .25s linear;
+}
+.BD-tab .panel-title a[aria-expanded="false"]:before{
+    content: "\f105";
+}
+.BD-tab .panel-title a[aria-expanded="true"]:before{
+    content: "\f107";
+}
+/*.BD-tab .panel-title a[aria-expanded="true"]{
+    border-left: 5px solid #1e88e5;
+}*/
+.BD-tab .progress-bar-cont {
+    display: flex;
+}
+.BD-tab .pbc-close {
+    border: 1px solid #c1c1c1;
+    border-radius: 50%;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 0 5px;
+}
+.BD-tab .progress {
+    height: 4px;
+    background: #cbcbcb;
+    border-radius: 5px;
+    box-shadow: none;
+    border-collapse: separate;
+    overflow: visible;
+    margin: 10px 0 5px;
+    width: 300px;
+}
+.BD-tab .progress-bar {
+    height: 4px;
+    background-color: #1e88e5;
+    border-radius: 5px;
+}
+.BD-tab .pbc-close i {
+    padding: 0;
+}
+.fade.in {
+    opacity: 1;
+}
+/*addition css*/
+.BD-tab .upload-files {
+    display: block;
+    text-align: right;
+    padding: 10px;
+}
+.BD-navtabs > li > a.active, .BD-navtabs > li > a.active:hover, .BD-navtabs > li > a.active:focus {
+    color: #ffffff;
+    background: #1e88e5;
+}
+.BD-tab .search-cont input {
+    padding: 5px 40px 6px 10px;
+    min-height: 32px;
+    border-radius: 0px;
+    border: 1px solid rgba(0,0,0,.15);
+    font-size: 14px;
+    -webkit-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+}
+.search-cont i {
+    padding: 7px;
+    border: 1px solid rgba(0,0,0,.15);
+    position: relative;
+    top: 2px;
+    right: 4px;
+}
+.search-cont {
+    padding: 10px;
+    display: inline-block;
+}
+.search-cont form {
+    display: inline-grid;
+}
+.search-cont #formpanel1 {
+    display: inline-grid;
+}
+.BD-tab .panel-body {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+}
+/*deleteModal CSS*/
+
+.error-modal{
+    height: 40px;
+}
+.btn-secondary:hover{
+    background-color: #fff!important;
+    color: #B4B4BE!important;
+     border-color: #B4B4BE;
+}
+.btn-danger, .btn-danger.disabled{
+     background-color: #F44336;
+}
+.btn-danger.active.focus, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger.focus:active, .btn-danger:active:focus, .btn-danger:active:hover, .open > .dropdown-toggle.btn-danger.focus, .open > .dropdown-toggle.btn-danger:focus, .open > .dropdown-toggle.btn-danger:hover, .btn-danger.focus, .btn-danger:focus{
+    background-color: #F44336;
+    border:1px solid #F44336;
+}
+.btn-danger{
+    background-color: #F44336;
+}
+.btn-secondary {
+    border-color: #B4B4BE;
+}
+.btn-secondary.active, .btn-secondary:focus, .btn-secondary.disabled.active, .btn-secondary.disabled:focus{
+    color: #B4B4BE!important; 
+}
+@media (min-width: 576px){
+.modal-dialog.modal-delete{
+    max-width: 400px;
+    margin: 160px auto;
+    }
+}
+.delete-footer{
+    background-color: #f5f5f5;
+}
+/*end deletemodal CSS*/
+@media (min-width: 1100px) {
+    .container-fluid {
+        max-width: inherit;
+    }
+}
+@media (min-width: 768px) {
+    .right-aside-nav > li > ul {
+        width: 240px!important;
+    }
+}
+
+.m-t-12{
+	margin-top:12px;
+}

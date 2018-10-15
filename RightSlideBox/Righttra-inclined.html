@@ -1,0 +1,227 @@
+<!-- tra-Inclined Right Sidebar  -->
+
+<div class="rightFloat w700" id="rightTrussPitched">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#tzbeam1" data-toggle="tab">Trapezoidal Truss - Inclined Bracing/Lacing Properties</a>
+        </li>
+        <li><a href="#tzbeam3" data-toggle="tab">Connection Details</a>
+        </li>
+        <li><a href="#tzbeam2" data-toggle="tab">Finish</a>
+        </li>
+
+    </ul>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="tzbeam1">
+            <form>
+                <div class="row m-b-10">
+                    <label class="labelBlack control-label col-lg-12 disblock"><b>Inclined Bracings/Lacings</b></label>
+                    <div class="col-lg-4 col-md-4 p-r-5">
+                        <label class="labelBlack control-label">Member Profile</label>
+                        <select class="form-control" id="trapezoidalprofile3">
+                         
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4 p-r-5">
+                        <label class="labelBlack control-label">Member Orientation</label>
+                        <select class="form-control per70" id="inclinedMemberOrientation">
+                           
+                        </select>
+                        <div class="txt-right">
+                            deg
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <label class="labelBlack control-label">Material Grade</label>
+                        <select class="form-control " id="inclinedMaterialGrade">  
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                     <div class="col-lg-12 col-md-12 p-r-5">
+                        <label class="labelBlack control-label disblock">Inclined Bracings/Lacings Layout Pattern</label>
+                          <select class="form-control w100" id="shapeicons">
+                                                        <option value="" label="Select"></option>
+                                                        <option value="s1" ctbd="1" ctbg="2">/</option>
+                                                        <option value="s2" ctbd="1" ctbg="2">\</option>
+                                                        <option value="s4" ctbd="2" ctbg="3">\/</option>
+                                                        <option value="s5" ctbd="2" ctbg="3">/\</option>
+                                                        <option value="s8" ctbd="4" ctbg="5">W</option>
+                                                        <option value="s9" ctbd="4" ctbg="5">M</option>
+                                                    </select>
+                    </div>
+                </div>
+                <div class="row nomarginlr m-b-10">
+                    <label class="custom-control custom-checkbox">
+                    <input id="chkinclined" type="checkbox" value="inclined checker" name="incline" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">If the inclined bracing/lacing does not connect to the vertical post, specify the end point distance from left end  </span></label>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-4 col-md-4 p-r-5">
+                        <label class="labelBlack control-label">Non Connecting End</label>
+                        <select class="form-control per90 w100" disabled="true" id="trainclined3">
+                            <option value="Left">Left</option>
+                            <option value="Right">Right</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-3 col-md-3 p-r-5">
+                        <input type="text" class="form-control per70" disabled="true" id="trainclined" onkeypress="return AllowNumbersOnly(event)">
+                        <div class="txt-right">
+                            ft
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 p-r-5">
+                        <select class="form-control per70" disabled="true" id="trainclined1">
+                        </select>
+                        <div class="txt-right">
+                            in
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 p-r-5">
+                        <select class="form-control per70" disabled="true" id="trainclined2">
+                        </select>
+                        <div class="txt-right">
+                            fr
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-10">
+                    <div class="col-lg-12">
+                        <label class="labelBlack control-label disblock">Reference Drawing Numbers</label>
+                        <select data-placeholder="" multiple class="referenceSelect" name="test" id="referencenum">
+                            
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="tzbeam3">
+            <form>
+                <div class="row m-b-10">
+                   <div class="col-lg-4 col-md-4">
+                        <label class="custom-control custom-radio"> <input id="rdinclinedlacing1" type="radio" checked="checked" name="rdhb" value="Connections Given" class="custom-control-input" 
+                           onclick="show1();"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Connections Given </span></label>
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <label class="custom-control custom-radio"> <input id="rdinclinedlacing2" type="radio"  name="rdhb" value="Connections to be Designed" class="custom-control-input" 
+                           onclick="show2();"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Connections to be Designed </span></label>
+                     </div>
+                </div>
+                <div id="showcg" >
+          		</div>
+                <div id="showcd" style="display: none;"> 
+                
+                </div>
+                           
+            </form>
+        </div>
+
+        <div class="tab-pane" id="tzbeam2">
+               <form>
+                    <div class="row m-b-10">
+                        <div class="col-lg-4 col-md-4">
+                            <label class="custom-control ">
+                                Surface Preparation</label>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <select class="form-control" id="trasurfacePreparation1">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-b-10">
+                        <div class="col-lg-4 col-md-4">
+                            <label class="custom-control custom-checkbox">
+                                <input id="chkprimer" type="checkbox" value="Primer" name="finishprimer" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Primer </span></label>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <label class="labelBlack control-label">Name</label>
+                            <input type="text" id="traprimer1" class="form-control"  disabled="true" id="name1">
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <label class="labelBlack control-label">No. of Coats</label>
+                             <select id="traprimer2" class="form-control" disabled="true" id="noOfCoats1">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-b-10">
+                        <div class="col-lg-4 col-md-4">
+                            <label class="custom-control custom-radio">
+                                <input id="chknopaint" type="radio" value="No Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">No Paint </span></label>
+                        </div>
+                    </div>
+                    <div class="row m-b-10">
+                       <div class="col-lg-4 col-md-4">
+                            <label class="custom-control custom-radio">
+                                <input id="chkpaint" type="radio" value="Paint" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Paint </span></label>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <label class="labelBlack control-label">Name</label>
+                            <input type="text" class="form-control" id="trapaint1"  disabled="true">
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <label class="labelBlack control-label">No. of Coats</label>
+                            <select id="trapaint2" class="form-control" disabled="true" id="noOfCoats2">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-b-10">
+                        <div class="col-lg-4 col-md-4">
+                            <label class="custom-control custom-radio">
+                                <input id="chkgalvanize" type="radio" value="Galvanization" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Galvanization </span></label>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <label class="labelBlack control-label">Zinc Coating Thickness</label>
+                            <div class="col-lg-12 nopadding">
+                                <select id="tragalvanization2" class="form-control per70" disabled="true" id="zincCoatingThickness">
+                                </select>
+                                <div class="txt-right">
+                                    mils
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-b-10">
+                        <div class="col-lg-4 col-md-4">
+                            <label class="custom-control custom-radio">
+                                <input id="chkfireproofing" type="radio" value="Fire Proofing" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">Fire Proofing </span></label>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 p-r-0">
+                            <label class="labelBlack control-label">Fire Proofing Type</label>
+                            <select id="trafireProofing2" class="form-control per70" disabled="true">
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-40">
+                            <label class="labelBlack control-label">Fire Rating</label>
+                            <select id="trafireProofing3" class="form-control per70" disabled="true">
+                            </select>
+                            <div class="txt-right">
+                                hr
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-b-10">
+                        <div class="col-lg-4 col-md-4">
+                            <label class="custom-control custom-radio">
+                                <input id="chkaess" type="radio" value="AESS" name="rdhb" class="custom-control-input"><span class="custom-control-indicator"></span> <span class="custom-control-description labelblk">AESS </span></label>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <label class="labelBlack control-label">Category</label>
+                            <select id="traaess1" class="form-control" disabled="true">
+
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modalcss modal-footer m-t-10">
+                <a href="javascript:void(0)" class="modalcancel" id="btncancel">Cancel</a>
+                <a href="javascript:void(0)" class="modalapply qckModifyBtn" id="btnmodify">Modify</a>
+            </div>
+        </div>
+    </div>
+
+    
+	<script type="text/javascript" src="resources/js/rightslideboxJS/Righttra-inclined.js"></script>

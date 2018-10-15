@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="95 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Project_Standards);
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Project_Standards">
+      <rect x="95" width="34" height="34"/>
+    </clipPath>
+  </defs>
+  <g id="Project_Standards" data-name="Project Standards" class="cls-1">
+    <g id="Group_3" data-name="Group 3" transform="translate(70 -240.75)">
+      <g id="Rectangle_1524" data-name="Rectangle 1524" class="cls-2" transform="translate(30 251)">
+        <rect class="cls-3" width="24" height="17"/>
+        <rect class="cls-4" x="0.75" y="0.75" width="22.5" height="15.5"/>
+      </g>
+      <line id="Line_292" data-name="Line 292" class="cls-2" y1="4.75" transform="translate(37 246.75)"/>
+      <line id="Line_293" data-name="Line 293" class="cls-2" y1="4.75" transform="translate(47 246.75)"/>
+      <line id="Line_294" data-name="Line 294" class="cls-2" x2="10" transform="translate(37 247.5)"/>
+      <g id="Ellipse_1" data-name="Ellipse 1" class="cls-2" transform="translate(38 256)">
+        <circle class="cls-3" cx="4" cy="4" r="4"/>
+        <circle class="cls-4" cx="4" cy="4" r="3.25"/>
+      </g>
+      <line id="Line_295" data-name="Line 295" class="cls-2" x2="9" transform="translate(30.832 255.619) rotate(20)"/>
+      <line id="Line_296" data-name="Line 296" class="cls-2" x2="9" transform="translate(44.832 258.381) rotate(-20)"/>
+    </g>
+  </g>
+</svg>

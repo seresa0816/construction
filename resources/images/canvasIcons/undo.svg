@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-undo);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #787877;
+        stroke-width: 1.5px;
+        fill-rule: evenodd;
+      }
+    </style>
+    <clipPath id="clip-undo">
+      <rect width="56" height="56"/>
+    </clipPath>
+  </defs>
+  <g id="undo" class="cls-1">
+    <g id="noun_Undo_1481983" transform="translate(11 14)">
+      <g id="Group_4425" data-name="Group 4425">
+        <path id="Path_2002" data-name="Path 2002" class="cls-2" d="M13.6,16.008c7.933-.283,17.708,4.25,20.4,11.05,0-10.2-10.908-19.55-20.117-20.4L14.167,0,0,11.617,13.317,24.083Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

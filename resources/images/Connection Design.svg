@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88 88">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Connection_Design_);
+      }
+
+      .cls-2 {
+        fill: #f6e6f4;
+      }
+
+      .cls-3 {
+        fill: #aa69a3;
+      }
+    </style>
+    <clipPath id="clip-Connection_Design_">
+      <rect width="88" height="88"/>
+    </clipPath>
+  </defs>
+  <g id="Connection_Design_" data-name="Connection Design " class="cls-1">
+    <circle id="Ellipse_104" data-name="Ellipse 104" class="cls-2" cx="42.5" cy="42.5" r="42.5" transform="translate(2 2)"/>
+    <g id="noun_Graph_658268" transform="translate(23 25)">
+      <g id="Group_4490" data-name="Group 4490" transform="translate(0.001)">
+        <g id="Group_4489" data-name="Group 4489">
+          <path id="Path_2036" data-name="Path 2036" class="cls-3" d="M44,5.282,43.964,4.4l-1.309.055V2.932H38.119V4.608l-4.259.1V2.932H29.324V7.468h1.828V17.591H29.324v1.828h-4.26V17.591H23.236v-4.26h1.828V8.8H20.528v1.85l-4.259.04V8.8h-1.88c.01-1.252.023-2.886.034-4.26h1.846V0H11.732V1.847l-4.259.035V0H2.937V1.919L0,1.942l.007.88L2.937,2.8V4.536H7.474V2.761l4.259-.035v1.81h1.811c-.01,1.237-.023,2.873-.034,4.26H11.732v4.536h4.536V11.566l4.259-.04v1.807h1.829v4.259H20.528v4.536h4.536V20.3h4.26v1.828H33.86V17.591H32.032V7.468H33.86V5.587l4.259-.1v1.98h4.536V5.338Z" transform="translate(-0.002)"/>
+        </g>
+      </g>
+      <g id="Group_4492" data-name="Group 4492" transform="translate(0 17.591)">
+        <g id="Group_4491" data-name="Group 4491">
+          <path id="Path_2037" data-name="Path 2037" class="cls-3" d="M43.988,51.449l-.014-.88-1.32.02V48.8H38.118v1.828H33.859V48.8H29.323v4.536h1.828v4.26H29.323V59.5l-4.26.147V57.591H23.328c-.018-1.277-.042-2.9-.061-4.26h1.8V48.8H20.527v1.834l-4.259.011V48.8H11.731v1.869L7.472,50.7V48.8H5.5c.027-1.255.063-2.887.092-4.26H7.472V40H2.936v1.851L0,41.881l.009.88,2.927-.029v1.8H4.715c-.027,1.237-.062,2.871-.092,4.26H2.936v4.536H7.472v-1.75l4.259-.037v1.788h4.536V51.52l4.259-.011v1.823h1.861c.018,1.227.041,2.853.061,4.259H20.527v4.536h4.536v-1.6l4.26-.147v1.75h4.536V57.591H32.031v-4.26h1.828V51.5h4.259v1.828h4.536V51.468Z" transform="translate(0 -40)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

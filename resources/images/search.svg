@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-search);
+      }
+
+      .cls-2 {
+        fill: #e6e6e6;
+        fill-rule: evenodd;
+      }
+    </style>
+    <clipPath id="clip-search">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="search" class="cls-1">
+    <g id="Group_2" data-name="Group 2">
+      <g id="Group_263" data-name="Group 263">
+        <g id="Group_262" data-name="Group 262">
+          <path id="Path_1080" data-name="Path 1080" class="cls-2" d="M17.347,15.731l6.224,5.848L21.955,23.2l-6.224-5.848a9.715,9.715,0,1,1,1.617-1.617ZM9.716,17.146a7.43,7.43,0,1,0-7.43-7.43A7.43,7.43,0,0,0,9.716,17.146Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

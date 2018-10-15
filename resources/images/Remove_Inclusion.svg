@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Rmove_Inclusion);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #f5f5f5;
+      }
+
+      .cls-3 {
+        fill: #818181;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        filter: url(#Ellipse_15);
+      }
+    </style>
+    <filter id="Ellipse_15" x="-4.5" y="-1.5" width="43" height="43" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Rmove_Inclusion">
+      <rect width="34" height="34"/>
+    </clipPath>
+  </defs>
+  <g id="Rmove_Inclusion" class="cls-1">
+    <g id="Group_1" data-name="Group 1" transform="translate(-430 -616)">
+      <g class="cls-6" transform="matrix(1, 0, 0, 1, 430, 616)">
+        <g id="Ellipse_15-2" data-name="Ellipse 15" class="cls-2">
+          <circle class="cls-4" cx="17" cy="17" r="17"/>
+          <circle class="cls-5" cx="17" cy="17" r="16.5"/>
+        </g>
+      </g>
+      <path id="Path_1910" data-name="Path 1910" class="cls-3" d="M21.673,33.127a.811.811,0,0,0,1.175,0L27.4,28.6l4.552,4.552a.838.838,0,0,0,1.175-1.2L28.6,27.4l4.552-4.552a.846.846,0,1,0-1.2-1.2L27.4,26.2l-4.552-4.531a.846.846,0,0,0-1.2,1.2L26.2,27.4l-4.531,4.552A.811.811,0,0,0,21.673,33.127Z" transform="translate(419.6 605.6)"/>
+    </g>
+  </g>
+</svg>
