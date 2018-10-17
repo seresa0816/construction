@@ -33,6 +33,12 @@ function drawGrid( plane, flg){
 
 function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 {
+	var line_length = 0;
+	for (var i = 0; i < lineData.length; i++) {
+		if (line_length < (lineData[i].Label.toString().length)) {
+			line_length = lineData[i].Label.toString().length;
+		}
+	}
 
 	for (var i = 0; i < lineData.length; i++) 
 	{
@@ -103,7 +109,8 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 			// var elevText_right = insertTextBoxes(maxH - gridOffSet + maxH * 0.1 + 15 / canvas.getZoom(), startY + 6 / canvas.getZoom() / scale, value.toString(), false, true, false);
 			// canvas.add(elevText_right);
 
-			var strLength = (lineData[i].Label + " @ Ele " + value).toString().length;
+			// var strLength = (lineData[i].Label + " @ Ele " + value).toString().length;
+			var strLength = line_length;
 
 			var Label_left = insertTextBoxes(startX - (strLength + 1) * 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
 			canvas.add(Label_left);
