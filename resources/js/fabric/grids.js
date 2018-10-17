@@ -43,7 +43,7 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 			Dimension),axis,plane);
 
 		var line = new fabric.Line([ startX*scale - 5,startY*scale - 0.5 / canvas.getZoom(),endX*scale + 5,endY*scale - 0.5 / canvas.getZoom()],
-			{id:'hLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], strokeWidth: 1 / canvas.getZoom(),
+			{id:'hLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], strokeWidth: 1,
 			hasControls:false, selectable: true, lockMovementX: true, lockMovementY: true, mode: 'gridLine', type: 'hori'});
 		
 		if (redrawFlag == undefined || redrawFlag == false)
@@ -124,7 +124,7 @@ function drawVertiLines(lineData,axis,plane, redrawFlag)
 		var endY=maxV - gridOffSet + maxV * 0.1 + Math.abs(minV);
 
 		var line = new fabric.Line([ startX*scale - 0.5 / canvas.getZoom(), startY*scale - 5, endX * scale - 0.5 / canvas.getZoom(), endY * scale + 5],
-			 {id:'vLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], strokeWidth: 1 / canvas.getZoom(),
+			 {id:'vLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], strokeWidth: 1,
 			 hasControls:false, selectable: true, lockMovementX: true, lockMovementY: true, mode: 'gridLine', type: 'vert'});
 		if (redrawFlag == undefined || redrawFlag == false)
 		 	canvas.add(line);

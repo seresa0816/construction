@@ -11,7 +11,7 @@ var DataModel = function () {
     this.insertData = function (modelName, data) {
         new_data = new arr_data_class[modelName]().createData(data);
         arr_data = arr_data.concat(new_data);
-        console.log(JSON.stringify(arr_data));
+        // console.log(JSON.stringify(arr_data));
 
 //        alart(JSON.stringify(arr_data));
     };

@@ -1720,7 +1720,7 @@ function initSubmitEvents()
 				}
 			}
 		}
-		$("#message_area p").html("Floor " + $("#from_copy option:selected").text() + " was copied to " + $("#from_paste option:selected").text() + " and " + $("#to_paste option:selected").text() + ".");
+		$("#message_area p").html("" + $("#from_copy option:selected").text() + " was copied to " + $("#from_paste option:selected").text() + " and " + $("#to_paste option:selected").text() + ".");
 		$("#message_area").fadeIn();
 
 		setTimeout(function()
