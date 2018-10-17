@@ -758,7 +758,7 @@ function checkColumn(obj)
 
 function checkBeam(obj)
 {
-    if (obj.mode == "Beam" || obj.mode == "periBeam" || obj.mode == "ibeam" || obj.mode == "pgirder")
+    if (obj.mode == "Beam" || obj.mode == "periBeam" || obj.mode == "ibeam" || obj.mode == "pgirder" || obj.mode == "cantBeam")
         return true;
     return false;
 }

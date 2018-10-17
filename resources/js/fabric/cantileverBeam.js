@@ -287,10 +287,10 @@ var class_cant_Beam = function()
         // if (shape.chkPosAvailable(line, line.mode))
 	    if (shape.chkPossibleBeam(line))
 	    {
-	    	memberList.push(data);
-                dataModel.insertData("canteBeam", data);
-	    	canvas.add(line);
-	    	stopDraggingElement(line);
+			memberList.push(data);
+			canvas.add(line);
+			stopDraggingElement(line);
+			dataModel.insertData("canteBeam", data);
 	    }
 	}
 
