@@ -142,7 +142,7 @@ var class_box_Column 	= function(parent)
 			main.member_boxColumn.memberProperties.startPoint.z = convertToUnit(main.member_boxColumn.baseElevation_ft, main.member_boxColumn.baseElevation_in, main.member_boxColumn.baseElevation_fr, main.member_boxColumn.baseElevation_sign);
 			main.member_boxColumn.memberProperties.endPoint.z = convertToUnit(main.member_boxColumn.topElevation_ft, main.member_boxColumn.topElevation_in, main.member_boxColumn.topElevation_fr, main.member_boxColumn.topElevation_sign);
 
-			main.member_boxColumn.id = increaseGUID();
+			main.member_boxColumn.id = main.unique_id++; //increaseGUID();
 			main.member_boxColumn.uid = "boxColumn_" + main.member_boxColumn.id;
 			main.member_boxColumn.type = "boxColumn";
 			main.member_boxColumn.floor = parseFloat($("#depthdrpdwn").val());

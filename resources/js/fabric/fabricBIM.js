@@ -91,7 +91,7 @@ function getGUID() {
 	var guid = 0;
 	if (_guid) {
 		try {
-			guid = Integer.parseInt(_guid);
+			guid = parseInt(_guid);
 		}catch(ex){
 			
 		}
@@ -110,7 +110,7 @@ function increaseGUID() {
 	var guid = 0;
 	if (_guid) {
 		try {
-			guid = Integer.parseInt(_guid);
+			guid = parseInt(_guid);
 		} catch (ex) {
 
 		}
