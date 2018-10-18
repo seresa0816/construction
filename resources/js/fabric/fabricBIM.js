@@ -138,7 +138,7 @@ function initCanvas()
 
 	fabric.Object.prototype.render = function(ctx, noTransform) 
 	{
-		if (!this.isOnScreen() && !this.group) 
+		if (!this.group && !this.isOnScreen()) 
 		{
 			return
 		}
@@ -147,6 +147,10 @@ function initCanvas()
 			return;
 		}
 		return originalRender.call(this, ctx, noTransform);
+		// if (!this.isOnScreen())
+		// 	return;
+		// else 
+		// 	originalRender.call(this, ctx, noTransform);
 	};
 }
 
