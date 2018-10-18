@@ -86,6 +86,39 @@ $(document).ready(function()
 	initSubmitEvents();
 });
 
+function getGUID() {
+	var _guid = localStorage.getItem("guid");
+	var guid = 0;
+	if (_guid) {
+		try {
+			guid = Integer.parseInt(_guid);
+		}catch(ex){
+			
+		}
+	}
+
+	return setGUID(guid);
+}
+
+function setGUID(_guid) {
+	localStorage.setItem("guid", _guid);
+	return _guid;
+}
+
+function increaseGUID() {
+	var _guid = localStorage.getItem("guid");
+	var guid = 0;
+	if (_guid) {
+		try {
+			guid = Integer.parseInt(_guid);
+		} catch (ex) {
+
+		}
+	}
+	guid ++;
+	return setGUID(guid);
+}
+
 function loadGridToCanvas(){
 	scale = Math.max(80 / gridData.xaxis[gridData.xaxis.length - 1].Dimension, 80 / gridData.yaxis[gridData.yaxis.length - 1].Dimension) * 5;
 	org_scale = scale;
