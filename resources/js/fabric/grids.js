@@ -34,6 +34,8 @@ function drawGrid( plane, flg){
 function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 {
 	var line_length = 0;
+	var line_strokeWidth = 1;
+
 	for (var i = 0; i < lineData.length; i++) {
 		if (line_length < (lineData[i].Label.toString().length)) {
 			line_length = lineData[i].Label.toString().length;
@@ -45,11 +47,10 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 	   	var startX = minH + gridOffSet-maxH * 0.1;
 		var startY=mapCoordinate( parseFloat(lineData[i].Dimension),axis,plane);
 		var endX= maxH - gridOffSet + maxH * 0.1;
-		var endY=mapCoordinate( parseFloat(lineData[i].
-			Dimension),axis,plane);
+		var endY=mapCoordinate( parseFloat(lineData[i].Dimension),axis,plane);
 
-		var line = new fabric.Line([ startX*scale - 5,startY*scale - 0.5 / canvas.getZoom(),endX*scale + 5,endY*scale - 0.5 / canvas.getZoom()],
-			{id:'hLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], strokeWidth: 1,
+		var line = new fabric.Line([startX * scale - 5, startY * scale - line_strokeWidth / 2, endX * scale + 5, endY * scale - line_strokeWidth / 2],
+			{id:'hLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], line_strokeWidth: line_strokeWidth,
 			hasControls:false, selectable: true, lockMovementX: true, lockMovementY: true, mode: 'gridLine', type: 'hori'});
 		
 		if (redrawFlag == undefined || redrawFlag == false)
@@ -123,6 +124,7 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 
 function drawVertiLines(lineData,axis,plane, redrawFlag)
 {
+	line_strokeWidth = 1; // 0.5 / canvas.getZoom() == line_strokeWidth / 2 => line_strokeWidth = 1 / canvas.getZoom();
 	for (var i = 0; i < lineData.length; i++) 
 	{
 		var startX=mapCoordinate( parseFloat(lineData[i].Dimension),axis,plane);
@@ -130,8 +132,8 @@ function drawVertiLines(lineData,axis,plane, redrawFlag)
 		var endX= mapCoordinate( parseFloat(lineData[i].Dimension),axis,plane);
 		var endY=maxV - gridOffSet + maxV * 0.1 + Math.abs(minV);
 
-		var line = new fabric.Line([ startX*scale - 0.5 / canvas.getZoom(), startY*scale - 5, endX * scale - 0.5 / canvas.getZoom(), endY * scale + 5],
-			 {id:'vLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], strokeWidth: 1,
+		var line = new fabric.Line([startX * scale - line_strokeWidth / 2, startY * scale - 5, endX * scale - line_strokeWidth / 2, endY * scale + 5],
+			{id: 'vLine' + i, index: i, stroke: '#c0c0c0', strokeDashArray: [5, 5, 10], strokeWidth: line_strokeWidth,
 			 hasControls:false, selectable: true, lockMovementX: true, lockMovementY: true, mode: 'gridLine', type: 'vert'});
 		if (redrawFlag == undefined || redrawFlag == false)
 		 	canvas.add(line);

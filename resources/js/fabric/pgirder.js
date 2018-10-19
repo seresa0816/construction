@@ -374,7 +374,7 @@ var class_PGirder = function()
 	        var startZ=mapCoordinate(data.memberProperties.startPoint.z,"Z",plane)+offSet;
 	        var endZ=mapCoordinate(data.memberProperties.endPoint.z,"Z",plane)-offSet;
 	        
-	        var line = new fabric.Line([startX*scale,startZ*scale,endX*scale,endZ*scale],
+			var line = new fabric.Line([startX * scale, startZ * scale - (Length / 2), endX * scale, endZ * scale - (Length / 2)],
 						{
 							stroke: '#000000', 
 							id: data.id, 
@@ -396,7 +396,7 @@ var class_PGirder = function()
 	        var endY=mapCoordinate(data.memberProperties.endPoint.y,"Y",plane)-offSet;
 	        var startZ=mapCoordinate(data.memberProperties.startPoint.z,"Z",plane)+offSet;
 	        var endZ=mapCoordinate(data.memberProperties.endPoint.z,"Z",plane)-offSet;
-	        var line = new fabric.Line([ startY*scale,startZ*scale,endY*scale,endZ*scale ],
+			var line = new fabric.Line([startY * scale, startZ * scale - (Length / 2), endY * scale, endZ * scale - (Length / 2)],
 								{
 									stroke: '#000000', 
 									id: data.id, 
