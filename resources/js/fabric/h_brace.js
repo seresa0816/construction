@@ -497,9 +497,10 @@ var class_h_Braces 	= function(parent)
 		if(main.parent.chkPosAvailable(group, main.mode))
 		{
 			memberList.push(data);
+//			console.log(memberList);
 			canvas.add(group);
 			stopDraggingElement(group);
-                        dataModel.insertData("h_brace", data);
+            dataModel.insertData("h_brace", data);
 		}
 	}
 

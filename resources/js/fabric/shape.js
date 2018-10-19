@@ -171,7 +171,6 @@ var class_shape = function()
 		newMember.id = obj.id;
 		if (main.chkPosAvailable(obj, obj.mode))
 		{
-			console.log('here');
 			memberList.push(newMember);
 			canvas.add(obj);
 			canvas.renderAll();
