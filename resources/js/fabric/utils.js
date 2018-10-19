@@ -756,6 +756,13 @@ function checkColumn(obj)
     return false;
 }
 
+function checkColumnMember(member)
+{
+    if (member.type == "Column" || member.type == "boxColumn" || member.type == "builtUpIColumn" || member.type == "builtUpCRColumn" || member.type == "builtUpCHColumn" || member.type == "postColumn")
+        return true;
+    return false;
+}
+
 function checkBeam(obj)
 {
     if (obj.mode == "Beam" || obj.mode == "periBeam" || obj.mode == "ibeam" || obj.mode == "pgirder" || obj.mode == "cantBeam")
