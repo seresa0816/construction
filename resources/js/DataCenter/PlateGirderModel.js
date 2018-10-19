@@ -33,21 +33,21 @@ var PlateGirderMain = function () {
             "memberType": _mp.memberType,
             "dataSource": _mp.dataSource,
             "profile": {
-                "topFlThick_in": "3", // check
-                "topFlThick_fr": "0", // check
-                "topFlWidth_ft": "5", // check
-                "topFlWidth_in": "0", // check
-                "topFlWidth_fr": "0", // check
-                "botFlThick_in": "3", // check
-                "botFlThick_fr": "0", // check
-                "botFlWidth_ft": "5", // check
-                "botFlWidth_in": "0", // check
-                "botFlWidth_fr": "0", // check
-                "webPlThick_in": "1", // check
-                "webPlThick_fr": "0", // check
-                "webPlWidth_ft": "2", // check
-                "webPlWidth_in": "0", // check
-                "webPlWidth_fr": "0"    // check
+                "topFlThick_in": data.topFlangeThick_in,
+                "topFlThick_fr": data.topFlangeThick_fr,
+                "topFlWidth_ft": data.topFlangeWidth_fr,
+                "topFlWidth_in": data.topFlangeWidth_in,
+                "topFlWidth_ft": data.topFlangeWidth_ft,
+                "botFlThick_in": data.bottomFlangeThick_in,
+                "botFlThick_fr": data.bottomFlangeThick_fr,
+                "botFlWidth_ft": data.bottomFlangeWidth_ft,
+                "botFlWidth_in": data.bottomFlangeWidth_in,
+                "botFlWidth_fr": data.bottomFlangeWidth_fr,
+                "webPlThick_in": data.webPlateThick_in,
+                "webPlThick_fr": data.webPlateThick_fr,
+                "webPlWidth_ft": data.webPlateThick_ft,
+                "webPlWidth_in": data.webPlateWidth_in,
+                "webPlWidth_fr": data.webPlateWidth_fr,
             },
             "topFl_w_type": "Fillet", // check
             "topFl_w_size": "3/16", // check

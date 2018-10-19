@@ -94,7 +94,7 @@ var GridBeamMain = function () {
                     "fr": "0", // check
                     "profile": "W5X19"    // check
                 }],
-            "camberReq": data.camberReq,
+            "camberReq": data.camberRequired,
             "camber_in": data.camber_in,
             "StudReq": data.isshearStudRequired,
             "StudDia_in": data.shearStudDia_in,

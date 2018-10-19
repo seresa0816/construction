@@ -202,7 +202,7 @@ function insertTextBoxes( xAxis, yAxis,value, angle, smallfont, centerAlign, cir
 			width: fontsize * value.length,
 			height: fontsize,
 			selectable: false,
-			editable: true,
+			editable: false,
 			mode: "axisLabel"
 		});
 
@@ -215,11 +215,7 @@ function insertTextBoxes( xAxis, yAxis,value, angle, smallfont, centerAlign, cir
 		if (centerAlign)
 		{
 			text.set({originX: "center", originY: "center"});
-		} else {
-			text.set({originX: "left", originY: "center" });
 		}
-
-		
 		return text;
 	}
 	else 

@@ -846,6 +846,8 @@ var class_context 	= function()
 												// else
 												// 	$("#" + configure[entry]).prop('checked', false).trigger('change');
 											}
+											else if (entry == "stiffWeldType")
+												$("#" + configure[entry]).val(periMember[entry]).trigger("change");
 											else 
 											{
 												$("#" + configure[entry]).val(periMember[entry]);
@@ -1157,6 +1159,8 @@ var class_context 	= function()
 												// else
 												// 	$("#" + configure[entry]).prop('checked', false).trigger('change');
 											}
+											else if (entry == "weld_type")
+												$("#" + configure[entry]).val(boxMember[entry]).trigger("change");
 											else 
 											{
 												$("#" + configure[entry]).val(boxMember[entry]);
@@ -1252,6 +1256,8 @@ var class_context 	= function()
 												if (boxMember[entry] == "on")
 													$("#" + configure[entry]).prop('checked', true).trigger("change");;
 											}
+											else if (entry == "weld_toptype" || entry == "weld_bottype")
+												$("#" + configure[entry]).val(boxMember[entry]).trigger("change");
 											else 
 											{
 												$("#" + configure[entry]).val(boxMember[entry]);
@@ -3846,6 +3852,8 @@ var class_context 	= function()
 												$("#splice" + (j + 1) + "ThicknessDFr").val(boxMember.splice_data[j].thick_d_fr);
 											}
 										}
+										else if (entry == "weld_type")
+											$("#" + box_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
 										else
 											$("#" + box_conf[entry]).val(tmp_memberList[0][entry]);
 									}

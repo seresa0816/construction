@@ -1724,6 +1724,8 @@ function initSubmitEvents()
 		var to_paste_floor 		= parseFloat($("#to_paste").val());
 		for (var i = memberList.length - 1; i >= 0 ; i --)
 		{
+			if (checkColumnMember(memberList[i]))
+				continue;
 			if (memberList[i].floor != undefined && memberList[i].floor == from_floor)
 			{
 				var from, to;
