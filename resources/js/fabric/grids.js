@@ -33,14 +33,29 @@ function drawGrid( plane, flg){
 
 function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 {
-	var line_length = 0;
+	
 	var line_strokeWidth = 1;
 
-	for (var i = 0; i < lineData.length; i++) {
-		if (line_length < (lineData[i].Label.toString().length)) {
-			line_length = lineData[i].Label.toString().length;
+	if (elevFlag) {
+		var vertiLabelMaxLen = 0;
+		for (var i = 0; i < lineData.length; i++) {
+			if (i == 0)
+				value = "0'-" + '0"';
+			else {
+				value = displayDimension(lineData[i].dimension_ft_tos, lineData[i].dimension_in_tos, lineData[i].dimension_fra_tos);
+			}
+			line_length = getTextWidth(lineData[i].Label + " @ Ele " + value);
+			if (vertiLabelMaxLen < line_length) {
+				vertiLabelMaxLen = line_length;
+			}
 		}
 	}
+
+	function getTextWidth(text) {
+		var metrics = canvas.getContext("2D").measureText(text);
+		return metrics.width;
+	}
+	
 
 	for (var i = 0; i < lineData.length; i++) 
 	{
@@ -87,7 +102,7 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 				dim = convertToUnit(lineData[i+1].g_dimension_ft_tos, lineData[i+1].g_dimension_in_tos, lineData[i+1].g_dimension_fra_tos, "+");
 			}
 			var positionY = (mapCoordinate(parseFloat(lineData[i+1].Dimension),axis, plane)+mapCoordinate(parseFloat(lineData[i].Dimension),axis,plane)) / 2;
-			var dimText_left = insertTextBoxes(minH + gridOffSet - 80 / canvas.getZoom(), positionY, value.toString(), true, true, false);
+			var dimText_left = insertTextBoxes(minH + gridOffSet - 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
 			if (dimText_left.width < dim * scale * canvas.getZoom())
 				canvas.add(dimText_left);
 
@@ -111,9 +126,9 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 			// canvas.add(elevText_right);
 
 			// var strLength = (lineData[i].Label + " @ Ele " + value).toString().length;
-			var strLength = line_length;
+			var strLength = vertiLabelMaxLen;
 
-			var Label_left = insertTextBoxes(startX - (strLength + 1) * 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
+			var Label_left = insertTextBoxes(startX - (strLength) / canvas.getZoom() , startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
 			canvas.add(Label_left);
 
 			var Label_right = insertTextBoxes(maxH - gridOffSet + maxH * 0.1 + 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
@@ -121,6 +136,8 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 		}
 	}
 }
+
+
 
 function drawVertiLines(lineData,axis,plane, redrawFlag)
 {
@@ -185,7 +202,7 @@ function insertTextBoxes( xAxis, yAxis,value, angle, smallfont, centerAlign, cir
 			width: fontsize * value.length,
 			height: fontsize,
 			selectable: false,
-			editable: false,
+			editable: true,
 			mode: "axisLabel"
 		});
 
@@ -198,7 +215,11 @@ function insertTextBoxes( xAxis, yAxis,value, angle, smallfont, centerAlign, cir
 		if (centerAlign)
 		{
 			text.set({originX: "center", originY: "center"});
+		} else {
+			text.set({originX: "left", originY: "center" });
 		}
+
+		
 		return text;
 	}
 	else 
