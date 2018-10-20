@@ -36,21 +36,6 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 	
 	var line_strokeWidth = 1;
 
-	if (elevFlag) {
-		var vertiLabelMaxLen = 0;
-		for (var i = 0; i < lineData.length; i++) {
-			if (i == 0)
-				value = "0'-" + '0"';
-			else {
-				value = displayDimension(lineData[i].dimension_ft_tos, lineData[i].dimension_in_tos, lineData[i].dimension_fra_tos);
-			}
-			line_length = getTextWidth(lineData[i].Label + " @ Ele " + value);
-			if (vertiLabelMaxLen < line_length) {
-				vertiLabelMaxLen = line_length;
-			}
-		}
-	}
-
 	function getTextWidth(text) {
 		var metrics = canvas.getContext("2D").measureText(text);
 		return metrics.width;
@@ -64,7 +49,7 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 		var endX= maxH - gridOffSet + maxH * 0.1;
 		var endY=mapCoordinate( parseFloat(lineData[i].Dimension),axis,plane);
 
-		var line = new fabric.Line([startX * scale - 5, startY * scale - line_strokeWidth / 2, endX * scale + 5, endY * scale - line_strokeWidth / 2],
+		var line = new fabric.Line([startX * scale , startY * scale - line_strokeWidth / 2, endX * scale , endY * scale - line_strokeWidth / 2],
 			{id:'hLine'+i,index:i, stroke: '#c0c0c0',  strokeDashArray: [5,5, 10], line_strokeWidth: line_strokeWidth,
 			hasControls:false, selectable: true, lockMovementX: true, lockMovementY: true, mode: 'gridLine', type: 'hori'});
 		
@@ -79,10 +64,10 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 		}
 		if (!elevFlag)
 		{
-			var Label_left = insertTextBoxes(startX - (strLength + 1) * 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
+			var Label_left = insertTextBoxes(startX - (strLength + 1) * 15 / canvas.getZoom() , startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
 			canvas.add(Label_left);
 
-			var Label_right = insertTextBoxes(maxH - gridOffSet + maxH * 0.1 + 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
+			var Label_right = insertTextBoxes(endX + 15 / canvas.getZoom() , startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
 			canvas.add(Label_right);
 		}
 
@@ -125,13 +110,13 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 			// var elevText_right = insertTextBoxes(maxH - gridOffSet + maxH * 0.1 + 15 / canvas.getZoom(), startY + 6 / canvas.getZoom() / scale, value.toString(), false, true, false);
 			// canvas.add(elevText_right);
 
-			// var strLength = (lineData[i].Label + " @ Ele " + value).toString().length;
-			var strLength = vertiLabelMaxLen;
+			var strLength = (lineData[i].Label + " @ Ele " + value).toString().length;
 
-			var Label_left = insertTextBoxes(startX - (strLength) / canvas.getZoom() , startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
+			// var Label_left = insertTextBoxes(startX - (strLength) / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
+			var Label_left = insertLetTextBoxes(startX - 5 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value);
 			canvas.add(Label_left);
 
-			var Label_right = insertTextBoxes(maxH - gridOffSet + maxH * 0.1 + 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
+			var Label_right = insertTextBoxes(endX + 5 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label + " @ Ele " + value, false, false, false, false);
 			canvas.add(Label_right);
 		}
 	}
@@ -155,10 +140,10 @@ function drawVertiLines(lineData,axis,plane, redrawFlag)
 		if (redrawFlag == undefined || redrawFlag == false)
 		 	canvas.add(line);
  
-		 var Label_top = insertTextBoxes(endX, startY - 18 / scale, lineData[i].Label.toString(), false, false, true, true);
+		 var Label_top = insertTextBoxes(endX - 3, startY - 18 / scale - 5, lineData[i].Label.toString(), false, false, true, true);
 		 canvas.add(Label_top);
 
-		 var Label_bottom = insertTextBoxes(endX, endY, lineData[i].Label.toString(), false, false, true, true);
+		 var Label_bottom = insertTextBoxes(endX - 3 , endY + 5 , lineData[i].Label.toString(), false, false, true, true);
 		 canvas.add(Label_bottom);
 		 
 		 //adding Dimension Text Boxes
@@ -180,6 +165,28 @@ function drawVertiLines(lineData,axis,plane, redrawFlag)
 		 }
 	 }
 	
+}
+
+function insertLetTextBoxes(xAxis, yAxis, value){
+	var fontsize = 15 / canvas.getZoom();
+	var ctx = canvas.getContext("2D");
+	ctx.font = ctx.font.replace(/\d+px/, fontsize + "px");
+	var width = canvas.getContext("2D").measureText(value).width;
+	console.log(width);
+	var text = new fabric.Text(value,
+		{
+			left: xAxis * scale - width,
+			top: yAxis * scale,
+			fontSize: fontsize,
+			width: width,
+			height: fontsize,
+			selectable: false,
+			editable: false,
+			textAlign: "right",
+			mode: "axisLabel"
+		});
+	
+	return text;
 }
 
 function insertTextBoxes( xAxis, yAxis,value, angle, smallfont, centerAlign, circle_flg)
