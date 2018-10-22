@@ -510,10 +510,9 @@ var class_context 	= function()
 					{
 						for ( var j = memberList.length - 1; j >= 0; j --)
 						{
-							if (memberList[j].uid == sel_obj._objects[i].mode + "_" + sel_obj._objects[i].uid){
 								// memberList.splice(j, 1);
 								dataModel.removeData(j, 1);
-							}
+							if (memberList[j].uid == sel_obj._objects[i].mode + "_" + sel_obj._objects[i].uid)
 
 						}
 						canvas.remove(sel_obj._objects[i]);
@@ -849,8 +848,6 @@ var class_context 	= function()
 												// else
 												// 	$("#" + configure[entry]).prop('checked', false).trigger('change');
 											}
-											else if (entry == "stiffWeldType")
-												$("#" + configure[entry]).val(periMember[entry]).trigger("change");
 											else 
 											{
 												$("#" + configure[entry]).val(periMember[entry]);
@@ -1162,8 +1159,6 @@ var class_context 	= function()
 												// else
 												// 	$("#" + configure[entry]).prop('checked', false).trigger('change');
 											}
-											else if (entry == "weld_type")
-												$("#" + configure[entry]).val(boxMember[entry]).trigger("change");
 											else 
 											{
 												$("#" + configure[entry]).val(boxMember[entry]);
@@ -1179,20 +1174,18 @@ var class_context 	= function()
 										else
 										{
 											if (entry == "splice_plateConnMark")
-											{
-												$("#" + configure.connectionProperties[entry]).val(boxMember.connectionProperties[entry]).trigger("change");
-											}
-											else 
-												$("#" + configure.connectionProperties[entry]).val(boxMember.connectionProperties[entry]);
+												console.log(boxMember.connectionProperties[entry]);
+											$("#" + configure.connectionProperties[entry]).val(boxMember.connectionProperties[entry]);
 										}
 									});
+
 									for ( var j = 0; j < parseInt(boxMember['splice_count']); j ++ )
 									{
 										$(".c4boxsplice" + (j + 1)).show();
 										$("#boxProfile" + (j + 1)).show();
 									}
 
-									for ( var j = 0; j < parseInt(boxMember['splice_count']); j ++ )
+									for ( var j = 0; j < parseInt(boxMember['splice_count'].replace("sc", "")); j ++ )
 									{
 										$("#splice" + (j + 1) + "PosNeg").val(boxMember.splice_data[j].sign);
 										$("#splice" + (j + 1) + "Ft").val(boxMember.splice_data[j].elevation_ft);
@@ -1259,8 +1252,6 @@ var class_context 	= function()
 												if (boxMember[entry] == "on")
 													$("#" + configure[entry]).prop('checked', true).trigger("change");;
 											}
-											else if (entry == "weld_toptype" || entry == "weld_bottype")
-												$("#" + configure[entry]).val(boxMember[entry]).trigger("change");
 											else 
 											{
 												$("#" + configure[entry]).val(boxMember[entry]);
@@ -1279,7 +1270,6 @@ var class_context 	= function()
 										else
 											$("#" + configure.connectionProperties[entry]).val(boxMember.connectionProperties[entry]);
 									});
-									console.log($("#bc2spcm").val());
 
 									for ( var j = 0; j < parseInt(boxMember['splice_count']); j ++ )
 									{
@@ -1361,14 +1351,12 @@ var class_context 	= function()
 											{
 												if (boxMember[entry] == "on")
 													$("#" + configure[entry]).prop('checked', true).trigger("change");
-											}
-											else if (entry == "wt_profile" || entry == "weld_type")
-											{
-												$("#" + configure[entry]).val(boxMember[entry]).trigger("change");
+												// else
+												// 	$("#" + configure[entry]).prop('checked', false).trigger('change');
 											}
 											else 
 											{
-												$("#" + configure[entry]).val(boxMember[entry])
+												$("#" + configure[entry]).val(boxMember[entry]);
 											}
 										}
 									});
@@ -1522,6 +1510,7 @@ var class_context 	= function()
 									{
 										if (entry != "memberProperties" && entry != "finishProperties" && entry != "connectionProperties")
 										{
+											// console.log(entry);
 											if ($("#" + configure[entry]).is(":checkbox"))
 											{
 												if (ibeamMember[entry] == "on")
@@ -3449,6 +3438,22 @@ var class_context 	= function()
 								}
 							});
 
+							Object.keys(column_conf.connectionProperties).map(function(entry)
+							{
+								var flg = true;
+								for (var i = 0; i < tmp_memberList.length; i ++)
+								{
+									if (tmp_memberList[0].connectionProperties[entry] != tmp_memberList[i].connectionProperties[entry])
+									{
+										flg = false;
+										break;
+									}
+								}
+
+								if (flg)
+									$("#" + column_conf.connectionProperties[entry]).val(tmp_memberList[0].connectionProperties[entry]);
+							});
+
 							Object.keys(column_conf.finishProperties).map(function(entry)
 							{
 								var flg = true;
@@ -3488,12 +3493,8 @@ var class_context 	= function()
 
 									if (flg)
 									{
-										if ($("#" + column_conf[entry]).is(":checkbox"))
-										{
-											if (tmp_memberList[0][entry] == "on")
-												$("#" + column_conf[entry]).prop("checked", true).trigger("change");
-										}
-										else if (entry == "splice_count")
+										$("#" + column_conf[entry]).val(tmp_memberList[0][entry]);
+										if (entry == "splice_count")
 										{
 											$("#" + column_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
 											for (var j = 0; j < parseInt(tmp_memberList[0][entry]); j ++)
@@ -3552,30 +3553,7 @@ var class_context 	= function()
 												}
 											}
 										}
-										else 
-											$("#" + column_conf[entry]).val(tmp_memberList[0][entry]);
 									}
-								}
-							});
-
-							Object.keys(column_conf.connectionProperties).map(function(entry)
-							{
-								var flg = true;
-								for (var i = 0; i < tmp_memberList.length; i ++)
-								{
-									if (tmp_memberList[0].connectionProperties[entry] != tmp_memberList[i].connectionProperties[entry])
-									{
-										flg = false;
-										break;
-									}
-								}
-
-								if (flg)
-								{
-									if (entry == "cap_check")
-										$("#" + column_conf.connectionProperties[entry]).prop("checked", tmp_memberList[0].connectionProperties[entry]).trigger("change");
-									else
-										$("#" + column_conf.connectionProperties[entry]).val(tmp_memberList[0].connectionProperties[entry]);
 								}
 							});
 
@@ -3661,201 +3639,6 @@ var class_context 	= function()
 									if (flg)
 									{
 										if (entry == "splice_count")
-										{
-											$("#" + box_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
-											for ( var j = 0; j < parseInt(tmp_memberList[0][entry]); j ++)
-											{
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].sign != tmp_memberList[i].splice_data[j].sign)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "PosNeg").val(tmp_memberList[0].splice_data[j].sign);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].elevation_ft != tmp_memberList[i].splice_data[j].elevation_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "Ft").val(tmp_memberList[0].splice_data[j].elevation_ft);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].elevation_in != tmp_memberList[i].splice_data[j].elevation_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "In").val(tmp_memberList[0].splice_data[j].elevation_in);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].elevation_fr != tmp_memberList[i].splice_data[j].elevation_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "Fr").val(tmp_memberList[0].splice_data[j].elevation_fr);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].depth_a_ft != tmp_memberList[i].splice_data[j].depth_a_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "DepthAFt").val(tmp_memberList[0].splice_data[j].depth_a_ft);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].depth_a_in != tmp_memberList[i].splice_data[j].depth_a_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "DepthAIn").val(tmp_memberList[0].splice_data[j].depth_a_in);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].depth_a_fr != tmp_memberList[i].splice_data[j].depth_a_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "DepthAFr").val(tmp_memberList[0].splice_data[j].depth_a_fr);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].width_b_ft != tmp_memberList[i].splice_data[j].width_b_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WidthBFt").val(tmp_memberList[0].splice_data[j].width_b_ft);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].width_b_in != tmp_memberList[i].splice_data[j].width_b_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WidthBIn").val(tmp_memberList[0].splice_data[j].width_b_in);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].width_b_fr != tmp_memberList[i].splice_data[j].width_b_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WidthBFr").val(tmp_memberList[0].splice_data[j].width_b_fr);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].thick_c_in != tmp_memberList[i].splice_data[j].thick_c_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "ThicknessCIn").val(tmp_memberList[0].splice_data[j].thick_c_in);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].thick_c_fr != tmp_memberList[i].splice_data[j].thick_c_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "ThicknessCFr").val(tmp_memberList[0].splice_data[j].thick_c_fr);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].thick_d_in != tmp_memberList[i].splice_data[j].thick_d_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "ThicknessDIn").val(tmp_memberList[0].splice_data[j].thick_d_in);
-
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++) 
-												{
-													if (tmp_memberList[0].splice_data[j].thick_d_fr != tmp_memberList[i].splice_data[j].thick_d_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "ThicknessDFr").val(tmp_memberList[0].splice_data[j].thick_d_fr);
-											}
-											for ( var j = 0; j < parseInt(boxMember['splice_count']); j ++ )
-											{
-												$("#splice" + (j + 1) + "PosNeg").val(boxMember.splice_data[j].sign);
-												$("#splice" + (j + 1) + "Ft").val(boxMember.splice_data[j].elevation_ft);
-												$("#splice" + (j + 1) + "In").val(boxMember.splice_data[j].elevation_in);
-												$("#splice" + (j + 1) + "Fr").val(boxMember.splice_data[j].elevation_fr);
-
-												$("#splice" + (j + 1) + "DepthAFt").val(boxMember.splice_data[j].depth_a_ft);
-												$("#splice" + (j + 1) + "DepthAIn").val(boxMember.splice_data[j].depth_a_in);
-												$("#splice" + (j + 1) + "DepthAFr").val(boxMember.splice_data[j].depth_a_fr);
-
-												$("#splice" + (j + 1) + "WidthBFt").val(boxMember.splice_data[j].width_b_ft);
-												$("#splice" + (j + 1) + "WidthBIn").val(boxMember.splice_data[j].width_b_in);
-												$("#splice" + (j + 1) + "WidthBFr").val(boxMember.splice_data[j].width_b_fr);
-
-												$("#splice" + (j + 1) + "ThicknessCIn").val(boxMember.splice_data[j].thick_c_in);
-												$("#splice" + (j + 1) + "ThicknessCFr").val(boxMember.splice_data[j].thick_c_fr);
-
-												$("#splice" + (j + 1) + "ThicknessDIn").val(boxMember.splice_data[j].thick_d_in);
-												$("#splice" + (j + 1) + "ThicknessDFr").val(boxMember.splice_data[j].thick_d_fr);
-											}
-										}
-										else if (entry == "weld_type")
 											$("#" + box_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
 										else
 											$("#" + box_conf[entry]).val(tmp_memberList[0][entry]);
@@ -3942,6 +3725,23 @@ var class_context 	= function()
 								}
 							});
 
+							Object.keys(builtup_conf.connectionProperties).map(function(entry)
+							{
+								var flg = true;
+								for (i = 1; i < tmp_memberList.length; i ++)
+								{
+									if (tmp_memberList[0].connectionProperties[entry] != tmp_memberList[i].connectionProperties[entry])
+									{
+										flg = false;
+										break;
+									}
+								}
+								if (flg)
+								{
+									$("#" + builtup_conf.connectionProperties[entry]).val(tmp_memberList[0].connectionProperties[entry]);
+								}
+							});
+
 							Object.keys(builtup_conf).map(function(entry)
 							{
 								if (entry != "memberProperties" && entry != "connectionProperties" && entry != "finishProperties")
@@ -3958,262 +3758,13 @@ var class_context 	= function()
 
 									if (flg)
 									{
-										if ($("#" + builtup_conf[entry]).is(":checkbox"))
-										{
-											if (tmp_memberList[0][entry] == "on")
-												$("#" + builtup_conf[entry]).prop("checked", tmp_memberList[0][entry]).trigger("change");
-										}
-										else if (entry == "weld_toptype" || entry == "weld_bottype" || entry == "splice_count")
+										$("#" + builtup_conf[entry]).val(tmp_memberList[0][entry]);
+										if (entry == "weld_toptype" || entry == "weld_bottype")
 											$("#" + builtup_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
-										else 
-											$("#" + builtup_conf[entry]).val(tmp_memberList[0][entry]);
-
-										if (entry == "splice_count") {
-											for (var j = 0; j < tmp_memberList[0]['splice_count']; j ++)
-											{
-												var tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].sign != tmp_memberList[i].splice_data[j].sign)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "PosNeg").val(tmp_memberList[0].splice_data[j].sign);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].elevation_ft != tmp_memberList[i].splice_data[j].elevation_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "Ft").val(tmp_memberList[0].splice_data[j].elevation_ft);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].elevation_in != tmp_memberList[i].splice_data[j].elevation_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "In").val(tmp_memberList[0].splice_data[j].elevation_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].elevation_fr != tmp_memberList[i].splice_data[j].elevation_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "Fr").val(tmp_memberList[0].splice_data[j].elevation_fr);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].topthick_in != tmp_memberList[i].splice_data[j].topthick_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "TFPlateThicknessIn").val(tmp_memberList[0].splice_data[j].topthick_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].topthick_fr != tmp_memberList[i].splice_data[j].topthick_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "TFPlateThicknessFr").val(tmp_memberList[0].splice_data[j].topthick_fr);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].topwidth_ft != tmp_memberList[i].splice_data[j].topwidth_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "TFPlateWidthFt").val(tmp_memberList[0].splice_data[j].topwidth_ft);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].topwidth_in != tmp_memberList[i].splice_data[j].topwidth_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "TFPlateWidthIn").val(tmp_memberList[0].splice_data[j].topwidth_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].topwidth_fr != tmp_memberList[i].splice_data[j].topwidth_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "TFPlateWidthFr").val(tmp_memberList[0].splice_data[j].topwidth_fr);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].botthick_in != tmp_memberList[i].splice_data[j].botthick_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "BFPlateThicknessIn").val(tmp_memberList[0].splice_data[j].botthick_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].botthick_fr != tmp_memberList[i].splice_data[j].botthick_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "BFPlateThicknessFr").val(tmp_memberList[0].splice_data[j].botthick_fr);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].botwidth_ft != tmp_memberList[i].splice_data[j].botwidth_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "BFPlateWidthFt").val(tmp_memberList[0].splice_data[j].botwidth_ft);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].botwidth_in != tmp_memberList[i].splice_data[j].botwidth_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "BFPlateWidthIn").val(tmp_memberList[0].splice_data[j].botwidth_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].botwidth_fr != tmp_memberList[i].splice_data[j].botwidth_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "BFPlateWidthFr").val(tmp_memberList[0].splice_data[j].botwidth_fr);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].webthick_in != tmp_memberList[i].splice_data[j].webthick_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WebPlateThicknessIn").val(tmp_memberList[0].splice_data[j].webthick_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].webthick_fr != tmp_memberList[i].splice_data[j].webthick_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WebPlateThicknessFr").val(tmp_memberList[0].splice_data[j].webthick_fr);
-
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].webwidth_ft != tmp_memberList[i].splice_data[j].webwidth_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WebPlateWidthFt").val(tmp_memberList[0].splice_data[j].webwidth_ft);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].webwidth_in != tmp_memberList[i].splice_data[j].webwidth_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WebPlateWidthIn").val(tmp_memberList[0].splice_data[j].webwidth_in);
-												tmp_flg = true;
-												for (var i = 1; i < tmp_memberList.length; i ++)
-												{
-													if (tmp_memberList[0].splice_data[j].webwidth_fr != tmp_memberList[i].splice_data[j].webwidth_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WebPlateWidthFr").val(tmp_memberList[0].splice_data[j].webwidth_fr);
-											}
-										}
 
 									}
 								}
 							});
-
-							Object.keys(builtup_conf.connectionProperties).map(function(entry)
-							{
-								var flg = true;
-								for (i = 1; i < tmp_memberList.length; i ++)
-								{
-									if (tmp_memberList[0].connectionProperties[entry] != tmp_memberList[i].connectionProperties[entry])
-									{
-										flg = false;
-										break;
-									}
-								}
-								if (flg)
-								{
-									if (entry == "cap_check")
-										$("#" + builtup_conf.connectionProperties[entry]).prop("checked", tmp_memberList[0].connectionProperties[entry]).trigger("change");
-									else
-										$("#" + builtup_conf.connectionProperties[entry]).val(tmp_memberList[0].connectionProperties[entry])
-								}
-							});
-							
 							$("#memID").val(tmp_index.map(String));
 							$("#memType").val("builtup");
 						});
@@ -4276,85 +3827,6 @@ var class_context 	= function()
 								}
 							});
 
-							Object.keys(crucified_conf).map(function(entry)
-							{
-								if (entry != "memberProperties" && entry != "connectionProperties" && entry != "finishProperties")
-								{
-									var flg = true;
-									for (i = 1; i < tmp_memberList.length; i ++)
-									{
-										if (tmp_memberList[0][entry] != tmp_memberList[i][entry])
-										{
-											flg = false;
-											break;
-										}
-									}
-
-									if (flg)
-									{
-										$("#" + crucified_conf[entry]).val(tmp_memberList[0][entry]);
-										if (entry == "wt_profile" || entry == "weld_type" || entry == "splice_count")
-											$("#" + crucified_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
-
-										if (entry == "splice_count")
-										{
-											for (var j = 0; j < tmp_memberList[0]["splice_count"]; j ++)
-											{
-												var tmp_flg = true;
-												for (var i = 0; i < tmp_memberList.length; i ++)
-													if (tmp_memberList[0].splice_data[j].sign != tmp_memberList[i].splice_data[j].sign)
-													{
-														tmp_flg = false;
-														break;
-													}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "PosNeg").val(tmp_memberList[0].splice_data[j].sign);
-
-												tmp_flg = true;
-												for (var i = 0; i < tmp_memberList.length; i ++)
-													if (tmp_memberList[0].splice_data[j].elevation_ft != tmp_memberList[i].splice_data[j].elevation_ft)
-													{
-														tmp_flg = false;
-														break;
-													}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "Ft").val(tmp_memberList[0].splice_data[j].elevation_ft);
-
-												tmp_flg = true;
-												for (var i = 0; i < tmp_memberList.length; i ++)
-													if (tmp_memberList[0].splice_data[j].elevation_in != tmp_memberList[i].splice_data[j].elevation_in)
-													{
-														tmp_flg = false;
-														break;
-													}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "In").val(tmp_memberList[0].splice_data[j].elevation_in);
-
-												tmp_flg = true;
-												for (var i = 0; i < tmp_memberList.length; i ++)
-													if (tmp_memberList[0].splice_data[j].elevation_fr != tmp_memberList[i].splice_data[j].elevation_fr)
-													{
-														tmp_flg = false;
-														break;
-													}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "Fr").val(tmp_memberList[0].splice_data[j].elevation_fr);
-
-												tmp_flg = true;
-												for (var i = 0; i < tmp_memberList.length; i ++)
-													if (tmp_memberList[0].splice_data[j].profile != tmp_memberList[i].splice_data[j].profile)
-													{
-														tmp_flg = false;
-														break;
-													}
-												if (tmp_flg)
-													$("#splice" + (j + 1) + "WProfile").val(tmp_memberList[0].splice_data[j].profile);
-											}
-										}
-									}
-								}
-							});
-
 							Object.keys(crucified_conf.connectionProperties).map(function(entry)
 							{
 								var flg = true;
@@ -4372,6 +3844,26 @@ var class_context 	= function()
 								}
 							});
 
+							Object.keys(crucified_conf).map(function(entry)
+							{
+								if (entry != "memberProperties" && entry != "connectionProperties" && entry != "finishProperties")
+								{
+									var flg = true;
+									for (i = 1; i < tmp_memberList.length; i ++)
+									{
+										if (tmp_memberList[0][entry] != tmp_memberList[i][entry])
+										{
+											flg = false;
+											break;
+										}
+									}
+
+									if (flg)
+									{
+										$("#" + crucified_conf[entry]).val(tmp_memberList[0][entry]);
+									}
+								}
+							});
 							$("#memID").val(tmp_index.map(String));
 							$("#memType").val("crucified");
 						});
