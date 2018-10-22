@@ -7,7 +7,7 @@ var class_post_Column 	= function(parent)
 
 	main.isDrawReady = 0;
 
-	main.unique_id 	 = 0;
+	// main.unique_id 	 = 0;
 
 	main.grid_w 	 = 0;
 	main.grid_h 	 = 0;

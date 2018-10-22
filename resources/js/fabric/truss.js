@@ -6,7 +6,7 @@ var class_Truss 	= function(parent)
 	main.mode 		 = "truss";
 	main.parent  	 = parent;
 
-	main.unique_id 	 = 0;
+	// main.unique_id 	 = 0;
 	main.grid_w 	 = 0;
 	main.grid_h 	 = 0;
 
@@ -326,10 +326,10 @@ var class_Truss 	= function(parent)
 
 		main.verticals(data, start_x, start_y, middle_x, plane, data.vert_data.length);
 		data.plane = plane;
-		data.uid = "truss_" + (memId);
+		data.id = increaseGUID();
+		data.uid = "truss_" + data.id;
 		// memberList.push(data);
 		dataModel.insertData(data); //pitchTruss
-		memId++;
 		return true;
 	}
 
@@ -351,7 +351,7 @@ var class_Truss 	= function(parent)
 								lockRotation: true,
 								mode: "truss",
 								memType: "pitch_topchord",
-								uid: memId
+								uid: getGUID()
 							});
 		if (plane == "YZ")
 		{
@@ -381,7 +381,7 @@ var class_Truss 	= function(parent)
 								lockRotation: true,
 								mode: "truss",
 								memType: "pitch_bottomchord",
-								uid: memId
+								uid: getGUID()
 							});
 		if (plane == "YZ")
 		{
@@ -439,7 +439,7 @@ var class_Truss 	= function(parent)
 						memType: "pitch_vertical",
 						type: "pitch_vertical_" + i,
 						mode: "truss",
-						uid: memId
+						uid: getGUID()
 					});
 
 			if (plane == "YZ")
@@ -617,13 +617,13 @@ var class_Truss 	= function(parent)
 								mode: "truss",
 								memType: "pitch_brace",
 								type: "pitch_brace_" + braceIndex,
-								uid: memId
+								uid: getGUID()
 							}));
 		var group = new fabric.Group(objs);
 		group.mode = "truss";
 		group.memType = "pitch_brace";
 		group.type = "pitch_brace_" + braceIndex;
-		group.uid = memId;
+		group.uid = getGUID();
 		group.lockRotation = true;
 		// group.left = range[1] * scale;
 		// group.top = mapCoordinate(range[0] + Math.max(range[2], range[4]), "Z", plane) * scale;

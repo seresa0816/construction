@@ -7,7 +7,7 @@ var class_grid_beam = function()
 
 	main.isDrawReady = 0;
 	main.isOneDrawReady = 0;
-	main.unique_id = 0;
+	// main.unique_id = 0;
 
 	main.data = {};
 
@@ -165,7 +165,7 @@ var class_grid_beam = function()
 	    }
 
 	    var group = new fabric.Group(objs);
-	    group.uid 	= main.unique_id++;
+		group.uid = increaseGUID(); //main.unique_id++;
 	    if (data.memberProperties.endPoint.x == gridData.xaxis[gridData.xaxis.length - 1].Dimension && data.memberProperties.startPoint.y != gridData.yaxis[0].Dimension && data.memberProperties.endPoint.y != gridData.yaxis[gridData.yaxis.length - 1].Dimension) 
 		    group.left  = endX * scale;
 		else
@@ -182,7 +182,7 @@ var class_grid_beam = function()
 		data.type  	= main.mode;
 		data.mode  	= "periBeam";
         data.color 	= "#33adff";
-        data.id 	= "Mem" + memId ++;
+		data.id = increaseGUID();//"Mem" + memId ++;
         data.uid 	= "periBeam_" + group.uid;
 
         if (shape.chkPosAvailable(group, group.mode))
@@ -231,7 +231,7 @@ var class_grid_beam = function()
 	    	}));
 
 	    	var group = new fabric.Group(objs);
-		    group.uid 	= main.unique_id++;
+			group.uid = increaseGUID();//main.unique_id++;
 		    group.left  = startX * scale;
 		    group.top   = endZ * scale;
 		    group.mode  = "periBeam";
@@ -277,7 +277,7 @@ var class_grid_beam = function()
 	    	}));
 
 	    	var group = new fabric.Group(objs);
-		    group.uid 	= main.unique_id++;
+			group.uid = increaseGUID();//main.unique_id++;
 		    group.left  = endX * scale;
 		    group.top   = endZ * scale;
 		    group.mode  = "periBeam";

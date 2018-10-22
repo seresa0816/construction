@@ -8,7 +8,7 @@ var class_grid_Plan 	= function(parent)
 	main.isDrawReady 	= 0;
 	main.insertReady	= 0;
 
-	main.unique_id 		= 0;
+	// main.unique_id 		= 0;
 
 	main.grid_w 		= 0;
 	main.grid_h			= 0;

@@ -51,7 +51,7 @@ function placeDefaultColumns(columnObj,plane){
             
             column.name =   columnObj.name;
             column.type =   columnObj.type;
-            column.id ="Mem"+memId++;
+            column.id = increaseGUID();//"Mem"+memId++;
             column.memberProperties.profile = columnObj.memberProperties.profile;
             column.memberProperties.startPoint.x = parseFloat(gridData.xaxis[x].Dimension);
             column.memberProperties.startPoint.y = parseFloat(gridData.yaxis[y].Dimension);
@@ -312,7 +312,7 @@ var class_place_column   = function(parent)
 
     main.isDrawReady = 0;
 
-    main.unique_id   = 0;
+    // main.unique_id   = 0;
 
     main.grid_w      = 0;
     main.grid_h      = 0;
@@ -417,7 +417,7 @@ var class_place_column   = function(parent)
             
             column.name =   main.tmpData.name;
             column.type =   main.tmpData.type;
-            column.id   ="Mem"+memId++;
+            column.id = increaseGUID();//"Mem"+memId++;
             column.memberProperties.profile=main.tmpData.memberProperties.profile;
             column.memberProperties.startPoint.z=parseFloat(main.tmpData.memberProperties.startPoint.z);
             column.memberProperties.endPoint.z=parseFloat(main.tmpData.memberProperties.endPoint.z);

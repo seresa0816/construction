@@ -6,7 +6,7 @@ var class_infill_Beam = function()
 	main.mode = "ibeam";
 
 	main.isDrawReady = 0;
-	main.unique_id = 0;
+	// main.unique_id = 0;
 
 	main.data = {};
 
@@ -242,7 +242,7 @@ var class_infill_Beam = function()
 				}
 				beam.memberProperties.startPoint.z = beam.height;
 				beam.memberProperties.endPoint.z = beam.height;
-				beam.id="Mem"+memId++;
+				beam.id = increaseGUID();//"Mem"+memId++;
 				beam.uid = "ibeam_" + beam.id;
 				beam.type = "ibeam";
 				beam.mode = "ibeam";

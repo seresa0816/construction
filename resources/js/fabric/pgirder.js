@@ -6,7 +6,7 @@ var class_PGirder = function()
 	main.mode = "pgirder";
 
 	main.isDrawReady = 0;
-	main.unique_id = 0;
+	// main.unique_id = 0;
 
 	main.data = {};
 
@@ -227,7 +227,7 @@ var class_PGirder = function()
 					uid 		: data.id
 				});
 
-	    // group.uid 	= main.unique_id++;
+		group.uid = increaseGUID();//main.unique_id++;
 	    // group.left  = startX * scale;
 	    // group.top   = endY * scale;
 	    group.mode  = "pgirder";
@@ -241,7 +241,7 @@ var class_PGirder = function()
         data.color 	= "#000000";
         if (data.id == undefined)
         {
-	        data.id 	= "Mem" + memId ++;
+			data.id = increaseGUID();// "Mem" + memId ++;
 	    }
 	    group.uid = data.id;
 	    if (data.uid == undefined)
@@ -341,7 +341,7 @@ var class_PGirder = function()
 			}
 		}
 		if (data.id == undefined)
-			data.id 	= "Mem" + memId ++;
+			data.id = increaseGUID();// "Mem" + memId ++;
 
 	    return data;
 	}

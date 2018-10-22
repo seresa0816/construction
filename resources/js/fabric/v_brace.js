@@ -12,7 +12,7 @@ var class_v_Braces 	= function(parent)
 
 	main.prev_x 	 = 0;
 	main.prev_y 	 = 0;
-	main.unique_id 	 = 0;
+	// main.unique_id 	 = 0;
 
 	main.grid_w 	 = 0;
 	main.grid_h 	 = 0;
@@ -700,7 +700,7 @@ var class_v_Braces 	= function(parent)
 		var group = new fabric.Group(objs);
 
 		if (data.uid == undefined)
-			group.uid  = main.unique_id ++;
+			group.uid = increaseGUID();//main.unique_id ++;
 		else
 			group.uid = data.uid.replace("v_brace_", "");
 		group.mode = main.mode;
@@ -710,7 +710,7 @@ var class_v_Braces 	= function(parent)
         data.type  = main.mode;
         data.mode  = type;
         data.color = color;
-        data.id 	 = "Mem" + memId ++;
+        data.id 	 = increaseGUID; //"Mem" + memId ++;
         data.uid 	= "v_brace_" + group.uid;
 
         data.startIndex.x_index = x_pos;

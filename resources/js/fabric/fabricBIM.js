@@ -1734,7 +1734,7 @@ function initSubmitEvents()
 				{
 					var newMember = JSON.parse(JSON.stringify(memberList[i]));
 					newMember.floor = gridData.zaxis[j].Dimension;
-					newMember.id = "Mem" + memId ++;
+					newMember.id = increaseGUID();// "Mem" + memId ++;
 					newMember.uid = newMember.type + "_" + newMember.id;
 					if (newMember.tos_ft != undefined)
 					{

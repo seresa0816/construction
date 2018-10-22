@@ -6,7 +6,7 @@ var class_cant_Beam = function()
 	main.mode = "cantBeam";
 
 	main.isDrawReady = 0;
-	main.unique_id = 0;
+	// main.unique_id = 0;
 
 	main.data = {};
 
@@ -89,7 +89,7 @@ var class_cant_Beam = function()
 
 		data.memberProperties.startPoint.z = convertToUnit(data.tos_ft, data.tos_in, data.tos_fr, data.tos_sign);
 		data.memberProperties.endPoint.z = convertToUnit(data.tos_ft, data.tos_in, data.tos_fr, data.tos_sign);
-		data.id = "Mem" + memId ++;
+		data.id = increaseGUID();//"Mem" + memId ++;
 		main.draw(data);
 		reloadGrid();
 	}
@@ -139,7 +139,7 @@ var class_cant_Beam = function()
 
 		data.memberProperties.startPoint.z = convertToUnit(data.tos_ft, data.tos_in, data.tos_fr, data.tos_sign);
 		data.memberProperties.endPoint.z = convertToUnit(data.tos_ft, data.tos_in, data.tos_fr, data.tos_sign);
-		data.id = "Mem" + memId ++;
+		data.id = increaseGUID();//"Mem" + memId ++;
 		main.draw(data);
 		reloadGrid();
 	}
@@ -347,7 +347,7 @@ var class_cant_Beam = function()
 
 		data.type = main.mode;
 		data.mode = main.mode;
-		data.id = "Mem" + memId ++;
+		data.id = increaseGUID();//"Mem" + memId ++;
 		data.uid = "cantBeam_" + line.uid;
 
 		if (shape.chkPosAvailable(line, line.mode))

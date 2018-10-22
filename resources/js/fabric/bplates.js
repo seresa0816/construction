@@ -6,7 +6,7 @@ var class_BPlates 	= function(parent)
 	main.mode 		 = "pourStop";
 	main.parent  	 = parent;
 
-	main.unique_id 	 = 0;
+	// main.unique_id 	 = 0;
 	main.grid_w 	 = 0;
 	main.grid_h 	 = 0;
 
@@ -146,7 +146,7 @@ var class_BPlates 	= function(parent)
 		pourObj.origin_x = beamObj.memberProperties.startPoint.x;
 		pourObj.origin_y = beamObj.memberProperties.startPoint.y;
 
-		pourObj.id = main.unique_id ++;
+		pourObj.id = increaseGUID();//main.unique_id ++;
 		pourObj.uid = "pourStop_" + pourObj.id;
 		pourObj.type = "pourStop";
 		pourObj.floor = floor;

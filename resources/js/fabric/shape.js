@@ -164,7 +164,7 @@ var class_shape = function()
 		newMember.y_depth = gridData.yaxis[y_index].Dimension;
 		newMember.originPoint = undefined;
 
-		obj.id="Mem"+memId++;
+		obj.id = increaseGUID();//"Mem"+memId++;
 		obj.uid = obj.id;
 		obj.mode = origin.mode;
 		newMember.uid = origin.mode + "_" + obj.id;
@@ -223,7 +223,7 @@ var class_shape = function()
 		newMember.uid = origin.mode + "_" + obj.id;
 		newMember.id  = obj.id;
 
-		newMember.id  = "Mem" + memId++;
+		newMember.id = increaseGUID();// "Mem" + memId++;
 		newMember.uid = origin.mode + "_" + newMember.id;
 
 		hbrace.placeHBrace(newMember);
@@ -330,7 +330,7 @@ var class_shape = function()
 		newMember.uid = origin.mode + "_" + obj.id;
 		newMember.id = obj.id;
 
-		newMember.id = "Mem" + memId++;
+		newMember.id = increaseGUID();// "Mem" + memId++;
 		newMember.uid = origin.mode + "_" + newMember.id;
 		
 		vbrace.placeVBrace(newMember);
@@ -372,7 +372,7 @@ var class_shape = function()
 			newMember.memberProperties.endPoint.y = gridData.yaxis[x_index].Dimension;
 		}
 		newMember.originPoint = undefined;
-		obj.id="Mem"+memId++;
+		obj.id = increaseGUID();//"Mem"+memId++;
 		obj.uid = obj.id;
 		newMember.uid = origin.mode + "_" + obj.id;
 		newMember.id = obj.id;
@@ -444,7 +444,7 @@ var class_shape = function()
 		}
 
 		delete newMember.origin;
-		obj.id 		= "Mem" + memId++;
+		obj.id = increaseGUID();// "Mem" + memId++;
 		obj.uid 	= obj.id;
 		if (origin.mode == "periBeam" || origin.mode == "Beam")
 		{
@@ -532,7 +532,7 @@ var class_shape = function()
 		}
 
 		delete newMember.origin;
-		obj.id 		="Mem"+memId++;
+		obj.id = increaseGUID();//"Mem"+memId++;
 		obj.uid = obj.id;
 		newMember.uid = origin.mode + "_" + obj.id;
 		newMember.id = obj.id;
@@ -563,7 +563,7 @@ var class_shape = function()
 		}
 
 		bplates.isDrawReady = true;
-		newMember.id = "Mem" + memId++;
+		newMember.id = increaseGUID();// "Mem" + memId++;
 		newMember.uid = origin.mode + "_" + newMember.id;
 		bplates.drawPourStop(beam, newMember);
 	}

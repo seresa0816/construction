@@ -31,7 +31,7 @@ function placeGridBeams(beamObj,plane){
             
             beam.name=beamObj.name;
             beam.type=beamObj.type;
-            beam.id="Mem"+memId++;
+            beam.id=increaseGUID();//"Mem"+memId++;
             beam.memberProperties.profile=beamObj.memberProperties.profile;
             
             beam.memberProperties.startPoint.x=parseFloat(gridData.xaxis[x].Dimension);
@@ -88,7 +88,7 @@ function placeGridBeams(beamObj,plane){
             
             beam.name=beamObj.name;
             beam.type=beamObj.type;
-            beam.id="Mem"+memId++;
+            beam.id = increaseGUID();//"Mem"+memId++;
             beam.memberProperties.profile=beamObj.memberProperties.profile;
             
             beam.memberProperties.startPoint.x=parseFloat(gridData.xaxis[x].Dimension);
@@ -149,7 +149,7 @@ function placePeripheralBeams(beamObj,plane){
         
         beamAtLeft.name=beamObj.name;
         beamAtLeft.type=beamObj.type;
-        beamAtLeft.id="Mem"+memId++;
+        beamAtLeft.id = increaseGUID();//"Mem"+memId++;
         beamAtLeft.memberProperties.profile=beamObj.memberProperties.profile;
         
         beamAtLeft.memberProperties.startPoint.x=parseFloat(gridData.xaxis[0].Dimension);
@@ -202,7 +202,7 @@ function placePeripheralBeams(beamObj,plane){
         
         beamAtRight.name = beamObj.name;
         beamAtRight.type = beamObj.type;
-        beamAtRight.id   ="Mem"+memId++;
+        beamAtRight.id = increaseGUID();//"Mem"+memId++;
         beamAtRight.memberProperties.profile = beamObj.memberProperties.profile;
         
         beamAtRight.memberProperties.startPoint.x = parseFloat(gridData.xaxis[gridData.xaxis.length-1].Dimension);        						
@@ -259,7 +259,7 @@ function placePeripheralBeams(beamObj,plane){
         
         beamAtBottom.name   =beamObj.name;
         beamAtBottom.type   =beamObj.type;
-        beamAtBottom.id     ="Mem"+memId++;
+        beamAtBottom.id = increaseGUID();//"Mem"+memId++;
         beamAtBottom.memberProperties.profile = beamObj.memberProperties.profile;
         
         beamAtBottom.memberProperties.startPoint.x = parseFloat(gridData.xaxis[x-1].Dimension);
@@ -312,7 +312,7 @@ function placePeripheralBeams(beamObj,plane){
         
         beamAtTop.name  = beamObj.name;
         beamAtTop.type  = beamObj.type;
-        beamAtTop.id    = "Mem"+memId++;
+        beamAtTop.id = increaseGUID();// "Mem"+memId++;
         beamAtTop.memberProperties.profile = beamObj.memberProperties.profile;
         
         beamAtTop.memberProperties.startPoint.x = parseFloat(gridData.xaxis[x-1].Dimension);
@@ -607,7 +607,7 @@ var class_place_beam = function()
     main.mode = "Beam";
 
     main.isDrawReady = 0;
-    main.unique_id = 0;
+    // main.unique_id = 0;
 
     main.data = {};
     main.tmpData = {};
@@ -779,7 +779,7 @@ var class_place_beam = function()
 
             beamObj.name = main.tmpData.name;
             beamObj.type = main.tmpData.type;
-            beamObj.id = "Mem"+memId++;
+            beamObj.id = increaseGUID();//"Mem"+memId++;
             beamObj.memberProperties.profile = main.tmpData.memberProperties.profile;
             beamObj.uid = main.mode + "_" + main.tmpData.id;
             beamObj.memberProperties.startPoint.z = convertToUnit(main.tmpData.tos_ft, main.tmpData.tos_in, main.tmpData.tos_fr, main.tmpData.tos_sign);

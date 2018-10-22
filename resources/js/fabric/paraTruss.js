@@ -6,7 +6,7 @@ var class_para_Truss 	= function(parent)
 	main.mode 		 = "paraTruss";
 	main.parent  	 = parent;
 
-	main.unique_id 	 = 0;
+	// main.unique_id 	 = 0;
 	main.grid_w 	 = 0;
 	main.grid_h 	 = 0;
 
@@ -241,10 +241,10 @@ var class_para_Truss 	= function(parent)
 		else 
 			main.drawSpeciBraces(data, left_x, top_y, plane);
 		data.plane = plane;
-		data.uid = "paraTruss_" + (memId);
+		data.id = increaseGUID();
+		data.uid = "paraTruss_" + data.id
 		// memberList.push(data);
 		dataModel.insertData(data); //parallelTruss
-		memId++;
 		return true;
 	}
 
@@ -303,7 +303,7 @@ var class_para_Truss 	= function(parent)
 							lockRotation: true,
 							mode: "paraTruss",
 							memType: "para_topchord",
-							uid: memId
+							uid: getGUID()
 						});
 		canvas.add(topChord);
 		stopDraggingElement(topChord);
@@ -366,7 +366,7 @@ var class_para_Truss 	= function(parent)
 							lockRotation: true,
 							mode: "paraTruss",
 							memType: "para_bottomchord",
-							uid: memId
+							uid: getGUID()
 						});
 		canvas.add(bottomChord);
 		stopDraggingElement(bottomChord);
@@ -431,7 +431,7 @@ var class_para_Truss 	= function(parent)
 								memType: "para_vertical",
 								type: "para_vertical_" + i,
 								mode: "paraTruss",
-								uid: memId
+								uid: getGUID()
 							});
 
 				if (plane == "YZ")
@@ -472,7 +472,7 @@ var class_para_Truss 	= function(parent)
 								memType: "para_vertical",
 								type: "para_vertical_" + i,
 								mode: "paraTruss",
-								uid: memId
+								uid: getGUID()
 							});
 
 				if (plane == "YZ")
@@ -594,13 +594,13 @@ var class_para_Truss 	= function(parent)
 								mode: "paraTruss",
 								memType: "para_brace",
 								type: "para_brace_" + braceIndex,
-								uid: memId
+								uid: getGUID()
 							}));
 		var group = new fabric.Group(objs);
 		group.mode = "paraTruss";
 		group.memType = "para_brace";
 		group.type = "para_brace_" + braceIndex;
-		group.uid = memId;
+		group.uid = getGUID();
 		group.lockRotation = true;
 		data.inclinedbracings[braceIndex].shapePoint = main.fixYPos(tmpShapePoints, plane, data.floor);
 		canvas.add(group);

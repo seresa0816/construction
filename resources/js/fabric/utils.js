@@ -1,6 +1,6 @@
 ////Scale = 1ft = 10 pixels
 var scale = 5;
-var memId=1;
+// var memId=1;
 var gridOffSet = 30;
 var maxV = 0;
 var maxH = 0;

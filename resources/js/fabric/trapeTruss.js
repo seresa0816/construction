@@ -6,7 +6,7 @@ var class_trape_Truss 	= function(parent)
 	main.mode 		 = "trapeTruss";
 	main.parent  	 = parent;
 
-	main.unique_id 	 = 0;
+	// main.unique_id 	 = 0;
 	main.grid_w 	 = 0;
 	main.grid_h 	 = 0;
 
@@ -357,10 +357,10 @@ var class_trape_Truss 	= function(parent)
 
 		main.verticals(data, start_x, start_y, middle_x, plane, data.vert_data.length);
 		data.plane = plane;
-		data.uid = "trapeTruss_" + (memId);
+		data.id = increaseGUID();
+		data.uid = "trapeTruss_" + data.id;
 		// memberList.push(data);
 		dataModel.insertData(data); //trapeTruss
-		memId++;
 		return true;
 	}
 
@@ -385,7 +385,7 @@ var class_trape_Truss 	= function(parent)
 								lockRotation: true,
 								mode: "trapeTruss",
 								memType: "trape_topchord",
-								uid: memId
+								uid: getGUID()
 							});
 		console.log(topChord);
 		if (plane == "YZ")
@@ -416,7 +416,7 @@ var class_trape_Truss 	= function(parent)
 								lockRotation: true,
 								mode: "trapeTruss",
 								memType: "trape_bottomchord",
-								uid: memId
+								uid: getGUID()
 							});
 		if (plane == "YZ")
 		{
@@ -481,7 +481,7 @@ var class_trape_Truss 	= function(parent)
 						memType: "trape_vertical",
 						type: "trape_vertical_" + i,
 						mode: "trapeTruss",
-						uid: memId
+						uid: getGUID()
 					});
 
 			if (plane == "YZ")
@@ -630,13 +630,13 @@ var class_trape_Truss 	= function(parent)
 								mode: "trapeTruss",
 								memType: "trape_brace",
 								type: "trape_brace_" + braceIndex,
-								uid: memId
+								uid: getGUID()
 							}));
 		var group = new fabric.Group(objs);
 		group.mode = "trapeTruss";
 		group.memType = "trape_brace";
 		group.type = "trape_brace_" + braceIndex;
-		group.uid = memId;
+		group.uid = getGUID();
 		group.lockRotation = true;
 		// group.left = range[1] * scale;
 		// group.top = mapCoordinate(range[0] + Math.max(range[2], range[4]), "Z", plane) * scale;
