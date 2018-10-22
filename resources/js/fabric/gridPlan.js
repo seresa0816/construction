@@ -151,8 +151,8 @@ var class_grid_Plan 	= function(parent)
 				gridData.yaxis.splice(yLength - y_index - 1, 0, {Label: label, Dimension: parseFloat(gridData.yaxis[yLength - 1 - y_index].Dimension) + distance});
 				distance = gridData.yaxis[yLength - y_index].Dimension - gridData.yaxis[yLength - y_index - 1].Dimension + distance;
 			}
-			else 
-				gridData.yaxis.splice(yLength - y_index, 0, {Label: label, Dimension: parseFloat(gridData.yaxis[yLength - 1 - y_index].Dimension) + distance});
+			
+			gridData.yaxis.splice(yLength - y_index, 0, {Label: label, Dimension: parseFloat(gridData.yaxis[yLength - 1 - y_index].Dimension) + distance});
 
 			if (moveFLag)
 				for ( i = yLength; i > yLength - y_index; i-- )
