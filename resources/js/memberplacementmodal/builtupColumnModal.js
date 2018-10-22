@@ -514,7 +514,7 @@
 			    
 		
 			  $.each(cmsplice, function(key, value) {
-			        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
+			       var ConnectionMark="<option>"+value.connectionMark+"</option>";
 			       $(ConnectionMark).appendTo('#bc1spcm'); 
 			   }); 
 			  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -529,7 +529,7 @@
 		    
 		
 		  $.each(cmsplice, function(key, value) {
-		        var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
+		       var ConnectionMark="<option>"+value.connectionMark+"</option>";
 		       $(ConnectionMark).appendTo('#bc1spcm'); 
 		   }); 
 		  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -544,7 +544,7 @@
 	  
 	
 	$.each(cmsplice, function(key, value) {
-	      var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
+	     var ConnectionMark="<option>"+value.connectionMark+"</option>";
 	     $(ConnectionMark).appendTo('#bc1spcm'); 
 	 }); 
 			}
