@@ -382,8 +382,13 @@ var class_infill_Beam = function()
         }
         if (beamObj.floor == parseFloat($("#depthdrpdwn").val()))
         {
-			canvas.add(line);
-			stopDraggingElement(line);
+        	if (!checkExistMember(beamObj))
+        	{
+        		// memberList.push(beamObj);
+				dataModel.insertData(beamObj); //infillBeam
+				canvas.add(line);
+				stopDraggingElement(line);
+			}
 		}
 	}
 
