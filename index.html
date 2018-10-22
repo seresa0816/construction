@@ -1239,6 +1239,7 @@ jQuery(document).ready(function() {
             
     
 </script>
+<script src="resources/js/fabric/utils.js"></script>
 <script src="resources/js/DataCenter/model.js"></script>
 <script src="resources/js/DataCenter/BoxColumnModel.js"></script>
 <script src="resources/js/DataCenter/IColumnModel.js"></script>
@@ -1257,7 +1258,6 @@ jQuery(document).ready(function() {
 <script src="resources/js/DataCenter/TrapeTrussModel.js"></script>
 <script src="resources/js/DataCenter/PitchTrussModel.js"></script>
 
-  <script src="resources/js/fabric/utils.js"></script>
     <script src="resources/js/fabric/shape.js"></script>
     <script src="resources/js/fabric/h_brace.js"></script>
     <script src="resources/js/fabric/v_brace.js"></script>
@@ -1402,7 +1402,7 @@ jQuery(document).ready(function() {
                     
                     
                          else if (conntypeText.toLowerCase().indexOf("splicecolumn") >= 0) {
-                            console.log(connDetJson[connDet]);
+                            // console.log(connDetJson[connDet]);
                             if(connDetJson[connDet].UpperShaftProfile){
                             connData.USprofile = connDetJson[connDet].UpperShaftProfile.Profile;  
                             }
@@ -1531,26 +1531,17 @@ jQuery(document).ready(function() {
   // console.log(connectionObjList);
 
    if (wsGridJSON !=null){
-    
-
            gridData = JSON.parse(wsGridJSON).grids;
-           console.log(JSON.stringify(gridData));
-
-    
+        //    console.log(JSON.stringify(gridData));
    }
    else{
     window.location.replace("gridproperties.html");
    }
 
-   
-   
-
    if (wsMemberInfo != null) {            
        if (wsMemberInfo.status == "true") {
            memberList = JSON.parse(wsMemberInfo.rs[0].MemberPlacement);
-           console.log(JSON.stringify(memberList));
-           
-           //console.log(wsMemberInfo.rs[0].MemberPlacement);
+        //    console.log(JSON.stringify(memberList));
        }
    }
    //console.log(memberInfo);

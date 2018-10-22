@@ -1,27 +1,42 @@
 var RegularColumnModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["regularColumn_main"]().getData(data);
+        mainModel = new RegularColumnMain.getData(data);
         returnData.push(mainModel);
         return returnData;
     }
 }
 
 var RegularColumnMain = function () {
-    this.model = clone(arr_data_model["regularColumn_main"]);
-    this.getData = function (data) {
+    main = this;
+    main.model = clone(regularColumn_main);
+    main.getData = function (data) {
         dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+        main.model["uid"] = dataModel.uid;
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     }
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
+
+        splice_data = new Array();
+        if (data.splice_count) {
+            data.splice_data.forEach(element => {
+                splice_data.push({
+                    "sign": element.sign,
+                    "El_ft": element.elevation_ft,
+                    "El_in": element.elevation_in,
+                    "El_fr": element.elevation_fr,
+                    "profile": element.profile
+                });
+            });
+        }
+
         mp = {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
@@ -41,7 +56,7 @@ var RegularColumnMain = function () {
                 "topEl_fr": data.topElevation_fr,
             },
             "splice_count": data.splice_count,
-            "splice_data": data.splice_data, // check 
+            "splice_data": splice_data,
             "DoublerPlate": {
                 "DoublerPlReq": data.isDoublerPlateRequired,
                 "PlGrade": data.plateGrade,
@@ -49,18 +64,18 @@ var RegularColumnMain = function () {
                 "count": data.count,
                 "PlLength_ft": data.plateLength_ft,
                 "PlLength_in": data.plateLength_in,
-                "PlLength_fr": data.plateLength_fr, 
-                "PlWidth_ft": data.plateWidth_ft, 
-                "PlWidth_in": data.plateWidth_in, 
-                "PlWidth_fr": data.plateWidth_fr, 
+                "PlLength_fr": data.plateLength_fr,
+                "PlWidth_ft": data.plateWidth_ft,
+                "PlWidth_in": data.plateWidth_in,
+                "PlWidth_fr": data.plateWidth_fr,
                 "PlW_type": data.plateWeldType,
                 "PlW_size_in": data.plateWeldSize_in,
             },
-            "referenceDrawing": _mp.referenceDrawing // check 
+            "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     }
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -71,14 +86,14 @@ var RegularColumnMain = function () {
             "surType": _fp.paintType,
             "paintName": _fp.paintName,
             "paintCoats": _fp.paintCoats,
-            "ZincThick": null,
+            "ZincThick": _fp.galvZincCoatThickness,
             "fProofType": _fp.fireProofType,
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat,
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     }
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "bPlCMark": _cp.basePlateConnMark,
@@ -92,15 +107,11 @@ var RegularColumnMain = function () {
             "cap_axialLoad": _cp.cap_axialLoad,
             "cap_momentLoad": _cp.cap_momentLoad
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     }
 }
 
-arr_data_class["regularColumn"] = RegularColumnModel;
-arr_data_class["regularColumn_main"] = RegularColumnMain;
-
-
-arr_data_model["regularColumn_main"] = {
+regularColumn_main = {
     "Group": "Beam",
     "type": "Column",
     "3rPartyID": {

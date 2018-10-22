@@ -87,7 +87,7 @@ function drawHorizLines(lineData,axis,plane, flag, elevFlag, redrawFlag)
 				dim = convertToUnit(lineData[i+1].g_dimension_ft_tos, lineData[i+1].g_dimension_in_tos, lineData[i+1].g_dimension_fra_tos, "+");
 			}
 			var positionY = (mapCoordinate(parseFloat(lineData[i+1].Dimension),axis, plane)+mapCoordinate(parseFloat(lineData[i].Dimension),axis,plane)) / 2;
-			var dimText_left = insertTextBoxes(minH + gridOffSet - 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
+			var dimText_left = insertTextBoxes(minH + gridOffSet - (35 + 15) / canvas.getZoom(), positionY, value.toString(), true, true, false);
 			if (dimText_left.width < dim * scale * canvas.getZoom())
 				canvas.add(dimText_left);
 
@@ -172,7 +172,6 @@ function insertLetTextBoxes(xAxis, yAxis, value){
 	var ctx = canvas.getContext("2D");
 	ctx.font = ctx.font.replace(/\d+px/, fontsize + "px");
 	var width = canvas.getContext("2D").measureText(value).width;
-	console.log(width);
 	var text = new fabric.Text(value,
 		{
 			left: xAxis * scale - width,

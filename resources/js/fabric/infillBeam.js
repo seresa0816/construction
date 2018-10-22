@@ -383,7 +383,7 @@ var class_infill_Beam = function()
         	if (!checkExistMember(beamObj))
         	{
         		// memberList.push(beamObj);
-				dataModel.insertData(beamObj); //infillBean
+				dataModel.insertData(beamObj); //infillBeam
 				canvas.add(line);
 				stopDraggingElement(line);
 			}

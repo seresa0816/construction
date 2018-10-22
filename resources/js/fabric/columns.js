@@ -433,7 +433,8 @@ var class_place_column   = function(parent)
             placeColumn(column,plane);
             column.uid = "Column_" + column.id;
             undoAction.addAction("memberPlace");
-            memberList.push(column);
+            // memberList.push(column);
+            dataModel.insertData(column);
         });
     }
 

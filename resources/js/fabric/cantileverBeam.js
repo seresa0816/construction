@@ -331,7 +331,7 @@ var class_cant_Beam = function()
 			var startY 	= mapCoordinate(data.memberProperties.startPoint.z, "Z", "YZ");
 			var endY 	= mapCoordinate(data.memberProperties.endPoint.z, "Z", "YZ");
 
-			line = new fabric.line([startX * scale, startY * scale - Length / 2, endX * scale, endY * scale - Length / 2], 
+			line = new fabric.Line([startX * scale, startY * scale - Length / 2, endX * scale, endY * scale - Length / 2], 
 				{
 					stroke: "#000000",
 					id: data.id,
