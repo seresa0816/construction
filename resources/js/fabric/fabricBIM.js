@@ -144,7 +144,7 @@ function initCanvas()
 	var gaps  = 0;
 	var width = $("#expandCanvas").innerWidth() - 70;;
 	// var height = $(window).height() - $(".topbar").height() - $(".mp-heading").height() - 20;
-	var height = $(window).height() - 217;
+	var height = $(window).height() - 260;
 
 	var absolute_width_cm = $("#feet_convert").width();
 	var absolute_inch = absolute_width_cm * 2.54;
@@ -171,7 +171,7 @@ function initCanvas()
 
 	fabric.Object.prototype.render = function(ctx, noTransform) 
 	{
-		if (!this.group && !this.isOnScreen()) 
+		if (!this.isOnScreen() && !this.group) 
 		{
 			return
 		}
@@ -180,10 +180,6 @@ function initCanvas()
 			return;
 		}
 		return originalRender.call(this, ctx, noTransform);
-		// if (!this.isOnScreen())
-		// 	return;
-		// else 
-		// 	originalRender.call(this, ctx, noTransform);
 	};
 }
 
@@ -1724,8 +1720,6 @@ function initSubmitEvents()
 		var to_paste_floor 		= parseFloat($("#to_paste").val());
 		for (var i = memberList.length - 1; i >= 0 ; i --)
 		{
-			if (checkColumnMember(memberList[i]))
-				continue;
 			if (memberList[i].floor != undefined && memberList[i].floor == from_floor)
 			{
 				var from, to;
@@ -1939,7 +1933,7 @@ function initSubmitEvents()
 		var member = memberList[parseInt(memID)];
 		if (memID.split(",").length > 1)
 		{
-			applyGroup(memID.split(","), $(this).attr("id"));
+			applyGroup(memID.split(","));
 			return;
 		}
 
@@ -2933,7 +2927,7 @@ function initSubmitEvents()
 	})
 }
 
-function applyGroup(str, shape_id)
+function applyGroup(str)
 {
 	var index_arr = [];
 	for (i = 0; i < str.length; i ++)
@@ -2942,8 +2936,6 @@ function applyGroup(str, shape_id)
 	}
 
 	var memType = $("#memType").val();
-	if (!genericValidatorfunction(shape_id))
-		return false;
 	var configure = new_configure[memType];
 	if (configure == undefined)
 		return;
