@@ -373,32 +373,37 @@ var class_grid_Plan 	= function(parent)
 			{
 				if (memberList[i].memberProperties.startPoint.x == gridData.xaxis[index].Dimension)
 				{
-					memberList.splice(i, 1);
+					// memberList.splice(i, 1);
+					dataModel.removeData(i, 1);
 				}
 				else if (memberList[i].x_depth && memberList[i].x_depth == gridData.xaxis[index].Dimension)
 				{
 					if (memberList[i].memberProperties.startPoint.x != memberList[i].memberProperties.endPoint.x && memberList[i].memberProperties.endPoint.x == memberList[i].memberProperties.startPoint.x + (gridData.xaxis[index + 1].Dimension - gridData.xaxis[index
 						].Dimension))
 					{
-						memberList.splice(i, 1);
+						// memberList.splice(i, 1);
+						dataModel.removeData(i, 1);
 					}
 				}
 				else if (memberList[i].startIndex && memberList[i].startIndex.x_index == index && memberList.type != 'h_brace')
 				{
-					memberList.splice(i, 1);
+					// memberList.splice(i, 1);
+					dataModel.removeData(i, 1);
 				}
 				else if (memberList[i].startIndex && memberList[i].startIndex.x_index == index)
 				{
 					if (memberList[i].type == 'h_brace')
 					{
-						memberList.splice(i, 1);
+						// memberList.splice(i, 1);
+						dataModel.removeData(i, 1);
 					}
 				}
 				else if (memberList[i].x_depth == gridData.xaxis[index].Dimension)
 				{
 					if (memberList[i].memberProperties.startPoint.x == memberList[i].memberProperties.endPoint.x)
 					{
-						memberList.splice(i, 1);
+						// memberList.splice(i, 1);
+						dataModel.removeData(i, 1);
 					}
 				}
 			}
@@ -436,27 +441,31 @@ var class_grid_Plan 	= function(parent)
 			{
 				if (memberList[i].memberProperties.startPoint.y == gridData.yaxis[orgIndex].Dimension)
 				{
-					memberList.splice(i, 1);
+					// memberList.splice(i, 1);
+					dataModel.removeData(i, 1);
 				}
 				else if (memberList[i].y_depth && memberList[i].y_depth == gridData.yaxis[orgIndex].Dimension)
 				{
 					if (memberList[i].memberProperties.startPoint.y != memberList[i].memberProperties.endPoint.y && memberList[i].memberProperties.endPoint.y == memberList[i].memberProperties.startPoint.y + (gridData.yaxis[orgIndex + 1].Dimension - gridData.yaxis[orgIndex].Dimension))
 					{
-						memberList.splice(i, 1);
+						// memberList.splice(i, 1);
+						dataModel.removeData(i, 1);
 					}
 				}
 				else if (memberList[i].startIndex && memberList[i].startIndex.y_index == orgIndex)
 				{
 					if (memberList[i].type == 'h_brace')
 					{
-						memberList.splice(i, 1);
+						// memberList.splice(i, 1);
+						dataModel.removeData(i, 1);
 					}
 				}
 				else if (memberList[i].y_depth && memberList[i].y_depth == gridData.yaxis[orgIndex].Dimension)
 				{
 					if (memberList[i].memberProperties.startPoint.y == memberList[i].memberProperties.endPoint.y)
 					{
-						memberList.splice(i, 1);
+						// memberList.splice(i, 1);
+						dataModel.removeData(i, 1);
 					}
 				}
 			}

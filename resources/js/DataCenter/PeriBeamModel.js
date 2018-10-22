@@ -1,27 +1,33 @@
-/* global arr_data_class, dataModel, arr_data_model */
-
 var PeriBeamModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["periBeam_main"]().getData(data);
+        mainModel = new PeriBeamMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 
 var PeriBeamMain = function () {
-    this.model = clone(arr_data_model["periBeam_main"]);
-    this.getData = function (data) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+    main.model = {
+        "Group": "Beam",
+        "type": "periBeam",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
         mp = {
@@ -109,9 +115,9 @@ var PeriBeamMain = function () {
             "frameCMethod": data.frameCMethod,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -127,9 +133,9 @@ var PeriBeamMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -148,28 +154,6 @@ var PeriBeamMain = function () {
             "mommentLoad_LHS": _cp.mommentLoad_LHS,
             "mommentLoad_RHS": _cp.mommentLoad_RHS
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-
-arr_data_class["periBeam"] = PeriBeamModel;
-arr_data_class["periBeam_main"] = PeriBeamMain;
-arr_data_model["periBeam_main"] = {
-    "Group": "Beam",
-    "type": "periBeam",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
 };

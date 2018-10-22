@@ -1,25 +1,35 @@
 var IColumnModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["iColumn_main"]().getData(data);
+        mainModel = new IColumnMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     }
 }
 
 var IColumnMain = function () {
-    this.model = clone(arr_data_model["iColumn_main"]);
-    this.getData = function (data) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+
+    main.model = {
+        "Group": "Beam",
+        "type": "builtUpIColumn",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
+    };
+
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     }
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
         mp = {
@@ -64,9 +74,9 @@ var IColumnMain = function () {
             "splice_data": data.splice_data, // check 
             "referenceDrawing": _mp.referenceDrawing // check 
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     }
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -82,9 +92,9 @@ var IColumnMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat,
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     }
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "bPlCMark": _cp.basePlateConnMark,
@@ -98,27 +108,6 @@ var IColumnMain = function () {
             "cap_axialLoad": _cp.cap_axialLoad,
             "cap_momentLoad": _cp.cap_momentLoad
         };
-        this.model["connectionProperties"] = cp;
-    }
-}
-
-arr_data_class["iColumn"] = IColumnModel;
-arr_data_class["iColumn_main"] = IColumnMain;
-
-
-arr_data_model["iColumn_main"] = {
-    "Group": "Beam",
-    "type": "builtUpIColumn",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-    },
-    "finishProperties": {
-    },
-    "connectionProperties": {
+        main.model["connectionProperties"] = cp;
     }
 }

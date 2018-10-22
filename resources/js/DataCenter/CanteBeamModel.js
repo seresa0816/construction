@@ -1,26 +1,34 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
 var CanteBeamModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["canteBeam_main"]().getData(data);
+        mainModel = new CanteBeamMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 var CanteBeamMain = function () {
-    this.model = clone(arr_data_model["canteBeam_main"]);
-    this.getData = function (data) {
-        console.log(data);
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+
+    main.model = {
+        "Group": "Beam",
+        "type": "canteBeam",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
     };
-    this.setMemberProperties = function (data) {
+
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
+    };
+
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
         mp = {
@@ -49,7 +57,7 @@ var CanteBeamMain = function () {
             },
             "ffl": {
                 "sign": data.ffl_sign, // checkd
-//                "ft": data.ffl_ft, // check
+                //                "ft": data.ffl_ft, // check
                 "in": data.ffl_in, // check
                 "fr": data.ffl_fr //check
             },
@@ -61,7 +69,7 @@ var CanteBeamMain = function () {
             },
             "ffl_1": {
                 "sign": data.tos_sign2, //check
-//                "ft": data.tos_ft2, //check
+                //                "ft": data.tos_ft2, //check
                 "in": data.tos_in2, // check
                 "fr": data.tos_fr2 //check
             },
@@ -93,15 +101,15 @@ var CanteBeamMain = function () {
                     "tos_fr": "0"    // check
                 }
             },
-//            "splice_count": data.splice_count,
-//            "splice_data": [{
-//                    "ft": "10", // check
-//                    "in": "0", // check
-//                    "fr": "0", // check
-//                    "profile": "W5X19"    // check
-//                }],
-//            "camberReq": data.camberReq,
-//            "camber_in": data.camber_in,
+            //            "splice_count": data.splice_count,
+            //            "splice_data": [{
+            //                    "ft": "10", // check
+            //                    "in": "0", // check
+            //                    "fr": "0", // check
+            //                    "profile": "W5X19"    // check
+            //                }],
+            //            "camberReq": data.camberReq,
+            //            "camber_in": data.camber_in,
             "StudReq": data.isshearStudRequired,
             "StudDia_in": data.shearStudDia_in,
             "StudLength_in": data.shearStudLength_in,
@@ -116,9 +124,9 @@ var CanteBeamMain = function () {
             "frameCMethod": data.frameCMethod,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -134,9 +142,9 @@ var CanteBeamMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -147,7 +155,7 @@ var CanteBeamMain = function () {
             "Support_RHS": _cp.connSupportMethod_RHS,
             "Supported_LHS": _cp.connSupportedMethod_LHS,
             "Supported_RHS": _cp.connSupportedMethod_RHS,
-//            "splice_CMark": _cp.connMark_Splice,
+            //            "splice_CMark": _cp.connMark_Splice,
             "shearLoad_LHS": _cp.shearLoad_LHS,
             "shearLoad_RHS": _cp.shearLoad_RHS,
             "axialLoad_LHS": _cp.axialLoad_LHS,
@@ -155,27 +163,6 @@ var CanteBeamMain = function () {
             "mommentLoad_LHS": _cp.mommentLoad_LHS,
             "mommentLoad_RHS": _cp.mommentLoad_RHS
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-arr_data_class["canteBeam"] = CanteBeamModel;
-arr_data_class["canteBeam_main"] = CanteBeamMain;
-arr_data_model["canteBeam_main"] = {
-    "Group": "Beam",
-    "type": "canteBeam",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connProperties": {
-
-    }
 };

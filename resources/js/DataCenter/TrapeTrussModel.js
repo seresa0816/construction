@@ -1,24 +1,23 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
 var TrapeTrussModel = function () {
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["trapeTruss_main"]().getData(data);
+        mainModel = new TrapeTrussMain().getData(data);
         returnData.push(mainModel);
         ////top Chord/////trapeTruss_sub_top
-        subModel = new arr_data_class["trapeTruss_sub_top"]().getData(data, mainModel['uid'], i);
+        subModel = new TrapeTrussSubTop(mainModel['uid'], 0).getData(data);
         returnData.push(subModel);
         ////bottom Chord/////
-        subModel = new arr_data_class["trapeTruss_sub_bottom"]().getData(data, mainModel['uid'], i);
+        subModel = new TrapeTrussSubBottom(mainModel['uid'], 0).getData(data);
         returnData.push(subModel);
         ////vertical/////
         for (i = 0; i < data.verticals.length; i++) {
-            subModel = new arr_data_class["trapeTruss_sub_vertical"]().getData(data, mainModel['uid'], i);
+            subModel = new TrapeTrussSubVertical(mainModel['uid'], i).getData(data);
             returnData.push(subModel);
         }
         ////brace/////
         for (i = 0; i < data.member_truss.inclinedbracings.length; i++) {
-            subModel = new arr_data_class["trapeTruss_sub_brace"]().getData(data, mainModel['uid'], i);
+            subModel = new TrapeTrussSubBrace(mainModel['uid'], i).getData(data);
             returnData.push(subModel);
         }
         return returnData;
@@ -26,18 +25,29 @@ var TrapeTrussModel = function () {
 };
 
 var TrapeTrussMain = function () {
-    this.model = clone(arr_data_model["trapeTruss_main"]);
-    this.getData = function (data) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+    main.model = {
+        "Group": "truss",
+        "type": "trapezoidal",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
     };
 
-    this.setMemberProperties = function (data) {
+    main.getData = function (data) {
+        dataModel.uid++;
+        main.model["uid"] = dataModel.uid;
+
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
+    };
+
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "Ridge": {
@@ -71,9 +81,9 @@ var TrapeTrussMain = function () {
             "fr": "", // check
             "referenceDrawing": _mp.referenceDrawing           // check
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -89,45 +99,45 @@ var TrapeTrussMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "Type": "Connections Given", //check
             "ConnGiven": [{
-                    "CMark_1": null, //check
-                    "CType_1": null, //check
-                    "CMethod_1": null, //check
-                    "CMark_2": null, //check
-                    "CType_2": null, //check
-                    "CMethod_2": null, //check
-                    "CMark_3": null, //check
-                    "CType_3": null, //check
-                    "CMethod_3": null //check
-                }],
+                "CMark_1": null, //check
+                "CType_1": null, //check
+                "CMethod_1": null, //check
+                "CMark_2": null, //check
+                "CType_2": null, //check
+                "CMethod_2": null, //check
+                "CMark_3": null, //check
+                "CType_3": null, //check
+                "CMethod_3": null //check
+            }],
             "ConnDesign": [] //check
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var TrapeTrussSubTop = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["trapeTruss_sub_top"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+var TrapeTrussSubTop = function (parent_index, index) {
+    main = this;
+    main.index = index;
+    main.model = {
+        "type": "topchord",
+        "parent_member_id": parent_index,
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -141,9 +151,9 @@ var TrapeTrussSubTop = function () {
             "splice_data": data.splice_data,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -159,9 +169,9 @@ var TrapeTrussSubTop = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -178,26 +188,26 @@ var TrapeTrussSubTop = function () {
             "s_shearLoad": _cp.splice_shearLoad
 
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var TrapeTrussSubBottom = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["trapeTruss_sub_bottom"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+var TrapeTrussSubBottom = function (parent_index, index) {
+    main = this;
+    main.index = index;
+    main.model = {
+        "type": "bottomchord",
+        "parent_member_id": parent_index,
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -210,9 +220,9 @@ var TrapeTrussSubBottom = function () {
             "splice_data": data.splice_data,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -228,9 +238,9 @@ var TrapeTrussSubBottom = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -246,26 +256,26 @@ var TrapeTrussSubBottom = function () {
             "sPl_CMark": _cp.connMark_Splice,
             "s_shearLoad": _cp.splice_shearLoad
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var TrapeTrussSubVertical = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["trapeTruss_sub_vertical"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+var TrapeTrussSubVertical = function (parent_index, index) {
+    main = this;
+    main.index = index;
+    main.model = {
+        "type": "vertical",
+        "parent_member_id": parent_index,
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -276,9 +286,9 @@ var TrapeTrussSubVertical = function () {
             "dataSource": _mp.dataSource,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -294,9 +304,9 @@ var TrapeTrussSubVertical = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -307,29 +317,31 @@ var TrapeTrussSubVertical = function () {
             "CMethod_RHS": null, // CHECK
             "axialLoad": "" // CHECK
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var TrapeTrussSubBrace = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["trapeTruss_sub_brace"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
-
-        this.model["subtype"] = "brace" + index;
-        this.model["pattern"] = main.member_truss.inclinedbracings[index].pattern;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+var TrapeTrussSubBrace = function (parent_index, index) {
+    main = this;
+    main.index = index;
+    main.model = {
+        "type": "brace",
+        "parent_member_id": parent_index,
+        "subtype": "brace" + index,
+        "uid": increaseJsonUid(),
+        "pattern": "tvvs"
+    };
+    main.getData = function (data) {
+        //
+        main.model["pattern"] = main.member_truss.inclinedbracings[index].pattern;
+        //
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -340,9 +352,9 @@ var TrapeTrussSubBrace = function () {
             "dataSource": _mp.dataSource,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -358,9 +370,9 @@ var TrapeTrussSubBrace = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "Type": "Connections Given", // CHECK
@@ -372,94 +384,8 @@ var TrapeTrussSubBrace = function () {
             "CMethod_RHS": null, // CHECK
             "axialLoad": "" // CHECK
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-
-arr_data_class["trapeTruss"] = TrapeTrussModel;
-arr_data_class["trapeTruss_main"] = TrapeTrussMain;
-arr_data_class["trapeTruss_sub_top"] = TrapeTrussSubTop;
-arr_data_class["trapeTruss_sub_bottom"] = TrapeTrussSubBottom;
-arr_data_class["trapeTruss_sub_vertical"] = TrapeTrussSubVertical;
-arr_data_class["trapeTruss_sub_brace"] = TrapeTrussSubBrace;
-
-arr_data_model["trapeTruss_main"] = {
-    "Group": "truss",
-    "type": "trapezoidal",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "paraTruss",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }};
-
-arr_data_model["trapeTruss_sub_top"] = {
-    "type": "topchord",
-    "parent_member_id": "trapTruss",
-    "uid": "topchord_1",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
-};
-arr_data_model["trapeTruss_sub_bottom"] = {
-    "type": "topchord",
-    "parent_member_id": "trapTruss",
-    "uid": "topchord_1",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
-};
-
-arr_data_model["trapeTruss_sub_vertical"] = {
-    "type": "vertical",
-    "parent_member_id": "trapTruss",
-    "uid": "01",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
-};
-arr_data_model["trapeTruss_sub_brace"] = {
-    "type": "brace",
-    "parent_member_id": "trapTruss",
-    "subtype": "brace01",
-    "uid": "01",
-    "pattern": "tvvs",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
 };
 
 

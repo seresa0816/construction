@@ -4,38 +4,39 @@ var modelClassMap = {
     /** Column */
     "Column": RegularColumnModel,
     /* Column -> Built-Up Column */
-    "boxColumn": "boxColumn",
-    "builtUpIColumn": "iColumn",
-    "builtUpCRColumn": "cruciColumn",
-    "builtUpCHColumn": "channelColumn",
+    "boxColumn": BoxColumnModel,
+    "builtUpIColumn": IColumnModel,
+    "builtUpCRColumn": CruciColumnModel,
+    "builtUpCHColumn": ChannelColumnModel,
     /* Column -> Post */
-    "postColumn": "postColumn",
+    "postColumn": PostColumnModel,
 
     /** Beam */
-    "periBeam": "periBeam",
-    "Beam": "gridBeam",
-    "ibeam": "infillBeam",
-    "cantBeam": "canteBeam",
-    "pgirder": "plateGirder",
+    "periBeam": PeriBeamModel,
+    "Beam": GridBeamModel,
+    "ibeam": InfillBeamModel,
+    "cantBeam": CanteBeamModel,
+    "pgirder": PlateGirderModel,
 
     /** H Braces */
-    "h_brace": "h_brace",
+    "h_brace": H_braceModel,
     /** V Braces */
-    "v_brace": "v_brace",
+    "v_brace": V_braceModel,
 
     /** Planar Truss */
-    "paraTruss": "parallelTruss",
-    "trapeTruss": "trapeTruss",
-    "truss": "pitchTruss",
+    "paraTruss": ParallelTrussModel,
+    "trapeTruss": TrapeTrussModel,
+    "truss": PitchTrussModel,
 
     /** Pour Stop */
-    "pourStop": "pourStop" // it's not implemented yet.
+    "pourStop": PourStopModel // it's not implemented yet.
 };
 
 function DataModel() {
     var main = this;
-    main.uid = getJsonUid();
-    main.insertData = function (data) {
+
+    main.makeData = function (index) {
+        data = memberList[index];
         try {
             var data_type = (data.type) ? data.type : 'blank';
             var modelClass = modelClassMap[data_type];
@@ -49,51 +50,43 @@ function DataModel() {
             new_data = new modelClass().createData(data);
             console.log("json_data: \n" + JSON.stringify(new_data, null, 4));
             arr_data = arr_data.concat(new_data);
-            data.json_uid = main.uid;
-            setJsonUid(main.uid);
+            // set json_uid
+            memberList[index].json_uid = new_data[0]["uid"];
         }
+    }
+
+    main.insertData = function (data) {
         memberList.push(data);
+        main.makeData(memberList.length -1);
     };
+
+    main.removeData = function (index, count) {
+        var splicedData = memberList.splice(index, count);
+        splicedData.forEach(element => {
+            if (element.json_uid) {
+                for (var i = arr_data.length - 1; i >= 0; i--) {
+                    if (element.json_uid == arr_data[i]["uid"] || element.json_uid == arr_data[i]["parent_member_id"]) {
+                        arr_data.splice(i, 1);
+                    }
+                }
+            }
+        });
+    }
+
+    main.updateData = function (index) {
+        var json_uid = memberList[index].json_uid;
+        if (json_uid){
+            for (var i = arr_data.length - 1; i >= 0; i--) {
+                if (json_uid == arr_data[i]["uid"] || json_uid == arr_data[i]["parent_member_id"]) {
+                    arr_data.splice(i, 1);
+                }
+            }
+        }
+        main.makeData(index);
+    }
 }
 
 var dataModel = new DataModel();
-
-
-
-// modelNameMap = {
-//     "blank": {
-//         "blank": "",
-//         "Column": "regularColumn",
-//         "boxColumn": "boxColumn",
-//         "builtUpIColumn": "iColumn",
-//         "builtUpCRColumn": "cruciColumn",
-//         "builtUpCHColumn": "channelColumn",
-//         "postColumn": "postColumn",
-//         "Beam": "gridBeam",
-//         "periBeam": "periBeam",
-
-//         "paraTruss": "parallelTruss",
-//         "trapeTruss": "trapeTruss",
-//         "truss": "pitchTruss",
-
-//         "pourStop": "pourStop" // it's not implemented yet.
-//     },
-//     "ibeam": {
-//         "ibeam": "infillBeam",
-//     },
-//     "cantBeam": {
-//         "cantBeam": "canteBeam",
-//     },
-//     "pgirder": {
-//         "pgirder": "plateGirder"
-//     },
-//     "hxs": {
-//         "h_brace": "h_brace"
-//     },
-//     "vvs": {
-//         "v_brace": "v_brace"
-//     }
-// };
 
 function getJsonUid() {
     var json_uid = localStorage.getItem("json_uid");
@@ -105,6 +98,11 @@ function getJsonUid() {
         }
     }
     return 0;
+}
+
+function increaseJsonUid() {
+    json_uid = getJsonUid() + 1;
+    setJsonUid(json_uid);
 }
 
 function setJsonUid(json_uid) {

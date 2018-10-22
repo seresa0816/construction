@@ -1,27 +1,35 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
 var BoxColumnModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["boxColumn_main"]().getData(data);
+        mainModel = new BoxColumnMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 
 var BoxColumnMain = function () {
-    this.model = clone(arr_data_model["boxColumn_main"]);
-    this.getData = function (data) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+
+    main.model = {
+        "Group": "Beam",
+        "type": "boxColumn",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
     };
 
-    this.setMemberProperties = function (data) {
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
+    };
+
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
         mp = {
@@ -61,10 +69,9 @@ var BoxColumnMain = function () {
             "splice_data": data.splice_data, // check 
             "referenceDrawing": _mp.referenceDrawing // check 
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
-
+    main.setFinishProperties = function (data) {
         _fp = data.finishProperties;
         fp = {
             "surPrep": _fp.surfacePreparation,
@@ -79,9 +86,9 @@ var BoxColumnMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "bPlCMark": _cp.basePlateConnMark,
@@ -95,27 +102,6 @@ var BoxColumnMain = function () {
             "cap_axialLoad": _cp.cap_axialLoad,
             "cap_momentLoad": _cp.cap_momentLoad
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-
-arr_data_class["boxColumn"] = BoxColumnModel;
-arr_data_class["boxColumn_main"] = BoxColumnMain;
-
-
-arr_data_model["boxColumn_main"] = {
-    "Group": "Beam",
-    "type": "boxColumn",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-    },
-    "finishProperties": {
-    },
-    "connectionProperties": {
-    }
 };

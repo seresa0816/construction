@@ -2902,6 +2902,8 @@ function initSubmitEvents()
 			}
 		}
 
+		dataModel.updateData(parseInt(memID));
+
 		$("#hiddenSlide").click();
 		$("#rightFloat").html('');
 
@@ -3236,7 +3238,8 @@ function loadMembersToCanvas(plane,depth){
         		if (memberList[index].floor == floor) 
         		{
     				infillBeam.drawPlan(memberList[index], "XY");
-    				memberList.splice(index, 1);
+					// memberList.splice(index, 1);
+					dataModel.removeData(index, 1);
         		}
         	}
         	else 
@@ -3251,7 +3254,8 @@ function loadMembersToCanvas(plane,depth){
         		if (memberList[index].floor == floor)
         		{
         			pgirder.draw(memberList[index]);
-        			memberList.splice(index, 1);
+					// memberList.splice(index, 1);
+					dataModel.removeData(index, 1);
         		}
         	}
         	else 
@@ -3266,7 +3270,8 @@ function loadMembersToCanvas(plane,depth){
         		if (memberList[index].floor == floor)
         		{
         			cantilBeam.draw(memberList[index]);
-        			memberList.splice(index, 1);
+					// memberList.splice(index, 1);
+					dataModel.removeData(index, 1);
         		}
         	}
         	else 
@@ -3286,7 +3291,8 @@ function loadMembersToCanvas(plane,depth){
         	if(plane=="XY" && memberList[index].floor == floor) 
             {
             	hbrace.placeHBrace(memberList[index]);
-            	memberList.splice(index,1);
+				// memberList.splice(index,1);
+				dataModel.removeData(index, 1);
             }
         }
         else if(memberList[index].type=="v_brace")
@@ -3294,15 +3300,19 @@ function loadMembersToCanvas(plane,depth){
             if ((plane == "YZ" || plane == "XZ") && memberList[index].plane == plane && memberList[index].floor == floor)
             {
             	vbrace.placeVBrace(memberList[index]);
-                memberList.splice(index,1);
+				// memberList.splice(index,1);
+				dataModel.removeData(index, 1);
             }
         }
         else if (memberList[index].type == "truss") 
         {
         	if ((plane=="YZ" || plane=="XZ") && memberList[index].plane == plane && memberList[index].floor == floor)
         	{
-        		if (truss.draw(memberList[index],"", "", memberList[index].left_index, memberList[index].top_index, plane))
-                	memberList.splice(index,1);
+				if (truss.draw(memberList[index],"", "", memberList[index].left_index, memberList[index].top_index, plane))
+				{
+                	// memberList.splice(index,1);
+					dataModel.removeData(index, 1);
+				}
         	}
         	else if (plane == "XY")
         		truss.drawPlane(memberList[index], plane);
@@ -3311,8 +3321,10 @@ function loadMembersToCanvas(plane,depth){
         {
         	if ((plane=="YZ" || plane=="XZ") && memberList[index].plane == plane && memberList[index].floor == floor)
         	{
-        		if (paraTruss.draw(memberList[index],"", "", memberList[index].left_x, memberList[index].top_y, plane))
-                	memberList.splice(index,1);
+        		if (paraTruss.draw(memberList[index],"", "", memberList[index].left_x, memberList[index].top_y, plane)){
+                	// memberList.splice(index,1);
+					dataModel.removeData(index, 1);
+				}
         	}
         	else if (plane == "XY")
         		paraTruss.drawPlane(memberList[index], plane);
@@ -3321,8 +3333,10 @@ function loadMembersToCanvas(plane,depth){
         {
         	if ((plane=="YZ" || plane=="XZ") && memberList[index].plane == plane && memberList[index].floor == floor)
         	{
-        		if (trapeTruss.draw(memberList[index],"", "", memberList[index].left_index, memberList[index].top_index, plane))
-                	memberList.splice(index,1);
+        		if (trapeTruss.draw(memberList[index],"", "", memberList[index].left_index, memberList[index].top_index, plane)){
+                	// memberList.splice(index,1);
+					dataModel.removeData(index, 1);
+				}
         	}
         	else if (plane == "XY")
         		trapeTruss.drawPlane(memberList[index], plane);

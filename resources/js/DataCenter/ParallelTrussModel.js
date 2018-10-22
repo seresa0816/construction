@@ -1,26 +1,25 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
 var ParallelTrussModel = function () {
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["parallelTruss_main"]().getData(data);
+        mainModel = new ParallelTrussMain().getData(data);
         returnData.push(mainModel);
         ////top Chord/////parallelTruss_sub_top
-        subModel = new arr_data_class["parallelTruss_sub_top"]().getData(data, mainModel['uid'], i);
+        subModel = new ParallelTrussSubTop(mainModel['uid'], 0).getData(data);
         returnData.push(subModel);
         ////bottom Chord/////
-        subModel = new arr_data_class["parallelTruss_sub_bottom"]().getData(data, mainModel['uid'], i);
+        subModel = new ParallelTrussSubBottom(mainModel['uid'], 0).getData(data);
         returnData.push(subModel);
         ////vertical/////
         if (data.inclineNum != 0) {
             for (i = 0; i < data.verticals.length; i++) {
-                subModel = new arr_data_class["parallelTruss_sub_vertical"]().getData(data, mainModel['uid'], i);
+                subModel = new ParallelTrussSubVertical(mainModel['uid'], i).getData(data);
                 returnData.push(subModel);
             }
         } else {
             ////brace/////
             for (i = 0; i < data.member_truss.inclinedbracings.length; i++) {
-                subModel = new arr_data_class["parallelTruss_sub_brace"]().getData(data, mainModel['uid'], i);
+                subModel = new ParallelTrussSubBrace(mainModel['uid'], i).getData(data);
                 returnData.push(subModel);
             }
         }
@@ -29,18 +28,27 @@ var ParallelTrussModel = function () {
 };
 
 var ParallelTrussMain = function () {
-    this.model = clone(arr_data_model["parallelTruss_main"]);
-    this.getData = function (data) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
+    main = this;
 
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main.model = {
+        "Group": "truss",
+        "type": "paraTruss",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
     };
 
-    this.setMemberProperties = function (data) {
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
+    };
+
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "height_left_ft": data.height_left_ft,
@@ -69,9 +77,9 @@ var ParallelTrussMain = function () {
             "fr": "", // check
             "referenceDrawing": _mp.referenceDrawing           // check
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -87,45 +95,45 @@ var ParallelTrussMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "Type": "Connections Given", //check
             "ConnGiven": [{
-                    "CMark_1": null, //check
-                    "CType_1": null, //check
-                    "CMethod_1": null, //check
-                    "CMark_2": null, //check
-                    "CType_2": null, //check
-                    "CMethod_2": null, //check
-                    "CMark_3": null, //check
-                    "CType_3": null, //check
-                    "CMethod_3": null //check
-                }],
+                "CMark_1": null, //check
+                "CType_1": null, //check
+                "CMethod_1": null, //check
+                "CMark_2": null, //check
+                "CType_2": null, //check
+                "CMethod_2": null, //check
+                "CMark_3": null, //check
+                "CType_3": null, //check
+                "CMethod_3": null //check
+            }],
             "ConnDesign": [] //check
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var ParallelTrussSubTop = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["parallelTruss_sub_top"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+var ParallelTrussSubTop = function (parent_index, index) {
+    main = this;
+    main.index = index;
+    main.model = {
+        "type": "topchord",
+        "parent_member_id": parent_index,
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -140,9 +148,9 @@ var ParallelTrussSubTop = function () {
             "splice_data": data.splice_data,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -158,9 +166,9 @@ var ParallelTrussSubTop = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -177,26 +185,27 @@ var ParallelTrussSubTop = function () {
             "s_shearLoad": _cp.splice_shearLoad
 
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var ParallelTrussSubBottom = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["parallelTruss_sub_bottom"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
+var ParallelTrussSubBottom = function (parent_index, index) {
+    main = this;
 
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main.index = index;
+    main.model = {
+        "type": "bottomchord",
+        "parent_member_id": parent_index,
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -211,9 +220,9 @@ var ParallelTrussSubBottom = function () {
             "splice_data": data.splice_data,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -229,9 +238,9 @@ var ParallelTrussSubBottom = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -247,26 +256,27 @@ var ParallelTrussSubBottom = function () {
             "sPl_CMark": _cp.connMark_Splice,
             "s_shearLoad": _cp.splice_shearLoad
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var ParallelTrussSubVertical = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["parallelTruss_sub_vertical"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
+var ParallelTrussSubVertical = function (parent_index, index) {
+    main = this;
 
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main.index = index;
+    main.model = {
+        "type": "vertical",
+        "parent_member_id": parent_index,
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -277,9 +287,9 @@ var ParallelTrussSubVertical = function () {
             "dataSource": _mp.dataSource,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -295,9 +305,9 @@ var ParallelTrussSubVertical = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -308,29 +318,32 @@ var ParallelTrussSubVertical = function () {
             "CMethod_RHS": null, // CHECK
             "axialLoad": "" // CHECK
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
 };
 
-var ParallelTrussSubBrace = function () {
-    this.index = 0;
-    this.model = clone(arr_data_model["parallelTruss_sub_brace"]);
-    this.getData = function (data, parent_index, index) {
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.model["parent_member_id"] = parent_index;
-        this.index = index;
+var ParallelTrussSubBrace = function (parent_index, index) {
+    main = this;
 
-        this.model["subtype"] = "brace" + index;
-        this.model["pattern"] = main.member_truss.inclinedbracings[index].pattern;
-
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main.index = index;
+    main.model = {
+        "type": "brace",
+        "parent_member_id": parent_index,
+        "subtype": "brace" + index,
+        "uid": increaseJsonUid(),
+        "pattern": "tvvs"
+    };
+    main.getData = function (data) {
+        //
+        main.model["pattern"] = main.member_truss.inclinedbracings[index].pattern;
+        //
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
             "startPoint": _mp.startPoint,
@@ -341,9 +354,9 @@ var ParallelTrussSubBrace = function () {
             "dataSource": _mp.dataSource,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -359,9 +372,9 @@ var ParallelTrussSubBrace = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "Type": "Connections Given", // CHECK
@@ -373,94 +386,8 @@ var ParallelTrussSubBrace = function () {
             "CMethod_RHS": null, // CHECK
             "axialLoad": "" // CHECK
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-
-arr_data_class["parallelTruss"] = ParallelTrussModel;
-arr_data_class["parallelTruss_main"] = ParallelTrussMain;
-arr_data_class["parallelTruss_sub_top"] = ParallelTrussSubTop;
-arr_data_class["parallelTruss_sub_bottom"] = ParallelTrussSubBottom;
-arr_data_class["parallelTruss_sub_vertical"] = ParallelTrussSubVertical;
-arr_data_class["parallelTruss_sub_brace"] = ParallelTrussSubBrace;
-
-arr_data_model["parallelTruss_main"] = {
-    "Group": "truss",
-    "type": "paraTruss",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "paraTruss",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }};
-
-arr_data_model["parallelTruss_sub_top"] = {
-    "type": "topchord",
-    "parent_member_id": "paraTruss",
-    "uid": "topchord_1",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
-};
-arr_data_model["parallelTruss_sub_bottom"] = {
-    "type": "topchord",
-    "parent_member_id": "paraTruss",
-    "uid": "topchord_1",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
-};
-
-arr_data_model["parallelTruss_sub_vertical"] = {
-    "type": "vertical",
-    "parent_member_id": "paraTruss",
-    "uid": "01",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
-};
-arr_data_model["parallelTruss_sub_brace"] = {
-    "type": "brace",
-    "parent_member_id": "paraTruss",
-    "subtype": "brace01",
-    "uid": "01",
-    "pattern": "tvvs",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
 };
 
 

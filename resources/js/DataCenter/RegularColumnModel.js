@@ -10,10 +10,17 @@ var RegularColumnModel = function () {
 
 var RegularColumnMain = function () {
     main = this;
-    main.model = clone(regularColumn_main);
+    main.model = {
+        "Group": "Beam",
+        "type": "Column",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
+    };
     main.getData = function (data) {
-        dataModel.uid++;
-        main.model["uid"] = dataModel.uid;
         main.setMemberProperties(data);
         main.setFinishProperties(data);
         main.setConnectionProperties(data);
@@ -108,22 +115,5 @@ var RegularColumnMain = function () {
             "cap_momentLoad": _cp.cap_momentLoad
         };
         main.model["connectionProperties"] = cp;
-    }
-}
-
-regularColumn_main = {
-    "Group": "Beam",
-    "type": "Column",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-    },
-    "finishProperties": {
-    },
-    "connectionProperties": {
     }
 }

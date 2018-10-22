@@ -1,28 +1,33 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
 var PlateGirderModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["plateGirder_main"]().getData(data);
+        mainModel = new PlateGirderMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 
 var PlateGirderMain = function () {
-    this.model = clone(arr_data_model["plateGirder_main"]);
-    this.getData = function (data) {
-        console.log(data);
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+    main.model = {
+        "Group": "Beam",
+        "type": "pgirder",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
+    };
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
     };
 
-    this.setMemberProperties = function (data) {
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
         mp = {
@@ -146,9 +151,9 @@ var PlateGirderMain = function () {
             "frameCMethod": data.frameCMethod,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -164,9 +169,9 @@ var PlateGirderMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -185,28 +190,6 @@ var PlateGirderMain = function () {
             "mommentLoad_LHS": _cp.mommentLoad_LHS,
             "mommentLoad_RHS": _cp.mommentLoad_RHS
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-
-arr_data_class["plateGirder"] = PlateGirderModel;
-arr_data_class["plateGirder_main"] = PlateGirderMain;
-arr_data_model["plateGirder_main"] = {
-    "Group": "Beam",
-    "type": "pgirder",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
 };

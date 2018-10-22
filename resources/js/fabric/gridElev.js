@@ -188,12 +188,15 @@ var class_grid_Elev 	= function(parent)
 		{
 			if (memberList[i].floor && memberList[i].floor == gridData.zaxis[index].Dimension)
 			{
-				memberList.splice(i, 1);
+				// memberList.splice(i, 1);
+				dataModel.removeData(i, 1);
 			}
 			else if (memberList[i].elevEnabled)
 			{
-				if (memberList[i].startIndex && memberList[i].startIndex.y_index == index)
-					memberList.splice(i, 1);
+				if (memberList[i].startIndex && memberList[i].startIndex.y_index == index){
+					// memberList.splice(i, 1);
+					dataModel.removeData(i, 1);
+				}
 			}
 		}
 

@@ -510,8 +510,10 @@ var class_context 	= function()
 					{
 						for ( var j = memberList.length - 1; j >= 0; j --)
 						{
-							if (memberList[j].uid == sel_obj._objects[i].mode + "_" + sel_obj._objects[i].uid)
-								memberList.splice(j, 1);
+							if (memberList[j].uid == sel_obj._objects[i].mode + "_" + sel_obj._objects[i].uid){
+								// memberList.splice(j, 1);
+								dataModel.removeData(j, 1);
+							}
 
 						}
 						canvas.remove(sel_obj._objects[i]);
@@ -520,7 +522,8 @@ var class_context 	= function()
 				{
 					if (memberList[j].uid == sel_obj.mode + "_" + sel_obj.uid)
 					{
-						memberList.splice(j, 1);
+						// memberList.splice(j, 1);
+						dataModel.removeData(j, 1);
 					}
 				}
 				canvas.remove(sel_obj);

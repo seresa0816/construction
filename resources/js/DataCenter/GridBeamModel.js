@@ -1,28 +1,35 @@
-/* global arr_data_class, arr_data_model, dataModel */
-
 var GridBeamModel = function () {
-    var mainModel;
-    this.createData = function (data) {
+    main = this;
+    main.createData = function (data) {
         var returnData = Array();
-        mainModel = new arr_data_class["gridBeam_main"]().getData(data);
+        mainModel = new GridBeamMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     };
 };
 
 var GridBeamMain = function () {
-    this.model = clone(arr_data_model["gridBeam_main"]);
-    this.getData = function (data) {
-        console.log(data);
-        dataModel.uid++;
-        this.model["uid"] = dataModel.uid;
-        this.setMemberProperties(data);
-        this.setFinishProperties(data);
-        this.setConnectionProperties(data);
-        return this.model;
+    main = this;
+
+    main.model = {
+        "Group": "Beam",
+        "type": "gridBeam",
+        "3rPartyID": {
+            "Tekla": "",
+            "Revit": "",
+            "SDS/2": ""
+        },
+        "uid": increaseJsonUid()
     };
 
-    this.setMemberProperties = function (data) {
+    main.getData = function (data) {
+        main.setMemberProperties(data);
+        main.setFinishProperties(data);
+        main.setConnectionProperties(data);
+        return main.model;
+    };
+
+    main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
         mp = {
@@ -89,11 +96,11 @@ var GridBeamMain = function () {
             },
             "splice_count": data.splice_count,
             "splice_data": [{
-                    "ft": "10", // check
-                    "in": "0", // check
-                    "fr": "0", // check
-                    "profile": "W5X19"    // check
-                }],
+                "ft": "10", // check
+                "in": "0", // check
+                "fr": "0", // check
+                "profile": "W5X19"    // check
+            }],
             "camberReq": data.camberRequired,
             "camber_in": data.camber_in,
             "StudReq": data.isshearStudRequired,
@@ -110,9 +117,9 @@ var GridBeamMain = function () {
             "frameCMethod": data.frameCMethod,
             "referenceDrawing": _mp.referenceDrawing
         };
-        this.model["memberProperties"] = mp;
+        main.model["memberProperties"] = mp;
     };
-    this.setFinishProperties = function (data) {
+    main.setFinishProperties = function (data) {
 
         _fp = data.finishProperties;
         fp = {
@@ -128,9 +135,9 @@ var GridBeamMain = function () {
             "fRating": _fp.fireRating,
             "aessCat": _fp.aessCat
         };
-        this.model["finishProperties"] = fp;
+        main.model["finishProperties"] = fp;
     };
-    this.setConnectionProperties = function (data) {
+    main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
             "CMark_LHS": _cp.connMark_LHS,
@@ -149,28 +156,6 @@ var GridBeamMain = function () {
             "mommentLoad_LHS": _cp.mommentLoad_LHS,
             "mommentLoad_RHS": _cp.mommentLoad_RHS
         };
-        this.model["connectionProperties"] = cp;
+        main.model["connectionProperties"] = cp;
     };
-};
-
-arr_data_class["gridBeam"] = GridBeamModel;
-arr_data_class["gridBeam_main"] = GridBeamMain;
-arr_data_model["gridBeam_main"] = {
-    "Group": "Beam",
-    "type": "gridBeam",
-    "3rPartyID": {
-        "Tekla": "",
-        "Revit": "",
-        "SDS/2": ""
-    },
-    "uid": "",
-    "memberProperties": {
-
-    },
-    "finishProperties": {
-
-    },
-    "connectionProperties": {
-
-    }
 };
