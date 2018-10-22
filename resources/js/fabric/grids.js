@@ -82,11 +82,11 @@ function drawHorizLines(lineData, axis, plane, flag, elevFlag, redrawFlag) {
 				dim = convertToUnit(lineData[i + 1].g_dimension_ft_tos, lineData[i + 1].g_dimension_in_tos, lineData[i + 1].g_dimension_fra_tos, "+");
 			}
 			var positionY = (mapCoordinate(parseFloat(lineData[i + 1].Dimension), axis, plane) + mapCoordinate(parseFloat(lineData[i].Dimension), axis, plane)) / 2;
-			var dimText_left = insertTextBoxes(minH + gridOffSet - 2 - (35 + 15) / canvas.getZoom(), positionY, value.toString(), true, true, false);
+			var dimText_left = insertTextBoxes(minH + gridOffSet - 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
 			if (dimText_left.width < dim * scale * canvas.getZoom())
 				canvas.add(dimText_left);
 
-			var dimText_right = insertTextBoxes(maxH - gridOffSet + 1 + 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
+			var dimText_right = insertTextBoxes(maxH - gridOffSet + 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
 			if (dimText_right.width < dim * scale * canvas.getZoom())
 				canvas.add(dimText_right);
 		}
@@ -247,7 +247,7 @@ function getGridIndex(position, Axis, plane) {
 			{
 				switch (Axis) {
 					case "X":
-						if (position < 0)
+						if (position < gridData.xaxis[0].Dimension)
 							return -1;
 						if (position > parseFloat(gridData.xaxis[gridData.xaxis.length - 1].Dimension))
 							return -1;
@@ -263,7 +263,7 @@ function getGridIndex(position, Axis, plane) {
 						break;
 
 					case "Y":
-						if (position < 0)
+						if (position < gridData.yaxis[0].Dimension)
 							return -1;
 						if (position > parseFloat(gridData.yaxis[gridData.yaxis.length - 1].Dimension))
 							return -1;
@@ -282,7 +282,7 @@ function getGridIndex(position, Axis, plane) {
 			{
 				switch (Axis) {
 					case "Y":
-						if (position < 0)
+						if (position < gridData.yaxis[0].Dimension)
 							return -1;
 						if (position > parseFloat(gridData.yaxis[gridData.yaxis.length - 1].Dimension))
 							return -1;
@@ -297,7 +297,7 @@ function getGridIndex(position, Axis, plane) {
 						break;
 
 					case "Z":
-						if (position < 0)
+						if (position < gridData.zaxis[0].Dimension)
 							return -1;
 						if (position > parseFloat(gridData.zaxis[gridData.zaxis.length - 1].Dimension))
 							return -1;
@@ -316,7 +316,7 @@ function getGridIndex(position, Axis, plane) {
 			{
 				switch (Axis) {
 					case "X":
-						if (position < 0)
+						if (position < gridData.xaxis[0].Dimension)
 							return -1;
 						if (position > parseFloat(gridData.xaxis[gridData.xaxis.length - 1].Dimension))
 							return -1;
@@ -332,7 +332,7 @@ function getGridIndex(position, Axis, plane) {
 						break;
 
 					case "Z":
-						if (position < 0)
+						if (position < gridData.zaxis[0].Dimension)
 							return -1;
 						if (position > parseFloat(gridData.zaxis[gridData.zaxis.length - 1].Dimension))
 							return -1;
