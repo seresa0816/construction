@@ -752,7 +752,7 @@
 						    
 					
 						  $.each(cmsplice, function(key, value) {
-						       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+						       var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 						       $(ConnectionMark).appendTo('#bc4spcm'); 
 						   }); 
 						  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -767,7 +767,7 @@
 					    
 				
 					  $.each(cmsplice, function(key, value) {
-					       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+					       var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 					       $(ConnectionMark).appendTo('#bc4spcm'); 
 					   }); 
 					  var cmsplice = $.grep(connectionObjList, function (el2) {
@@ -782,34 +782,12 @@
 				    
 				
 				  $.each(cmsplice, function(key, value) {
-				       var ConnectionMark="<option>"+value.connectionMark+"</option>";
+				       var ConnectionMark="<option value=\""+value.connectionMark+"\">"+value.connectionMark+"</option>";
 				       $(ConnectionMark).appendTo('#bc4spcm'); 
 				   }); 
 						}
 						
-		   			}
-		   			function getCapPlateConnectionMark(){
-						 //Populate Cap Plate Connection Mark  
 		   			
-				     	// $('#chkcapplate').change(function() {
-				     			     				
-				   		// if( $('#chkboxCap1').is(':enabled')){
-				   		 $('#chkboxCap1').empty();
-				  
-							   var capcm = $.grep(connectionObjList, function (el) {
-								   if((el.post == "Column" )&& (el.profile == "Built-Up Member") && (el.type.toLowerCase().indexOf("base")>=0) && (el.baseplate.toLowerCase().indexOf("cap")>=0))
-								  {
-							        	return el.connectionMark;
-							        	
-							        }
-							    });
-						
-							    $.each(capcm, function(key, value) {
-							    	 
-								       var ConnectionMark="<option>"+value.connectionMark+"</option>";
-								         $(ConnectionMark).appendTo('#chkboxCap1'); 
-								        
-								   });   
 						 
 		   			}								 
 		   			$("#c4boxsplicecount").change(function() {

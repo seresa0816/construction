@@ -730,6 +730,10 @@ function checkExistMember(obj)
     var flag = false;
     for (var i = 0; i < memberList.length; i ++)
     {
+        if (memberList[i].uid == obj.uid)
+        {
+            break;
+        }
         if (memberList[i].type == obj.type)
         {
             if (memberList[i].memberProperties.startPoint.x == obj.memberProperties.startPoint.x && memberList[i].memberProperties.startPoint.y == obj.memberProperties.startPoint.y && memberList[i].memberProperties.startPoint.z == obj.memberProperties.startPoint.z)
@@ -752,9 +756,16 @@ function checkColumn(obj)
     return false;
 }
 
+function checkColumnMember(member)
+{
+    if (member.type == "Column" || member.type == "boxColumn" || member.type == "builtUpIColumn" || member.type == "builtUpCRColumn" || member.type == "builtUpCHColumn" || member.type == "postColumn")
+        return true;
+    return false;
+}
+
 function checkBeam(obj)
 {
-    if (obj.mode == "Beam" || obj.mode == "periBeam" || obj.mode == "ibeam" || obj.mode == "pgirder")
+    if (obj.mode == "Beam" || obj.mode == "periBeam" || obj.mode == "ibeam" || obj.mode == "pgirder" || obj.mode == "cantBeam")
         return true;
     return false;
 }
