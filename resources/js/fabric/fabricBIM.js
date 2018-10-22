@@ -2408,16 +2408,16 @@ function initSubmitEvents()
 				splice.elevation_ft = $("#splice" + (i + 1) + "Ft").val();
 				splice.elevation_in = $("#splice" + (i + 1) + "In").val();
 				splice.elevation_fr = $("#splice" + (i + 1) + "Fr").val();
-				splice.depth_a_ft = $("#splice" + (i + 1) + "DepthAFt").val();
-				splice.depth_a_in = $("#splice" + (i + 1) + "DepthAIn").val();
-				splice.depth_a_fr = $("#splice" + (i + 1) + "DepthAFr").val();
-				splice.width_b_ft = $("#splice" + (i + 1) + "WidthBFt").val();
-				splice.width_b_in = $("#splice" + (i + 1) + "WidthBIn").val();
-				splice.width_b_fr = $("#splice" + (i + 1) + "WidthBFr").val();
-				splice.thick_c_in = $("#splice" + (i + 1) + "ThicknessCIn").val();
-				splice.thick_c_fr = $("#splice" + (i + 1) + "ThicknessCFr").val();
-				splice.thick_d_in = $("#splice" + (i + 1) + "ThicknessDIn").val();
-				splice.thick_d_fr = $("#splice" + (i + 1) + "ThicknessDFr").val();
+				splice.depth_ft = $("#splice" + (i + 1) + "DepthAFt").val();
+				splice.depth_in = $("#splice" + (i + 1) + "DepthAIn").val();
+				splice.depth_fr = $("#splice" + (i + 1) + "DepthAFr").val();
+				splice.width_ft = $("#splice" + (i + 1) + "WidthBFt").val();
+				splice.width_in = $("#splice" + (i + 1) + "WidthBIn").val();
+				splice.width_fr = $("#splice" + (i + 1) + "WidthBFr").val();
+				splice.thick_C_in = $("#splice" + (i + 1) + "ThicknessCIn").val();
+				splice.thick_C_fr = $("#splice" + (i + 1) + "ThicknessCFr").val();
+				splice.thick_D_in = $("#splice" + (i + 1) + "ThicknessDIn").val();
+				splice.thick_D_fr = $("#splice" + (i + 1) + "ThicknessDFr").val();
 				memberList[[parseInt(memID)]].splice_data.push(splice);
             }
 		}
