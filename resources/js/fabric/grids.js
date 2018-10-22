@@ -62,10 +62,10 @@ function drawHorizLines(lineData, axis, plane, flag, elevFlag, redrawFlag) {
 			circle_flg = true;
 		}
 		if (!elevFlag) {
-			var Label_left = insertTextBoxes(startX - (strLength + 1) * 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
+			var Label_left = insertTextBoxes(startX - (15 / canvas.getZoom() + 10) / scale, startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
 			canvas.add(Label_left);
 
-			var Label_right = insertTextBoxes(endX + 15 / canvas.getZoom(), startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
+			var Label_right = insertTextBoxes(endX + 6 / scale, startY - 6 / scale, lineData[i].Label.toString(), false, false, false, circle_flg);
 			canvas.add(Label_right);
 		}
 
@@ -82,11 +82,11 @@ function drawHorizLines(lineData, axis, plane, flag, elevFlag, redrawFlag) {
 				dim = convertToUnit(lineData[i + 1].g_dimension_ft_tos, lineData[i + 1].g_dimension_in_tos, lineData[i + 1].g_dimension_fra_tos, "+");
 			}
 			var positionY = (mapCoordinate(parseFloat(lineData[i + 1].Dimension), axis, plane) + mapCoordinate(parseFloat(lineData[i].Dimension), axis, plane)) / 2;
-			var dimText_left = insertTextBoxes(minH + gridOffSet - 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
+			var dimText_left = insertTextBoxes(minH + gridOffSet - (15 / canvas.getZoom() + 10) / scale, positionY, value.toString(), true, true, false);
 			if (dimText_left.width < dim * scale * canvas.getZoom())
 				canvas.add(dimText_left);
 
-			var dimText_right = insertTextBoxes(maxH - gridOffSet + 35 / canvas.getZoom(), positionY, value.toString(), true, true, false);
+			var dimText_right = insertTextBoxes(maxH - gridOffSet + 10 / scale, positionY, value.toString(), true, true, false);
 			if (dimText_right.width < dim * scale * canvas.getZoom())
 				canvas.add(dimText_right);
 		}
