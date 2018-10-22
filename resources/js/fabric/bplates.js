@@ -50,6 +50,7 @@ var class_BPlates 	= function(parent)
 
 		var pourObj = JSON.parse(JSON.stringify(data));
 		pourObj.tmpBeam_uid = beamObj.uid;
+		pourObj.tmpBeam_json_uid = beamObj.json_uid;
 		main.drawShape(pourObj);
 	}
 

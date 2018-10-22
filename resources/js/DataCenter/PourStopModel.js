@@ -25,7 +25,7 @@ var PourStopMain = function () {
 
     main.getData = function (data) {
         //
-        main.model["tmpBeam_uid"] = ""; // check
+        main.model["tmpBeam_uid"] = data.tmpBeam_json_uid; // check
         //
         main.setMemberProperties(data);
         main.setFinishProperties(data);
@@ -37,63 +37,55 @@ var PourStopMain = function () {
 
         _mp = data.memberProperties;
         mp = {
-            "startPoint": {
-                "x": 72,
-                "y": 144,
-                "z": 0
-            },
-            "endPoint": {
-                "x": 144,
-                "y": 144,
-                "z": 0
-            },
-            "material": "Bent Plate",
+            "startPoint": _mp.startPoint,
+            "endPoint": _mp.endPoint,
+            "material": _mp.material,
             "angle": {
-                "profile": ""
+                "profile": data.angleprofile
             },
             "plate": {
-                "PlThick_in": "7/16",
-                "ver_LegLength_in": "0",
-                "ver_LegLength_fr": "0",
-                "EOS_ft": "3",
-                "EOS_in": "0",
-                "EOS_fr": "0"
+                "PlThick_in": data.plateThick_in,
+                "ver_LegLength_in": data.verticalLegLength_in,
+                "ver_LegLength_fr": data.verticalLegLength_fr,
+                "EOS_ft": data.EOS_ft,
+                "EOS_in": data.EOS_in,
+                "EOS_fr": data.EOS_fr
             },
-            "orientation": "left",
-            "materialGrade": "A529-GR.55",
-            "dataSource": "",
-            "pourposition": "fulllength",
-            "position_ft": "",
-            "position_in": "0",
-            "position_fr": "0",
-            "length_ft": "",
-            "length_in": "0",
-            "length_fr": "0",
-            "StudReq": "off",
-            "StudDia_in": "",
-            "StudLength_in": "",
-            "StudCount": "",
-            "OL_Length_in": "1 1/4",
-            "beamCType": "Welded",
+            "orientation": _mp.orientation,
+            "materialGrade": _mp.materialGrade,
+            "dataSource": _mp.dataSource,
+            "pourposition": data.pourposition,
+            "position_ft": data.position_ft,
+            "position_in": data.position_in,
+            "position_fr": data.position_fr,
+            "length_ft": data.length_ft,
+            "length_in": data.length_in,
+            "length_fr": data.length_fr,
+            "StudReq": data.isShearStudAttached, // check
+            "StudDia_in": data.shearStudDia_in,
+            "StudLength_in": data.shearStudLength_in,
+            "StudCount": data.shearStudCount,
+            "OL_Length_in": data.overLapLength_in,
+            "beamCType": data.beamConnectionType,
             "weld": {
-                "w_type": "Stitch Weld",
-                "w_size": "7/8",
-                "w_Length_ft": "1",
-                "w_Length_in": "0",
-                "w_Length_fr": "0",
-                "pitch_ft": "1",
-                "pitch_in": "0",
-                "pitch_fr": "0"
+                "w_type": data.weldType,
+                "w_size": data.weldSize,
+                "w_Length_ft": data.weldLength_ft,
+                "w_Length_in": data.weldLength_in,
+                "w_Length_fr": data.weldLength_fr,
+                "pitch_ft": data.pitch_ft,
+                "pitch_in": data.pitch_in,
+                "pitch_fr": data.pitch_fr
             },
             "bolt": {
-                "Dia_in": "",
-                "Grade": "",
-                "Row": "",
-                "Spacing_ft": "",
-                "Spacing_in": "0",
-                "Spacing_fr": "0"
+                "Dia_in": data.boltDia_in,
+                "Grade": data.boltGrade,
+                "Row": data.boltRow,
+                "Spacing_ft": data.boltSpacing_ft,
+                "Spacing_in": data.boltSpacing_in,
+                "Spacing_fr": data.boltSpacing_fr
             },
-            "referenceDrawing": "",
+            "referenceDrawing": _mp.referenceDrawing,
         };
         main.model["memberProperties"] = mp;
     };
@@ -104,12 +96,12 @@ var PourStopMain = function () {
             "primCheck": _fp.primerCheck,
             "primName": _fp.primerName,
             "primCoats": _fp.primerCoats,
-            "surType": _fp.paintType,
+            "surType": _fp.paint,
             "paintName": _fp.paintName,
             "paintCoats": _fp.paintCoats,
-            "ZincThick": _fp.galvZincCoatThickness,
+            "ZincThick": "",    // check
             "fProofType": _fp.fireProofType,
-            "fRating": _fp.fireRating,
+            "fRating": "", // check
             "aessCat": _fp.aessCat
         };
         main.model["finishProperties"] = fp;
@@ -117,16 +109,6 @@ var PourStopMain = function () {
     main.setConnectionProperties = function (data) {
         _cp = data.connectionProperties;
         cp = {
-            // "bPlCMark": _cp.basePlateConnMark,
-            // "sPlCMark": _cp.splice_plateConnMark,
-            // "s_shearLoad": _cp.splice_shearLoad,
-            // "s_axialLoad": _cp.splice_axialLoad,
-            // "s_momentLoad": _cp.splice_momentLoad,
-            // "cap_check": _cp.cap_check,
-            // "cap_PlCMark": _cp.cap_plateConnMark,
-            // "cap_shearLoad": _cp.cap_shearLoad,
-            // "cap_axialLoad": _cp.cap_axialLoad,
-            // "cap_momentLoad": _cp.cap_momentLoad
         };
         main.model["connectionProperties"] = cp;
     };
