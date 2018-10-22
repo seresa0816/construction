@@ -1107,7 +1107,7 @@
           function setHeight() {
             windowHeight = $(window).innerHeight();
             // $('#expandCanvas').css('min-height', windowHeight);
-            $('#expandCanvas') .css({'height': (($(window).height()) - 217)+'px'});
+            $('#expandCanvas') .css({'height': (($(window).height()) - 260)+'px'});
           };
           setHeight();
           
