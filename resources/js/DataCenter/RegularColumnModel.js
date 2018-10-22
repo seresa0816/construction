@@ -2,7 +2,7 @@ var RegularColumnModel = function () {
     main = this;
     main.createData = function (data) {
         var returnData = Array();
-        mainModel = new RegularColumnMain.getData(data);
+        mainModel = new RegularColumnMain().getData(data);
         returnData.push(mainModel);
         return returnData;
     }

@@ -1,41 +1,8 @@
 var arr_data = new Array();
 
-var arr_data_model = new Array();
-var arr_data_class = new Array();
-
-
-function DataModel() {
-    var main = this;
-    main.uid = getJsonUid();
-    main.insertData = function (data) {
-        try {
-            // var data_mode = (data.mode) ? data.mode : 'blank';
-            var data_type = (data.type) ? data.type : 'blank';
-            // var modelName = modelNameMap[data_mode][data_type];
-            var modelName = modelNameMap[data_type];
-        } catch (ex) {
-
-        }
-        // console.log("mode: '" + data_mode + "' type: '" + data_type + "'");
-        console.log("type: '" + data_type + "'");
-        console.log("data: \n" + JSON.stringify(data, null, 4));
-
-        if (modelName) {
-            new_data = new arr_data_class[modelName]().createData(data);
-            console.log("json_data: \n" + JSON.stringify(new_data, null, 4));
-            arr_data = arr_data.concat(new_data);
-            data.json_uid = main.uid;
-            setJsonUid(main.uid);
-        }
-        memberList.push(data);
-    };
-}
-
-var dataModel = new DataModel();
-
-modelNameMap = {
+var modelClassMap = {
     /** Column */
-    "Column": "regularColumn",
+    "Column": RegularColumnModel,
     /* Column -> Built-Up Column */
     "boxColumn": "boxColumn",
     "builtUpIColumn": "iColumn",
@@ -64,6 +31,34 @@ modelNameMap = {
     /** Pour Stop */
     "pourStop": "pourStop" // it's not implemented yet.
 };
+
+function DataModel() {
+    var main = this;
+    main.uid = getJsonUid();
+    main.insertData = function (data) {
+        try {
+            var data_type = (data.type) ? data.type : 'blank';
+            var modelClass = modelClassMap[data_type];
+        } catch (ex) {
+
+        }
+        console.log("type: '" + data_type + "'");
+        console.log("data: \n" + JSON.stringify(data, null, 4));
+
+        if (modelClass) {
+            new_data = new modelClass().createData(data);
+            console.log("json_data: \n" + JSON.stringify(new_data, null, 4));
+            arr_data = arr_data.concat(new_data);
+            data.json_uid = main.uid;
+            setJsonUid(main.uid);
+        }
+        memberList.push(data);
+    };
+}
+
+var dataModel = new DataModel();
+
+
 
 // modelNameMap = {
 //     "blank": {
