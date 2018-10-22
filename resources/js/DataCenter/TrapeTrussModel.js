@@ -11,14 +11,17 @@ var TrapeTrussModel = function () {
         subModel = new TrapeTrussSubBottom(mainModel['uid'], 0).getData(data);
         returnData.push(subModel);
         ////vertical/////
-        for (i = 0; i < data.verticals.length; i++) {
-            subModel = new TrapeTrussSubVertical(mainModel['uid'], i).getData(data);
-            returnData.push(subModel);
-        }
-        ////brace/////
-        for (i = 0; i < data.member_truss.inclinedbracings.length; i++) {
-            subModel = new TrapeTrussSubBrace(mainModel['uid'], i).getData(data);
-            returnData.push(subModel);
+        if (data.inclineNum != 0) {
+            for (i = 0; i < data.verticals.length; i++) {
+                subModel = new TrapeTrussSubVertical(mainModel['uid'], i).getData(data);
+                returnData.push(subModel);
+            }
+        } else {
+            ////brace/////
+            for (i = 0; i < data.inclinedbracings.length; i++) {
+                subModel = new TrapeTrussSubBrace(mainModel['uid'], i).getData(data);
+                returnData.push(subModel);
+            }
         }
         return returnData;
     };
@@ -26,6 +29,7 @@ var TrapeTrussModel = function () {
 
 var TrapeTrussMain = function () {
     main = this;
+
     main.model = {
         "Group": "truss",
         "type": "trapezoidal",
@@ -46,12 +50,25 @@ var TrapeTrussMain = function () {
 
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
+
+        vartical_space_data = new Array();
+
+        if (data.verticals) {
+            data.verticals.forEach(element => {
+                vartical_space_data.push({
+                    "spacing_ft": element.spacing_ft,
+                    "spacing_in": element.spacing_in,
+                    "spacing_fr": element.spacing_fr,
+                });
+            });
+        }
+
         mp = {
             "Ridge": {
-                "position": "Center", // check
-                "position_ft": "0", // check
-                "position_in": "0", // check
-                "position_fr": "0"           // check
+                "position": data.ridge_pos,
+                "position_ft": data.ridge_pos_ft,
+                "position_in": data.ridge_pos_in,
+                "position_fr": data.ridge_pos_fr
             },
             "height_left_ft": data.height_left_ft,
             "height_left_in": data.height_left_in,
@@ -66,16 +83,17 @@ var TrapeTrussMain = function () {
             "length_in": data.length_in,
             "length_fr": data.length_fr,
             "dataSource": data.memberProperties.dataSource,
+            "slopingChord": data.slopingChord,
             "verticals": {
-                "Spacing_btw": data.member_truss.verticalSpacing,
-                "Count": "4", // check
-                "spacing": []           // check
+                "Spacing_btw": data.verticalSpacing,
+                "Count": data.verticalCount,
+                "spacing": vartical_space_data           // check
             },
             "non_ConnEnd": "false", // check
             "non_ConnEnd_value": "", // check
-            "ft": "", // check
-            "in": "", // check
-            "fr": "", // check
+            "ft": data.connected_ft,
+            "in": data.connected_in,
+            "fr": data.connected_fr,
             "referenceDrawing": _mp.referenceDrawing           // check
         };
         main.model["memberProperties"] = mp;
@@ -136,17 +154,18 @@ var TrapeTrussSubTop = function (parent_index, index) {
 
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
+
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "middlePoint": _mp.middlePoint,
-            "profile": "W6X25", // CHECK
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "dataSource": _mp.dataSource,
-            "splice_count": data.splice_count,
-            "splice_data": data.splice_data,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.topchord.startPoint,
+            "middlePoint": data.topchord.middlePoint,
+            "endPoint": data.topchord.endPoint,
+            "profile": data.topchord.profile,
+            "orientation": data.topchord.orientation,
+            "materialGrade": data.topchord.materialGrade,
+            "dataSource": "", // check 
+            "splice_count": data.topchord.splice_count,
+            "splice_data": data.topchord.splice_data,
+            "referenceDrawing": "", // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -191,6 +210,7 @@ var TrapeTrussSubTop = function (parent_index, index) {
 
 var TrapeTrussSubBottom = function (parent_index, index) {
     main = this;
+
     main.index = index;
     main.model = {
         "type": "bottomchord",
@@ -207,15 +227,15 @@ var TrapeTrussSubBottom = function (parent_index, index) {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25", // CHECK
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "dataSource": _mp.dataSource,
-            "splice_count": data.splice_count,
-            "splice_data": data.splice_data,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.bottomchord.startPoint,
+            "endPoint": data.bottomchord.endPoint,
+            "profile": data.bottomchord.profile,
+            "orientation": data.bottomchord.orientation,
+            "materialGrade": data.bottomchord.materialGrade,
+            "dataSource": "", // check
+            "splice_count": "0", // check
+            "splice_data": "", // check
+            "referenceDrawing": "" // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -259,6 +279,7 @@ var TrapeTrussSubBottom = function (parent_index, index) {
 
 var TrapeTrussSubVertical = function (parent_index, index) {
     main = this;
+
     main.index = index;
     main.model = {
         "type": "vertical",
@@ -275,13 +296,13 @@ var TrapeTrussSubVertical = function (parent_index, index) {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25",
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "dataSource": _mp.dataSource,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.verticals[main.index].startPoint,
+            "endPoint": data.verticals[main.index].endPoint,
+            "profile": data.verticals[main.index].profile,
+            "orientation": data.verticals[main.index].orientation,
+            "materialGrade": data.verticals[main.index].materialGrade,
+            "dataSource": "", // check
+            "referenceDrawing": "" // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -320,6 +341,7 @@ var TrapeTrussSubVertical = function (parent_index, index) {
 
 var TrapeTrussSubBrace = function (parent_index, index) {
     main = this;
+
     main.index = index;
     main.model = {
         "type": "brace",
@@ -330,7 +352,7 @@ var TrapeTrussSubBrace = function (parent_index, index) {
     };
     main.getData = function (data) {
         //
-        main.model["pattern"] = main.member_truss.inclinedbracings[index].pattern;
+        main.model["pattern"] = data.inclinedbracings[main.index].pattern;
         //
         main.setMemberProperties(data);
         main.setFinishProperties(data);
@@ -341,13 +363,13 @@ var TrapeTrussSubBrace = function (parent_index, index) {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25",
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "dataSource": _mp.dataSource,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.inclinedbracings[main.index].startPoint,
+            "endPoint": data.inclinedbracings[main.index].endPoint,
+            "profile": data.inclinedbracings[main.index].profile,
+            "orientation": data.inclinedbracings[main.index].orientation,
+            "materialGrade": data.inclinedbracings[main.index].materialGrade,
+            "dataSource": "", // check
+            "referenceDrawing": "" // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -384,5 +406,3 @@ var TrapeTrussSubBrace = function (parent_index, index) {
         main.model["connectionProperties"] = cp;
     };
 };
-
-

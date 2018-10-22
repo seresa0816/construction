@@ -18,7 +18,7 @@ var ParallelTrussModel = function () {
             }
         } else {
             ////brace/////
-            for (i = 0; i < data.member_truss.inclinedbracings.length; i++) {
+            for (i = 0; i < data.inclinedbracings.length; i++) {
                 subModel = new ParallelTrussSubBrace(mainModel['uid'], i).getData(data);
                 returnData.push(subModel);
             }
@@ -50,6 +50,19 @@ var ParallelTrussMain = function () {
 
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
+
+        vartical_space_data = new Array();
+
+        if (data.verticals) {
+            data.verticals.forEach(element => {
+                vartical_space_data.push({
+                    "spacing_ft": element.spacing_ft,
+                    "spacing_in": element.spacing_in,
+                    "spacing_fr": element.spacing_fr,
+                });
+            });
+        }
+
         mp = {
             "height_left_ft": data.height_left_ft,
             "height_left_in": data.height_left_in,
@@ -67,14 +80,14 @@ var ParallelTrussMain = function () {
             "slopingChord": data.slopingChord,
             "verticals": {
                 "Spacing_btw": data.verticalSpacing,
-                "Count": data.VerticalCount,
-                "spacing": []           // check
+                "Count": data.verticalCount,
+                "spacing": vartical_space_data           // check
             },
             "non_ConnEnd": "false", // check
             "non_ConnEnd_value": "", // check
-            "ft": "", // check
-            "in": "", // check
-            "fr": "", // check
+            "ft": data.connected_ft,
+            "in": data.connected_in,
+            "fr": data.connected_fr,
             "referenceDrawing": _mp.referenceDrawing           // check
         };
         main.model["memberProperties"] = mp;
@@ -135,30 +148,19 @@ var ParallelTrussSubTop = function (parent_index, index) {
 
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
-        splice_data = new Array();
-        if (data.splice_count) {
-            data.splice_data.forEach(element => {
-                splice_data.push({
-                    "sign": element.sign,
-                    "El_ft": element.elevation_ft,
-                    "El_in": element.elevation_in,
-                    "El_fr": element.elevation_fr,
-                    "profile": element.profile
-                });
-            });
-        }
+
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25", // CHECK
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "Camber": "true", // CHECK
-            "topChordCamber": "", // CHECK
-            "dataSource": _mp.dataSource,
-            "splice_count": data.splice_count,
-            "splice_data": data.splice_data,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.topchord.startPoint,
+            "endPoint": data.topchord.endPoint,
+            "profile": data.topchord.profile,
+            "orientation": data.topchord.orientation,
+            "materialGrade": data.topchord.materialGrade,
+            "Camber": data.topChordCamber,// check
+            "topChordCamber": data.topChordCamber,
+            "dataSource": "", // check 
+            "splice_count": data.topchord.splice_count,
+            "splice_data": data.topchord.splice_data,
+            "referenceDrawing": "", // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -220,17 +222,17 @@ var ParallelTrussSubBottom = function (parent_index, index) {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25", // CHECK
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "Camber": "true", // CHECK
-            "bottomChordCamber": "", // CHECK
-            "dataSource": _mp.dataSource,
-            "splice_count": data.splice_count,
-            "splice_data": data.splice_data,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.bottomchord.startPoint,
+            "endPoint": data.bottomchord.endPoint,
+            "profile": data.bottomchord.profile,
+            "orientation": data.bottomchord.orientation,
+            "materialGrade": data.bottomchord.materialGrade,
+            "Camber": data.bottomChordCamber, // CHECK
+            "bottomChordCamber": data.bottomChordCamber,
+            "dataSource": "", // check
+            "splice_count": "0", // check
+            "splice_data": "", // check
+            "referenceDrawing": "" // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -291,13 +293,13 @@ var ParallelTrussSubVertical = function (parent_index, index) {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25",
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "dataSource": _mp.dataSource,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.verticals[main.index].startPoint,
+            "endPoint": data.verticals[main.index].endPoint,
+            "profile": data.verticals[main.index].profile,
+            "orientation": data.verticals[main.index].orientation,
+            "materialGrade": data.verticals[main.index].materialGrade,
+            "dataSource": "", // check
+            "referenceDrawing": "" // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -347,7 +349,7 @@ var ParallelTrussSubBrace = function (parent_index, index) {
     };
     main.getData = function (data) {
         //
-        main.model["pattern"] = main.member_truss.inclinedbracings[index].pattern;
+        main.model["pattern"] = data.inclinedbracings[main.index].pattern;
         //
         main.setMemberProperties(data);
         main.setFinishProperties(data);
@@ -358,13 +360,13 @@ var ParallelTrussSubBrace = function (parent_index, index) {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "startPoint": _mp.startPoint,
-            "endPoint": _mp.endPoint,
-            "profile": "W6X25",
-            "orientation": _mp.orientation,
-            "materialGrade": _mp.materialGrade,
-            "dataSource": _mp.dataSource,
-            "referenceDrawing": _mp.referenceDrawing
+            "startPoint": data.inclinedbracings[main.index].startPoint,
+            "endPoint": data.inclinedbracings[main.index].endPoint,
+            "profile": data.inclinedbracings[main.index].profile,
+            "orientation": data.inclinedbracings[main.index].orientation,
+            "materialGrade": data.inclinedbracings[main.index].materialGrade,
+            "dataSource": "", // check
+            "referenceDrawing":"" // check
         };
         main.model["memberProperties"] = mp;
     };
@@ -401,5 +403,3 @@ var ParallelTrussSubBrace = function (parent_index, index) {
         main.model["connectionProperties"] = cp;
     };
 };
-
-
