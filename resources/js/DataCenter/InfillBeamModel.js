@@ -94,13 +94,8 @@ var InfillBeamMain = function () {
                     "tos_fr": "0"    // check
                 }
             },
-            "splice_count": data.splice_count,
-            "splice_data": [{
-                "ft": "10", // check
-                "in": "0", // check
-                "fr": "0", // check
-                "profile": "W5X19"    // check
-            }],
+            // "splice_count": data.splice_count,   // check
+            // "splice_data": splice_data,          // check
             "camberReq": data.camberReq,
             "camber_in": data.camber_in,
             "StudReq": data.isshearStudRequired,

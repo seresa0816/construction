@@ -32,6 +32,29 @@ var BoxColumnMain = function () {
     main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
+
+        splice_data = new Array();
+        if (data.splice_count) {
+            data.splice_data.forEach(element => {
+                splice_data.push({
+                    "sign": element.sign,
+                    "El_ft": element.elevation_ft,
+                    "El_in": element.elevation_in,
+                    "El_fr": element.elevation_fr,
+                    "depth_a_ft": element.depth_a_ft,
+                    "depth_a_in": element.depth_a_in,
+                    "depth_a_fr": element.depth_a_fr,
+                    "width_b_ft": element.width_b_ft,
+                    "width_b_in": element.width_b_in,
+                    "width_b_fr": element.width_b_fr,
+                    "thick_c_in": element.thick_c_in,
+                    "thick_c_fr": element.thick_c_fr,
+                    "thick_d_in": element.thick_d_in,
+                    "thick_d_fr": element.thick_d_fr
+                });
+            });
+        }
+
         mp = {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
@@ -66,8 +89,9 @@ var BoxColumnMain = function () {
             "cjp_weld": data.cjp_weld,
             "length_in": "0", // check
             "length__fr": "0", // check 
-            "splice_data": data.splice_data, // check 
-            "referenceDrawing": _mp.referenceDrawing // check 
+            "splice_count": data.splice_count,
+            "splice_data": splice_data, 
+            "referenceDrawing": _mp.referenceDrawing 
         };
         main.model["memberProperties"] = mp;
     };

@@ -32,6 +32,20 @@ var ChannelColumnMain = function () {
     main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
+
+        splice_data = new Array();
+        if (data.splice_count) {
+            data.splice_data.forEach(element => {
+                splice_data.push({
+                    "sign": element.sign,
+                    "El_ft": element.elevation_ft,
+                    "El_in": element.elevation_in,
+                    "El_fr": element.elevation_fr,
+                    "profile": element.profile
+                });
+            });
+        }
+
         mp = {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
@@ -66,7 +80,7 @@ var ChannelColumnMain = function () {
             "w_type": data.weld_type,
             "w_size": data.weld_size,
             "splice_count": data.splice_count, 
-            "splice_data": data.splice_data, // check 
+            "splice_data": splice_data, 
             "referenceDrawing": _mp.referenceDrawing // check 
         };
         main.model["memberProperties"] = mp;

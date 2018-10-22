@@ -32,6 +32,33 @@ var IColumnMain = function () {
     main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
+
+        splice_data = new Array();
+        if (data.splice_count) {
+            data.splice_data.forEach(element => {
+                splice_data.push({
+                    "sign": element.sign,
+                    "El_ft": element.elevation_ftelevation_ft,
+                    "El_in": element.elevation_in,
+                    "El_fr": element.elevation_fr,
+                    "topthick_in": element.topthick_in,
+                    "topthick_fr": element.topthick_fr,
+                    "topwidth_in": element.topwidth_in,
+                    "topwidth_fr": element.topwidth_ft,
+                    "botthick_in": element.botthick_in,
+                    "botthick_fr": element.botthick_fr,
+                    "botwidth_ft": element.botwidth_ft,
+                    "botwidth_in": element.botwidth_in,
+                    "botwidth_fr": element.botwidth_fr,
+                    "webthick_in": element.webthick_in,
+                    "webthick_fr": element.webthick_fr,
+                    "webwidth_ft": element.webwidth_ft,
+                    "webwidth_in": element.webwidth_in,
+                    "webwidth_fr": element.webwidth_fr
+                });
+            });
+        }
+
         mp = {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
@@ -71,7 +98,7 @@ var IColumnMain = function () {
                 "topEl_fr": data.topElevation_fr,
             },
             "splice_count": data.splice_count,
-            "splice_data": data.splice_data, // check 
+            "splice_data": splice_data, // check 
             "referenceDrawing": _mp.referenceDrawing // check 
         };
         main.model["memberProperties"] = mp;

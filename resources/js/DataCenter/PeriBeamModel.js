@@ -30,6 +30,7 @@ var PeriBeamMain = function () {
     main.setMemberProperties = function (data) {
 
         _mp = data.memberProperties;
+
         mp = {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
@@ -92,13 +93,8 @@ var PeriBeamMain = function () {
                     "tos_fr": "0"    // check
                 }
             },
-            "splice_count": data.splice_count,
-            "splice_data": [{
-                    "ft": "10", // check
-                    "in": "0", // check
-                    "fr": "0", // check
-                    "profile": "W5X19"    // check
-                }],
+            // "splice_count": data.splice_count,   // CHECK
+            // "splice_data": splice_data,          // CHECK
             "camberReq": data.camberReq,
             "camber_in": data.camber_in,
             "StudReq": data.isshearStudRequired,

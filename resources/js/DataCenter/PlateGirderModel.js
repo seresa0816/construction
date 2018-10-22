@@ -58,28 +58,8 @@ var PlateGirderMain = function () {
             "topFl_w_size": "3/16", // check
             "botFl_w_type": "Fillet", // check
             "botFl_w_size": "1/8", // check
-            "splice_count": "1", // check
-            "splice_data": [{// check
-                    "sign": "", // check
-                    "SPosition1_ft": "45", // check
-                    "SPosition1_in": "0", // check
-                    "SPosition1_fr": "0", // check
-                    "topFlThick_in": "3", // check
-                    "topFlThick_fr": "0", // check
-                    "topFlWidth_ft": "5", // check
-                    "topFlWidth_in": "0", // check
-                    "topFlWidth_fr": "0", // check
-                    "botFlThick_in": "3", // check
-                    "botFlThick_fr": "0", // check
-                    "botFlWidth_ft": "5", // check
-                    "botFlWidth_in": "0", // check
-                    "botFlWidth_fr": "0", // check
-                    "webPlThick_in": "1", // check
-                    "webPlThick_fr": "0", // check
-                    "webPlWidth_ft": "2", // check
-                    "webPlWidth_in": "0", // check
-                    "webPlWidth_fr": "0"    // check
-                }],
+            // "splice_count": splice_count,    // check
+            // "splice_data": splice_data,      // check
 
             "alignment": data.alignment,
             "tos": {

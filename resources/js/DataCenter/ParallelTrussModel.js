@@ -66,8 +66,8 @@ var ParallelTrussMain = function () {
             "dataSource": data.memberProperties.dataSource,
             "slopingChord": data.slopingChord,
             "verticals": {
-                "Spacing_btw": data.member_truss.verticalSpacing,
-                "Count": "4", // check
+                "Spacing_btw": data.verticalSpacing,
+                "Count": data.VerticalCount,
                 "spacing": []           // check
             },
             "non_ConnEnd": "false", // check
@@ -135,6 +135,18 @@ var ParallelTrussSubTop = function (parent_index, index) {
 
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
+        splice_data = new Array();
+        if (data.splice_count) {
+            data.splice_data.forEach(element => {
+                splice_data.push({
+                    "sign": element.sign,
+                    "El_ft": element.elevation_ft,
+                    "El_in": element.elevation_in,
+                    "El_fr": element.elevation_fr,
+                    "profile": element.profile
+                });
+            });
+        }
         mp = {
             "startPoint": _mp.startPoint,
             "endPoint": _mp.endPoint,
