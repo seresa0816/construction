@@ -38,9 +38,6 @@ var TrapeTrussMain = function () {
     };
 
     main.getData = function (data) {
-        dataModel.uid++;
-        main.model["uid"] = dataModel.uid;
-
         main.setMemberProperties(data);
         main.setFinishProperties(data);
         main.setConnectionProperties(data);

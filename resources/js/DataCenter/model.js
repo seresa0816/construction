@@ -103,6 +103,7 @@ function getJsonUid() {
 function increaseJsonUid() {
     json_uid = getJsonUid() + 1;
     setJsonUid(json_uid);
+    return json_uid;
 }
 
 function setJsonUid(json_uid) {
@@ -139,7 +140,7 @@ function download(filename, text) {
 
 $(document).ready(function () {
     $("#showJsonFile").click(function () {
-        download("JsonData_last_uid_" + dataModel.uid + ".txt", JSON.stringify(arr_data, null, 4));
+        download("JsonData_last_uid_" + getJsonUid() + ".txt", JSON.stringify(arr_data, null, 4));
         return false;
     });
 });

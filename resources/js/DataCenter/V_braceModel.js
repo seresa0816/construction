@@ -33,7 +33,6 @@ var V_braceMain = function () {
     main.setMemberProperties = function (data) {
         _mp = data.memberProperties;
         mp = {
-            "uid": dataModel.uid,
             "profile": data.memberProperties.profile,
             "orientation": data.memberProperties.orientation,
             "materialGrade": data.memberProperties.materialGrade,
