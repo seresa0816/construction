@@ -250,7 +250,8 @@ var class_infill_Beam = function()
 				beam.x_depth = startPoint_left_x;
 				beam.y_depth = startPoint_left_y;
 
-				memberList.push(beam);
+				// memberList.push(beam);
+				dataModel.insertData(beam);
 				main.drawPlan(beam, "XY");
 			}
 		});
