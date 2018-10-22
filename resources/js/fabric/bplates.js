@@ -157,7 +157,8 @@ var class_BPlates 	= function(parent)
 
 		canvas.discardActiveObject();
 
-		memberList.push(pourObj)
+		// memberList.push(pourObj)
+		dataModel.insertData(pourObj);
 
 		main.draw(pourObj);
 	}

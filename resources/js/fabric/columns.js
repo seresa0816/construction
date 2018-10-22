@@ -64,8 +64,8 @@ function placeDefaultColumns(columnObj,plane){
             column.y_depth = gridData.yaxis[y].Dimension;
             placeColumn(column,plane);
             column.uid = "Column_" + column.id;
-            memberList.push(column);
-            dataModel.insertData("regularColumn", column);
+            // memberList.push(column);
+            dataModel.insertData(column); //regularColumn
         }
     }
 }

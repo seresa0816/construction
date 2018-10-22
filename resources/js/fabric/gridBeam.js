@@ -187,9 +187,9 @@ var class_grid_beam = function()
 
         if (shape.chkPosAvailable(group, group.mode))
 	    {
-	    	memberList.push(data);
+	    	// memberList.push(data);
+			dataModel.insertData(data);//"gridBeam", 
 	    	canvas.add(group);
-                dataModel.insertData("gridBeam", data);
 	    }
 	}
 

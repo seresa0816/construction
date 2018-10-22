@@ -144,9 +144,8 @@ var class_iiibox_Column 	= function(parent)
 			{
 				
 				undoAction.addAction("memberPlace");
-				memberList.push(main.member_boxColumn);
-				//console.log(memberList);
-				dataModel.insertData("channelColumn", main.member_boxColumn);
+				// memberList.push(main.member_boxColumn);
+				dataModel.insertData(main.member_boxColumn); //channelColumn
 			}
 
 		});

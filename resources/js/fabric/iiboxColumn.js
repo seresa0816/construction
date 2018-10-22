@@ -142,9 +142,8 @@ var class_iibox_Column 	= function(parent)
 			if (main.drawShape(main.member_boxColumn, main.s_type, "#e72f5f", main.member_boxColumn.memberProperties.startPoint.x, main.member_boxColumn.memberProperties.startPoint.y))
 			{
 				undoAction.addAction("memberPlace");
-				memberList.push(main.member_boxColumn);
-				dataModel.insertData("cruciColumn", main.member_boxColumn);
-				//console.log(memberList);
+				// memberList.push(main.member_boxColumn);
+				dataModel.insertData(main.member_boxColumn); //cruciColumn
 			}
 
 		});

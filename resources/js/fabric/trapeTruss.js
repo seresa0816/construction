@@ -358,8 +358,8 @@ var class_trape_Truss 	= function(parent)
 		main.verticals(data, start_x, start_y, middle_x, plane, data.vert_data.length);
 		data.plane = plane;
 		data.uid = "trapeTruss_" + (memId);
-		memberList.push(data);
-                dataModel.insertData("trapeTruss", data);
+		// memberList.push(data);
+		dataModel.insertData(data); //trapeTruss
 		memId++;
 		return true;
 	}

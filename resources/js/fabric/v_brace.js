@@ -733,8 +733,8 @@ var class_v_Braces 	= function(parent)
 				delete data.rightCol;
 			if (data.leftCol)
 				delete data.leftCol;
-			memberList.push(data);
-                        dataModel.insertData("v_brace", data);
+			// memberList.push(data);
+			dataModel.insertData(data); //v_brace
 		}
 	}
 

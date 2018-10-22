@@ -242,8 +242,8 @@ var class_para_Truss 	= function(parent)
 			main.drawSpeciBraces(data, left_x, top_y, plane);
 		data.plane = plane;
 		data.uid = "paraTruss_" + (memId);
-		memberList.push(data);
-                dataModel.insertData("parallelTruss", data);
+		// memberList.push(data);
+		dataModel.insertData(data); //parallelTruss
 		memId++;
 		return true;
 	}

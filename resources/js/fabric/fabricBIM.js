@@ -1755,7 +1755,8 @@ function initSubmitEvents()
 						if (checkExistMember(newMember))
 							continue;
 					}
-					memberList.push(newMember);
+					// memberList.push(newMember);
+					dataModel.insertData(newMember);
 				}
 			}
 		}

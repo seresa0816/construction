@@ -169,9 +169,8 @@ var class_ibox_Column 	= function(parent)
 			if (main.drawShape(main.member_boxColumn, main.member_boxColumn.uid, "#e72f5f", main.member_boxColumn.memberProperties.startPoint.x, main.member_boxColumn.memberProperties.startPoint.y))
 			{
 				undoAction.addAction("memberPlace");
-				memberList.push(main.member_boxColumn);
-				dataModel.insertData("iColumn", main.member_boxColumn);
-				
+				//memberList.push(main.member_boxColumn);
+				dataModel.insertData(main.member_boxColumn); //"iColumn", 
 			}
 
 		});

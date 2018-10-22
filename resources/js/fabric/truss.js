@@ -327,8 +327,8 @@ var class_Truss 	= function(parent)
 		main.verticals(data, start_x, start_y, middle_x, plane, data.vert_data.length);
 		data.plane = plane;
 		data.uid = "truss_" + (memId);
-		memberList.push(data);
-                dataModel.insertData("pitchTruss", data);
+		// memberList.push(data);
+		dataModel.insertData(data); //pitchTruss
 		memId++;
 		return true;
 	}

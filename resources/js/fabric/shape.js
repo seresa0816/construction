@@ -171,7 +171,8 @@ var class_shape = function()
 		newMember.id = obj.id;
 		if (main.chkPosAvailable(obj, obj.mode))
 		{
-			memberList.push(newMember);
+			// memberList.push(newMember);
+			dataModel.insertData(newMember);
 			canvas.add(obj);
 			canvas.renderAll();
 		}
@@ -375,7 +376,8 @@ var class_shape = function()
 		obj.uid = obj.id;
 		newMember.uid = origin.mode + "_" + obj.id;
 		newMember.id = obj.id;
-		memberList.push(newMember);
+		// memberList.push(newMember);
+		dataModel.insertData(newMember);
 	}
 
 	main.addSnapTruss = function(obj)
@@ -470,8 +472,11 @@ var class_shape = function()
 		newMember.uid = newMember.mode + "_" + obj.id;
 		newMember.id = obj.id;
 		
-		if (!checkExistMember(newMember))
-			memberList.push(newMember);
+		if (!checkExistMember(newMember)){
+			// memberList.push(newMember);
+			dataModel.insertData(newMember);
+		}
+			
 	}
 
 	main.addSnapBeamElevation = function(origin, obj, mode, plane)
@@ -531,7 +536,8 @@ var class_shape = function()
 		obj.uid = obj.id;
 		newMember.uid = origin.mode + "_" + obj.id;
 		newMember.id = obj.id;
-		memberList.push(newMember);
+		// memberList.push(newMember);
+		dataModel.insertData(newMember);
 	}
 
 	main.addSnapPourstop = function(origin, obj, mode)

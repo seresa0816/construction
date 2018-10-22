@@ -1,42 +1,50 @@
+var arr_data = new Array();
 
 var arr_data_model = new Array();
 var arr_data_class = new Array();
-var arr_data = new Array();
 
-var DataModel = function () {
-    this.uid = 0;
-//    var modelName = "";
-//    var model = new Object();
 
-    this.insertData = function (modelName, data) {
-        new_data = new arr_data_class[modelName]().createData(data);
-        arr_data = arr_data.concat(new_data);
-        // console.log(JSON.stringify(arr_data));
+var dataModel = function () {
+    var main = this;
+    main.uid = getJsonUid();
+    main.insertData = function (data) {
+        try {
+            var data_mode = (data.mode) ? data.mode : 'blank';
+            var data_type = (data.type) ? data.type : 'blank';
+            var modelName = modelNameMap[data_mode][data_type];
+        } catch (ex) {
 
-//        alart(JSON.stringify(arr_data));
+        }
+        console.trace();
+        console.log("mode: '" + data_mode + "' type: '" + data_type + "'");
+
+        if (modelName) {
+            new_data = new arr_data_class[modelName]().createData(data);
+            arr_data = arr_data.concat(new_data);
+            data.json_uid = main.uid;
+            setJsonUid(main.uid);
+        }
+        memberlist.push(data);
     };
-//
-//    function setMemberProperties(modelName, data) {
-//        arr_data_class[modelName].setMemberProperties(data);
-//    }
-//
-//    function setFinishProperties(modelName, data) {
-//        arr_data_class[modelName].setFinishProperties(data);
-//    }
-//
-//    function setConnectionProperties(modelName, data) {
-//        arr_data_class[modelName].setConnectionProperties(data);
-//    }
-//    
-//    function convertJson(modelName){
-//        
-//    }
-//    
-//    function getData(){
-//        return arr_data_class[modelName].getData();
-//    }
-};
-dataModel = new DataModel();
+}();
+
+modelNameMap['blank']['blank'] = "";
+
+function getJsonUid() {
+    var json_uid = localStorage.getItem("json_uid");
+    if (json_uid) {
+        try {
+            return parseInt(json_uid);
+        } catch (ex) {
+
+        }
+    }
+    return 0;
+}
+
+function setJsonUid(json_uid) {
+    localStorage.setItem("json_uid", json_uid);
+}
 
 function clone(obj) {
     if (obj === null || typeof (obj) !== 'object')

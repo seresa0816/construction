@@ -51,8 +51,8 @@ function placeGridBeams(beamObj,plane){
 
             placeBeam(beam,plane);
             beam.uid = "Beam_" + beam.id;
-            memberList.push(beam);
-            dataModel.insertData("gridBeam", beam);
+            // memberList.push(beam);
+            dataModel.insertData(beam); //gridBeam
         }
     }
     
@@ -110,8 +110,8 @@ function placeGridBeams(beamObj,plane){
 
             placeBeam(beam,plane);
             beam.uid = "Beam_" + beam.id;
-            memberList.push(beam);
-            dataModel.insertData("gridBeam", beam);
+            // memberList.push(beam);
+            dataModel.insertData(beam); // gridBeam
         }
     }
 }
@@ -170,8 +170,8 @@ function placePeripheralBeams(beamObj,plane){
         if (!checkExistMember(beamAtLeft))
         {
             placeBeam(beamAtLeft,plane);
-            memberList.push(beamAtLeft);
-            dataModel.insertData("periBeam", beamAtLeft);
+            // memberList.push(beamAtLeft);
+            dataModel.insertData(beamAtLeft); // "periBeam", 
         }
         
         var beamAtRight =new beamMember();
@@ -222,8 +222,8 @@ function placePeripheralBeams(beamObj,plane){
         if (!checkExistMember(beamAtRight))
         {
             placeBeam(beamAtRight,plane);
-            memberList.push(beamAtRight);
-            dataModel.insertData("periBeam", beamAtRight);
+            // memberList.push(beamAtRight);
+            dataModel.insertData(beamAtRight);//periBeam
         }
         
     }
@@ -280,8 +280,8 @@ function placePeripheralBeams(beamObj,plane){
         if (!checkExistMember(beamAtBottom))
         {
             placeBeam(beamAtBottom,plane);
-            memberList.push(beamAtBottom);
-            dataModel.insertData("periBeam", beamAtBottom);
+            // memberList.push(beamAtBottom);
+            dataModel.insertData(beamAtBottom);//periBeam
         }
         
         var beamAtTop =new beamMember();
@@ -333,8 +333,8 @@ function placePeripheralBeams(beamObj,plane){
         if (!checkExistMember(beamAtTop))
         {
             placeBeam(beamAtTop,plane);
-            memberList.push(beamAtTop);
-            dataModel.insertData("periBeam", beamAtTop);
+            // memberList.push(beamAtTop);
+            dataModel.insertData(beamAtTop);//periBeam
         }
     }
 }
@@ -790,12 +790,8 @@ var class_place_beam = function()
             {
                 undoAction.addAction("memberPlace");
                 placeBeam(beamObj, "XY");
-                memberList.push(beamObj);
-                if (main.mode == "periBeam"){
-                    dataModel.insertData("periBeam", beamObj);
-                }else{
-                    dataModel.insertData("gridBeam", beamObj);
-                }
+                // memberList.push(beamObj);
+                dataModel.insertData(beamObj); //"gridBeam"
             }
         });
     }
