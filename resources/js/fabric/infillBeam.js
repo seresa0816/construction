@@ -250,6 +250,7 @@ var class_infill_Beam = function()
 				beam.x_depth = startPoint_left_x;
 				beam.y_depth = startPoint_left_y;
 
+				memberList.push(beam);
 				main.drawPlan(beam, "XY");
 			}
 		});
@@ -380,13 +381,8 @@ var class_infill_Beam = function()
         }
         if (beamObj.floor == parseFloat($("#depthdrpdwn").val()))
         {
-        	if (!checkExistMember(beamObj))
-        	{
-        		// memberList.push(beamObj);
-				dataModel.insertData(beamObj); //infillBeam
-				canvas.add(line);
-				stopDraggingElement(line);
-			}
+			canvas.add(line);
+			stopDraggingElement(line);
 		}
 	}
 
