@@ -2428,72 +2428,70 @@ function initSubmitEvents()
             }
 		}
 
-		else if (memType == "builtup")
-		{
+		else if (memType == "builtup") {
 			var splice_count = parseInt(memberList[[parseInt(memID)]]["splice_count"].replace("sc", ""));
 			memberList[[parseInt(memID)]].splice_data = [];
-			for (var i = 0; i < splice_count; i ++) {
-                var splice = new spliceProperties();
-                splice.sign = $("#splice" + (i + 1) + "PosNeg").val();
+			for (var i = 0; i < splice_count; i++) {
+				var splice = new spliceProperties();
+				splice.sign = $("#splice" + (i + 1) + "PosNeg").val();
 				splice.elevation_ft = $("#splice" + (i + 1) + "Ft").val();
 				splice.elevation_in = $("#splice" + (i + 1) + "In").val();
 				splice.elevation_fr = $("#splice" + (i + 1) + "Fr").val();
 
-				splice.topFlangeThick_in = $("#splice" + (i + 1) + "TFPlateThicknessIn").val();
-				splice.topFlangeThick_fr = $("#splice" + (i + 1) + "TFPlateThicknessFr").val();
+				splice.topthick_in = $("#splice" + (i + 1) + "TFPlateThicknessIn").val();
+				splice.topthick_fr = $("#splice" + (i + 1) + "TFPlateThicknessFr").val();
 
-				splice.topFlangeWidth_ft = $("#splice" + (i + 1) + "TFPlateWidthFt").val();
-				splice.topFlangeWidth_in = $("#splice" + (i + 1) + "TFPlateWidthIn").val();
-				splice.topFlangeWidth_fr = $("#splice" + (i + 1) + "TFPlateWidthFr").val();
+				splice.topwidth_ft = $("#splice" + (i + 1) + "TFPlateWidthFt").val();
+				splice.topwidth_in = $("#splice" + (i + 1) + "TFPlateWidthIn").val();
+				splice.topwidth_fr = $("#splice" + (i + 1) + "TFPlateWidthFr").val();
 
-				splice.bottomFlangeThick_in = $("#splice" + (i + 1) + "BFPlateThicknessIn").val();
-				splice.bottomFlangeThick_fr = $("#splice" + (i + 1) + "BFPlateThicknessFr").val();
+				splice.botthick_in = $("#splice" + (i + 1) + "BFPlateThicknessIn").val();
+				splice.botthick_fr = $("#splice" + (i + 1) + "BFPlateThicknessFr").val();
 
-				splice.bottomFlangeWidth_ft = $("#splice" + (i + 1) + "BFPlateWidthFt").val();
-				splice.bottomFlangeWidth_in = $("#splice" + (i + 1) + "BFPlateWidthIn").val();
-				splice.bottomFlangeWidth_fr = $("#splice" + (i + 1) + "BFPlateWidthFr").val();
+				splice.botwidth_ft = $("#splice" + (i + 1) + "BFPlateWidthFt").val();
+				splice.botwidth_in = $("#splice" + (i + 1) + "BFPlateWidthIn").val();
+				splice.botwidth_fr = $("#splice" + (i + 1) + "BFPlateWidthFr").val();
 
-				splice.webPlateThick_in = $("#splice" + (i + 1) + "WebPlateThicknessIn").val();
-				splice.webPlateThick_fr = $("#splice" + (i + 1) + "WebPlateThicknessFr").val();
+				splice.webthick_in = $("#splice" + (i + 1) + "WebPlateThicknessIn").val();
+				splice.webthick_fr = $("#splice" + (i + 1) + "WebPlateThicknessFr").val();
 
-				splice.webPlateWidth_ft = $("#splice" + (i + 1) + "WebPlateWidthFt").val();
-				splice.webPlateWidth_in = $("#splice" + (i + 1) + "WebPlateWidthIn").val();
-				splice.webPlateWidth_fr = $("#splice" + (i + 1) + "WebPlateWidthFr").val();
+				splice.webwidth_ft = $("#splice" + (i + 1) + "WebPlateWidthFt").val();
+				splice.webwidth_in = $("#splice" + (i + 1) + "WebPlateWidthIn").val();
+				splice.webwidth_fr = $("#splice" + (i + 1) + "WebPlateWidthFr").val();
 
 				memberList[[parseInt(memID)]].splice_data.push(splice);
-            }
+			}
 		}
 
-		else if (memType == "crucified")
-		{
+		else if (memType == "crucified") {
 			var splice_count = parseInt(memberList[[parseInt(memID)]]["splice_count"].replace("sc", ""));
 			memberList[[parseInt(memID)]].splice_data = [];
-			for (var i = 0; i < splice_count; i ++) {
-                var splice = new spliceProperties();
-                splice.sign = $("#splice" + (i + 1) + "PosNeg").val();
-                splice.elevation_ft = $("#splice" + (i + 1) + "Ft").val();
-                splice.elevation_in = $("#splice" + (i + 1) + "In").val();
-                splice.elevation_fr = $("#splice" + (i + 1) + "Fr").val();
-                splice.profile = $("#splice" + (i + 1) + "WProfile").val();
+			for (var i = 0; i < splice_count; i++) {
+				var splice = new spliceProperties();
+				splice.sign = $("#splice" + (i + 1) + "PosNeg").val();
+				splice.elevation_ft = $("#splice" + (i + 1) + "Ft").val();
+				splice.elevation_in = $("#splice" + (i + 1) + "In").val();
+				splice.elevation_fr = $("#splice" + (i + 1) + "Fr").val();
+				splice.profile = $("#splice" + (i + 1) + "WProfile").val();
 
 				memberList[[parseInt(memID)]].splice_data.push(splice);
-            }
+			}
 		}
 
-		else if (memType == "builtupPlate")
-		{
+		else if (memType == "builtupPlate") {
 			var splice_count = parseInt(memberList[[parseInt(memID)]]["splice_count"].replace("sc", ""));
 			memberList[[parseInt(memID)]].splice_data = [];
-			for (var i = 0; i < splice_count; i ++) {
-                var splice = new spliceProperties();
-                splice.sign = $("#rightFloat #splice" + (i + 1) + "PosNeg").val();
-                splice.elevation_ft = $("#rightFloat #splice" + (i + 1) + "Ft").val();
-                splice.elevation_in = $("#rightFloat #splice" + (i + 1) + "In").val();
-                splice.elevation_fr = $("#rightFloat #splice" + (i + 1) + "Fr").val();
-                splice.profile = $("#rightFloat #splice" + (i + 1) + "WProfile").val();
+			for (var i = 0; i < splice_count; i++) {
+				var splice = new spliceProperties();
+
+				splice.sign = $("#rightFloat #splicee" + (i + 1) + "posneg").val();
+				splice.elevation_ft = $("#rightFloat #splicePositionLeftEndFt" + (i + 1)).val();
+				splice.elevation_in = $("#rightFloat #splicePositionLeftEndIn" + (i + 1)).val();
+				splice.elevation_fr = $("#rightFloat #splicePositionLeftEndFr" + (i + 1)).val();
+				splice.profile = $("#rightFloat #spliceel" + (i + 1) + "profile").val();
 
 				memberList[[parseInt(memID)]].splice_data.push(splice);
-            }
+			}
 		}
 
 		else if (memType == "pourstop")
