@@ -1,4 +1,5 @@
 var V_braceModel = function () {
+    main = this;
     main.createData = function (data) {
         var returnData = Array();
         mainModel = new V_braceMain().getData(data);
@@ -13,6 +14,7 @@ var V_braceModel = function () {
 };
 
 var V_braceMain = function () {
+    main = this;
     main.model = {
         "Group": "Brace",
         "type": "v_brace",
@@ -96,6 +98,7 @@ var V_braceMain = function () {
 };
 
 var V_braceSub = function (parent_index, index) {
+    main = this;
     main.index = index;
     main.model = {
         "type": "v_brace",

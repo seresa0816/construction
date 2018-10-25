@@ -40,24 +40,29 @@ function DataModel() {
         try {
             var data_type = (data.type) ? data.type : 'blank';
             var modelClass = modelClassMap[data_type];
+
+            console.log("type: '" + data_type + "'");
+            // console.log("data: \n" + JSON.stringify(data, null, 4));
+
+            if (modelClass) {
+                modelObject = new modelClass();
+                if (!modelObject)
+                    return;
+
+                new_data = modelObject.createData(data);
+                // console.log("json_data: \n" + JSON.stringify(new_data, null, 4));
+                arr_data = arr_data.concat(new_data);
+                // set json_uid
+                memberList[index].json_uid = new_data[0]["uid"];
+            }
         } catch (ex) {
-
-        }
-        console.log("type: '" + data_type + "'");
-        console.log("data: \n" + JSON.stringify(data, null, 4));
-
-        if (modelClass) {
-            new_data = new modelClass().createData(data);
-            console.log("json_data: \n" + JSON.stringify(new_data, null, 4));
-            arr_data = arr_data.concat(new_data);
-            // set json_uid
-            memberList[index].json_uid = new_data[0]["uid"];
+            console.log("here is bug:" + data_type);
         }
     }
 
     main.insertData = function (data) {
         memberList.push(data);
-        main.makeData(memberList.length -1);
+        main.makeData(memberList.length - 1);
     };
 
     main.removeData = function (index, count) {
@@ -75,7 +80,7 @@ function DataModel() {
 
     main.updateData = function (index) {
         var json_uid = memberList[index].json_uid;
-        if (json_uid){
+        if (json_uid) {
             for (var i = arr_data.length - 1; i >= 0; i--) {
                 if (json_uid == arr_data[i]["uid"] || json_uid == arr_data[i]["parent_member_id"]) {
                     arr_data.splice(i, 1);
