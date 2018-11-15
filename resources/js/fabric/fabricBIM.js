@@ -1718,10 +1718,21 @@ function initSubmitEvents()
 
 	$(document).on("click", "#copyFloor", function()
 	{
-		undoAction.addAction("memberPlace");
 		var from_floor 			= parseFloat($("#from_copy").val());
 		var from_paste_floor 	= parseFloat($("#from_paste").val());
 		var to_paste_floor 		= parseFloat($("#to_paste").val());
+		if (from_paste_floor > to_paste_floor)
+		{
+			$("#message_area p").html("You can't run copyFloor in descending order");
+			$("#message_area").fadeIn();
+
+			setTimeout(function()
+			{
+				$("#message_area").fadeOut();
+			}, 3000);
+			return;
+		}
+		undoAction.addAction("memberPlace");
 		for (var i = memberList.length - 1; i >= 0 ; i --)
 		{
 			if (checkColumnMember(memberList[i]))

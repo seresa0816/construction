@@ -1095,6 +1095,9 @@ var class_context 	= function()
 									Object.keys(configure.connectionProperties).map(function(entry)
 									{
 										$("#" + configure.connectionProperties[entry]).val(postMember.connectionProperties[entry]);
+										if (entry == "cap_check")
+											if (postMember.connectionProperties[entry] == "on")
+												$("#" + configure.connectionProperties[entry]).prop('checked', true).trigger("change");
 									});
 									
 									Object.keys(configure).map(function(entry) 
@@ -3833,26 +3836,26 @@ var class_context 	= function()
 												if (tmp_flg)
 													$("#splice" + (j + 1) + "ThicknessDFr").val(tmp_memberList[0].splice_data[j].thick_d_fr);
 											}
-											for ( var j = 0; j < parseInt(boxMember['splice_count']); j ++ )
+											for ( var j = 0; j < parseInt(tmp_memberList[0]['splice_count']); j ++ )
 											{
-												$("#splice" + (j + 1) + "PosNeg").val(boxMember.splice_data[j].sign);
-												$("#splice" + (j + 1) + "Ft").val(boxMember.splice_data[j].elevation_ft);
-												$("#splice" + (j + 1) + "In").val(boxMember.splice_data[j].elevation_in);
-												$("#splice" + (j + 1) + "Fr").val(boxMember.splice_data[j].elevation_fr);
+												$("#splice" + (j + 1) + "PosNeg").val(tmp_memberList[0].splice_data[j].sign);
+												$("#splice" + (j + 1) + "Ft").val(tmp_memberList[0].splice_data[j].elevation_ft);
+												$("#splice" + (j + 1) + "In").val(tmp_memberList[0].splice_data[j].elevation_in);
+												$("#splice" + (j + 1) + "Fr").val(tmp_memberList[0].splice_data[j].elevation_fr);
 
-												$("#splice" + (j + 1) + "DepthAFt").val(boxMember.splice_data[j].depth_a_ft);
-												$("#splice" + (j + 1) + "DepthAIn").val(boxMember.splice_data[j].depth_a_in);
-												$("#splice" + (j + 1) + "DepthAFr").val(boxMember.splice_data[j].depth_a_fr);
+												$("#splice" + (j + 1) + "DepthAFt").val(tmp_memberList[0].splice_data[j].depth_a_ft);
+												$("#splice" + (j + 1) + "DepthAIn").val(tmp_memberList[0].splice_data[j].depth_a_in);
+												$("#splice" + (j + 1) + "DepthAFr").val(tmp_memberList[0].splice_data[j].depth_a_fr);
 
-												$("#splice" + (j + 1) + "WidthBFt").val(boxMember.splice_data[j].width_b_ft);
-												$("#splice" + (j + 1) + "WidthBIn").val(boxMember.splice_data[j].width_b_in);
-												$("#splice" + (j + 1) + "WidthBFr").val(boxMember.splice_data[j].width_b_fr);
+												$("#splice" + (j + 1) + "WidthBFt").val(tmp_memberList[0].splice_data[j].width_b_ft);
+												$("#splice" + (j + 1) + "WidthBIn").val(tmp_memberList[0].splice_data[j].width_b_in);
+												$("#splice" + (j + 1) + "WidthBFr").val(tmp_memberList[0].splice_data[j].width_b_fr);
 
-												$("#splice" + (j + 1) + "ThicknessCIn").val(boxMember.splice_data[j].thick_c_in);
-												$("#splice" + (j + 1) + "ThicknessCFr").val(boxMember.splice_data[j].thick_c_fr);
+												$("#splice" + (j + 1) + "ThicknessCIn").val(tmp_memberList[0].splice_data[j].thick_c_in);
+												$("#splice" + (j + 1) + "ThicknessCFr").val(tmp_memberList[0].splice_data[j].thick_c_fr);
 
-												$("#splice" + (j + 1) + "ThicknessDIn").val(boxMember.splice_data[j].thick_d_in);
-												$("#splice" + (j + 1) + "ThicknessDFr").val(boxMember.splice_data[j].thick_d_fr);
+												$("#splice" + (j + 1) + "ThicknessDIn").val(tmp_memberList[0].splice_data[j].thick_d_in);
+												$("#splice" + (j + 1) + "ThicknessDFr").val(tmp_memberList[0].splice_data[j].thick_d_fr);
 											}
 										}
 										else if (entry == "weld_type")
@@ -4467,7 +4470,10 @@ var class_context 	= function()
 
 									if (flg)
 									{
-										$("#" + builtupPlate_conf[entry]).val(tmp_memberList[0][entry]);
+										if (entry == "connect_channel")
+											$("#" + builtupPlate_conf[entry]).val(tmp_memberList[0][entry]).trigger("change");
+										else
+											$("#" + builtupPlate_conf[entry]).val(tmp_memberList[0][entry]);
 									}
 								}
 							});
@@ -4550,6 +4556,9 @@ var class_context 	= function()
 								if (flg)
 								{
 									$("#" + post_conf.connectionProperties[entry]).val(tmp_memberList[0].connectionProperties[entry]);
+									if (entry == "cap_check")
+											if (tmp_memberList[0].connectionProperties[entry] == "on")
+												$("#" + post_conf.connectionProperties[entry]).prop('checked', true).trigger("change");
 								}
 							});
 
@@ -4609,7 +4618,10 @@ var class_context 	= function()
 								}
 								if (flg)
 								{
-									$("#" + ibeam_conf.memberProperties[entry]).val(tmp_memberList[0].memberProperties[entry]);
+									if (entry == "profile")
+										$("#" + ibeam_conf.memberProperties[entry]).val(tmp_memberList[0].memberProperties[entry]).trigger("change");
+									else
+										$("#" + ibeam_conf.memberProperties[entry]).val(tmp_memberList[0].memberProperties[entry]);
 								}
 							});
 

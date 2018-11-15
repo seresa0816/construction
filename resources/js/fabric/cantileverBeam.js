@@ -160,7 +160,7 @@ var class_cant_Beam = function()
 		}
 		data.floor = undefined;
 
-		for (var i = 0; i < gridData.zaxis.length - 1; i ++)
+		for (var i = 0; i < gridData.zaxis.length; i ++)
 	    {
 	        if (data.memberProperties.startPoint.z >= (gridData.zaxis[i].Dimension - 24) && (data.memberProperties.startPoint.z <= (gridData.zaxis[i].Dimension + 24)) )
 	        {

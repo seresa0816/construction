@@ -62,10 +62,12 @@ function placeDefaultColumns(columnObj,plane){
             column.floor = parseFloat(columnObj.floor);
             column.x_depth = gridData.xaxis[x].Dimension;
             column.y_depth = gridData.yaxis[y].Dimension;
-            placeColumn(column,plane);
-            column.uid = "Column_" + column.id;
-            // memberList.push(column);
-            dataModel.insertData(column); //regularColumn
+            if (placeColumn(column,plane))
+            {
+                column.uid = "Column_" + column.id;
+                // memberList.push(column);
+                dataModel.insertData(column); //regularColumn
+            }
         }
     }
 }
@@ -255,7 +257,10 @@ function placeColumn(columnObj,plane){
         {
             canvas.add(line);
             stopDraggingElement(line);
+            return true;
         }
+        else
+            return false;
     }
     else if (plane == "XZ"){
         if (columnObj.y_depth != $("#depthdrpdwn").val())
@@ -278,6 +283,7 @@ function placeColumn(columnObj,plane){
 
         canvas.add(line);
         stopDraggingElement(line);
+        return true;
     }
     else if (plane=="YZ"){
         if (columnObj.x_depth != $("#depthdrpdwn").val())
@@ -300,6 +306,7 @@ function placeColumn(columnObj,plane){
                     
         canvas.add(line);
         stopDraggingElement(line);
+        return true;
     }
 }
 
@@ -430,11 +437,13 @@ var class_place_column   = function(parent)
             column.memberProperties.endPoint.x = gridData.xaxis[x_index].Dimension;
             column.memberProperties.endPoint.y = gridData.yaxis[y_index].Dimension;
 
-            placeColumn(column,plane);
-            column.uid = "Column_" + column.id;
-            undoAction.addAction("memberPlace");
-            // memberList.push(column);
-            dataModel.insertData(column);
+            if (placeColumn(column,plane))
+            {
+                column.uid = "Column_" + column.id;
+                undoAction.addAction("memberPlace");
+                // memberList.push(column);
+                dataModel.insertData(column);
+            }
         });
     }
 

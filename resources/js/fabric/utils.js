@@ -215,7 +215,7 @@ function getNearestBeam(pos, direction)
             {
                 if (canvas._objects[i].mode == "Beam" || canvas._objects[i].mode == "periBeam" || canvas._objects[i].mode == "ibeam" || canvas._objects[i].mode == "pgirder")
                 {
-                    if (pos.x * scale > canvas._objects[i].x1 && (pos.x * scale - canvas._objects[i].x1) < maxH && (canvas._objects[i].y1 - pos.y * scale) * (canvas._objects[i].y2 - pos.y * scale) <= 0)
+                    if (pos.x * scale > canvas._objects[i].x1 && (pos.x * scale - canvas._objects[i].x1) <= maxH && (canvas._objects[i].y1 - pos.y * scale) * (canvas._objects[i].y2 - pos.y * scale) <= 0)
                     {
                         maxH = pos.x * scale - canvas._objects[i].x1;
                         mode = canvas._objects[i].mode;
@@ -237,7 +237,7 @@ function getNearestBeam(pos, direction)
             {
                 if (canvas._objects[i].mode == "Beam" || canvas._objects[i].mode == "periBeam" || canvas._objects[i].mode == "ibeam" || canvas._objects[i].mode == "pgirder")
                 {
-                    if (pos.x * scale < canvas._objects[i].x1 && (canvas._objects[i].x1 - pos.x * scale) < maxH && (canvas._objects[i].y1 - pos.y * scale) * (canvas._objects[i].y2 - pos.y * scale) <= 0)
+                    if (pos.x * scale < canvas._objects[i].x1 && (canvas._objects[i].x1 - pos.x * scale) <= maxH && (canvas._objects[i].y1 - pos.y * scale) * (canvas._objects[i].y2 - pos.y * scale) <= 0)
                     {
                         maxH = canvas._objects[i].x1 - pos.x * scale;
                         mode = canvas._objects[i].mode;
@@ -258,7 +258,7 @@ function getNearestBeam(pos, direction)
             {
                 if (canvas._objects[i].mode == "Beam" || canvas._objects[i].mode == "periBeam" || canvas._objects[i].mode == "ibeam" || canvas._objects[i].mode == "pgirder")
                 {
-                    if (pos.y * scale < canvas._objects[i].y1 && (canvas._objects[i].y1 - pos.y * scale) < maxV && (canvas._objects[i].x1 - pos.x * scale) * (canvas._objects[i].x2 - pos.x * scale) <= 0)
+                    if (pos.y * scale < canvas._objects[i].y1 && (canvas._objects[i].y1 - pos.y * scale) <= maxV && (canvas._objects[i].x1 - pos.x * scale) * (canvas._objects[i].x2 - pos.x * scale) <= 0)
                     {
                         maxV = canvas._objects[i].y1 - pos.y * scale;
                         mode = canvas._objects[i].mode;
@@ -281,7 +281,7 @@ function getNearestBeam(pos, direction)
             {
                 if (canvas._objects[i].mode == "Beam" || canvas._objects[i].mode == "periBeam" || canvas._objects[i].mode == "ibeam" || canvas._objects[i].mode == "pgirder")
                 {
-                    if (pos.y * scale > canvas._objects[i].y1 && (pos.y * scale- canvas._objects[i].y1) < maxV && (canvas._objects[i].x1 - pos.x * scale) * (canvas._objects[i].x2 - pos.x * scale) <= 0)
+                    if (pos.y * scale > canvas._objects[i].y1 && (pos.y * scale- canvas._objects[i].y1) <= maxV && (canvas._objects[i].x1 - pos.x * scale) * (canvas._objects[i].x2 - pos.x * scale) <= 0)
                     {
                         maxV = pos.y * scale- canvas._objects[i].y1;
                         mode = canvas._objects[i].mode;
@@ -734,7 +734,7 @@ function checkExistMember(obj)
         {
             break;
         }
-        if (memberList[i].type == obj.type)
+        if (memberList[i].type == obj.type || (checkBeam(memberList[i]) && checkBeam(obj)))
         {
             if (memberList[i].memberProperties.startPoint.x == obj.memberProperties.startPoint.x && memberList[i].memberProperties.startPoint.y == obj.memberProperties.startPoint.y && memberList[i].memberProperties.startPoint.z == obj.memberProperties.startPoint.z)
             {
@@ -766,6 +766,8 @@ function checkColumnMember(member)
 function checkBeam(obj)
 {
     if (obj.mode == "Beam" || obj.mode == "periBeam" || obj.mode == "ibeam" || obj.mode == "pgirder" || obj.mode == "cantBeam")
+        return true;
+    if (obj.type == "Beam" || obj.type == "periBeam" || obj.type == "ibeam" || obj.type == "pgirder" || obj.type == "cantBeam")
         return true;
     return false;
 }

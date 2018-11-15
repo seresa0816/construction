@@ -62,6 +62,11 @@ var class_post_Column 	= function(parent)
 		Object.keys(postProperties.connectionProperties).map(function(entry)
 		{
 			main.member_postColumn.connectionProperties[entry] = $("#postModal #" + postProperties.connectionProperties[entry]).val();
+			if ($("#" + postProperties.connectionProperties[entry]).is(":checkbox"))
+				if ($("#postModal #" + postProperties.connectionProperties[entry]).prop("checked"))
+					main.member_postColumn.connectionProperties[entry] = "on";
+				else
+					main.member_postColumn.connectionProperties[entry] = "off";
 		});
 
 		Object.keys(postProperties).map(function(entry) 
